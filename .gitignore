@@ -5,6 +5,7 @@ vendor/
 .env
 ### PhpStorm ###
 
+public/frontend/images
 *.iml
 # Composer
 composer.phar
