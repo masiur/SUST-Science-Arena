@@ -12,8 +12,11 @@
 */
 
 Route::get('/', function () {
-	return Redirect::route('dashboard');
+	return Redirect::route('home');
 });
+
+// public routes -- Added by Masiur
+Route::get('home', array('as' => 'home', 'uses' => 'FrontendController@index'));
 
 Route::group(['middleware' => 'guest'], function(){
 

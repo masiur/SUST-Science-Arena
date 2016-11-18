@@ -1,11 +1,353 @@
-@extends('layouts.frontend')
-    @section('content')
-        @include('admin.includes.alert')
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+
+<!-- Mirrored from webdesign-finder.com/html/phoenix/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Nov 2016 03:47:00 GMT -->
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css" id="color-switcher-link">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="js/vendor/html5shiv.min.js"></script>
+        <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader_image"></div>
+    </div>
+    <!--[if lt IE 9]>
+        <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+
+    <!-- search modal -->
+    <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+        <div class="widget widget_search">
+            <form method="get" class="searchform form-inline" action="http://webdesign-finder.com/">
+                <div class="form-group">
+                    <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+                </div>
+                <button type="submit" class="theme_button">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- wrappers for visual page editor and boxed version of template -->
+    <div id="canvas">
+        <div id="box_wrapper">
+
+            <!-- template sections -->
+
+            <section class="page_topline ds section_padding_top_0 section_padding_bottom_0 table_section table_section_md">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="soc-icons col-sm-12 col-md-2 text-center text-md-left">
+                            <a href="#" class="social-icon bg-icon soc-facebook"></a><a href="#" class="social-icon bg-icon soc-twitter"></a><a href="#" class="social-icon bg-icon soc-google"></a><a href="#" class="social-icon bg-icon soc-skype"></a><a href="#" class="social-icon bg-icon soc-youtube"></a>
+                        </div>
+
+                        <div class="topline-info col-sm-12 col-md-8 text-center">
+
+                            <span>
+                                <i class="rt-icon2-clock-o highlight fontsize_24"></i>9:00 am - 5:00 pm
+                            </span>
+
+                            <span>
+                                <i class="rt-icon2-location highlight fontsize_24"></i>204 Woodland, San Diego, CA, 95814
+                            </span>
+
+                            <span>
+                                <i class="fa fa-globe highlight fontsize_24"></i> phoenix@mail.com
+                            </span>
+
+                        </div>
+
+                        <div class="col-sm-12 col-md-2 text-center text-md-right widget_search">
+                            <form method="get" class="searchform form-inline" action="http://webdesign-finder.com/">
+                                <div class="form-group">
+                                    <input id="widget-search" type="text" value="" name="search" class="form-control" placeholder="Search...">
+                                </div>
+                                <button type="submit" class="theme_button">Search</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="main-page-header">
+                <div class="logo-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center main-logo">
+                                    <div class="float-left buttons">
+                                        <a class="theme_button inverse2" href="#">
+                                            <i class="rt-icon2-phone6"></i>
+                                        </a>
+                                        <span>(800) 253-76-84</span>
+                                    </div>
+                                    <a href="http://webdesign-finder.com/">
+                                        <img src="images/logo.png" alt="">
+                                    </a>
+                                    <div class="float-right buttons">
+                                        <span class="logo-right-text">Send Flowers</span>
+                                        <a class="img-button-top" href="#">
+                                            <img src="images/img-button-top.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <header class="page_header header_white floating_logo columns_padding_0 table_section">
+                    <div class="container-fluid">
+                        <a class="menu-line-logo" href="http://webdesign-finder.com/">
+                            <img src="images/logo-sm.png" alt="">
+                        </a>
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <!-- main nav start -->
+                                <nav class="mainmenu_wrapper">
+                                    <ul class="mainmenu nav sf-menu">
+                                        <li>
+                                            <a href="index.html">Home</a>
+                                        </li>
+
+                                        <!-- Pages -->
+                                        <li>
+                                            <a href="about.html">Pages</a>
+                                            <ul>
+                                                <!-- features -->
+                                                <li>
+                                                    <a href="shortcodes_teasers.html">Shortcodes&amp;Widgets</a>
+                                                    <ul>
+
+                                                        <li>
+                                                            <a href="shortcodes_teasers.html">Teasers</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shortcodes_buttons.html">Buttons</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shortcodes_progress.html">Progress</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shortcodes_pricing.html">Pricing</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shortcodes_socialicons.html">Social Icons</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shortcodes_tabs.html">Tabs &amp; Collapse</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shortcodes_bootstrap.html">Bootstrap Elements</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shortcodes_typography.html">Typography</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shortcodes_widgets.html">Widgets</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shortcodes_animation.html">Animation</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shortcodes_icons.html">Template Icons</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <!-- eof features -->
+
+                                                <!-- breadcrumbs -->
+                                                <li>
+                                                    <a href="breadcrumbs1.html">Breadcrumbs</a>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="breadcrumbs1.html">Breadcrumbs 1</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="breadcrumbs2.html">Breadcrumbs 2</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="breadcrumbs3.html">Breadcrumbs 3</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="breadcrumbs4.html">Breadcrumbs 4</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="breadcrumbs5.html">Breadcrumbs 5</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="breadcrumbs6.html">Breadcrumbs 6</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <!-- eof breadcrumbs -->
+
+                                                <li>
+                                                    <a href="about.html">About</a>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="about.html">About</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="about2.html">About 2</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <!-- blog -->
+                                                <li>
+                                                    <a href="blog-right.html">Blog</a>
+                                                    <ul>
+
+                                                        <li>
+                                                            <a href="blog-right.html">Right Sidebar</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="blog-left.html">Left Sidebar</a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="blog-single-right.html">Post</a>
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="blog-single-right.html">Right Sidebar</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="blog-single-left.html">Left Sidebar</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <!-- eof blog -->
+
+                                                <li>
+                                                    <a href="plan.html">Plan</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="calculate.html">Calculator</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="elements.html">Elements</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="obituaries.html">Obituaries</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="funerals.html">Services</a>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="funerals.html">Funerals</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <a href="pricing.html">Pricing</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="faq.html">FAQ</a>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="faq.html">FAQ</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="faq2.html">FAQ 2</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="404.html">404</a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <!-- eof pages -->
+
+                                        <!-- Cemetery -->
+                                        <li>
+                                            <a href="gallery-regular.html">Cemetery</a>
+                                        </li>
+                                        <!-- eof Cemetery -->
+
+                                        <!-- Cemetery -->
+                                        <li>
+                                            <a href="about.html">Memorials</a>
+                                        </li>
+                                        <!-- eof Cemetery -->
+
+                                        <!-- contacts -->
+                                        <li>
+                                            <a href="contact.html">Contacts</a>
+
+                                        </li>
+                                        <!-- eof contacts -->
+
+                                        <!-- shop -->
+                                        <li>
+                                            <a href="shop-right.html">Gifts & Flowers</a>
+                                        </li>
+                                        <!-- eof shop -->
+
+                                        <!-- donate -->
+                                        <li class="active">
+                                            <a href="donate.html">Donate</a>
+
+                                        </li>
+                                        <!-- eof donate -->
+
+                                    </ul>
+                                </nav>
+                                <!-- eof main nav -->
+                                <span class="toggle_menu">
+                                    <span></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="float-right menu-line-button buttons">
+                            <span>(800) 253-76-84</span>
+                            <a class="theme_button inverse2" href="#">
+                                <i class="rt-icon2-phone6"></i>
+                            </a>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
             <section class="intro_section page_mainslider ds">
                 <div class="flexslider">
                     <ul class="slides">
                         <li>
-                            <img src="{{ asset('frontend/images/slide01.jpg') }}" alt="">
+                            <img src="images/slide01.jpg" alt="">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -30,7 +372,7 @@
                             <!-- eof .container -->
                         </li>
                         <li>
-                            <img src="{{ asset('frontend/images/slide02.jpg') }} alt="">
+                            <img src="images/slide02.jpg" alt="">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -55,7 +397,7 @@
                             <!-- eof .container -->
                         </li>
                         <li>
-                            <img src="{{ asset('frontend/images/slide03.jpg') }}" alt="">
+                            <img src="images/slide03.jpg" alt="">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -94,7 +436,7 @@
                                         <span>Services</span>
                                     </span>
                                 </div>
-                                <img src="{{ asset('frontend/images/services-img1.png') }}" alt="">
+                                <img src="images/services-img1.png" alt="">
                                 <a class="big" href="#">More Info</a>
                             </div>
                         </div>
@@ -105,7 +447,7 @@
                                         <span>Services</span>
                                     </span>
                                 </div>
-                                <img src="{{ asset('frontend/images/services-img2.png') }}" alt="">
+                                <img src="images/services-img2.png" alt="">
                                 <a class="big" href="#">More Services</a>
                             </div>
                         </div>
@@ -116,7 +458,7 @@
                                         <span>Services</span>
                                     </span>
                                 </div>
-                                <img src="{{ asset('frontend/images/services-img3.png') }}" alt="">
+                                <img src="images/services-img3.png" alt="">
                                 <a class="big" href="#">Read More</a>
                             </div>
                         </div>
@@ -230,7 +572,7 @@
                                 <div>
                                     <div class="testimonials">
                                         <div>
-                                            <img src="{{ asset('frontend/images/orb/01.jpg') }}" alt="">
+                                            <img src="images/orb/01.jpg" alt="">
                                         </div>
                                         <div>
                                             <h4>Robert
@@ -248,7 +590,7 @@
                                 <div>
                                     <div class="testimonials">
                                         <div>
-                                            <img src="{{ asset('frontend/images/orb/02.jpg') }}" alt="">
+                                            <img src="images/orb/02.jpg" alt="">
                                         </div>
                                         <div>
                                             <h4>Jason
@@ -266,7 +608,7 @@
                                 <div>
                                     <div class="testimonials">
                                         <div>
-                                            <img src="{{ asset('frontend/images/orb/03.jpg') }}" alt="">
+                                            <img src="images/orb/03.jpg" alt="">
                                         </div>
                                         <div>
                                             <h4>Elsabeth
@@ -284,7 +626,7 @@
                                 <div>
                                     <div class="testimonials">
                                         <div>
-                                            <img src="{{ asset('frontend/images/orb/01.jpg') }}" alt="">
+                                            <img src="images/orb/01.jpg" alt="">
                                         </div>
                                         <div>
                                             <h4>Robert
@@ -302,7 +644,7 @@
                                 <div>
                                     <div class="testimonials">
                                         <div>
-                                            <img src="{{ asset('frontend/images/orb/02.jpg') }}" alt="">
+                                            <img src="images/orb/02.jpg" alt="">
                                         </div>
                                         <div>
                                             <h4>Jason
@@ -320,7 +662,7 @@
                                 <div>
                                     <div class="testimonials">
                                         <div>
-                                            <img src="{{ asset('frontend/images/orb/03.jpg') }}" alt="">
+                                            <img src="images/orb/03.jpg" alt="">
                                         </div>
                                         <div>
                                             <h4>Elsabeth
@@ -338,7 +680,7 @@
                                 <div>
                                     <div class="testimonials">
                                         <div>
-                                            <img src="{{ asset('frontend/images/orb/01.jpg') }}" alt="">
+                                            <img src="images/orb/01.jpg" alt="">
                                         </div>
                                         <div>
                                             <h4>Robert
@@ -356,7 +698,7 @@
                                 <div>
                                     <div class="testimonials">
                                         <div>
-                                            <img src="{{ asset('frontend/images/orb/02.jpg') }}" alt="">
+                                            <img src="images/orb/02.jpg" alt="">
                                         </div>
                                         <div>
                                             <h4>Jason
@@ -374,7 +716,7 @@
                                 <div>
                                     <div class="testimonials">
                                         <div>
-                                            <img src="{{ asset('frontend/images/orb/03.jpg') }}" alt="">
+                                            <img src="images/orb/03.jpg" alt="">
                                         </div>
                                         <div>
                                             <h4>Elsabeth
@@ -565,7 +907,7 @@
                         <div class="col-sm-4 to_animate">
                             <div class="recent-post">
                                 <div class="post-img">
-                                    <img src="{{ asset('frontend/images/blog/top-01.jpg') }}" alt="">
+                                    <img src="images/blog/top-01.jpg" alt="">
                                 </div>
                                 <div class="meta">
                                     <div>
@@ -586,7 +928,7 @@
                         <div class="col-sm-4 to_animate">
                             <div class="recent-post">
                                 <div class="post-img">
-                                    <img src="{{ asset('frontend/images/blog/top-02.jpg') }}" alt="">
+                                    <img src="images/blog/top-02.jpg" alt="">
                                 </div>
                                 <div class="meta">
                                     <div>
@@ -607,7 +949,7 @@
                         <div class="col-sm-4 to_animate">
                             <div class="recent-post">
                                 <div class="post-img">
-                                    <img src="{{ asset('frontend/images/blog/top-03.jpg') }}" alt="">
+                                    <img src="images/blog/top-03.jpg" alt="">
                                 </div>
                                 <div class="meta">
                                     <div>
@@ -637,7 +979,7 @@
                             <div class="item">
                                 <div>
                                     <a title="" href="#">
-                                        <img src="{{ asset('frontend/images/partner1.png') }}" alt="">
+                                        <img src="images/partner1.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -645,7 +987,7 @@
                             <div class="item">
                                 <div>
                                     <a title="" href="#">
-                                        <img src="{{ asset('frontend/images/partner2.png') }}" alt="">
+                                        <img src="images/partner2.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -653,7 +995,7 @@
                             <div class="item">
                                 <div>
                                     <a title="" href="#">
-                                        <img src="{{ asset('frontend/images/partner3.png') }}" alt="">
+                                        <img src="images/partner3.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -661,7 +1003,7 @@
                             <div class="item">
                                 <div>
                                     <a title="" href="#">
-                                        <img src="{{ asset('frontend/images/partner4.png') }}" alt="">
+                                        <img src="images/partner4.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -669,7 +1011,7 @@
                             <div class="item">
                                 <div>
                                     <a title="" href="#">
-                                        <img src="{{ asset('frontend/images/partner5.png') }}" alt="">
+                                        <img src="images/partner5.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -677,7 +1019,7 @@
                             <div class="item">
                                 <div>
                                     <a title="" href="#">
-                                        <img src="{{ asset('frontend/images/partner6.png') }}" alt="">
+                                        <img src="images/partner6.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -686,5 +1028,96 @@
                     </div>
                 </div>
             </section>
-        
-@stop
+            <footer class="page_footer ds ms section_padding_top_50 section_padding_bottom_100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 to_animate" data-animation="scaleAppear">
+                            <div>
+                                <p>
+                                    <img src="images/logo.png" alt="">
+                                </p>
+                                <p>At vero eos et accusam et justo duo dolores eta rebum. Stet clita kasd gubergren, no sea takimata sanctus lorem ipsum dolor.</p>
+                                <div class="soc-icons text-center text-md-left">
+                                    <a href="#" class="social-icon bg-icon soc-facebook"></a>
+                                    <a href="#" class="social-icon bg-icon soc-twitter"></a>
+                                    <a href="#" class="social-icon bg-icon soc-google"></a>
+                                    <a href="#" class="social-icon bg-icon soc-skype"></a>
+                                    <a href="#" class="social-icon bg-icon soc-youtube"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 to_animate padding-top-60" data-animation="scaleAppear">
+                            <div class="">
+
+                                <h3 class="widget-title">Contact Links</h3>
+                                <div>
+                                    <ul class="footer-menu-links">
+                                        <li class="">
+                                            <p>
+                                                <i class="rt-icon2-location highlight2 fontsize_24"></i>204 Woodland, San Diego, CA, 95814</p>
+                                        </li>
+                                        <li class="">
+                                            <p>
+                                                <i class="rt-icon2-phone highlight2 fontsize_24"></i>(800) 253-76-84</p>
+                                        </li>
+                                        <li class="">
+                                            <p>
+                                                <i class="fa fa-globe highlight2 fontsize_24"></i>
+                                                <a href="mailto:phoenix@mail.com">phoenix@mail.com</a>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-3 col-sm-12 to_animate padding-top-60" data-animation="scaleAppear">
+                            <div class="testimonial-footer">
+
+                                <h3 class="widget-title">Testimonials</h3>
+                                <div>
+                                    <p class="quote">
+                                        <span>Yesterday I came to visit my great-grandfather's grave (O.C). You looked up the location, but also Diane took us there. In addition, she noted needed repairs to his...</span>
+                                    </p>
+                                    <span>- Michael Owens</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 to_animate padding-top-60" data-animation="scaleAppear">
+                            <div class="widget widget_flickr footer">
+
+                                <h3 class="widget-title">Flickr Gallery</h3>
+                                <ul id="flickr"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <section class="page_copyright ls table_section section_padding_25">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <p>&copy; Copyright 2016 by
+                                <a href="#">MWTemplates</a>. All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- eof #box_wrapper -->
+    </div>
+    <!-- eof #canvas -->
+
+    <script src="js/compressed.js"></script>
+    <script src="js/main.js"></script>
+    
+
+</body>
+
+
+<!-- Mirrored from webdesign-finder.com/html/phoenix/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Nov 2016 03:48:05 GMT -->
+</html>
