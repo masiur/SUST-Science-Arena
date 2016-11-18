@@ -2,7 +2,7 @@
 @section('content')
     <div class="wraper container-fluid">
 
-        @include('includes.alert')
+        @include('admin.includes.alert')
         <!-- <div class="page-title"> 
             <h3 class="title">{!!$title!!}</h3> 
         </div> -->

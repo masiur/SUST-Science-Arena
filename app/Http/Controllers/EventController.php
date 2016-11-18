@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Event;
+use Input;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -17,6 +18,18 @@ class EventController extends Controller
     public function index()
     {
         //
+
+
+                   $events = Event::all() ;
+
+
+           
+           return view('event.index')
+                ->with('title', 'List of All Events')
+                ->with('eventCounter', 1)
+                ->with('events', $events);
+
+
     }
 
     /**
@@ -26,7 +39,9 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+                return view('admin.event.create')
+                ->with('title', 'Add a Event');
+
     }
 
     /**
@@ -38,6 +53,24 @@ class EventController extends Controller
     public function store(Request $request)
     {
         //
+
+                    
+
+              $event = new Event();
+
+              $event->name =    Input::get('name');
+              $event->date =    Input::get('date');
+              $event->description = Input::get('details');
+              $event->place =    Input::get('place');
+
+             $event->save();
+
+             return redirect()->route('event.index')->with('success', 'Event Added Successfuly.');
+
+
+
+
+
     }
 
     /**
