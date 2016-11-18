@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\User;
 use Validator;
 use Auth;
 use Hash;
@@ -143,7 +143,7 @@ class AuthController extends Controller
     }
 
     public function dashboard(){
-        return view('dashboard')
+        return view('admin.dashboard')
                     ->with('title','Dashboard')->with('user', Auth::user());
         // return 'Dashboard';
     }
