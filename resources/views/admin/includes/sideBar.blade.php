@@ -41,6 +41,17 @@
                         </ul>
                     </li>
 
+                   <li class="has-submenu"><a href="#"><i class="ion-stats-bars"></i> <span class="nav-label">Event</span><span class="badge bg-purple">1</span></a>
+                        <ul class="list-unstyled">
+                            <li><a href="{!! route('event.create') !!}">Create</a></li>
+                            <li><a href="#">Index</a></li>
+
+                        </ul>
+                    </li>
+
+
+
+
 
                     <li class="has-submenu"><a href="#"><i class="ion-email"></i> <span class="nav-label">Mail</span></a>
                         <ul class="list-unstyled">
