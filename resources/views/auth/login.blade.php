@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('includes.header')
+@include('admin.includes.header')
 
 <body>
 
@@ -11,7 +11,7 @@
             <h3 class="text-center"><strong>InfancyIT Velonic(5.1)</strong> </h3>
         </div>
         
-             @include('includes.alert')
+             @include('admin.includes.alert')
 
             {!! Form::open(array('route' => 'login', 'method' => 'post', 'class' => 'form-horizontal m-t-40')) !!}
             <div class="form-group ">

@@ -4,7 +4,7 @@
                         <div class="col-md-3 col-sm-6 to_animate" data-animation="scaleAppear">
                             <div>
                                 <p>
-                                    <img src="images/logo.png" alt="">
+                                    <img src="{{ asset('frontend/images/logo.jpg') }}" alt="">
                                 </p>
                                 <p>At vero eos et accusam et justo duo dolores eta rebum. Stet clita kasd gubergren, no sea takimata sanctus lorem ipsum dolor.</p>
                                 <div class="soc-icons text-center text-md-left">
@@ -24,7 +24,7 @@
                                     <ul class="footer-menu-links">
                                         <li class="">
                                             <p>
-                                                <i class="rt-icon2-location highlight2 fontsize_24"></i>204 Woodland, San Diego, CA, 95814</p>
+                                                <i class="rt-icon2-location highlight2 fontsize_24"></i>SUST, Sylhet-3114</p>
                                         </li>
                                         <li class="">
                                             <p>
@@ -33,7 +33,7 @@
                                         <li class="">
                                             <p>
                                                 <i class="fa fa-globe highlight2 fontsize_24"></i>
-                                                <a href="mailto:phoenix@mail.com">phoenix@mail.com</a>
+                                                <a href="mailto:ssa.sust@gmail.com">ssa.sust@gmail.com</a>
                                             </p>
                                         </li>
                                     </ul>
