@@ -3,7 +3,7 @@
 
 
 
-@include('includes.header')
+@include('admin.includes.header')
 
 
 
@@ -12,10 +12,10 @@
 <div class="wrapper-page animated fadeInDown">
     <div class="panel panel-color panel-primary">
         <div class="panel-heading">
-            <h3 class="text-center m-t-10"> Sign Up || InfancyIT</h3>
+            <h3 class="text-center m-t-10"> Sign Up || SSA</h3>
         </div>
         <br>
-        @include('includes.alert')
+        @include('admin.includes.alert')
 
         {!! Form::open(array('route' => 'postRegister', 'method' => 'post', 'class' => 'form-signin')) !!}
 

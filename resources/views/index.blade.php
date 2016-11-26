@@ -30,7 +30,7 @@
                             <!-- eof .container -->
                         </li>
                         <li>
-                            <img src="{{ asset('frontend/images/slide02.jpg') }} alt="">
+                            <img src="{{ asset('frontend/images/slide02.jpg') }}" alt="">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -84,7 +84,7 @@
                 <!-- eof flexslider -->
             </section>
 
-            <section class="ls ms services-section">
+           <!--  <section class="ls ms services-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4 margin_0">
@@ -123,7 +123,7 @@
 
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section class="ls ls section_padding_top_100 section_padding_bottom_100">
                 <div class="container">
@@ -136,17 +136,17 @@
                                     <ul class="nav" role="tablist">
                                         <li class="active">
                                             <a href="#vertical-tab1" role="tab" data-toggle="tab">
-                                                <i class="fa fa-circle-thin"></i> When Someone Dies
+                                                <i class="fa fa-circle-thin"></i> What We DO
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#vertical-tab2" role="tab" data-toggle="tab">
-                                                <i class="fa fa-circle-thin"></i> Eveniet
+                                                <i class="fa fa-circle-thin"></i> Regular Works
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#vertical-tab3" role="tab" data-toggle="tab">
-                                                <i class="fa fa-circle-thin"></i> Dolorum
+                                                <i class="fa fa-circle-thin"></i> Upcoming Events
                                             </a>
                                         </li>
                                         <li>
@@ -208,356 +208,14 @@
                 </div>
             </section>
 
-            <section class="ls parallax section_padding_100 dark_testimonials_section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 to_animate">
-                            <div class="row padding-bottom-55">
-                                <div class="col-sm-8 col-md-9">
-                                    <h2 class="text-left margin_0">Recent Obituaries</h2>
-                                </div>
-                                <div class="col-sm-4 col-md-3 widget widget_search">
-                                    <form method="get" class="searchform form-inline" action="http://webdesign-finder.com/">
-                                        <div class="form-group">
-                                            <input id="widget-search-2" type="text" value="" name="search" class="form-control" placeholder="Search Obituaries">
-                                        </div>
-                                        <button type="submit" class="theme_button">Search</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="owl-carousel" data-dots="false" data-nav="true" data-items="3" data-autoplay="true" data-autoplaySpeed="2300" data-responsive-lg="3" data-responsive-md="2" data-responsive-sm="2" data-responsive-xs="1">
-
-                                <div>
-                                    <div class="testimonials">
-                                        <div>
-                                            <img src="{{ asset('frontend/images/orb/01.jpg') }}" alt="">
-                                        </div>
-                                        <div>
-                                            <h4>Robert
-                                                <br>
-                                                <span>Donowan</span>
-                                            </h4>
-                                            <span>May 8, 2016</span>
-                                            <br>
-                                            <p>Share / Send Flowers</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- .item -->
-
-                                <div>
-                                    <div class="testimonials">
-                                        <div>
-                                            <img src="{{ asset('frontend/images/orb/02.jpg') }}" alt="">
-                                        </div>
-                                        <div>
-                                            <h4>Jason
-                                                <br>
-                                                <span>Anderson</span>
-                                            </h4>
-                                            <span>May 7, 2016</span>
-                                            <br>
-                                            <p>Share / Send Flowers</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- .item -->
-
-                                <div>
-                                    <div class="testimonials">
-                                        <div>
-                                            <img src="{{ asset('frontend/images/orb/03.jpg') }}" alt="">
-                                        </div>
-                                        <div>
-                                            <h4>Elsabeth
-                                                <br>
-                                                <span>Stonem</span>
-                                            </h4>
-                                            <span>May 4, 2016</span>
-                                            <br>
-                                            <p>Share / Send Flowers</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- .item -->
-
-                                <div>
-                                    <div class="testimonials">
-                                        <div>
-                                            <img src="{{ asset('frontend/images/orb/01.jpg') }}" alt="">
-                                        </div>
-                                        <div>
-                                            <h4>Robert
-                                                <br>
-                                                <span>Donowan</span>
-                                            </h4>
-                                            <span>May 8, 2016</span>
-                                            <br>
-                                            <p>Share / Send Flowers</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- .item -->
-
-                                <div>
-                                    <div class="testimonials">
-                                        <div>
-                                            <img src="{{ asset('frontend/images/orb/02.jpg') }}" alt="">
-                                        </div>
-                                        <div>
-                                            <h4>Jason
-                                                <br>
-                                                <span>Anderson</span>
-                                            </h4>
-                                            <span>May 7, 2016</span>
-                                            <br>
-                                            <p>Share / Send Flowers</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- .item -->
-
-                                <div>
-                                    <div class="testimonials">
-                                        <div>
-                                            <img src="{{ asset('frontend/images/orb/03.jpg') }}" alt="">
-                                        </div>
-                                        <div>
-                                            <h4>Elsabeth
-                                                <br>
-                                                <span>Stonem</span>
-                                            </h4>
-                                            <span>May 4, 2016</span>
-                                            <br>
-                                            <p>Share / Send Flowers</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- .item -->
-
-                                <div>
-                                    <div class="testimonials">
-                                        <div>
-                                            <img src="{{ asset('frontend/images/orb/01.jpg') }}" alt="">
-                                        </div>
-                                        <div>
-                                            <h4>Robert
-                                                <br>
-                                                <span>Donowan</span>
-                                            </h4>
-                                            <span>May 8, 2016</span>
-                                            <br>
-                                            <p>Share / Send Flowers</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- .item -->
-
-                                <div>
-                                    <div class="testimonials">
-                                        <div>
-                                            <img src="{{ asset('frontend/images/orb/02.jpg') }}" alt="">
-                                        </div>
-                                        <div>
-                                            <h4>Jason
-                                                <br>
-                                                <span>Anderson</span>
-                                            </h4>
-                                            <span>May 7, 2016</span>
-                                            <br>
-                                            <p>Share / Send Flowers</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- .item -->
-
-                                <div>
-                                    <div class="testimonials">
-                                        <div>
-                                            <img src="{{ asset('frontend/images/orb/03.jpg') }}" alt="">
-                                        </div>
-                                        <div>
-                                            <h4>Elsabeth
-                                                <br>
-                                                <span>Stonem</span>
-                                            </h4>
-                                            <span>May 4, 2016</span>
-                                            <br>
-                                            <p>Share / Send Flowers</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- .item -->
-
-
-                            </div>
-                            <!-- .owl-carousel -->
-                        </div>
-                        <!-- .col- -->
-                    </div>
-                    <!-- .row -->
-                </div>
-            </section>
-
-            <section class="ls ms section_padding_top_100 section_padding_bottom_100">
-                <div class="container">
-
-                    <div class="row">
-                        <div class="col-sm-12 section-heading text-center">
-                            <h3>Phoenix</h3>
-                            <h2>Pricing Table</h2>
-
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-12 col-md-4 to_animate" data-animation="pullUp">
-                            <ul class="price-table style2">
-                                <li class="plan-name">
-                                    <h4>Cremation Only</h4>
-                                    <span>& 2999</span>
-                                </li>
-
-                                <li class="features-list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Services of Director & Staff</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Initial Transfer of Deceased</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Process Dressing & Cosmetizing</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Cremation Process</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Private Family Goodbye</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="call-to-action">
-                                    <a href="#" class="theme_button color1">Order Cremation</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="col-sm-12 col-md-4 to_animate" data-animation="pullDown">
-                            <ul class="price-table style2">
-                                <li class="plan-name colored-li">
-                                    <h4>Deluxe Cremation</h4>
-                                    <span>& 5499</span>
-                                </li>
-                                <li class="features-list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Services of Director & Staff</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Initial Transfer of Deceased</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Embalming Service</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Dressing & Cosmetizing</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Flower Transportation</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="call-to-action">
-                                    <a href="#" class="theme_button color1">Order Service</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="col-sm-12 col-md-4 to_animate" data-animation="pullUp">
-                            <ul class="price-table style2">
-                                <li class="plan-name">
-                                    <h4>Traditional Funeral</h4>
-                                    <span>& 3999</span>
-                                </li>
-                                <li class="features-list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Funeral Transport Service</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Funeral Dressing Process</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Cosmetizing Funeral Flowers</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Records and Goodbye Family Car</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Dressing & Cosmetizing</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="call-to-action">
-                                    <a href="#" class="theme_button color1">Order Funeral</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <section class="ls parallax color-bg section_padding_top_100 section_padding_bottom_100 newsletter_section">
-                <div class="container">
-
-                    <div class="row">
-
-                        <div class="col-lg-12 to_animate" data-animation="expandOpen">
-                            <div class="text-center">
-                                <h3>365 days</h3>
-                                <h2>Of Affirmation</h2>
-                                <p>Sign up for our daily email affirmations by entering your information below.</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6 col-sm-push-3">
-
-                                    <form class="contact-form columns_padding_5" method="post" action="http://webdesign-finder.com/">
-                                        <div class="col-sm-12 col-md-6">
-                                            <p class="contact-form-name">
-                                                <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Full Name">
-                                            </p>
-                                        </div>
-
-                                        <div class="col-sm-12 col-md-6">
-                                            <p class="contact-form-email">
-                                                <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email">
-                                            </p>
-                                        </div>
-
-                                        <div class="col-sm-12 text-center">
-                                            <button type="submit" id="contact_form_submit" name="contact_submit" class="theme_button inverse3">Subscribe</button>
-                                        </div>
-                                    </form>
-
-                                </div>
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
-                </div>
-            </section>
+         
 
             <section class="ls section_padding_top_100 section_padding_bottom_100">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 section-heading text-center">
-                            <h3>Phoenix</h3>
-                            <h2>Recent News</h2>
+                            <h3>SUST Science Arena</h3>
+                            <h2>Recent Articles</h2>
 
                         </div>
                     </div>
@@ -629,7 +287,7 @@
                     </div>
                 </div>
             </section>
-            <section class="partners-block">
+            <!-- <section class="partners-block">
                 <div class="container">
                     <div class="row">
                         <div class="owl-carousel partners-carousel owl-theme owl-loaded" data-dots="false" data-items="6" data-responsive-lg="6" data-responsive-md="6" data-responsive-sm="4" data-responsive-xs="2" data-margin="10">
@@ -641,7 +299,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <!-- .item -->
+                       
                             <div class="item">
                                 <div>
                                     <a title="" href="#">
@@ -649,7 +307,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <!-- .item -->
+                    
                             <div class="item">
                                 <div>
                                     <a title="" href="#">
@@ -657,7 +315,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <!-- .item -->
+                 
                             <div class="item">
                                 <div>
                                     <a title="" href="#">
@@ -665,7 +323,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <!-- .item -->
+                     
                             <div class="item">
                                 <div>
                                     <a title="" href="#">
@@ -673,7 +331,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <!-- .item -->
+                      
                             <div class="item">
                                 <div>
                                     <a title="" href="#">
@@ -681,10 +339,10 @@
                                     </a>
                                 </div>
                             </div>
-                            <!-- .item -->
+                      
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
         
 @stop

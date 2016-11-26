@@ -1,46 +1,23 @@
-<div class="main-page-header">
-				<div class="logo-section">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="text-center main-logo">
-									<div class="float-left buttons">
-										<a class="theme_button inverse2" href="#">
-											<i class="rt-icon2-phone6"></i>
-										</a>
-										<span>Science In Life</span>
-									</div>
-									<a href="{{ route('home') }}">
-										<img src="{{ asset('frontend/images/logo.png') }}" alt="">
-									</a>
-									<div class="float-right buttons">
-										<span class="logo-right-text">Science For Life</span>
-										<a class="img-button-top" href="#">
-											<img src="{{ asset('frontend/images/img-button-top.png') }}" alt="">
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<header class="page_header header_white floating_logo columns_padding_0 table_section">
+
+				<header class="page_header header_white floating_logo columns_padding_0 table_section affix fixed">
 					<div class="container-fluid">
 						<a class="menu-line-logo" href="{{ route('home') }}">
-							<img src="{{ asset('frontend/images/logo-sm.png') }}" alt="">
+							<img src="{{ asset('frontend/images/logo.jpg') }}" alt="" width="120px" height="110px">
 						</a>
+
 						<div class="row">
-							<div class="col-lg-12 text-center">
+							<div class="col-lg-12 text-right">
 								<!-- main nav start -->
 								<nav class="mainmenu_wrapper">
 									<ul class="mainmenu nav sf-menu">
+									
 										<li>
 											<a href="{{ route('home') }}">Home</a>
 										</li>
 
 										<!-- Pages -->
 										<li>
-											<a href="about.html">Pages</a>
+											<a href="#">Pages</a>
 											<ul>
 												<!-- features -->
 												<li>
@@ -111,10 +88,10 @@
 												<!-- eof breadcrumbs -->
 
 												<li>
-													<a href="about.html">About</a>
+													<a href="#">About</a>
 													<ul>
 														<li>
-															<a href="about.html">About</a>
+															<a href="#">About</a>
 														</li>
 														<li>
 															<a href="about2.html">About 2</a>
@@ -122,32 +99,7 @@
 													</ul>
 												</li>
 
-												<!-- blog -->
-												<li>
-													<a href="blog-right.html">Blog</a>
-													<ul>
-
-														<li>
-															<a href="blog-right.html">Right Sidebar</a>
-														</li>
-														<li>
-															<a href="blog-left.html">Left Sidebar</a>
-														</li>
-
-														<li>
-															<a href="blog-single-right.html">Post</a>
-															<ul>
-																<li>
-																	<a href="blog-single-right.html">Right Sidebar</a>
-																</li>
-																<li>
-																	<a href="blog-single-left.html">Left Sidebar</a>
-																</li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-												<!-- eof blog -->
+												
 
 												<li>
 													<a href="plan.html">Plan</a>
@@ -199,50 +151,109 @@
 
 										<!-- Cemetery -->
 										<li>
-											<a href="gallery-regular.html">Gellery</a>
+											<a href="">Gallery</a>
 										</li>
 										<!-- eof Cemetery -->
 
 										<!-- Cemetery -->
 										<li>
-											<a href="about.html">Memorials</a>
+											<a href="#">Events</a>
 										</li>
 										<!-- eof Cemetery -->
 
 										<!-- contacts -->
 										<li>
-											<a href="contact.html">Contacts</a>
+											<a href="">Members</a>
+											<ul>
+												<li>
+													<a href="">Executives</a>
+												</li>
+												<li>
+													<a href="">General</a>
+												</li>
+											</ul>
+											
 
 										</li>
 										<!-- eof contacts -->
 
+										<!-- blog -->
+										<li>
+											<a href="">Blog</a>
+											<ul>
+
+												<li>
+													<a href="blog-right.html">Right Sidebar</a>
+												</li>
+												<li>
+													<a href="blog-left.html">Left Sidebar</a>
+												</li>
+
+												<li>
+													<a href="blog-single-right.html">Post</a>
+													<ul>
+														<li>
+															<a href="blog-single-right.html">Right Sidebar</a>
+														</li>
+														<li>
+															<a href="blog-single-left.html">Left Sidebar</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<!-- eof blog -->
+
 										<!-- shop -->
 										<li>
-											<a href="shop-right.html">Gifts & Flowers</a>
+											<a href="shop-right.html">Contact Us</a>
 										</li>
 										<!-- eof shop -->
 
 										<!-- donate -->
-										<li class="active">
-											<a href="donate.html">Donate</a>
+										@if(!auth()->check())
+										<li class="{{ Menu::isActiveRoute('login') }}">
+											<a href="{{ route('login') }}">Sign In</a>
 
 										</li>
-										<!-- eof donate -->
+										
+
+										<li class="{{ Menu::isActiveRoute('register') }}">
+											<a href="{{ route('register') }}">Sign Up</a>
+										</li>
+										@else
+										<li class="{{ Menu::isActiveRoute('profile') }}">
+											<a href="{{ route('profile') }}">Profile</a>
+
+										</li>
+										@endif
+
+										
 
 									</ul>
+
+									
 								</nav>
 								<!-- eof main nav -->
 								<span class="toggle_menu">
 									<span></span>
 								</span>
+
+
 							</div>
 						</div>
-						<div class="float-right menu-line-button buttons">
-							<span>(800) 253-76-84</span>
-							<a class="theme_button inverse2" href="#">
-								<i class="rt-icon2-phone6"></i>
-							</a>
-						</div>
+						<!-- <div class="float-right menu-line-button buttons">
+							<nav class="mainmenu_wrapper">
+								<ul class="mainmenu nav sf-menu">
+									<li class="{{ Menu::isActiveRoute('login') }}">
+										<a href="{{ route('login') }}">Log In</a>
+									</li>
+									<li class="{{ Menu::isActiveRoute('register') }}">
+										<a href="{{ route('register') }}">Sign Up</a>
+									</li>
+								</ul>
+							</nav>
+						</div> -->
 					</div>
 				</header>
-			</div>
+			<!-- </div> -->
