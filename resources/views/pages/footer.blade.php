@@ -60,15 +60,15 @@
                         <div class="footer-col">
                             <h3>Featured Work</h3>
                             <ul class="list-inline f2-work">
-                                <li><a href="portfolio-single.html"><img src="img/img-1.jpg" class="img-responsive" alt=""></a></li>
-                                <li><a href="portfolio-single.html"><img src="img/img-2.jpg" class="img-responsive" alt=""></a></li>
-                                <li><a href="portfolio-single.html"><img src="img/img-3.jpg" class="img-responsive" alt=""></a></li>
-                                <li><a href="portfolio-single.html"><img src="img/img-4.jpg" class="img-responsive" alt=""></a></li>
-                                <li><a href="portfolio-single.html"><img src="img/img-5.jpg" class="img-responsive" alt=""></a></li>
-                                <li><a href="portfolio-single.html"><img src="img/img-6.jpg" class="img-responsive" alt=""></a></li>
-                                <li><a href="portfolio-single.html"><img src="img/img-7.jpg" class="img-responsive" alt=""></a></li>
-                                <li><a href="portfolio-single.html"><img src="img/img-8.jpg" class="img-responsive" alt=""></a></li>
-                                <li><a href="portfolio-single.html"><img src="img/img-9.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="portfolio-single.html"><img src="user/img/img-1.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="portfolio-single.html"><img src="user/img/img-2.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="portfolio-single.html"><img src="user/img/img-3.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="portfolio-single.html"><img src="user/img/img-4.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="portfolio-single.html"><img src="user/img/img-5.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="portfolio-single.html"><img src="user/img/img-6.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="portfolio-single.html"><img src="user/img/img-7.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="portfolio-single.html"><img src="user/img/img-8.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="portfolio-single.html"><img src="user/img/img-9.jpg" class="img-responsive" alt=""></a></li>
                             </ul>
                         </div>                        
                     </div><!--footer col-->

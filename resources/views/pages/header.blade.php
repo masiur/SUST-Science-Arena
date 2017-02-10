@@ -5,23 +5,23 @@
         <title>assan - Professional theme</title>
 
         <!-- Bootstrap -->
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="user/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <!-- font awesome for icons -->
-        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="user/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <!-- flex slider css -->
-        <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="user/css/flexslider.css" rel="stylesheet" type="text/css" media="screen">
         <!-- animated css  -->
-        <link href="css/animate.css" rel="stylesheet" type="text/css" media="screen"> 
+        <link href="user/css/animate.css" rel="stylesheet" type="text/css" media="screen"> 
         <!--owl carousel css-->
-        <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="screen">
-        <link href="css/owl.theme.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="user/css/owl.carousel.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="user/css/owl.theme.css" rel="stylesheet" type="text/css" media="screen">
         <!--mega menu -->
-        <link href="css/yamm.css" rel="stylesheet" type="text/css">
+        <link href="user/css/yamm.css" rel="stylesheet" type="text/css">
         <!--cube css-->
-        <link href="cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css">
-         <link href="video-background/background.css" rel="stylesheet" type="text/css">
+        <link href="user/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css">
+         <link href="user/video-background/background.css" rel="stylesheet" type="text/css">
         <!-- custom css-->
-        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="user/css/style.css" rel="stylesheet" type="text/css" media="screen">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
