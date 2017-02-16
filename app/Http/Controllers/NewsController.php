@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Event;
-use Input;
 use App\Http\Requests;
+use App\Models\News;
+use Input;
 use App\Http\Controllers\Controller;
 
-class EventController extends Controller
+class NewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,13 +17,14 @@ class EventController extends Controller
      */
     public function index()
     {
-
-           $events = Event::all() ;
+        
+           $news = News::all() ;
            
-           return view('admin.event.list')
-                ->with('title', 'List of All Events')
-                ->with('eventCounter', 1)
-                ->with('events', $events);
+           return view('admin.news.list')
+                ->with('title', 'List of All News')
+                ->with('newsCounter', 1)
+                ->with('news', $news);
+   
     }
 
     /**
@@ -33,9 +34,9 @@ class EventController extends Controller
      */
     public function create()
     {
-                return view('admin.event.create')
-                ->with('title', 'Add a Event');
 
+         return view('admin.news.create')
+            ->with('title', 'Add a News');   
     }
 
     /**
@@ -46,25 +47,15 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+              $news = new News();
 
-                    
+              $news->title =    Input::get('title');
+              $news->detail =    Input::get('detail');
+              $news->url = Input::get('details');
 
-              $event = new Event();
+              $news->save();
 
-              $event->name =    Input::get('name');
-              $event->date =    Input::get('date');
-              $event->description = Input::get('details');
-              $event->place =    Input::get('place');
-
-             $event->save();
-
-             return redirect()->route('event.list')->with('success', 'Event Added Successfuly.');
-
-
-
-
-
+             return redirect()->route('news.list')->with('success', 'News Added Successfuly.');
     }
 
     /**
