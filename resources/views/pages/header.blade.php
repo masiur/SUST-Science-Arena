@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    {!! Html::style('frontend/css/bootstrap.min.css') !!}
+    {!! Html::style('frontend/bootstrap/css/bootstrap.min.css') !!}
 
     {!! Html::style('frontend/css/bootstrap.min.css') !!}
     {!! Html::style('frontend/css/main.css', ['id' => 'color-switcher-link']) !!}
