@@ -1,29 +1,17 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en">
+
 @include('pages.header')
 
 <body>
-    <!-- <div class="preloader">
-        <div class="preloader_image"></div>
-    </div> -->
 
-    <!-- wrappers for visual page editor and boxed version of template -->
-    <div id="canvas">
-        <div id="box_wrapper">
-            {{-- @include('pages.topline') --}}      	
-        	@include('pages.navBar')
+@include('pages.topline')      	
+@include('pages.navBar')
 
-        	@yield('content')
+@yield('content')
 
-        	@include('pages.footer')
-        	@include('pages.copyright')
-
-        </div>
-        <!-- eof #box_wrapper -->
-    </div>
-    <!-- eof #canvas -->
-
-
+@include('pages.footer')
+        	
 @include('pages.script')
 
 </body>

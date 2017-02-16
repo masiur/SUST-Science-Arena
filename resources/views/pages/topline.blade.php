@@ -1,4 +1,4 @@
-        <div class="top-bar-dark">            
+<div class="top-bar-dark">            
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4 hidden-xs">
@@ -15,25 +15,25 @@
                                 <i class="fa fa-google-plus"></i>
                                 <i class="fa fa-google-plus"></i>
                             </a>
-                            <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-linkedin">
+                            <!-- <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-linkedin">
                                 <i class="fa fa-linkedin"></i>
                                 <i class="fa fa-linkedin"></i>
-                            </a>
+                            </a> -->
                             <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-google-plus">
                                 <i class="fa fa-youtube"></i>
                                 <i class="fa fa-youtube"></i>
                             </a>
-                            <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-dribbble">
+                            <!-- <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-dribbble">
                                 <i class="fa fa-dribbble"></i>
                                 <i class="fa fa-dribbble"></i>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                     <div class="col-sm-8 text-right">
                         <ul class="list-inline top-dark-right">                      
-                            <li class="hidden-sm hidden-xs"><i class="fa fa-envelope"></i> Support@mail.com</li>
+                            <li class="hidden-sm hidden-xs"><i class="fa fa-envelope"></i> ssa.sust@gmail.com</li>
                             <li class="hidden-sm hidden-xs"><i class="fa fa-phone"></i> +01 1800 453 7678</li>
-                            <li><a href="#"><i class="fa fa-lock"></i> Login</a></li>
+                            <li><a href="{{ route('login') }}"><i class="fa fa-lock"></i> Login</a></li>
                             <li><a href="#"><i class="fa fa-user"></i> Sign Up</a></li>
                             <li><a class="topbar-icons" href="#"><span><i class="fa fa-search top-search"></i></span></a></li>
                         </ul>
@@ -48,4 +48,3 @@
                 </div>
             </div>
         </div><!--top-bar-dark end here-->
-     

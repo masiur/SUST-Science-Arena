@@ -37,7 +37,7 @@ Route::group(array('middleware' => 'auth'), function()
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function()
 {
-	Route::get('dashboard', array('as' => 'dashboard', 'uses' => 'Auth\AuthController@dashboard'));
+	// Route::get('dashboard', array('as' => 'dashboard', 'uses' => 'Auth\AuthController@dashboard'));
 
 	// Event CRUD by Mithun start
    Route::get('event',['as' => 'event.index', 'uses' => 'EventController@index']);
