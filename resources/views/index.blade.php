@@ -1,348 +1,898 @@
 @extends('layouts.frontend')
     @section('content')
         @include('admin.includes.alert')
-            <section class="intro_section page_mainslider ds">
-                <div class="flexslider">
-                    <ul class="slides">
-                        <li>
-                            <img src="{{ asset('frontend/images/slide01.jpg') }}" alt="">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="slide_description_wrapper text-center">
-                                            <div class="slide_description">
-                                                <div class="intro-layer" data-animation="scaleAppear">
-                                                    <h3 class="topmargin_40">
-                                                        Planning Ahead
-                                                    </h3>
-                                                    <h4 class="text-uppercase">can make all the difference</h4>
-                                                    <a class="theme_button inverse" href="#">Our Services</a>
-                                                </div>
-                                            </div>
-                                            <!-- eof .slide_description -->
-                                        </div>
-                                        <!-- eof .slide_description_wrapper -->
-                                    </div>
-                                    <!-- eof .col-* -->
-                                </div>
-                                <!-- eof .row -->
-                            </div>
-                            <!-- eof .container -->
-                        </li>
-                        <li>
-                            <img src="{{ asset('frontend/images/slide02.jpg') }}" alt="">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="slide_description_wrapper text-center">
-                                            <div class="slide_description">
-                                                <div class="intro-layer" data-animation="scaleAppear">
-                                                    <h3 class="topmargin_40">
-                                                        A Family Tradition
-                                                    </h3>
-                                                    <h4 class="text-uppercase">For Over 40 Years</h4>
-                                                    <a class="theme_button inverse" href="#">Know More</a>
-                                                </div>
-                                            </div>
-                                            <!-- eof .slide_description -->
-                                        </div>
-                                        <!-- eof .slide_description_wrapper -->
-                                    </div>
-                                    <!-- eof .col-* -->
-                                </div>
-                                <!-- eof .row -->
-                            </div>
-                            <!-- eof .container -->
-                        </li>
-                        <li>
-                            <img src="{{ asset('frontend/images/slide03.jpg') }}" alt="">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="slide_description_wrapper text-center">
-                                            <div class="slide_description">
-                                                <div class="intro-layer" data-animation="scaleAppear">
-                                                    <h3 class="topmargin_40">
-                                                        Celebrating Life
-                                                    </h3>
-                                                    <h4 class="text-uppercase">One Family At A Time</h4>
-                                                    <a class="theme_button inverse" href="#">Get Started</a>
-                                                </div>
-                                            </div>
-                                            <!-- eof .slide_description -->
-                                        </div>
-                                        <!-- eof .slide_description_wrapper -->
-                                    </div>
-                                    <!-- eof .col-* -->
-                                </div>
-                                <!-- eof .row -->
-                            </div>
-                            <!-- eof .container -->
-                        </li>
-                    </ul>
-                </div>
-                <!-- eof flexslider -->
-            </section>
+            <!--rev slider start-->
+        <div class="fullwidthbanner">
+            <div class="tp-banner">
+                <ul>
+                    <!-- SLIDE -->
+                    <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Powerful Theme">
+                        <!-- MAIN IMAGE -->
+                        <img src="img/bg-3.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <div class="caption title-2 sft"
+                             data-x="50"
+                             data-y="160"
+                             data-speed="1000"
+                             data-start="1000"
+                             data-easing="easeOutExpo">
+                            Powerful multipurpose <br>
+                            Business Template
+                        </div>
 
-           <!--  <section class="ls ms services-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 margin_0">
-                            <div class="s-block s-block1 to_animate">
-                                <div>
-                                    <span>Funeral
-                                        <span>Services</span>
-                                    </span>
-                                </div>
-                                <img src="{{ asset('frontend/images/services-img1.png') }}" alt="">
-                                <a class="big" href="#">More Info</a>
-                            </div>
+
+
+                        <div class="caption text sfl"
+                             data-x="50"
+                             data-y="290"
+                             data-speed="1000"
+                             data-start="1800"
+                             data-easing="easeOutExpo">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <br>
+                            lectus. Cras porta nisl at tincidunt tincidunt.  
                         </div>
-                        <div class="col-sm-4 margin_0">
-                            <div class="s-block s-block2 to_animate">
-                                <div>
-                                    <span>Cremation
-                                        <span>Services</span>
-                                    </span>
-                                </div>
-                                <img src="{{ asset('frontend/images/services-img2.png') }}" alt="">
-                                <a class="big" href="#">More Services</a>
-                            </div>
+                        <div class="caption sfb rev-buttons tp-resizeme"
+                             data-x="50"
+                             data-y="360"
+                             data-speed="500"
+                             data-start="1800"
+                             data-easing="Sine.easeOut">
+                            <a href="#" class="btn btn-theme-bg btn-lg">Purchase Now</a>
                         </div>
-                        <div class="col-sm-4 margin_0">
-                            <div class="s-block s-block3 to_animate">
-                                <div>
-                                    <span>Cemetery
-                                        <span>Services</span>
-                                    </span>
-                                </div>
-                                <img src="{{ asset('frontend/images/services-img3.png') }}" alt="">
-                                <a class="big" href="#">Read More</a>
-                            </div>
+
+                        <div class="caption sfb rev-buttons tp-resizeme"
+                             data-x="250"
+                             data-y="360"
+                             data-speed="500"
+                             data-start="2100"
+                             data-easing="Sine.easeOut">
+                            <a href="#" class="btn border-white btn-lg">View features</a>
                         </div>
+
+                    </li>
+                    <!-- SLIDE -->
+                    <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Unique Theme">
+                        <!-- MAIN IMAGE -->
+                        <img src="img/showcase-4.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
+
+
+
+                        <div class="caption text-center-top sft"
+                             data-x="center"
+                             data-y="210"
+                             data-speed="1000"
+                             data-start="1400"
+                             data-easing="easeOutExpo">
+                            Perfect for startup 
+                        </div>
+
+                        <div class="caption text-center-btm sfr text-center"
+                             data-x="center"
+                             data-y="265"
+                             data-speed="1000"
+                             data-start="1600"
+                             data-easing="easeOutExpo">
+
+                            Assan is a creative multipurpose theme, you can use it for<br>  business, corporate, portfolio, shop events, personal and more...
+
+                        </div>
+                        <div class="caption sfb rev-buttons tp-resizeme"
+                             data-x="center"
+                             data-y="350"
+                             data-speed="500"
+                             data-start="1800"
+                             data-easing="Sine.easeOut">
+                            <a href="#" class="btn border-white btn-lg">View features</a>
+                        </div>
+                    </li>
+                    <!-- SLIDE -->
+                    <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Multipurpose">
+                        <!-- MAIN IMAGE -->
+                        <img src="img/bg-1.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <!-- LAYER NR. 1 -->
+                        <div class="caption left-tile-text sfr tp-resizeme"
+                             data-x="40"
+                             data-y="110" 
+                             data-speed="600"
+                             data-start="1200"
+                             data-end="9400"
+                             data-endspeed="600">Unlimited layouts
+                        </div>
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="caption medium_bg_darkblue sfl medium tp-resizeme"
+                             data-x="40"
+                             data-y="170" 
+                             data-speed="600"
+                             data-start="1600"
+                             data-end="9400"
+                             data-endspeed="600"><i class="fa fa-check"></i>
+                        </div>
+
+                        <!-- LAYER NR. 3 -->
+                        <div class="caption modern_big_redbg sfb medium tp-resizeme"
+                             data-x="90"
+                             data-y="170" 
+                             data-speed="600"
+                             data-start="1600"
+                             data-end="9400"
+                             data-endspeed="600">Fully Responsive
+                        </div>
+
+                        <!-- LAYER NR. 4 -->
+                        <div class="caption medium_bg_darkblue sfl medium tp-resizeme"
+                             data-x="40"
+                             data-y="220" 
+                             data-speed="600"
+                             data-start="1800"
+                             data-end="9400"
+                             data-endspeed="600"><i class="fa fa-check"></i>
+                        </div>
+
+                        <!-- LAYER NR. 5 -->
+                        <div class="caption modern_big_redbg sfb medium tp-resizeme"
+                             data-x="90"
+                             data-y="220" 
+                             data-speed="600"
+                             data-start="1800"
+                             data-end="9400"
+                             data-endspeed="600">210+ HTML5 Valid Pages
+                        </div>
+
+                        <!-- LAYER NR. 6 -->
+                        <div class="caption medium_bg_darkblue sfl medium tp-resizeme"
+                             data-x="40"
+                             data-y="270" 
+                             data-speed="600"
+                             data-start="2000"
+                             data-end="9400"
+                             data-endspeed="600"><i class="fa fa-check"></i>
+                        </div>
+
+                        <!-- LAYER NR. 7 -->
+                        <div class="caption modern_big_redbg sfb medium tp-resizeme"
+                             data-x="90"
+                             data-y="270" 
+                             data-speed="600"
+                             data-start="2000"
+                             data-end="9400"
+                             data-endspeed="600">Slider revolution
+                        </div>
+
+                        <!-- LAYER NR. 8 -->
+                        <div class="caption medium_bg_darkblue sfl medium tp-resizeme"
+                             data-x="40"
+                             data-y="320" 
+                             data-speed="600"
+                             data-start="2200"
+                             data-end="9400"
+                             data-endspeed="600"><i class="fa fa-check"></i>
+                        </div>
+
+                        <!-- LAYER NR. 9 -->
+                        <div class="caption modern_big_redbg sfb medium tp-resizeme"
+                             data-x="90"
+                             data-y="320" 
+                             data-speed="600"
+                             data-start="2200"
+                             data-end="9400"
+                             data-endspeed="600">Clean & Commented Code
+                        </div>
+
+                        <!-- LAYER NR. 10 -->
+                        <div class="caption modern_big_redbg sfb medium tp-resizeme"
+                             data-x="40"
+                             data-y="370" 
+                             data-speed="600"
+                             data-start="2400"
+                             data-end="9400"
+                             data-endspeed="600">And Much More...
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div><!--full width banner-->
+        <!--revolution end-->
+
+        <div class="divide60"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="center-heading">
+                        <h2>What <strong>we do</strong> </h2>
+                        <span class="center-line"></span>
+                        <p class="sub-text margin40">
+                            We want to present you a simple and functional template “ASSAN”. It is a powerful Multi-Purpose HTML 5 Template. Build whatever you like with this Template that looks effortlessly on-point in Business </p>
+                    </div>
+                </div>
+
+            </div><!--center heading end-->
+            <div class="divide50"></div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 margin30">
+                    <div class="colored-boxed green">
+                        <i class="pe-7s-magic-wand"></i>
+                        <h3>Free support & updates</h3>
+                        <span class="center-line"></span>
+                        <p>
+                            Nullam vulputate lorem ut leo. Sed volutpat. Etiam non pede. Nullam et mauris. 
+                        </p>
+                    </div>
+                </div><!--colored boxed col end-->
+                <div class="col-md-3 col-sm-6 margin30">
+                    <div class="colored-boxed dark">
+                        <i class="pe-7s-phone"></i>
+                        <h3>Ultra responsive</h3>
+                        <span class="center-line"></span>
+                        <p>
+                            Nullam vulputate lorem ut leo. Sed volutpat. Etiam non pede. Nullam et mauris. 
+                        </p>
+                    </div>
+                </div><!--colored boxed col end-->
+                <div class="col-md-3 col-sm-6 margin30">
+                    <div class="colored-boxed blue">
+                        <i class="pe-7s-like"></i>
+                        <h3>made with love</h3>
+                        <span class="center-line"></span>
+                        <p>
+                            Nullam vulputate lorem ut leo. Sed volutpat. Etiam non pede. Nullam et mauris. 
+                        </p>
+                    </div>
+                </div><!--colored boxed col end-->
+                <div class="col-md-3 col-sm-6 margin30">
+                    <div class="colored-boxed red">
+                        <i class="pe-7s-folder"></i>
+                        <h3>Premium plugins</h3>
+                        <span class="center-line"></span>
+                        <p>
+                            Nullam vulputate lorem ut leo. Sed volutpat. Etiam non pede. Nullam et mauris. 
+                        </p>
+                    </div>
+                </div><!--colored boxed col end-->
+            </div>
+        </div><!--services container-->
+
+        <div class="divide80"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="center-heading">
+                        <h2>Recent <strong>Events</strong></h2>
+                        <span class="center-line"></span>
+                    </div>
+                </div>                   
+            </div>
+        </div>
+        <div class="container">
+            <div class="cube-masonry">
+
+                <div id="filters-container" class="cbp-l-filters-alignCenter">
+                    <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
+                        All <div class="cbp-filter-counter"></div>
+                    </div>
+                    <div data-filter=".identity" class="cbp-filter-item">
+                        Identity <div class="cbp-filter-counter"></div>
+                    </div>
+                    <div data-filter=".web-design" class="cbp-filter-item">
+                        Web Design <div class="cbp-filter-counter"></div>
+                    </div>
+                    <div data-filter=".graphic" class="cbp-filter-item">
+                        Graphic <div class="cbp-filter-counter"></div>
+                    </div>
+                    <div data-filter=".graphic, .identity" class="cbp-filter-item">
+                        Web Design & Identity <div class="cbp-filter-counter"></div>
+                    </div>
+                </div>
+
+                <div id="masnory-container" class="cbp">
+                    <div class="cbp-item identity">
+                        <a class="cbp-caption cbp-lightbox" data-title="Easy Note<br>by Cosmin Capitanu" href="img/mas-1.jpg">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/mas-1.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Easy Note</div>
+                                        <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item web-design">
+                        <a class="cbp-caption cbp-lightbox" data-title="The Gang Blue<br>by Cosmin Capitanu"
+                           href="img/img-1.jpg">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/img-1.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">The Gang Blue</div>
+                                        <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item graphic identity">
+                        <a class="cbp-caption cbp-lightbox" data-title="Tiger<br>by Cosmin Capitanu"
+                           href="img/img-2.jpg">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/img-2.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Tiger</div>
+                                        <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item graphic">
+                        <a class="cbp-caption cbp-lightbox" data-title="Flat Roman Typeface Ui<br>by Cosmin Capitanu"
+                           href="img/mas-2.jpg">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/mas-2.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Flat Roman Typeface Ui</div>
+                                        <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item identity">
+                        <a class="cbp-caption cbp-lightbox" data-title="Seemple* Music for iPad<br>by Tiberiu Neamu"
+                           href="img/mas-2.jpg">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/mas-1.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Seemple* Music for iPad</div>
+                                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item graphic">
+                        <a class="cbp-caption cbp-lightbox" data-title="Remind~Me More<br>by Tiberiu Neamu" href="img/img-3.jpg">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/img-3.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Remind~Me More</div>
+                                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item web-design">
+                        <a class="cbp-caption cbp-lightbox" data-title="Workout Buddy<br>by Tiberiu Neamu" href="img/img-4.jpg">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/img-4.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Workout Buddy</div>
+                                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item identity">
+                        <a class="cbp-caption cbp-lightbox" data-title="Volume Knob<br>by Paul Flavius Nechita" href="http://vimeo.com/156783#">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/img-5.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Volume Knob</div>
+                                        <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item identity">
+                        <a class="cbp-caption cbp-lightbox" data-title="Ski * Buddy<br>by Tiberiu Neamu" href="img/mas-2.jpg">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/mas-1.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Ski * Buddy</div>
+                                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item web-design graphic">
+                        <a class="cbp-caption cbp-lightbox" data-title="Virtualization Icon<br>by Paul Flavius Nechita"
+                           href="https://www.youtube.com/watch?v=dChhzNGHgnA">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/img-6.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Virtualization Icon</div>
+                                        <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item web-design graphic">
+                        <a class="cbp-caption cbp-lightbox" data-title="World Clock Widget<br>by Paul Flavius Nechita"
+                           href="img/img-7.jpg">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/img-7.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">World Clock Widget</div>
+                                        <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item web-design graphic">
+                        <a class="cbp-caption cbp-lightbox" data-title="Sickpuppy<br>by Cosmin Capitanu" href="img/img-8.jpg">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/img-8.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Sickpuppy</div>
+                                        <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div><!--.cube masonry-->
+        </div>
+        <div class="divide50"></div>
+        <div class="text-center">
+            <a href="masonry-portfolio-4.html" class="btn btn-theme-dark btn-lg">View Past Events</a>
+        </div>
+        <div class="divide50"></div>
+        <div class="wide-img-showcase">
+
+            <div class="row margin-0 wide-img-showcase-row">
+                <div class="col-sm-6 no-padding  img-2 ">
+                    <div class="no-padding-inner ">
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-sm-offset-6 no-padding gray">
+                    <div class="no-padding-inner gray">
+                        <h3 class="wow animated fadeInDownfadeInRight">Core features of <span class="colored-text">assan</span></h3>
+                        <div class="services-box margin30 wow animated fadeInRight">
+                            <div class="services-box-icon">
+                                <i class="fa fa-tablet"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>Fully Responsive</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
+                                </p>
+                            </div>
+                        </div><!--service box-->
+                        <div class="services-box margin30 wow animated fadeInRight">
+                            <div class="services-box-icon">
+                                <i class="fa fa-twitter"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>bootstrap 3</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
+                                </p>
+                            </div>
+                        </div><!--service box-->
+
+                        <div class="services-box margin30 wow animated fadeInRight">
+                            <div class="services-box-icon">
+                                <i class="fa fa-code"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>250+ valid HTML5 Pages and much more...</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
+                                </p>
+                            </div>
+                            <div class="divide30"></div>
+                            <p><a href="#" class="btn btn-theme-dark btn-lg">Purchase Now</a></p>
+                        </div><!--service box-->
 
                     </div>
                 </div>
-            </section> -->
-
-            <section class="ls ls section_padding_top_100 section_padding_bottom_100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="row vertical-tabs">
-                                <div class="col-sm-4">
-
-                                    <!-- Nav tabs -->
-                                    <ul class="nav" role="tablist">
-                                        <li class="active">
-                                            <a href="#vertical-tab1" role="tab" data-toggle="tab">
-                                                <i class="fa fa-circle-thin"></i> What We DO
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#vertical-tab2" role="tab" data-toggle="tab">
-                                                <i class="fa fa-circle-thin"></i> Regular Works
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#vertical-tab3" role="tab" data-toggle="tab">
-                                                <i class="fa fa-circle-thin"></i> Upcoming Events
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#vertical-tab4" role="tab" data-toggle="tab">
-                                                <i class="fa fa-circle-thin"></i> Nolestiae
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-sm-8">
-
-                                    <!-- Tab panes -->
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade in active" id="vertical-tab1">
-                                            <h3 class="color-2">What to Do</h3>
-                                            <h2>When Someone Dies</h2>
-                                            <br>
-                                            <p>In most cases you will need to register the death within five days and it is best to visit the register office in the area in which the person died. This will help avoid delays getting the necessary documents. The following people can register
-                                                a death:</p>
-                                            <div>
-                                                <ul class="list2">
-                                                    <li>Any relative of the person who has died</li>
-                                                    <li>Any person present at the death</li>
-                                                    <li>A person who lives in the house where the person died</li>
-                                                    <li>The person arranging the funeral, but not a funeral director.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="vertical-tab2">
-                                            <h3 class="color-2">Lorem ipsum</h3>
-                                            <h2>Dolor sit amet</h2>
-                                            <br>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptate, quas fugit facere possimus facilis odio delectus laborum id nobis expedita vitae molestiae a. Magnam aliquid architecto magni, quos omnis.</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, enim saepe libero iure tenetur optio nisi aliquam molestias ratione magnam ab ut quod possimus hic suscipit doloremque, deleniti ipsa quia!</p>
-                                        </div>
-                                        <div class="tab-pane fade" id="vertical-tab3">
-                                            <h3 class="color-2">Lorem ipsum</h3>
-                                            <h2>Dolor sit amet</h2>
-                                            <br>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque repellat, reiciendis sint officia quia iure nam! Dicta omnis ex ipsa fugiat maiores, vero expedita facilis, suscipit quam obcaecati veniam voluptate.</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis est, dolores, ex ducimus cumque iusto ipsam odit voluptatum autem error impedit obcaecati quisquam molestiae, optio porro inventore nostrum deleniti cupiditate.</p>
-                                        </div>
-                                        <div class="tab-pane fade" id="vertical-tab4">
-                                            <h3 class="color-2">Lorem ipsum</h3>
-                                            <h2>Dolor sit amet</h2>
-                                            <br>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium impedit asperiores illum nulla sint itaque laborum perferendis deleniti quo cumque, quisquam repudiandae molestias sunt ea delectus porro odio recusandae!</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus omnis quod eligendi mollitia vel optio neque id, assumenda! Quae at quisquam eum, dolorum ullam, maxime nesciunt ex modi minus illum!</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </div><!--wide image showcase end-->
+        <section class="fun-fact-wrap fun-facts-bg">
+            <div class="container">               
+                <div class="row">
+                    <div class="col-md-3 margin20 facts-in">
+                        <h3><span class="counter">3800</span> +</h3>
+                        <h4>Downloads</h4>
+                    </div><!--facts in-->
+                    <div class="col-md-3 margin20 facts-in">
+                        <h3><span class="counter">8500</span></h3>
+                        <h4>Happy Customers</h4>
+                    </div><!--facts in-->
+                    <div class="col-md-3 margin20 facts-in">
+                        <h3><span class="counter">250</span> +</h3>
+                        <h4>Valid layouts </h4>
+                    </div><!--facts in-->
+                    <div class="col-md-3 margin20 facts-in">
+                        <h3><span class="counter">11000</span></h3>
+                        <h4>Cups of tea</h4>
+                    </div><!--facts in-->
                 </div>
-            </section>
-
-         
-
-            <section class="ls section_padding_top_100 section_padding_bottom_100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 section-heading text-center">
-                            <h3>SUST Science Arena</h3>
-                            <h2>Recent Articles</h2>
+            </div>
+        </section><!--fun facts-->
+        <div class="testimonials-v-2 wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="100ms">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="center-heading">
+                            <h2><strong>What</strong> Advisor’s Say</h2>
+                            <p>2600+ Worldwide customers  use Assan template.</p>
+                            <span class="center-line"></span>
 
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-4 to_animate">
-                            <div class="recent-post">
-                                <div class="post-img">
-                                    <img src="{{ asset('frontend/images/blog/top-01.jpg') }}" alt="">
-                                </div>
-                                <div class="meta">
-                                    <div>
-                                        <span>
-                                            <i class="fa fa-calendar"></i> May 8, 2016</span>
-                                        <a href="#">
-                                            <i class="fa fa-comment-o"></i> 23 Comments</a>
-                                    </div>
-                                </div>
-                                <div class="text-center post-content">
-                                    <h4>
-                                        <a href="#">Lorem ipsum dolor</a>
+                </div><!--center heading end-->
+
+                <div class="row">
+
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="testi-slide">
+                            <ul class="slides">
+                                <li>
+                                    <img src="img/customer-1.jpg" alt="">
+                                    <p>
+                                        <i class="ion-quote"></i>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+                                    </p>
+                                    <h4 class="test-author">
+                                        Rick man - <em>rock inc</em>
                                     </h4>
-                                    <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 to_animate">
-                            <div class="recent-post">
-                                <div class="post-img">
-                                    <img src="{{ asset('frontend/images/blog/top-02.jpg') }}" alt="">
-                                </div>
-                                <div class="meta">
-                                    <div>
-                                        <span>
-                                            <i class="fa fa-calendar"></i> May 3, 2016</span>
-                                        <a href="#">
-                                            <i class="fa fa-comment-o"></i> 16 Comments</a>
-                                    </div>
-                                </div>
-                                <div class="text-center post-content">
-                                    <h4>
-                                        <a href="#">Sit consetetur</a>
+                                </li><!--testi item-->
+                                <li>
+                                    <img src="img/customer-2.jpg" alt="">
+                                    <p>
+                                        <i class="ion-quote"></i>
+                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years </p>
+                                    <h4 class="test-author">
+                                        Jellia - <em>Founder of tinka inc</em>
                                     </h4>
-                                    <p>Aliquyam erat, sed diam voluptua vero eos et accusam et justo duo dolores et ea rebum clita kasd gubergren.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 to_animate">
-                            <div class="recent-post">
-                                <div class="post-img">
-                                    <img src="{{ asset('frontend/images/blog/top-03.jpg') }}" alt="">
-                                </div>
-                                <div class="meta">
-                                    <div>
-                                        <span>
-                                            <i class="fa fa-calendar"></i> April 29, 2016</span>
-                                        <a href="#">
-                                            <i class="fa fa-comment-o"></i> 47 Comments</a>
-                                    </div>
-                                </div>
-                                <div class="text-center post-content">
-                                    <h4>
-                                        <a href="#">Elitr sediam nonumy</a>
+                                </li><!--testi item-->
+                                <li>
+                                    <img src="img/customer-3.jpg" alt="">
+                                    <p>
+                                        <i class="ion-quote"></i>
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor.</p>
+                                    <h4 class="test-author">
+                                        Smith - <em>Ceo, company inc.</em>
                                     </h4>
-                                    <p>No sea takimata sanctus est orem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur.</p>
-                                </div>
-                            </div>
+                                </li><!--testi item-->
+                            </ul>
+                        </div><!--flex slider testimonials end here-->
+                    </div>
+                </div><!--testi slider row end-->
 
-                        </div>
+            </div>
+        </div><!--testimonials v-2 end-->
+        <div class="blue-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 margin30">
+                        <div class="services-box wow animated fadeInDown">
+                            <div class="services-box-icon">
+                                <i class="pe-7s-diamond"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>250+ valid layouts</h4>
+                                <p>
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.</div>
+                        </div><!--service box-->
+                    </div>
+                    <div class="col-sm-6 ">
+                        <div class="services-box wow animated fadeInUp">
+                            <div class="services-box-icon">
+                                <i class="pe-7s-download"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>Free Support & Updates</h4>
+                                <p>
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor. </div>
+                        </div><!--service box-->
                     </div>
                 </div>
-            </section>
-            <!-- <section class="partners-block">
-                <div class="container">
-                    <div class="row">
-                        <div class="owl-carousel partners-carousel owl-theme owl-loaded" data-dots="false" data-items="6" data-responsive-lg="6" data-responsive-md="6" data-responsive-sm="4" data-responsive-xs="2" data-margin="10">
-
-                            <div class="item">
-                                <div>
-                                    <a title="" href="#">
-                                        <img src="{{ asset('frontend/images/partner1.png') }}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                       
-                            <div class="item">
-                                <div>
-                                    <a title="" href="#">
-                                        <img src="{{ asset('frontend/images/partner2.png') }}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                    
-                            <div class="item">
-                                <div>
-                                    <a title="" href="#">
-                                        <img src="{{ asset('frontend/images/partner3.png') }}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                 
-                            <div class="item">
-                                <div>
-                                    <a title="" href="#">
-                                        <img src="{{ asset('frontend/images/partner4.png') }}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                     
-                            <div class="item">
-                                <div>
-                                    <a title="" href="#">
-                                        <img src="{{ asset('frontend/images/partner5.png') }}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                      
-                            <div class="item">
-                                <div>
-                                    <a title="" href="#">
-                                        <img src="{{ asset('frontend/images/partner6.png') }}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                      
+            </div>
+        </div><!--full wide 2 columns content end-->
+        <div class="divide70"></div>
+        <div class="assan-features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="center-heading">
+                            <h2>Awesome <strong>features</strong></h2>
+                            <span class="center-line"></span>
                         </div>
+                    </div>                   
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 margin20">
+                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="100ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-image"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>Sliders</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
+                                </p>
+                            </div>
+                        </div><!--services box-->
+                    </div><!--services col-->
+                    <div class="col-md-4 col-sm-6 margin20">
+                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="200ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>Advanced Forms</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
+                                </p>
+                            </div>
+                        </div><!--services box-->
+                    </div><!--services col-->
+                    <div class="col-md-4 col-sm-6 margin20">
+                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="300ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-users"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>Customer Support</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
+                                </p>
+                            </div>
+                        </div><!--services box-->
+                    </div><!--services col-->
+
+                    <div class="col-md-4 col-sm-6 margin20">
+                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="400ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-crop"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>Pixel perfect design</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
+                                </p>
+                            </div>
+                        </div><!--services box-->
+                    </div><!--services col-->
+                    <div class="col-md-4 col-sm-6 margin20">
+                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="500ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-twitter"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>BOOTSTRAP 3.3.6</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
+                                </p>
+                            </div>
+                        </div><!--services box-->
+                    </div><!--services col-->
+                    <div class="col-md-4 col-sm-6 margin20">
+                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="600ms">
+                            <div class="services-box-icon">
+                                <i class="fa fa-flag"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>Font Awesome icons</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
+
+                                </p>
+
+                            </div>
+                        </div><!--services box-->
+                    </div><!--services col-->
+                </div><!--services row-->
+            </div>
+        </div><!--assan features-->
+        <div class="divide40"></div>
+
+        <div class="our-team-v-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="center-heading">
+                            <h2>SSA <strong>EC</strong></h2>
+                            <span class="center-line"></span>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 text-center">
+                        <div class="person-v2">
+                            <img src="img/team-5.jpg" class="img-responsive" alt="">
+                            <div class="person-desc-v2">
+                                <h3>Steve Smith</h3>
+                                <em>Creative Designer</em>
+                                <ul class="list-inline top-social">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <!--                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--person col end-->
+                    <div class="col-sm-3 text-center">
+                        <div class="person-v2">
+                            <img src="img/team-6.jpg" class="img-responsive" alt="">
+                            <div class="person-desc-v2">
+                                <h3>Steve Smith</h3>
+                                <em>Creative Designer</em>
+                                <ul class="list-inline top-social">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <!--                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--person col end-->
+                    <div class="col-sm-3 text-center">
+                        <div class="person-v2">
+                            <img src="img/team-7.jpg" class="img-responsive" alt="">
+                            <div class="person-desc-v2">
+                                <h3>Steve Smith</h3>
+                                <em>Creative Designer</em>
+                                <ul class="list-inline top-social">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <!--                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--person col end-->
+                    <div class="col-sm-3 text-center">
+                        <div class="person-v2">
+                            <img src="img/team-8.jpg" class="img-responsive" alt="">
+                            <div class="person-desc-v2">
+                                <h3>Steve Smith</h3>
+                                <em>Creative Designer</em>
+                                <ul class="list-inline top-social">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <!--                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--person col end-->
+                </div>
+            </div>
+        </div><!--our team v-2-->
+        <div class="divide70"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="center-heading">
+                        <h2><strong>latest</strong> news</h2>
+                        <span class="center-line"></span>
+                    </div>
+                </div>                   
+            </div>
+            <div class="row">
+                <div class="col-sm-4 margin30">
+                    <div>
+                        <a href="#">
+                            <div class="item-img-wrap">
+                                <img src="img/img-8.jpg" class="img-responsive" alt="workimg">
+                                <div class="item-img-overlay">
+                                    <span></span>
+                                </div>
+                            </div>                       
+                        </a><!--news link--> 
+                        <div class="news-desc">
+                            <span>Sports</span>
+                            <h4><a href="#">Lorem ipsum dollor Sit amet</a></h4>
+                            <span>By <a href="#">Author</a> on 24 july 2014</span> <span><a href="#">Read more...</a></span>
+                        </div><!--news desc-->
+                    </div> 
+                </div><!--news col-->
+                <div class="col-sm-4 margin30">
+                    <div>
+                        <a href="#">
+                            <div class="item-img-wrap">
+                                <img src="img/img-3.jpg" class="img-responsive" alt="workimg">
+                                <div class="item-img-overlay">
+                                    <span></span>
+                                </div>
+                            </div>                       
+                        </a><!--news link--> 
+                        <div class="news-desc">
+                            <span>Sports</span>
+                            <h4><a href="#">Lorem ipsum dollor Sit amet</a></h4>
+                            <span>By <a href="#">Author</a> on 24 july 2014</span> <span><a href="#">Read more...</a></span>
+                        </div><!--news desc-->
+                    </div> 
+                </div><!--news col-->
+                <div class="col-sm-4 margin30">
+                    <div>
+                        <a href="#">
+                            <div class="item-img-wrap">
+                                <img src="img/img-6.jpg" class="img-responsive" alt="workimg">
+                                <div class="item-img-overlay">
+                                    <span></span>
+                                </div>
+                            </div>                       
+                        </a><!--news link--> 
+                        <div class="news-desc">
+                            <span>Sports</span>
+                            <h4><a href="#">Lorem ipsum dollor Sit amet</a></h4>
+                            <span>By <a href="#">Author</a> on 24 july 2014</span> <span><a href="#">Read more...</a></span>
+                        </div><!--news desc-->
+                    </div> 
+                </div><!--news col-->
+            </div>
+        </div><!--latest news-->
+
+        <div class="divide40"></div>
+        <!-- <div class="intro-text-1 light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h4 class="animated slideInDown">Assan is Simply creative Template
+                        </h4>
+
+                        <p>
+                            Clean & powerful Easy to use multipurpose business HTML5 template.
+                        </p>                   
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="#" class="btn border-theme btn-lg">Purchase now</a>
                     </div>
                 </div>
-            </section> -->
+            </div>
+        </div> --> <!--intro text end-->
         
 @stop

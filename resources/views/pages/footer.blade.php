@@ -4,7 +4,7 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6 margin30">
                         <div class="footer-col">
-                            <h3>About assan</h3>
+                            <h3>About SSA</h3>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis. Pellentesque cursus arcu id magna euismod in elementum purus molestie.
                             </p>
@@ -27,18 +27,18 @@
                                         <i class="fa fa-google-plus"></i>
                                     </a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="#" class="social-icon si-dark si-gray-round si-colored-pinterest">
                                         <i class="fa fa-pinterest"></i>
                                         <i class="fa fa-pinterest"></i>
                                     </a>
-                                </li>
-                                <li>
+                                </li> -->
+                                <!-- <li>
                                     <a href="#" class="social-icon si-dark si-gray-round si-colored-linkedin">
                                         <i class="fa fa-linkedin"></i>
                                         <i class="fa fa-linkedin"></i>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>                        
                     </div><!--footer col-->
@@ -47,11 +47,11 @@
                             <h3>Contact</h3>
 
                             <ul class="list-unstyled contact">
-                                <li><p><strong><i class="fa fa-map-marker"></i> Address:</strong> vaisahali, jaipur, 302012</p></li> 
-                                <li><p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="#">Support@designmylife.com</a></p></li>
+                                <li><p><strong><i class="fa fa-map-marker"></i> Address:</strong> SUST, Sylhet-3114</p></li> 
+                                <li><p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="#">info@sustsciencearena.org</a></p></li>
                                 <li> <p><strong><i class="fa fa-phone"></i> Phone:</strong> +91 1800 2345 2132</p></li>
-                                <li> <p><strong><i class="fa fa-print"></i> Fax</strong> 1800 2345 2132</p></li>
-                                <li> <p><strong><i class="fa fa-skype"></i> Skype</strong> assan.856</p></li>
+                                <!-- <li> <p><strong><i class="fa fa-print"></i> Fax</strong> 1800 2345 2132</p></li>
+                                <li> <p><strong><i class="fa fa-skype"></i> Skype</strong> SSA.856</p></li> -->
 
                             </ul>
                         </div>                        
@@ -93,7 +93,7 @@
 
 
 
-                include('copyright.blade.php');
+                @include('pages.copyright');
 
 
 

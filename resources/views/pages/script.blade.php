@@ -1,48 +1,35 @@
-
-
-
-        <script src="user/js/jquery.min.js"></script>
-        <script src="user/js/jquery-migrate.min.js"></script> 
+        <!--scripts and plugins -->
+        <!--must need plugin jquery-->
+        {!! Html::script('frontend/js/jquery.min.js') !!}
+        {!! Html::script('frontend/js/jquery-migrate.min.js') !!} 
         <!--bootstrap js plugin-->
-        <script src="user/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>       
+        {!! Html::script('frontend/bootstrap/js/bootstrap.min.js') !!}       
         <!--easing plugin for smooth scroll-->
-        <script src="user/js/jquery.easing.1.3.min.js" type="text/javascript"></script>
+        {!! Html::script('frontend/js/jquery.easing.1.3.min.js') !!}
         <!--sticky header-->
-        <script type="text/javascript" src="user/js/jquery.sticky.js"></script>
+        {!! Html::script('frontend/js/jquery.sticky.js') !!}
         <!--flex slider plugin-->
-        <script src="user/js/jquery.flexslider-min.js" type="text/javascript"></script>
+        {!! Html::script('frontend/js/jquery.flexslider-min.js') !!}
         <!--parallax background plugin-->
-        <script src="user/js/jquery.stellar.min.js" type="text/javascript"></script>
+        {!! Html::script('frontend/js/jquery.stellar.min.js') !!}
         <!--digit countdown plugin-->
-        <script src="user/js/waypoints.min.js"></script>
+        {!! Html::script('frontend/js/waypoints.min.js') !!}
         <!--digit countdown plugin-->
-        <script src="user/js/jquery.counterup.min.js" type="text/javascript"></script>
+        {!! Html::script('frontend/js/jquery.counterup.min.js') !!}
         <!--on scroll animation-->
-        <script src="user/js/wow.min.js" type="text/javascript"></script> 
+        {!! Html::script('frontend/js/wow.min.js') !!} 
         <!--owl carousel slider-->
-        <script src="user/js/owl.carousel.min.js" type="text/javascript"></script>
+        {!! Html::script('frontend/js/owl.carousel.min.js') !!}
         <!--popup js-->
-        <script src="user/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+        {!! Html::script('frontend/js/jquery.magnific-popup.min.js') !!}
         <!--you tube player-->
-        <script src="user/js/jquery.mb.YTPlayer.min.js" type="text/javascript"></script>        
+        {!! Html::script('frontend/js/jquery.mb.YTPlayer.min.js') !!}        
         <!--customizable plugin edit according to your needs-->
-        <script src="user/js/custom.js" type="text/javascript"></script>
-        <script type="text/javascript" src="user/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-        <script type="text/javascript" src="user/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-        <script type="text/javascript" src="user/js/revolution-custom.js"></script>
+        {!! Html::script('frontend/js/custom.js') !!}
+        {!! Html::script('frontend/rs-plugin/js/jquery.themepunch.tools.min.js') !!}
+        {!! Html::script('frontend/rs-plugin/js/jquery.themepunch.revolution.min.js') !!}
+        {!! Html::script('frontend/js/revolution-custom.js') !!}
         <!--cube portfolio plugin-->
-        <script src="user/cubeportfolio/js/jquery.cubeportfolio.min.js" type="text/javascript"></script>
-        <script src="user/js/cube-portfolio.js" type="text/javascript"></script>
-        <script src="user/js/pace.min.js" type="text/javascript"></script>
-                   <script src="user/video-background/core.js"></script>
-        <script src="user/video-background/transition.js"></script>
-        <script src="user/video-background/background.js"></script>
-        <script>
-              // Formstone Background - Video Background Settings
-    $(".video-section").background({
-        source: {
-            poster: "img/typing_cover.jpg",
-            mp4: "img/typing.mp4"
-        }
-    });
-        </script>
+        {!! Html::script('frontend/cubeportfolio/js/jquery.cubeportfolio.min.js') !!}
+        {!! Html::script('frontend/js/cube-portfolio.js') !!}
+        {!! Html::script('frontend/js/pace.min.js') !!}

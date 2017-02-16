@@ -15,7 +15,7 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        return view('user.index')->with('title', 'Home');
+        return view('index')->with('title', 'Home');
     }
 
     /**
