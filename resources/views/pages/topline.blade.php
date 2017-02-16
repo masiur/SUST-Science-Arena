@@ -1,35 +1,51 @@
-            <section class="page_topline ds section_padding_top_0 section_padding_bottom_0 table_section table_section_md">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="soc-icons col-sm-12 col-md-2 text-center text-md-left">
-                            <a href="#" class="social-icon bg-icon soc-facebook"></a><a href="#" class="social-icon bg-icon soc-twitter"></a><a href="#" class="social-icon bg-icon soc-google"></a><a href="#" class="social-icon bg-icon soc-skype"></a><a href="#" class="social-icon bg-icon soc-youtube"></a>
+        <div class="top-bar-dark">            
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 hidden-xs">
+                        <div class="top-bar-socials">
+                            <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-facebook">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-twitter">
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-google-plus">
+                                <i class="fa fa-google-plus"></i>
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-linkedin">
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-google-plus">
+                                <i class="fa fa-youtube"></i>
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                            <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-dribbble">
+                                <i class="fa fa-dribbble"></i>
+                                <i class="fa fa-dribbble"></i>
+                            </a>
                         </div>
-
-                        <div class="topline-info col-sm-12 col-md-8 text-center">
-
-                            <span>
-                                <i class="rt-icon2-clock-o highlight fontsize_24"></i>9:00 am - 5:00 pm
-                            </span>
-
-                            <span>
-                                <i class="rt-icon2-location highlight fontsize_24"></i>204 Woodland, San Diego, CA, 95814
-                            </span>
-
-                            <span>
-                                <i class="fa fa-globe highlight fontsize_24"></i> phoenix@mail.com
-                            </span>
-
-                        </div>
-
-                        <div class="col-sm-12 col-md-2 text-center text-md-right widget_search">
-                            <form method="get" class="searchform form-inline" action="http://webdesign-finder.com/">
-                                <div class="form-group">
-                                    <input id="widget-search" type="text" value="" name="search" class="form-control" placeholder="Search...">
-                                </div>
-                                <button type="submit" class="theme_button">Search</button>
+                    </div>
+                    <div class="col-sm-8 text-right">
+                        <ul class="list-inline top-dark-right">                      
+                            <li class="hidden-sm hidden-xs"><i class="fa fa-envelope"></i> Support@mail.com</li>
+                            <li class="hidden-sm hidden-xs"><i class="fa fa-phone"></i> +01 1800 453 7678</li>
+                            <li><a href="#"><i class="fa fa-lock"></i> Login</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i> Sign Up</a></li>
+                            <li><a class="topbar-icons" href="#"><span><i class="fa fa-search top-search"></i></span></a></li>
+                        </ul>
+                        <div class="search">
+                            <form role="form">
+                                <input type="text" class="form-control" autocomplete="off" placeholder="Write something and press enter">
+                                <span class="search-close"><i class="fa fa-times"></i></span>
                             </form>
                         </div>
 
                     </div>
                 </div>
-            </section>
+            </div>
+        </div><!--top-bar-dark end here-->
+     

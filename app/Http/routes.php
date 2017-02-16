@@ -86,3 +86,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
    Route::get('event/{id}/edit',['as' => 'event.edit', 'uses' => 'EventController@edit']);
    Route::put('project/{id}',['as' => 'project.update', 'uses' => 'ProjectController@update']);
    Route::delete('event/{id}',['as' => 'event.delete', 'uses' => 'eventController@destroy']);
+
+
+
+
+/*****************************   
+
