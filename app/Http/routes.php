@@ -29,7 +29,9 @@ Route::group(array('middleware' => 'auth'), function()
 {
 	Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@logout']);
 	Route::get('profile', ['as' => 'profile', 'uses' => 'UserController@profile']);
-	Route::get('dashboard', array('as' => 'dashboard', 'uses' => 'Auth\AuthController@dashboard'));
+
+	 Route::get('dashboard', array('as' => 'dashboard', 'uses' => 'Auth\AuthController@dashboard'));
+
 	Route::get('change-password', array('as' => 'password.change', 'uses' => 'Auth\AuthController@changePassword'));
 	Route::post('change-password', array('as' => 'password.doChange', 'uses' => 'Auth\AuthController@doChangePassword'));
 
@@ -45,16 +47,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
    Route::post('event',['as' => 'event.store', 'uses' => 'EventController@store']);
    Route::get('event/{id}/show',['as' => 'event.show', 'uses' => 'EventController@show']);
    Route::get('event/{id}/edit',['as' => 'event.edit', 'uses' => 'EventController@edit']);
-   Route::put('project/{id}',['as' => 'project.update', 'uses' => 'ProjectController@update']);
-   Route::delete('event/{id}',['as' => 'event.delete', 'uses' => 'eventController@destroy']);
+   Route::put('event/{id}',['as' => 'event.update', 'uses' => 'ProjectController@update']);
+   Route::delete('event/{id}',['as' => 'event.delete', 'uses' => 'EventController@destroy']);
    // Mithun end
 
    // any new admin panel route must be added here 
 	
 });
 
-/* // Language CRUD
-	Route::get('language',['as' => 'language.index', 'uses' => 'LanguageController@index']);
+ // Language CRUD
+/*	Route::get('language',['as' => 'language.index', 'uses' => 'LanguageController@index']);
 	Route::get('language/create',['as' => 'language.create', 'uses' => 'LanguageController@create']);
 	Route::post('language',['as' => 'language.store', 'uses' => 'LanguageController@store']);
 	Route::get('language/{id}/edit',['as' => 'language.edit', 'uses' => 'LanguageController@edit']);
@@ -62,7 +64,18 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 	Route::put('language/{id}',['as' => 'language.update', 'uses' => 'LanguageController@update']);
 	Route::delete('language/{id}',['as' => 'language.delete', 'uses' => 'LanguageController@destroy']);
 
+*/
 
+
+
+ //  NEWS CRUD
+   Route::get('news',['as' => 'news.index', 'uses' => 'NewsController@index']);
+   Route::get('news/create',['as' => 'news.create', 'uses' => 'NewsController@create']);
+   Route::post('news',['as' => 'news.store', 'uses' => 'NewsController@store']);
+   Route::get('news/{id}/show',['as' => 'news.show', 'uses' => 'NewsController@show']);
+   Route::get('news/{id}/edit',['as' => 'news.edit', 'uses' => 'NewsController@edit']);
+   Route::put('project/{id}',['as' => 'project.update', 'uses' => 'ProjectController@update']);
+   Route::delete('news/{id}',['as' => 'news.delete', 'uses' => 'NewsController@destroy']);
 
 
 
