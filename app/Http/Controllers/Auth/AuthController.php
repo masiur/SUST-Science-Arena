@@ -116,12 +116,12 @@ class AuthController extends Controller
                 if ($throttles) {
                     $this->clearLoginAttempts($request);
                 }
-                return redirect()->intended('admin/dashboard');
+                return redirect()->intended('/');
             } else if(Auth::attempt([ 'username' => $allInput['email'], 'password' => $allInput['password'] ])) {
                 if ($throttles) {
                     $this->clearLoginAttempts($request);
                 }
-                return redirect()->intended('admin/dashboard');
+                return redirect()->intended('/');
             } else
             {   
                 if ($throttles) {

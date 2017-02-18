@@ -29,6 +29,7 @@ Route::group(array('middleware' => 'auth'), function()
 {
 	Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@logout']);
 	Route::get('profile', ['as' => 'profile', 'uses' => 'UserController@profile']);
+	Route::get('settings', ['as' => 'settings', 'uses' => 'UserController@settings']);
 
 	 Route::get('dashboard', array('as' => 'dashboard', 'uses' => 'Auth\AuthController@dashboard'));
 
@@ -55,7 +56,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 	
 });
 
- // Language CRUD
+// Language CRUD
 /*	Route::get('language',['as' => 'language.index', 'uses' => 'LanguageController@index']);
 	Route::get('language/create',['as' => 'language.create', 'uses' => 'LanguageController@create']);
 	Route::post('language',['as' => 'language.store', 'uses' => 'LanguageController@store']);

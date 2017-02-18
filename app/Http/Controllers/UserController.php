@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use App\Models\User;
 use Validator;
 use Auth;
 use Hash;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Models\Profile;
 class UserController extends Controller
 {
     /**
@@ -29,8 +29,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
-                    //->with('title', 'Register');
+        return view('auth.register')
+                    ->with('title', 'Register');
     }
 
     /**
@@ -42,7 +42,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $rules =[
-            'username'                  => 'required',
+            'fullName'              => 'required',
             'email'                 => 'required|unique:users,email',
             'password'              => 'required|confirmed',
             'password_confirmation' => 'required'
@@ -55,14 +55,28 @@ class UserController extends Controller
             return redirect()->back()->withErrors($validation)->withInput();
         }else{
             $user = new User;
-            $user->username = $data['username'];
+            // $user->username = $data['fullName']; // will be done later 
             $user->email = $data['email'];
             $user->password = Hash::make($data['password']);
 
             if($user->save()){
+
+                $profile = new Profile();
+                $profile->user_id = $user->id;
+                $profile->fullName = $data['fullName'];
+                $profile->address = $data['address'];
+                $profile->phone = $data['phone'];
+                $profile->bio = $data['bio'];
+                $profile->occupation = $data['occupation'];
+                if($profile->save()) {
+                    return redirect()->route('login')
+                            ->with('success','Registered successfully.You can Log In Now.');
+                } else {
+                    User::destroy($user->id);
+                    
+                }
                 Auth::logout();
-                return redirect()->route('login')
-                            ->with('success','Registered successfully. Sign In Now.');
+                
             }else{
                 return redirect()->route('dashboard')
                             ->with('error',"Something went wrong.Please Try again.");
