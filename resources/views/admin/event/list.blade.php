@@ -47,7 +47,7 @@
                                                 <td>{!! $event->date !!}</td>
                                                 <td>{!! $event->place !!}</td>
                                                 <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('event.edit',$event->id)!!}"  style="margin-right: 3px;">Edit</a></td>
-                                                <td><a href="#" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $event->id !!}">Delete</a></td>
+                                                <td><a href="{!! route('event.delete',$event->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $event->id !!}">Delete</a></td>
                                             </tr>
                                             
                                         @endforeach
@@ -65,10 +65,27 @@
         </div>
     </div>
 
-@if(count($events))  
-@include('sections.modals')  <!-- the two modals of this page  is kept in another folder for convenience  -->
-@else
-@endif
+<!-- Demo Delete Modal -->
+<div class="modal fade" id="deleteConfirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                Are you sure to delete?
+            </div>
+            <div class="modal-footer">
+                {!! Form::open(array('route' => array('event.delete'), 'method'=> 'delete', 'class' => 'deleteForm')) !!}
+                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                {!! Form::submit('Yes, Delete', array('class' => 'btn btn-success', 'id' =>'deleteButtonYes')) !!}
+                {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+</div>
+
 
 @stop
 

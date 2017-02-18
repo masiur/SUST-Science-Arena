@@ -29,8 +29,8 @@
                                             <th>No.</th>
                                             <th>News title</th>
                                             <th>Details</th>
-                                            <th>Date</th>
-                                            <th>Place</th>
+                                            
+                                        
                                             <th>#</th>
                                             <th>#</th>
                                         </tr>
@@ -44,6 +44,9 @@
                                                     <a class="show-project-modal" data-toggle="modal" data-project-id="{{ $news->id }}" data-project-url="{!! route('news.show',$news->id) !!}" href="#" style="">{!! $news->title !!}</a>
                                                 </td>
                                                 
+
+                                                <td>{!! $news->detail !!}</td>
+
                                                 <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('news.edit',$news->id)!!}"  style="margin-right: 3px;">Edit</a></td>
                                                 <td><a href="#" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $news->id !!}">Delete</a></td>
                                             </tr>
@@ -64,7 +67,26 @@
     </div>
 
 @if(count($news))  
-@include('sections.modals')  <!-- the two modals of this page  is kept in another folder for convenience  -->
+<div class="modal fade" id="deleteConfirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                Are you sure to delete?
+            </div>
+            <div class="modal-footer">
+                {!! Form::open(array('route' => array('demo.delete'), 'method'=> 'delete', 'class' => 'deleteForm')) !!}
+                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                {!! Form::submit('Yes, Delete', array('class' => 'btn btn-success', 'id' =>'deleteButtonYes')) !!}
+                {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+</div>
+
 @else
 @endif
 

@@ -59,7 +59,7 @@ class EventController extends Controller
 
              $event->save();
 
-             return redirect()->route('event.list')->with('success', 'Event Added Successfuly.');
+             return redirect()->route('event.index')->with('success', 'Event Added Successfuly.');
 
 
 
@@ -86,7 +86,10 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        //
+        $event = Event::find($id);
+        return view('admin.event.edit')
+                        ->with('title', 'Edit Event')
+                        ->with('event', $event);
     }
 
     /**
@@ -109,6 +112,13 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        //
+         try{
+            Event::destroy($id);
+
+            return redirect()->route('event.index')->with('success','Event Deleted Successfully.');
+
+        }catch(Exception $ex){
+            return redirect()->route('event.index')->with('error','Something went wrong.Try Again.');
+        }
     }
 }

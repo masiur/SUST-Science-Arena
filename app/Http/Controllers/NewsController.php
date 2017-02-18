@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Models\News;
 use Input;
+use Validator;
 use App\Http\Controllers\Controller;
 
 class NewsController extends Controller
@@ -46,16 +47,52 @@ class NewsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-              $news = new News();
+    {   
 
-              $news->title =    Input::get('title');
-              $news->detail =    Input::get('detail');
-              $news->url = Input::get('details');
+        $rules = [
+           
+           'title'   => 'required',
+           'details' => 'required',
+        ];
+
+
+       $data = $request->all();
+        $validation = Validator::make($data , $rules);
+
+        if($validation->fails()){
+
+          return redirect()->back()->withInput()->withErrors($validation);
+
+        }
+
+           $name = str_replace(" ", "-", $data['title']);          
+
+
+
+                $img_url = null;
+
+                if(Input::hasFile('image')) {
+
+
+                    $file = Input::file('image');
+
+                    $destination = public_path().'/uploads/user_image/';
+                    $filename = time().'_'.$name.'_'.$file->getClientOriginalExtension();
+                    $file->move($destination, $filename);
+                    $img_url = '/uploads/image/'.$filename;
+                } else {
+                    return redirect()->back()->withInput()->withErrors('Image Required');
+                }
+
+               $news = new News();
+
+              $news->title =   $data['title'];
+              $news->detail =  $data['details'];
+              $news->img_url =     $img_url;
 
               $news->save();
 
-             return redirect()->route('news.list')->with('success', 'News Added Successfuly.');
+             return redirect()->route('news.index')->with('success', 'News Added Successfuly.');
     }
 
     /**
@@ -89,7 +126,7 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
@@ -100,6 +137,13 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+         try{
+            News::destroy($id);
+
+            return redirect()->route('news.index')->with('success','News Deleted Successfully.');
+
+        }catch(Exception $ex){
+            return redirect()->route('news.index')->with('error','Something went wrong.Try Again.');
+        }
     }
 }

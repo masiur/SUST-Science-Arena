@@ -16,7 +16,7 @@
                                     <h4>{{ $title }}</h4>
                             </div>
                             <div class="col-md-6">                            
-                                <a class="pull-right" href="{!! route('event.index')!!}"><button class="btn btn-success">Event List</button></a>
+                                <a class="pull-right" href="{!! route('news.index')!!}"><button class="btn btn-success">News List</button></a>
                             </div>
                         </div>
                     </div>
@@ -25,45 +25,38 @@
                                 
                             <div class=" form"> 
 
-                                {!! Form::open(array('route' => 'event.store' , 'method' => 'post', 'class' => 'cmxform form-horizontal tasi-form')) !!}
+                                {!! Form::open(array('route' => 'news.store' , 'method' => 'post', 'class' => 'cmxform form-horizontal tasi-form', 'files'=>true)) !!}
 
 
                                 <div class="form-group">
-                                    {!! Form::label('name', "Event Name*", array('class' => 'control-label col-lg-2')) !!}
+                                    {!! Form::label('title', "News title*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Enter Event Name', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                        {!! Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Enter News Title', 'required' => 'required', 'aria-required' =>'true')) !!}
                                     </div>
                                 </div>
 
+                          
                                 <div class="form-group">
-                                    {!! Form::label('date', "Event Date*", array('class' => 'control-label col-lg-2')) !!}
+                                    {!! Form::label('details', "News Details*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('date', null, array('class' => 'form-control', 'placeholder' => 'Date of the Event', 'required' => 'required')) !!}
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    {!! Form::label('details', "Event Details*", array('class' => 'control-label col-lg-2')) !!}
-                                    <div class="col-lg-6">
-                                        {!! Form::textarea('details', null, array('class' => 'form-control','placeholder' => 'Details of the event', 'row' => 2, 'required')) !!}
+                                        {!! Form::textarea('details', null, array('class' => 'form-control','placeholder' => 'Details of the news', 'row' => 2, 'required')) !!}
                                     </div>
                                 </div>
 
 
                                 <div class="form-group">
-                                    {!! Form::label('place', "Event Place*", array('class' => 'control-label col-lg-2')) !!}
-                                    <div class="col-lg-6">
-                                        {!! Form::text('place', null, array('class' => 'form-control', 'placeholder' => 'Enter Event place', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                        {!! Form::label('image', "Image*", array('class' => 'control-label col-lg-2')) !!}
+                                        <div class="col-lg-10">
+                                            {!! Form::file('image', array('class' => 'form-control', 'required' => 'required', 'multiple'=>false )) !!}
+                                        </div>
                                     </div>
-                                </div>
-
 
 
                                                         
 
                                 <div class="form-group">
                                     <div class="col-lg-offset-2 col-lg-6">
-                                    {!! Form::submit('Add Event', array('class' => 'btn btn-success')) !!}
+                                    {!! Form::submit('Add News', array('class' => 'btn btn-success')) !!}
                                     </div>
                                 </div>
 

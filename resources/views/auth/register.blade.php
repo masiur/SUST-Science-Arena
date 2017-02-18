@@ -1,98 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-
-
-
-@include('admin.includes.header')
-
-
-
-<body>
-
-<div class="wrapper-page animated fadeInDown">
-    <div class="panel panel-color panel-primary">
-        <div class="panel-heading">
-            <h3 class="text-center m-t-10"> Sign Up || SSA</h3>
-        </div>
-        <br>
-        @include('admin.includes.alert')
-
-        {!! Form::open(array('route' => 'postRegister', 'method' => 'post', 'class' => 'form-signin')) !!}
-
-        <div class="form-group ">
-            <div class="col-xs-12"><br>
-                {!! Form::text('username', '', array('class' => 'form-control', 'placeholder' => 'User Name', 'autofocus')) !!}
+@extends('layouts.frontend')
+    @section('content')
+        
+<div class="breadcrumb-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4>Register</h4>
+                    </div>
+                    <div class="col-sm-6 hidden-xs text-right">
+                        <ol class="breadcrumb">
+                            <li><a href="{{ route('index')}}">Home</a></li>
+                            <li>Register</li>
+                        </ol>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div><!--breadcrumbs-->
+        <div class="divide80"></div>
+         <div class="container">
+            <div class="row">  
+                <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                @include('admin.includes.alert')
+                    <div class="login-form">
+                        <h3>Register</h3>
+                         <form role="form" method="POST" action="{{ route('postRegister') }}">
+                          {{ csrf_field() }}
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
 
-        <div class="form-group ">
-            <div class="col-xs-12"><br>
-                {!! Form::text('email', '', array('class' => 'form-control', 'placeholder' => 'Email Address', 'autofocus')) !!}
-            </div>
-        </div>
-
-        <div class="form-group ">
-            <div class="col-xs-12"><br>
-                {!! Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password')) !!}
-            </div>
-        </div>
-
-        <div class="form-group ">
-            <div class="col-xs-12"><br>
-                {!! Form::password('password_confirmation', array('class' => 'form-control', 'placeholder' => 'Confirm Password')) !!}
-            </div>
-        </div>
-
-
-
-        <div class="form-group text-right">
-            <br>
-            <div class="col-xs-12"><br>
-                {!! Form::submit('Sign Up', array('class' => 'btn btn-lg btn-login btn-block btn-purple ', 'type'=>'submit')) !!}
-                <br>
-            </div>
-        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Full Name</label>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
 
 
+                        <div class="form-group">
+                            <label for="exampleInputEmail1"> Address</label>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Where you live">
+                        </div>
 
 
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Contact no</label>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Contact no">
+                        </div>
 
 
-
-        <center>
-            <p>or you can sign up via social network</p>
-
-            <div class="login-social-link">
-                <a href="{{ route('login/fb') }}" class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</a>
-                <!-- <a href="#" class="btn btn-info"><i class="fa fa-twitter"></i>Twitter</a> -->
-                <a href="{{ route('login/gp') }}" class="btn btn-danger"><i class="fa fa-google-plus"></i> Google</a>
-            </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Bio</label>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Say something about you">
+                        </div>
 
 
-            <div class="registration">
-                <br>
-                Already have an account?
-                <a class="" href="{{ route('login') }}">
-                    Log In
-                </a>
-            </div>
-        </center>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Occupation</label>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Occupation">
+                        </div>
 
-        {!! Form::close() !!}
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>   
 
+
+                        <div class="form-group">
+       Add your image:<br>
+        {!! Form::file('image') !!}
     </div>
-</div>
 
 
-</body>
-<!-- js placed at the end of the document so the pages load faster -->
-{!! HTML::script('js/jquery.js') !!}
-{!! HTML::script('js/bootstrap.min.js') !!}
-{!! HTML::script('js/pace.min.js') !!}
-{!! HTML::script('js/wow.min.js') !!}
-{!! HTML::script('js/jquery.nicescroll.js') !!}
 
-        <!--common script for all pages-->
-{!! HTML::script('js/jquery.app.js') !!}
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember Me
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-theme-bg">Login</button>
+                        <a href="#" class="btn btn-fb-login"><i class="fa fa-facebook"></i> Login With Facebook</a>
+                        <a href="#">Forget Password?</a>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divide60"></div>
 
-</html>
+@endsection
