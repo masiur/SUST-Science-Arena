@@ -1,7 +1,7 @@
      <footer id="footer">
             <div class="container">
 
-                <div class="row">
+            <!--     <div class="row">
                     <div class="col-md-3 col-sm-6 margin30">
                         <div class="footer-col">
                             <h3>About SSA</h3>
@@ -26,22 +26,22 @@
                                         <i class="fa fa-google-plus"></i>
                                         <i class="fa fa-google-plus"></i>
                                     </a>
-                                </li>
+                                </li> -->
                                 <!-- <li>
                                     <a href="#" class="social-icon si-dark si-gray-round si-colored-pinterest">
                                         <i class="fa fa-pinterest"></i>
                                         <i class="fa fa-pinterest"></i>
                                     </a>
                                 </li> -->
-                                <!-- <li>
+                             <!--     <li>
                                     <a href="#" class="social-icon si-dark si-gray-round si-colored-linkedin">
                                         <i class="fa fa-linkedin"></i>
                                         <i class="fa fa-linkedin"></i>
                                     </a>
-                                </li> -->
+                                </li> 
                             </ul>
-                        </div>                        
-                    </div><!--footer col-->
+                        </div>                      
+                     </div>
                     <div class="col-md-3 col-sm-6 margin30">
                         <div class="footer-col">
                             <h3>Contact</h3>
@@ -50,12 +50,12 @@
                                 <li><p><strong><i class="fa fa-map-marker"></i> Address:</strong> SUST, Sylhet-3114</p></li> 
                                 <li><p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="#">info@sustsciencearena.org</a></p></li>
                                 <li> <p><strong><i class="fa fa-phone"></i> Phone:</strong> +91 1800 2345 2132</p></li>
-                                <!-- <li> <p><strong><i class="fa fa-print"></i> Fax</strong> 1800 2345 2132</p></li>
-                                <li> <p><strong><i class="fa fa-skype"></i> Skype</strong> SSA.856</p></li> -->
+                                <li> <p><strong><i class="fa fa-print"></i> Fax</strong> 1800 2345 2132</p></li>
+                                <li> <p><strong><i class="fa fa-skype"></i> Skype</strong> SSA.856</p></li> 
 
                             </ul>
                         </div>                        
-                    </div><!--footer col-->
+                    </div>
                     <div class="col-md-3 col-sm-6 margin30">
                         <div class="footer-col">
                             <h3>Featured Work</h3>
@@ -71,7 +71,7 @@
                                 <li><a href="portfolio-single.html"><img src="user/img/img-9.jpg" class="img-responsive" alt=""></a></li>
                             </ul>
                         </div>                        
-                    </div><!--footer col-->
+                    </div>
                     <div class="col-md-3 col-sm-6 margin30">
                         <div class="footer-col">
                             <h3>Newsletter</h3>
@@ -87,9 +87,9 @@
                                 </div>
                             </form>
                         </div>                        
-                    </div><!--footer col-->
+                    </div>
 
-                </div>
+                </div> -->
 
 
 
@@ -103,4 +103,4 @@
 
 
             </div>
-        </footer><!--default footer end here-->
+        </footer><!--default footer end here

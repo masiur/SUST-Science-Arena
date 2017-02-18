@@ -1,7 +1,7 @@
 <!-- Footer Start -->
 <footer class="footer">
 	<center>
-	Copyright&copy; 2016 InfancyIT, Bangladesh. All rights reserved.</center>
+	Copyright&copy; 2017 SSA, SUST, Sylhet-3114. All rights reserved.</center>
 </footer>
 <!-- Footer Ends -->
 
