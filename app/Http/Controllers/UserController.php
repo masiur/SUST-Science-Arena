@@ -19,7 +19,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        return view('admin.users')
+                ->with('title', "List of All Registered Users")
+                ->with('userCounter', 1)
+                ->with('users', $users);
     }
 
     /**
@@ -73,7 +77,7 @@ class UserController extends Controller
                             ->with('success','Registered successfully.You can Log In Now.');
                 } else {
                     User::destroy($user->id);
-                    
+
                 }
                 Auth::logout();
                 
