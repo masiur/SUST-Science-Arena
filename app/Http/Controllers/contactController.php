@@ -3,13 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Event;
-use Input;
+
+use App\models\Contact;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Validator;
 
-class EventController extends Controller
+
+class contactController extends Controller
 {
+
+
+    public function contact_page()
+    {
+        return view('user.contact');
+    }
+
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -17,13 +29,7 @@ class EventController extends Controller
      */
     public function index()
     {
-
-           $events = Event::all() ;
-           
-           return view('admin.event.list')
-                ->with('title', 'List of All Events')
-                ->with('eventCounter', 1)
-                ->with('events', $events);
+        //
     }
 
     /**
@@ -33,9 +39,7 @@ class EventController extends Controller
      */
     public function create()
     {
-                return view('admin.event.create')
-                ->with('title', 'Add a Event');
-
+        //
     }
 
     /**
@@ -46,24 +50,39 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
 
-                    
-
-              $event = new Event();
-
-              $event->name =    Input::get('name');
-              $event->date =    Input::get('date');
-              $event->description = Input::get('details');
-              $event->place =    Input::get('place');
-
-             $event->save();
-
-             return redirect()->route('event.index')->with('success', 'Event Added Successfuly.');
+       
+        $rules = [
+           
+           'name'   => 'required',
+           'email' => 'required',
+           'contact_no' => 'required',
+           'message' => 'required',
+        ];
 
 
+       $data = $request->all();
+        $validation = Validator::make($data , $rules);
+
+        if($validation->fails()){
+
+          return redirect()->back()->withInput()->withErrors($validation);
+
+        }
 
 
+        $message = new Contact();
+
+
+        $message->name = $data['name'];
+        $message->email = $data['email'];
+        $message->contact_no = $data['contact_no'];
+        $message->message = $data['message'];
+
+        $message->save();
+
+        return view('user.contact');
 
     }
 
@@ -73,14 +92,9 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-         
-         $event = Event::all();
-         
-         return view('user.event')->with('event' , $event);
-
-
+        //
     }
 
     /**
@@ -91,10 +105,7 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        $event = Event::find($id);
-        return view('admin.event.edit')
-                        ->with('title', 'Edit Event')
-                        ->with('event', $event);
+        //
     }
 
     /**
@@ -117,13 +128,6 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-         try{
-            Event::destroy($id);
-
-            return redirect()->route('event.index')->with('success','Event Deleted Successfully.');
-
-        }catch(Exception $ex){
-            return redirect()->route('event.index')->with('error','Something went wrong.Try Again.');
-        }
+        //
     }
 }
