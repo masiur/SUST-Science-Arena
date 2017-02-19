@@ -78,7 +78,15 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
    Route::delete('news/{id}',['as' => 'news.delete', 'uses' => 'NewsController@destroy']);
 
 
+// Category CRUD
 
+    Route::get('category',['as' => 'category.index', 'uses' => 'categoryController@index']);
+	Route::get('category/create',['as' => 'category.create', 'uses' => 'categoryController@create']);
+	Route::post('category',['as' => 'category.store', 'uses' => 'categoryController@store']);
+	Route::get('category/{id}/edit',['as' => 'category.edit', 'uses' => 'categoryController@edit']);
+	Route::get('category/{id}/show',['as' => 'category.show', 'uses' => 'categoryController@show']);
+	Route::put('category/{id}',['as' => 'category.update', 'uses' => 'categoryController@update']);
+	Route::delete('category/{id}',['as' => 'category.delete', 'uses' => 'categoryController@destroy']);
 
   
 
