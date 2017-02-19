@@ -15,48 +15,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown"><a><h4>SUST Science Arena</h4></a></li>
                         <li class="dropdown {!! Menu::isActiveRoute('index') !!} ">
-                            <a href="{{ route('index') }}" class="dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-                                <li class="dropdown-submenu">
-                                    <a tabindex="-1" href="#">Sliders </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="index.html">Revolution Full-width</a></li>
-                                        <li><a href="home-revolution-boxed.html">Revolution Boxed</a></li>
-                                        <li><a href="home-revolution-fullscreen.html">Revolution Fullscreen</a></li>
-                                        <li><a href="ken-burns.html">Ken burns Slider</a></li>
-                                        <li><a href="home-carousel.html">Carousel Slider</a></li>
-                                        <li><a href="home-flexslider.html">Flex slider</a></li>               
-                                    </ul>
-                                </li>
-                                <li class="dropdown-submenu">
-                                    <a tabindex="-1" href="#">Revolution 5</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="r5-classic.html">Carousel classic</a></li> 
-                                        <li><a href="r5-gym.html">Slider Gym</a></li> 
-                                    </ul>
-                                </li>
+                            <a href="{{ route('index') }}" class="dropdown-toggle" data-toggle="dropdown">Home</a>
                             
-                                <li><a href="home-parallax.html">Home - Parallax</a></li>
-                                <li><a href="home-video.html">Home -Youtube Video</a></li>
-                                <li><a href="home-self-video.html">Home - Vide</a></li>
-                                <li><a href="home-boxed.html">Home - Boxed</a></li>
-                                <li><a href="home-construction.html">Home - Construction</a></li>
-                                <li><a href="home-portfolio.html">Home - Portfolio</a></li>
-                                  
-                                <li class="dropdown-submenu">
-                                    <a tabindex="-1" href="#">Multi level menu </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#"> menu level 2</a></li>
-                                        <li class="dropdown-submenu">
-                                            <a tabindex="-1" href="#">menu level 2 </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#"> menu level 3</a></li>
-                                                <li><a href="#"> menu level 3</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
                         </li>
                         <!--menu home li end here-->
                         <li class="dropdown">
@@ -223,55 +183,9 @@
                         </li><!--features-->
 
                         <!--mega menu-->
-                        <li class="dropdown yamm-fw">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shortcodes  <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <div class="yamm-content">
-                                        <div class="row">
-
-                                            <div class="col-sm-3">
-                                                <h3 class="heading">Shortcode 1</h3>
-                                                <ul class="nav mega-vertical-nav">        
-
-                                                    <li><a href="typography.html"><i class="fa fa-text-height"></i> Typography</a></li>
-                                                    <li><a href="grid-system.html"><i class="fa fa-bars"></i> Grid System</a></li>
-                                                    <li><a href="testimonials.html"><i class="fa fa-comment-o"></i> testimonials </a></li>
-                                                    <li><a href="tabs-accordian.html"><i class="fa fa-table"></i> tabs &  Accordions </a></li>
-                                                </ul>
-
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <h3 class="heading">Shortcode 2 </h3>
-                                                <ul class="nav mega-vertical-nav">
-                                                    <li><a href="buttons.html"><i class="fa fa-cog"></i> Buttons</a></li>
-                                                    <li><a href="social-buttons.html"><i class="fa fa-share"></i> Social Buttons</a></li>
-                                                    <li><a href="alerts.html"><i class="fa fa-bell"></i> Alerts </a></li>
-                                                    <li><a href="other-elements.html"><i class="fa fa-cogs"></i> Other Elements </a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <h3 class="heading">Shortcode 3</h3>
-                                                <ul class="nav mega-vertical-nav">
-                                                    <li><a href="font-awesome.html"><i class="fa fa-flag"></i> Font Awesome icons</a></li>                                                   
-                                                    <li><a href="pe-icons.html"><i class="pe-7s-like"></i> Pe icons</a></li>   
-                                                    <li><a href="carousel-shortcodes.html"><i class="fa fa-sliders"></i> Carousel Sliders </a></li>
-                                                    <li><a href="tables.html"><i class="fa fa-table"></i> Tables </a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <h3 class="heading">Shortcode 4</h3>
-                                                <ul class="nav mega-vertical-nav">
-                                                    <li><a href="pricing-tables.html"><i class="fa fa-usd"></i> Pricing tables</a></li>                                                   
-                                                    <li><a href="videos.html"><i class="fa fa-image"></i> Responsive videos</a></li>   
-                                                    <li><a href="cta.html"><i class="fa fa-map-pin"></i> call to cations </a></li>
-                                                    <li><a href="maps.html"><i class="fa fa-map-marker"></i> Google maps </a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                        <li class="dropdown ">
+                            <a href="{{ route('contact') }}" class="dropdown-toggle" data-toggle="dropdown">Contact </a>
+                            
                         </li> <!--menu Features li end here-->   
 
                         <!--                        <li class="dropdown">

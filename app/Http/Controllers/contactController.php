@@ -16,7 +16,7 @@ class ContactController extends Controller
 
     public function contact_page()
     {
-        return view('user.contact');
+        return view('user.contact')->with('title', 'Contact');
     }
 
 
