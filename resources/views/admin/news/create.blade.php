@@ -44,7 +44,7 @@
                                 </div>
 
 
-                                <div class="form-group">
+                                    <div class="form-group">
                                         {!! Form::label('image', "Image*", array('class' => 'control-label col-lg-2')) !!}
                                         <div class="col-lg-10">
                                             {!! Form::file('image', array('class' => 'form-control', 'required' => 'required', 'multiple'=>false )) !!}

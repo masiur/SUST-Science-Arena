@@ -6,6 +6,8 @@
 Route::get('/', array('as' => 'index', 'uses' => 'FrontendController@index'));
 // public routes -- Added by Masiur
 Route::get('home', array('as' => 'home', 'uses' => 'FrontendController@index'));
+// Blog Public Page
+Route::get('blog',['as' => 'blog.index', 'uses' => 'FrontendController@blogIndex']);
 
 Route::group(['middleware' => 'guest'], function(){
 
@@ -26,6 +28,7 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('login/fb', ['as'=>'login/fb','uses' => 'SocialController@loginWithFacebook']);
 	Route::get('login/gp', ['as'=>'login/gp','uses' => 'SocialController@loginWithGoogle']);
 
+	
 
 
    
@@ -42,6 +45,15 @@ Route::group(array('middleware' => 'auth'), function()
 
 	Route::get('change-password', array('as' => 'password.change', 'uses' => 'Auth\AuthController@changePassword'));
 	Route::post('change-password', array('as' => 'password.doChange', 'uses' => 'Auth\AuthController@doChangePassword'));
+
+	// Blog CRUD for bloggers
+	Route::get('blog/myArticle',['as' => 'blog.myblog', 'uses' => 'BlogController@myblog']);
+	Route::get('blog/create',['as' => 'blog.create', 'uses' => 'BlogController@create']);
+	Route::post('blog',['as' => 'blog.store', 'uses' => 'BlogController@store']);
+	Route::get('blog/{id}/edit',['as' => 'blog.edit', 'uses' => 'BlogController@edit']);
+	Route::get('blog/{id}/show',['as' => 'blog.show', 'uses' => 'BlogController@show']);
+	Route::put('blog/{id}',['as' => 'blog.update', 'uses' => 'BlogController@update']);
+	Route::delete('blog/{id}',['as' => 'blog.delete', 'uses' => 'BlogController@destroy']);
 
 });
 
@@ -69,20 +81,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 	
 });
 
-<<<<<<< HEAD
-=======
-// Language CRUD
-/*	Route::get('language',['as' => 'language.index', 'uses' => 'LanguageController@index']);
-	Route::get('language/create',['as' => 'language.create', 'uses' => 'LanguageController@create']);
-	Route::post('language',['as' => 'language.store', 'uses' => 'LanguageController@store']);
-	Route::get('language/{id}/edit',['as' => 'language.edit', 'uses' => 'LanguageController@edit']);
-	Route::get('language/{id}/show',['as' => 'language.show', 'uses' => 'LanguageController@show']);
-	Route::put('language/{id}',['as' => 'language.update', 'uses' => 'LanguageController@update']);
-	Route::delete('language/{id}',['as' => 'language.delete', 'uses' => 'LanguageController@destroy']);
 
-*/
 
->>>>>>> e40d9341446f2a54e1cb7389d899cef59417d446
 
 
  //  NEWS CRUD
@@ -95,22 +95,21 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
    Route::delete('news/{id}',['as' => 'news.delete', 'uses' => 'NewsController@destroy']);
 
 
-// Category CRUD
-
-    Route::get('category',['as' => 'category.index', 'uses' => 'categoryController@index']);
-	Route::get('category/create',['as' => 'category.create', 'uses' => 'categoryController@create']);
-	Route::post('category',['as' => 'category.store', 'uses' => 'categoryController@store']);
-	Route::get('category/{id}/edit',['as' => 'category.edit', 'uses' => 'categoryController@edit']);
-	Route::get('category/{id}/show',['as' => 'category.show', 'uses' => 'categoryController@show']);
-	Route::put('category/{id}',['as' => 'category.update', 'uses' => 'categoryController@update']);
-	Route::delete('category/{id}',['as' => 'category.delete', 'uses' => 'categoryController@destroy']);
+	// Category CRUD
+    Route::get('category',['as' => 'category.index', 'uses' => 'CategoryController@index']);
+	Route::get('category/create',['as' => 'category.create', 'uses' => 'CategoryController@create']);
+	Route::post('category',['as' => 'category.store', 'uses' => 'CategoryController@store']);
+	Route::get('category/{id}/edit',['as' => 'category.edit', 'uses' => 'CategoryController@edit']);
+	Route::get('category/{id}/show',['as' => 'category.show', 'uses' => 'CategoryController@show']);
+	Route::put('category/{id}',['as' => 'category.update', 'uses' => 'CategoryController@update']);
+	Route::delete('category/{id}',['as' => 'category.delete', 'uses' => 'CategoryController@destroy']);
    
 
 
      //Content CRUD
 
-     Route::get('content/create',['as' => 'content.create', 'uses' => 'contentController@create']);
-     Route::post('content',['as' => 'content.store', 'uses' => 'contentController@store']);
+     Route::get('content/create',['as' => 'content.create', 'uses' => 'ContentController@create']);
+     Route::post('content',['as' => 'content.store', 'uses' => 'ContentController@store']);
   
 
      //USER PAGE

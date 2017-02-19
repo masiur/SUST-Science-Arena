@@ -14,7 +14,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown"><a><h4>SUST Science Arena</h4></a></li>
-                        <li class="dropdown active ">
+                        <li class="dropdown {!! Menu::isActiveRoute('index') !!} ">
                             <a href="{{ route('index') }}" class="dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                                 <li class="dropdown-submenu">
@@ -126,16 +126,16 @@
                             </ul>
                         </li>
                         <!--menu Portfolio li end here-->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <i class="fa fa-angle-down"></i></a>
+                        <li class="dropdown {!! Menu::areActiveRoutes(['blog.myblog', 'blog.index']) !!}">
+                            <a href="{{ route('blog.index' ) }}" class="dropdown-toggle" data-toggle="dropdown">Blog <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="blog-full.html">Blog - full width</a></li>
-                                <li><a href="blog-leftimg.html">Blog - left image</a></li>
-                                <li><a href="blog-sidebar.html">Blog - sidebar</a></li>
-                                <li><a href="blog-2col.html">Blog - 2 column</a></li>
-                                <li><a href="blog-timeline.html">Blog - Timeline</a></li>
-                                <li><a href="blog-masonary.html">Blog - Masonry</a></li>
-                                <li><a href="blog-single.html">Blog - Single</a></li>
+                                <li><a href="{{ route('blog.index') }}">Blog Public Page</a></li>
+                                @if(auth()->check())
+                                <li><a href="{{ route('blog.myblog') }}">My Article</a></li>
+                                <li><a href="{{ route('blog.create') }}">Write an Article</a></li>
+                                @endif
+                                
+                                
                             </ul>
                         </li>
                         <!--menu blog li end here-->

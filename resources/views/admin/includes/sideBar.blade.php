@@ -11,7 +11,6 @@
             </div>
             <!-- / brand -->
 
-
             <!-- Navbar Start -->
             <nav class="navigation">
                 <ul class="list-unstyled">
@@ -19,10 +18,17 @@
                      <li class="{!! Menu::isActiveRoute('dashboard') !!}"><a href="{{ route('dashboard') }}"><i class="ion-flask"></i> <span class="nav-label">Dashboard</span></a>                 
                     </li>
 
+                    <li class="has-submenu"><a href="#"><i class="ion-compose"></i> <span class="nav-label">Event</span><span class="badge bg-purple">1</span></a>
+                        <ul class="list-unstyled">
+                            <li><a href="{!! route('blog.create') !!}">Create blog</a></li>
+                            <li><a href="{!!route('blog.index') !!}">All Event List</a></li>
+
+                        </ul>
+                    </li>
+
 
                     <!-- <li class="{!! Menu::isActiveRoute('demo.index') !!}"><a href="{{ route('demo.index') }}"><i class="ion-compose"></i> <span class="nav-label">Demo (modal) CRUD</span></a>                       
                     </li>
-
 
                     <li class="has-submenu"><a href="#"><i class="ion-grid"></i> <span class="nav-label">Data Tables</span></a>
                         <ul class="list-unstyled">
@@ -41,7 +47,7 @@
                         </ul>
                     </li> -->
 
-                   <li class="has-submenu"><a href="#"><i class="ion-compose"></i> <span class="nav-label">Event</span><span class="badge bg-purple">1</span></a>
+                   <li class="has-submenu {!! Menu::areActiveRoutes(['event.index', 'event.create']) !!}"><a href="#"><i class="ion-compose"></i> <span class="nav-label">Event</span><span class="badge bg-purple">1</span></a>
                         <ul class="list-unstyled">
                             <li><a href="{!! route('event.create') !!}">Create Event</a></li>
                             <li><a href="{!!route('event.index') !!}">All Event List</a></li>
