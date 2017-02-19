@@ -36,6 +36,7 @@ Route::group(array('middleware' => 'auth'), function()
 {
 	Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@logout']);
 	Route::get('profile', ['as' => 'profile', 'uses' => 'UserController@profile']);
+	Route::get('settings', ['as' => 'settings', 'uses' => 'UserController@settings']);
 
 	 Route::get('dashboard', array('as' => 'dashboard', 'uses' => 'Auth\AuthController@dashboard'));
 
@@ -60,9 +61,28 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
    // Mithun end
 
    // any new admin panel route must be added here 
+   Route::get('user',['as' => 'user.index', 'uses' => 'UserController@index']);
+	Route::get('user/{id}/edit',['as' => 'user.edit', 'uses' => 'UserController@edit']);
+	Route::get('user/{id}/show',['as' => 'user.show', 'uses' => 'UserController@show']);
+	Route::put('user/{id}',['as' => 'user.update', 'uses' => 'UserController@update']);
+	Route::delete('user/{id}',['as' => 'user.delete', 'uses' => 'UserController@destroy']);
 	
 });
 
+<<<<<<< HEAD
+=======
+// Language CRUD
+/*	Route::get('language',['as' => 'language.index', 'uses' => 'LanguageController@index']);
+	Route::get('language/create',['as' => 'language.create', 'uses' => 'LanguageController@create']);
+	Route::post('language',['as' => 'language.store', 'uses' => 'LanguageController@store']);
+	Route::get('language/{id}/edit',['as' => 'language.edit', 'uses' => 'LanguageController@edit']);
+	Route::get('language/{id}/show',['as' => 'language.show', 'uses' => 'LanguageController@show']);
+	Route::put('language/{id}',['as' => 'language.update', 'uses' => 'LanguageController@update']);
+	Route::delete('language/{id}',['as' => 'language.delete', 'uses' => 'LanguageController@destroy']);
+
+*/
+
+>>>>>>> e40d9341446f2a54e1cb7389d899cef59417d446
 
 
  //  NEWS CRUD
