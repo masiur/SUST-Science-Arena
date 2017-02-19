@@ -1,9 +1,14 @@
 <?php
 
 
-
-
 Route::get('/', array('as' => 'index', 'uses' => 'FrontendController@index'));
+
+Route::get('news_list',['as' => 'news.list', 'uses' => 'NewsController@show']);
+     Route::get('event_list',['as' => 'event.list', 'uses' => 'EventController@show']);
+     Route::get('contact',['as' => 'contact', 'uses' => 'contactController@contact_page']);
+     Route::post('contact_store',['as' => 'contact.store', 'uses' => 'contactController@store']);
+
+
 // public routes -- Added by Masiur
 Route::get('home', array('as' => 'home', 'uses' => 'FrontendController@index'));
 // Blog Public Page
@@ -82,9 +87,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 });
 
 
-
-
-
  //  NEWS CRUD
    Route::get('news',['as' => 'news.index', 'uses' => 'NewsController@index']);
    Route::get('news/create',['as' => 'news.create', 'uses' => 'NewsController@create']);
@@ -114,10 +116,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 
      //USER PAGE
 
-     Route::get('news_list',['as' => 'news.list', 'uses' => 'NewsController@show']);
-     Route::get('event_list',['as' => 'event.list', 'uses' => 'EventController@show']);
-     Route::get('contact',['as' => 'contact', 'uses' => 'contactController@contact_page']);
-     Route::post('contact_store',['as' => 'contact.store', 'uses' => 'contactController@store']);
+     
 
 
 
