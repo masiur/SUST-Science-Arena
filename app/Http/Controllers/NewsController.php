@@ -101,9 +101,13 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+         $news = News::all();
+
+        // return $news;
+         
+         return view('user.news')->with('news' , $news);
     }
 
     /**

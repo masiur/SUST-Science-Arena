@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 Route::get('/', array('as' => 'index', 'uses' => 'FrontendController@index'));
 // public routes -- Added by Masiur
 Route::get('home', array('as' => 'home', 'uses' => 'FrontendController@index'));
@@ -22,6 +25,10 @@ Route::group(['middleware' => 'guest'], function(){
 	// social login route
 	Route::get('login/fb', ['as'=>'login/fb','uses' => 'SocialController@loginWithFacebook']);
 	Route::get('login/gp', ['as'=>'login/gp','uses' => 'SocialController@loginWithGoogle']);
+
+
+
+   
 
 });
 
@@ -49,22 +56,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
    Route::get('event/{id}/edit',['as' => 'event.edit', 'uses' => 'EventController@edit']);
    Route::put('event/{id}',['as' => 'event.update', 'uses' => 'ProjectController@update']);
    Route::delete('event/{id}',['as' => 'event.delete', 'uses' => 'EventController@destroy']);
+
    // Mithun end
 
    // any new admin panel route must be added here 
 	
 });
-
- // Language CRUD
-/*	Route::get('language',['as' => 'language.index', 'uses' => 'LanguageController@index']);
-	Route::get('language/create',['as' => 'language.create', 'uses' => 'LanguageController@create']);
-	Route::post('language',['as' => 'language.store', 'uses' => 'LanguageController@store']);
-	Route::get('language/{id}/edit',['as' => 'language.edit', 'uses' => 'LanguageController@edit']);
-	Route::get('language/{id}/show',['as' => 'language.show', 'uses' => 'LanguageController@show']);
-	Route::put('language/{id}',['as' => 'language.update', 'uses' => 'LanguageController@update']);
-	Route::delete('language/{id}',['as' => 'language.delete', 'uses' => 'LanguageController@destroy']);
-
-*/
 
 
 
@@ -78,9 +75,22 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
    Route::delete('news/{id}',['as' => 'news.delete', 'uses' => 'NewsController@destroy']);
 
 
+   
 
 
+
+     //Content CRUD
+
+     Route::get('content/create',['as' => 'content.create', 'uses' => 'contentController@create']);
+     Route::post('content',['as' => 'content.store', 'uses' => 'contentController@store']);
   
+
+     //USER PAGE
+
+     Route::get('news_list',['as' => 'news.list', 'uses' => 'NewsController@show']);
+     Route::get('event_list',['as' => 'event.list', 'uses' => 'EventController@show']);
+     Route::get('contact',['as' => 'contact', 'uses' => 'contactController@contact_page']);
+     Route::post('contact_store',['as' => 'contact.store', 'uses' => 'contactController@store']);
 
 
 
@@ -93,3 +103,17 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 	Route::get('demo/{id}/show',['as' => 'demo.show', 'uses' => 'DemoController@show']);
 	Route::put('demo/{id}',['as' => 'demo.update', 'uses' => 'DemoController@update']);
 	Route::get('demo/delete/{id}',['as' => 'demo.delete', 'uses' => 'DemoController@destroy']);
+
+
+
+
+	 // Language CRUD
+/*	Route::get('language',['as' => 'language.index', 'uses' => 'LanguageController@index']);
+	Route::get('language/create',['as' => 'language.create', 'uses' => 'LanguageController@create']);
+	Route::post('language',['as' => 'language.store', 'uses' => 'LanguageController@store']);
+	Route::get('language/{id}/edit',['as' => 'language.edit', 'uses' => 'LanguageController@edit']);
+	Route::get('language/{id}/show',['as' => 'language.show', 'uses' => 'LanguageController@show']);
+	Route::put('language/{id}',['as' => 'language.update', 'uses' => 'LanguageController@update']);
+	Route::delete('language/{id}',['as' => 'language.delete', 'uses' => 'LanguageController@destroy']);
+
+*/
