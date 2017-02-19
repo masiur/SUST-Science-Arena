@@ -119,8 +119,6 @@
                 $(".deleteForm").attr("action", url+'/'+deleteId);
             });
 
-            
-                // these above code concept line was borrowed from legaats project which was done by Mr. Md. Nayeem Iqubal Joy. Also , he helped dubugging it. 
         });
     </script>
 
