@@ -78,7 +78,7 @@ class EventController extends Controller
          
          $event = Event::all();
          
-         return view('user.event')->with('event' , $event);
+         return view('user.event')->with('event' , $event)->with('title' , "Event");
 
 
     }
