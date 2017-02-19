@@ -18,11 +18,15 @@ class CreateBlogsTable extends Migration
             $table->longText('details');
             $table->string('cover_img');
             $table->string('category');
-            $table->integer('user_id')->unsigned();
             $table->string('tags');
+            $table->enum('published', ['yes','no'])->default('no');
+            $table->integer('user_id')->unsigned();
+            $table->integer('category_id')->unsigned();
+
             $table->foreign('user_id')->references('id')->on('users')
                 ->onUpdate('cascade')->onDelete('cascade');
-            
+            $table->foreign('category_id')->references('id')->on('categories')
+                ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

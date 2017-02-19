@@ -77,7 +77,7 @@ class NewsController extends Controller
                     $file = Input::file('image');
 
                     $destination = public_path().'/uploads/user_image/';
-                    $filename = time().'_'.$name.'_'.$file->getClientOriginalExtension();
+                    $filename = time().'_'.$name.'_.'.$file->getClientOriginalExtension();
                     $file->move($destination, $filename);
                     $img_url = '/uploads/image/'.$filename;
                 } else {
@@ -105,9 +105,9 @@ class NewsController extends Controller
     {
          $news = News::all();
 
-        // return $news;
+      //   return $news;
          
-         return view('user.news')->with('news' , $news);
+         return view('user.news')->with('news' , $news)->with('title' , "Latest news");
     }
 
     /**

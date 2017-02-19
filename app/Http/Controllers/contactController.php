@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 use Validator;
 
 
-class contactController extends Controller
+class ContactController extends Controller
 {
 
 

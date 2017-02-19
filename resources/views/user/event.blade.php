@@ -18,12 +18,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h4>Blog left image</h4>
+                        <h4>{{ $title }}</h4>
                     </div>
                     <div class="col-sm-6 hidden-xs text-right">
                         <ol class="breadcrumb">
                             <li><a href="index.html">Home</a></li>
-                            <li>blog left img</li>
+                            <li>{{ $title }}</li>
                         </ol>
                     </div>
                 </div>
@@ -52,11 +52,11 @@
                             </div>
                             <div class="col-md-6 margin20">
                                 <ul class="list-inline post-detail">
-                                    <li>by <a href="#">assan</a></li>
-                                    <li><i class="fa fa-calendar"></i> 31st july 2014</li>
-                                    <li><i class="fa fa-tag"></i> <a href="#">Sports</a></li>
-                                </ul>
-                                <h2><a href="#">Lorem ipsum dollor sit amet</a></h2>
+                                    <li>by <a href="#">SSA</a></li>
+                                    <li><i class="fa fa-calendar"></i> {{ $events->created_at }} </li>
+                                   <!-- <li><i class="fa fa-tag"></i> <a href="#">Sports</a></li>
+                                </ul> -->
+                                <h2><a href="#">{{ $events->title }}</a></h2>
                                 <p>
                                     {!! $events->description !!}
                                 </p>
@@ -74,7 +74,7 @@
                         <li class="next"><a href="#">Next Page &rarr;</a></li>
                     </ul><!--pager-->
                 </div><!--col-->
-                <div class="col-md-3 col-md-offset-1">
+                <!-- <div class="col-md-3 col-md-offset-1">
                     <div class="sidebar-box margin40">
                         <h4>Search</h4>
                         <form role="form" class="search-widget">
@@ -82,13 +82,13 @@
                             <i class="fa fa-search"></i>
                         </form>
                     </div><!--sidebar-box-->
-                    <div class="sidebar-box margin40">
+                  <!--  <div class="sidebar-box margin40">
                         <h4>Text widget</h4>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis. Pellentesque cursus arcu id magna euismod in elementum purus molestie.
                         </p>
                     </div><!--sidebar-box-->
-                    <div class="sidebar-box margin40">
+                   <!-- <div class="sidebar-box margin40">
                         <h4>Categories</h4>
                         <ul class="list-unstyled cat-list">
                             <li> <a href="#">Marketing</a> <i class="fa fa-angle-right"></i></li>
@@ -100,7 +100,7 @@
                             <li> <a href="#">Marketing</a> <i class="fa fa-angle-right"></i></li>
                         </ul>
                     </div><!--sidebar-box-->
-                    <div class="sidebar-box margin40">
+                  <!--  <div class="sidebar-box margin40">
                         <h4>Popular Post</h4>
                         <ul class="list-unstyled popular-post">
                             <li>
@@ -132,7 +132,7 @@
                             </li>
                         </ul>
                     </div><!--sidebar-box-->
-                    <div class="sidebar-box margin40">
+                   <!-- <div class="sidebar-box margin40">
                         <h4>Tag Cloud</h4>
                         <div class="tag-list">
                             <a href="#">Wordpress</a>
@@ -147,8 +147,8 @@
                         </div>
                     </div>
                 </div><!--sidebar-col-->
-            </div><!--row for blog post-->
-        </div><!--blog full main container-->
+           <!-- </div><!--row for blog post-->
+       <!-- </div><!--blog full main container-->
         <div class="divide60"></div>
 
                @include('pages.footer')<!--default footer end here-->

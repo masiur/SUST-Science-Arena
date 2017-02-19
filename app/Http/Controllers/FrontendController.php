@@ -18,6 +18,11 @@ class FrontendController extends Controller
         return view('index')->with('title', 'Home');
     }
 
+    public function blogIndex()
+    {
+        return view('blog')->with('title', 'Blog');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
