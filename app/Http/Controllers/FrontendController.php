@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Models\Blog;
+use App\Models\Category;
 class FrontendController extends Controller
 {
     /**
@@ -20,7 +21,23 @@ class FrontendController extends Controller
 
     public function blogIndex()
     {
-        return view('blog')->with('title', 'Blog');
+        $blogs = Blog::orderBy('id', 'desc')->get();
+        $categories = Category::all();
+        return view('blog')
+                        ->with('title', 'Public Articles')
+                        ->with('blogs', $blogs)
+                        ->with('categories', $categories);
+    }
+
+    public function blogSingle($title)
+    {
+        $blog = Blog::where('title', str_slug($title, ' '))->first();
+        $pageTitle = str_limit($blog->title, 20).' || Blog';
+        $categories = Category::all();
+        return view('blog.blogSingle')
+                        ->with('title', $pageTitle)
+                        ->with('blog', $blog)
+                        ->with('categories', $categories);
     }
 
     /**

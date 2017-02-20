@@ -1,61 +1,69 @@
 @extends('layouts.frontend')
     @section('content')
-
-     	<div class="breadcrumb-wrap">
+    <div class="breadcrumb-wrap">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h4>All Articles</h4>
+                        <h4>Article Details</h4>
                     </div>
                     <div class="col-sm-6 hidden-xs text-right">
                         <ol class="breadcrumb">
                             <li><a href="{{ route('index') }}">Home</a></li>
                             <li><a href="{{ route('blog.index') }}">Blog</a></li>
+                            <li>Article Details</li>
                         </ol>
                     </div>
                 </div>
             </div>
         </div><!--breadcrumbs-->
         <div class="divide80"></div>
-        <div class="container blog-left-img">
-        @include('admin.includes.alert')
+        <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                	@foreach($blogs as $blog)
                     <div class="blog-post">
-                        <div class="row">
-                            <div class="col-md-6 margin20">
-                                <a href="#">
-                                    <div class="item-img-wrap">
-                                        <img src="{{ $blog->cover_img }}" class="img-responsive" alt="workimg">
-                                        <div class="item-img-overlay">
-                                            <span></span>
-                                        </div>
-                                    </div>                       
-                                </a><!--work link--> 
-                            </div>
-                            <div class="col-md-6 margin20">
-                                <ul class="list-inline post-detail">
-                                    <li>by <a href="#">{{ $blog->user->profile->fullName }}</a></li>
-                                    <li><i class="fa fa-calendar"></i> {{ $blog->created_at }}</li>
-                                    <li><i class="fa fa-tag"></i> <a href="#">{{ $blog->category->name }}</a></li>
-                                </ul>
-                                <h2><a href="{{ route('blog.single', str_slug($blog->title, '-')) }}">{{ $blog->title }}</a></h2>
-                                <p>{!! str_limit($blog->details, 100) !!}</p>
-                                <p class="divide60"></p>
-                                
-                                <p><a href="{{ route('blog.single', str_slug($blog->title, '-')) }}" class="btn btn-theme-dark">Read More...</a></p>
-                            </div>
-
-                        </div>
+                            <div>
+                                <img src="{{ asset('img/ssacover.jpg') }}" class="img-responsive" alt="workimg">
+                            </div>                       
+                        <ul class="list-inline post-detail">
+                            <li>by <a href="#">{{ $blog->user->profile->fullName }}</a></li>
+                            <li><i class="fa fa-calendar"></i> {{ $blog->created_at }}</li>
+                            <li><i class="fa fa-tag"></i> <a href="#">{{ $blog->category->name }}</a></li>
+                            <!-- <li><i class="fa fa-comment"></i> <a href="#">6 Comments</a></li> -->
+                        </ul>
+                        <h2>{{ $blog->title }}</h2>
+                        <p>
+                            {!! $blog->details !!}
+                        </p> 
                     </div><!--blog post-->
-                    @endforeach
-
+                    <div class="about-author">
+                        <h4 class="colored-text">About the Author</h4>
+                        <img src="{{ asset($blog->user->profile->img_url) }}" class="img-responsive" alt="{{ $blog->user->profile->fullName }}">
+                        <p>
+                            {{ $blog->user->profile->bio }}
+                        </p>
+                    </div><!--about author-->
                     
-                    <ul class="pager">
-                        <li class="previous"><a href="#">&larr; Previous Page</a></li>
-                        <li class="next"><a href="#">Next Page &rarr;</a></li>
-                    </ul><!--pager-->
+                    <div class="divide60"></div>
+                    <!-- <div class="comment-form">
+                        <h3>Leave Comment</h3>
+                        <div class="form-contact">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="email" class="form-control" id="name" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="password" class="form-control" id="email" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Comment</label>
+                                    <textarea class="form-control" rows="7" id="message" required=""></textarea>
+                                </div>                      
+                                <button type="submit" class="btn btn-theme-bg btn-lg pull-right">Comment</button>
+                            </form>
+                        </div>
+                    </div> -->
                 </div><!--col-->
                 <div class="col-md-3 col-md-offset-1">
                     <!-- <div class="sidebar-box margin40">
@@ -65,7 +73,7 @@
                             <i class="fa fa-search"></i>
                         </form>
                     </div> --><!--sidebar-box-->
-                   <!--  <div class="sidebar-box margin40">
+                    <!-- <div class="sidebar-box margin40">
                         <h4>Text widget</h4>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis. Pellentesque cursus arcu id magna euismod in elementum purus molestie.
@@ -74,14 +82,14 @@
                     <div class="sidebar-box margin40">
                         <h4>Categories</h4>
                         <ul class="list-unstyled cat-list">
-                        	@foreach($categories as $category)
+                            @foreach($categories as $category)
                             <li> <a href="#">{{ $category->name }}</a> <i class="fa fa-angle-right"></i></li>
                             @endforeach
                         </ul>
                     </div><!--sidebar-box-->
                     <div class="sidebar-box margin40">
                         <h4>Popular Post</h4>
-                        <ul class="list-unstyled popular-post">
+                       <ul class="list-unstyled popular-post">
                             <li>
                                 <div class="popular-img">
                                     <a href="#"> <img src="img/img-7.jpg" class="img-responsive" alt=""></a>
@@ -129,5 +137,6 @@
             </div><!--row for blog post-->
         </div><!--blog full main container-->
         <div class="divide60"></div>
+
           
     @endsection

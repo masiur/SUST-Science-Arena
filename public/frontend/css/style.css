@@ -41,9 +41,9 @@ iframe {
 }
 
 ::selection {
-  background: #fefac7;
-  /* Safari */
-  color: #555555;
+  /*background: #fefac7;
+   Safari 
+  color: #555555; */
 }
 
 ::-moz-selection {

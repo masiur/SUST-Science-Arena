@@ -16,8 +16,7 @@ class CreateBlogsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->longText('details');
-            $table->string('cover_img');
-            $table->string('category');
+            $table->string('cover_img')->nullable();
             $table->string('tags');
             $table->enum('published', ['yes','no'])->default('no');
             $table->integer('user_id')->unsigned();
@@ -26,7 +25,7 @@ class CreateBlogsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')
                 ->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')
-                ->onUpdate('cascade')->onDelete('cascade');
+                ->onUpdate('cascade');
             $table->timestamps();
         });
     }

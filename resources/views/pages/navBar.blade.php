@@ -1,19 +1,17 @@
-<!--navigation -->
+
         <!-- Static navbar -->
         <div class="navbar navbar-default navbar-static-top yamm sticky" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                
+                    
                     <a class="navbar-brand" href="{{ route('index') }}"><img src="{{ asset('img/logo.jpg') }}" alt="SUST Science Arena"></a>
+
                 </div>
+                <h4 class="masiur-navlogo-pos">SUST Science Arena</h4>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown"><a><h4>SUST Science Arena</h4></a></li>
+                        <!-- <li class="dropdown"><a><h4>SUST Science Arena</h4></a></li> -->
                         <li class="dropdown {!! Menu::isActiveRoute('index') !!} ">
                             <a href="{{ route('index') }}" class="dropdown-toggle" data-toggle="dropdown">Home</a>
                             
@@ -81,4 +79,4 @@
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--container-->
-        </div><!--navbar-default-->
+        </div><!--navbar-default

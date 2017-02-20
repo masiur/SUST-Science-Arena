@@ -14,6 +14,7 @@ Route::get('home', array('as' => 'home', 'uses' => 'FrontendController@index'));
 // Blog Public Page
 Route::get('blog',['as' => 'blog.index', 'uses' => 'FrontendController@blogIndex']);
 
+
 Route::group(['middleware' => 'guest'], function(){
 
 	Route::get('login', ['as'=>'login','uses' => 'Auth\AuthController@login']);
@@ -116,7 +117,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 
      //USER PAGE
 
-     
+     Route::get('blog/{title}',['as' => 'blog.single', 'uses' => 'FrontendController@blogSingle']);
 
 
 

@@ -33,3 +33,5 @@
         {!! Html::script('frontend/cubeportfolio/js/jquery.cubeportfolio.min.js') !!}
         {!! Html::script('frontend/js/cube-portfolio.js') !!}
         {!! Html::script('frontend/js/pace.min.js') !!}
+
+        @yield('script')

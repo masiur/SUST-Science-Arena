@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\BlogRequest;
 use App\Models\Blog;
 use App\Models\Category;
 use App\Http\Requests;
@@ -10,6 +11,7 @@ use App\Http\Controllers\Controller;
 use Auth;
 use Validation;
 use Input;
+
 class BlogController extends Controller
 {
     /**
@@ -19,10 +21,12 @@ class BlogController extends Controller
      */
     public function myblog()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::orderBy('id', 'desc')->where('user_id', auth()->user()->id)->get();
+        $categories = Category::all();
         return view('blog.myblog')
                         ->with('title', 'Article written by Me')
-                        ->with('blogs', $blogs);
+                        ->with('blogs', $blogs)
+                        ->with('categories', $categories);
     }
 
     /**
@@ -44,25 +48,22 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BlogRequest $request)
     {
-        $rules = [
-            'name' => 'required'
-            ];
-
+       
         $data = $request->all();
-        $validation = Validator::make($data, $rules);
-
-        if ($validation->fails()) {
-            return redirect()->back()->withInput()->withErrors($validation);
-        }
-
-        $category = new Category();
-        $category->name = $data['name'];
-        if($category->save()) {
-            return redirect()->route('category.index')->with('success','Category Successfully Added');
+        $blog = new Blog();
+        $blog->title = $data['title'];
+        $blog->category_id = $data['category_id'];
+        $blog->details = $data['details'];
+        $blog->user_id = auth()->user()->id;
+        // $blog->published = 'no'; // for admin approval status is by default no
+        $blog->cover_img = null;
+        $blog->tags =  $data['tags'];
+        if($blog->save()) {
+            return redirect()->route('blog.myblog')->with('success','Article Created Successfully');
         } else {
-            return redirect()->route('category.index')->with('error','Something went wrong');
+            return redirect()->route('blog.myblog')->with('error','Something went wrong.Please, try again');
         }
     }
 

@@ -8,10 +8,10 @@
                     <!-- SLIDE -->
                     <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Powerful Theme">
                         <!-- MAIN IMAGE -->
-                        <img src="img/bg-3.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <img src="{{ asset('img/ssacover.jpg') }}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                         <div class="caption title-2 sft"
-                             data-x="50"
-                             data-y="160"
+                             data-x="31"
+                             data-y="100"
                              data-speed="1000"
                              data-start="1000"
                              data-easing="easeOutExpo">

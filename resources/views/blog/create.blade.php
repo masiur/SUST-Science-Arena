@@ -24,7 +24,7 @@
                 <div class="col-md-10 col-sm-10">
                     <div class="login-form">
                         <h3>{{ $title }}</h3>
-                         <form role="form" method="POST" action="{{route('blog.store') }}"  enctype="multipart/form-data">
+                         <form role="form" method="POST" action="{{ route('blog.store') }}"  enctype="multipart/form-data" class="form-horizontal">
                           {{ csrf_field() }}
 
                         <div class="form-group">
@@ -32,36 +32,37 @@
                             <div class="col-lg-10">
                                 {!! Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Enter Your Article Title', 'required' => 'required')) !!}
                             </div>
-                        </div><br><br>
+                        </div>
 
                         <div class="form-group">
-                            {!! Form::label('details', "Details*", array('class' => 'control-label col-lg-2')) !!}
-                            <div class="col-lg-10">
-                                {!! Form::textarea('details', null, array('class' => 'form-control summernote', 'placeholder' => 'Article Content Goes Here', 'required' => 'required')) !!}
-                            </div>
-                        </div><br><br><br>
-
-                        <div class="form-group">
-                            {!! Form::label('details', "Details*", array('class' => 'control-label col-lg-2')) !!}
+                            {!! Form::label('category_id', "Category*", array('class' => 'control-label col-lg-2')) !!}
                             <div class="col-lg-10">
                                 {!! Form::select('category_id', $categories, null, array('class' => 'form-control ', 'placeholder' => 'Select Category', 'required' => 'required')) !!}
                             </div>
-                        </div><br><br>
+                        </div>
 
                         <div class="form-group">
-                            <div class="col-lg-offset-2 col-lg-10">
-                            {!! Form::submit('Create Article', array('class' => 'btn btn-theme-bg')) !!}
+                            {!! Form::label('details', "Details*", array('class' => 'control-label col-lg-2')) !!}
+                            <div class="col-lg-10">
+                                {!! Form::textarea('details', null, array('class' => 'form-control summernote', 'placeholder' => 'Article Content Goes Here')) !!}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            {!! Form::label('tags', "Tags*", array('class' => 'control-label col-lg-2')) !!}
+                            <div class="col-lg-10">
+                                {!! Form::text('tags', null, array('class' => 'form-control', 'placeholder' => 'science, biology, dna etc', 'required' => 'required')) !!}
                             </div>
                         </div>
 
                         
 
-                        <!-- <div class="form-group">
-                            <label for="exampleInputProfilePicture">Profile Picture</label>
-                            <input type="file" name="photo" class="form-control" id="exampleInputProfilePicture" multiple="false">
-                        </div> -->
-         
-                       
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                            {!! Form::submit('Create Article', array('class' => 'btn btn-success')) !!}
+                            </div>
+                        </div>
+                   
 
                     </form>
                     </div>
@@ -96,7 +97,7 @@
                     minHeight: null,             // set minimum height of editor
                     maxHeight: null,             // set maximum height of editor
 
-                    focus: true                 // set focus to editable area after initializing summernote
+                    // focus: true                 // set focus to editable area after initializing summernote
                 });
 
         });
