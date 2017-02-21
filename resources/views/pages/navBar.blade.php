@@ -32,8 +32,9 @@
                                 <li><a href="{{ route('blog.index') }}">Blog Public Page</a></li>
                                 @if(auth()->check())
                                 <li><a href="{{ route('blog.myblog') }}">My Article</a></li>
-                                <li><a href="{{ route('blog.create') }}">Write an Article</a></li>
                                 @endif
+                                <li><a href="{{ route('blog.create') }}">Write an Article</a></li>
+                                
                                 
                                 
                             </ul>
