@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
-use App\Http\Requests\BlogRequest;
+
 class BlogRequest extends Request
 {
     /**

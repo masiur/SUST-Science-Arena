@@ -8,7 +8,7 @@
                     <a class="navbar-brand" href="{{ route('index') }}"><img src="{{ asset('img/logo.jpg') }}" alt="SUST Science Arena"></a>
 
                 </div>
-                <h4 class="masiur-navlogo-pos">SUST Science Arena</h4>
+                <h4 class="masiur-navlogo-pos"><a href="{{ route('index') }}">SUST Science Arena</a></h4>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <!-- <li class="dropdown"><a><h4>SUST Science Arena</h4></a></li> -->
