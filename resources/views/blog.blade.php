@@ -25,7 +25,7 @@
                     <div class="blog-post">
                         <div class="row">
                             <div class="col-md-6 margin20">
-                                <a href="#">
+                                <a href="{{ route('blog.single', str_slug($blog->title, '-')) }}">
                                     <div class="item-img-wrap">
                                         <img src="{{ $blog->cover_img }}" class="img-responsive" alt="workimg">
                                         <div class="item-img-overlay">
@@ -50,12 +50,10 @@
                         </div>
                     </div><!--blog post-->
                     @endforeach
+                    <div class="divide60"></div>
+                   {!! $blogs->render() !!} 
+                   
 
-                    
-                    <ul class="pager">
-                        <li class="previous"><a href="#">&larr; Previous Page</a></li>
-                        <li class="next"><a href="#">Next Page &rarr;</a></li>
-                    </ul><!--pager-->
                 </div><!--col-->
                 <div class="col-md-3 col-md-offset-1">
                     <!-- <div class="sidebar-box margin40">
@@ -79,7 +77,7 @@
                             @endforeach
                         </ul>
                     </div><!--sidebar-box-->
-                    <div class="sidebar-box margin40">
+                    <!-- <div class="sidebar-box margin40">
                         <h4>Popular Post</h4>
                         <ul class="list-unstyled popular-post">
                             <li>
@@ -110,7 +108,7 @@
                                 </div>
                             </li>
                         </ul>
-                    </div><!--sidebar-box-->
+                    </div> --><!--sidebar-box-->
                     <!-- <div class="sidebar-box margin40">
                         <h4>Tag Cloud</h4>
                         <div class="tag-list">

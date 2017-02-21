@@ -2,8 +2,6 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\Category;
-// composer require laracasts/testdummy
-use Laracasts\TestDummy\Factory as TestDummy;
 
 class CategoryTableSeeder extends Seeder
 {

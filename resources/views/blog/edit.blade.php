@@ -11,7 +11,7 @@
                         <ol class="breadcrumb">
                             <li><a href="{{ route('index')}}">Home</a></li>
                             <li><a href="{{ route('blog.index')}}">Blog</a></li>
-                            <li>Writing Article</li>
+                            <li>Edit Article</li>
                         </ol>
                     </div>
                 </div>
@@ -24,8 +24,7 @@
                 <div class="col-md-12 col-sm-12">
                     <div class="login-form">
                         <h3>{{ $title }}</h3>
-                         <form role="form" method="POST" action="{{ route('blog.store') }}"  enctype="multipart/form-data" class="form-horizontal">
-                          {{ csrf_field() }}
+                        {!! Form::model($blog, array('route' => ['blog.update',$blog->id], 'method' => 'PUT', 'class' => 'form-horizontal', 'role' => 'form', 'files' => true)) !!}
 
                         <div class="form-group">
                             {!! Form::label('title', "Title*", array('class' => 'control-label col-lg-2')) !!}
@@ -59,12 +58,12 @@
 
                         <div class="form-group">
                             <div class="col-lg-offset-2 col-lg-10">
-                            {!! Form::submit('Create Article', array('class' => 'btn btn-success')) !!}
+                            {!! Form::submit('Save Changes', array('class' => 'btn btn-success')) !!}
                             </div>
                         </div>
                    
 
-                    </form>
+                    {!! Form::close() !!}
                     </div>
                 </div>
                 
