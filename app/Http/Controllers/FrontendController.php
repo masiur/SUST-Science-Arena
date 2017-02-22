@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Category;
+use App\Models\Event;
 class FrontendController extends Controller
 {
     /**
@@ -45,9 +46,11 @@ class FrontendController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function event()
     {
-        //
+        $event = Event::paginate(10);
+         
+         return view('user.event')->with('event' , $event)->with('title' , "Events");
     }
 
     /**

@@ -209,6 +209,7 @@
 
             </div><!--center heading end-->
             <div class="divide50"></div>
+            {{--
             <div class="row">
                 <div class="col-md-3 col-sm-6 margin30">
                     <div class="colored-boxed green">
@@ -251,6 +252,7 @@
                     </div>
                 </div><!--colored boxed col end-->
             </div>
+             --}}
         </div><!--services container-->
 
         <div class="divide80"></div>
@@ -267,7 +269,7 @@
         <div class="container">
             <div class="cube-masonry">
 
-                <div id="filters-container" class="cbp-l-filters-alignCenter">
+                <!-- <div id="filters-container" class="cbp-l-filters-alignCenter">
                     <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
                         All <div class="cbp-filter-counter"></div>
                     </div>
@@ -283,7 +285,7 @@
                     <div data-filter=".graphic, .identity" class="cbp-filter-item">
                         Web Design & Identity <div class="cbp-filter-counter"></div>
                     </div>
-                </div>
+                </div> -->
 
                 <div id="masnory-container" class="cbp">
                     <div class="cbp-item identity">
@@ -480,6 +482,7 @@
             <a href="masonry-portfolio-4.html" class="btn btn-theme-dark btn-lg">View Past Events</a>
         </div>
         <div class="divide50"></div>
+        {{-- Code
         <div class="wide-img-showcase">
 
             <div class="row margin-0 wide-img-showcase-row">
@@ -554,14 +557,15 @@
                 </div>
             </div>
         </section><!--fun facts-->
+         --}} Code
         <div class="testimonials-v-2 wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="100ms">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                         <div class="center-heading">
                             <h2><strong>What</strong> Advisor’s Say</h2>
-                            <p>2600+ Worldwide customers  use Assan template.</p>
-                            <span class="center-line"></span>
+                            <!-- <p>2600+ Worldwide customers  use Assan template.</p>
+                            <span class="center-line"></span> -->
 
                         </div>
                     </div>
@@ -573,7 +577,7 @@
                         <div class="testi-slide">
                             <ul class="slides">
                                 <li>
-                                    <img src="img/customer-1.jpg" alt="">
+                                    <img src="{{ asset('frontend/img/customer-1.jpg') }}" alt="">
                                     <p>
                                         <i class="ion-quote"></i>
                                         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
@@ -583,7 +587,7 @@
                                     </h4>
                                 </li><!--testi item-->
                                 <li>
-                                    <img src="img/customer-2.jpg" alt="">
+                                    <img src="{{ asset('frontend/img/customer-2.jpg') }}" alt="">
                                     <p>
                                         <i class="ion-quote"></i>
                                         Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years </p>
@@ -592,7 +596,7 @@
                                     </h4>
                                 </li><!--testi item-->
                                 <li>
-                                    <img src="img/customer-3.jpg" alt="">
+                                    <img src="{{ asset('frontend/img/customer-3.jpg') }}" alt="">
                                     <p>
                                         <i class="ion-quote"></i>
                                         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor.</p>
@@ -607,130 +611,9 @@
 
             </div>
         </div><!--testimonials v-2 end-->
-        <div class="blue-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 margin30">
-                        <div class="services-box wow animated fadeInDown">
-                            <div class="services-box-icon">
-                                <i class="pe-7s-diamond"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>250+ valid layouts</h4>
-                                <p>
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.</div>
-                        </div><!--service box-->
-                    </div>
-                    <div class="col-sm-6 ">
-                        <div class="services-box wow animated fadeInUp">
-                            <div class="services-box-icon">
-                                <i class="pe-7s-download"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>Free Support & Updates</h4>
-                                <p>
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor. </div>
-                        </div><!--service box-->
-                    </div>
-                </div>
-            </div>
-        </div><!--full wide 2 columns content end-->
-        <div class="divide70"></div>
-        <div class="assan-features">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="center-heading">
-                            <h2>Awesome <strong>features</strong></h2>
-                            <span class="center-line"></span>
-                        </div>
-                    </div>                   
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 margin20">
-                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="100ms">
-                            <div class="services-box-icon">
-                                <i class="fa fa-image"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>Sliders</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-                                </p>
-                            </div>
-                        </div><!--services box-->
-                    </div><!--services col-->
-                    <div class="col-md-4 col-sm-6 margin20">
-                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="200ms">
-                            <div class="services-box-icon">
-                                <i class="fa fa-envelope"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>Advanced Forms</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-                                </p>
-                            </div>
-                        </div><!--services box-->
-                    </div><!--services col-->
-                    <div class="col-md-4 col-sm-6 margin20">
-                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="300ms">
-                            <div class="services-box-icon">
-                                <i class="fa fa-users"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>Customer Support</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-                                </p>
-                            </div>
-                        </div><!--services box-->
-                    </div><!--services col-->
-
-                    <div class="col-md-4 col-sm-6 margin20">
-                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="400ms">
-                            <div class="services-box-icon">
-                                <i class="fa fa-crop"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>Pixel perfect design</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-                                </p>
-                            </div>
-                        </div><!--services box-->
-                    </div><!--services col-->
-                    <div class="col-md-4 col-sm-6 margin20">
-                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="500ms">
-                            <div class="services-box-icon">
-                                <i class="fa fa-twitter"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>BOOTSTRAP 3.3.6</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-                                </p>
-                            </div>
-                        </div><!--services box-->
-                    </div><!--services col-->
-                    <div class="col-md-4 col-sm-6 margin20">
-                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="600ms">
-                            <div class="services-box-icon">
-                                <i class="fa fa-flag"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>Font Awesome icons</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-
-                                </p>
-
-                            </div>
-                        </div><!--services box-->
-                    </div><!--services col-->
-                </div><!--services row-->
-            </div>
-        </div><!--assan features-->
+        
+        <!-- <div class="divide70"></div> -->
+        
         <div class="divide40"></div>
 
         <div class="our-team-v-2">
