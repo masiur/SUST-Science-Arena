@@ -76,9 +76,9 @@
                     </form>
                     </div>
                 </div>
-                <!-- <div class="col-md-4 col-sm-4">
+                <div class="col-md-4 col-sm-4">
                     <a href="#" class="btn btn-fb-login"><i class="fa fa-facebook"></i> Login With Facebook</a>
-                </div> -->
+                </div>
             </div>
         </div>
         <div class="divide60"></div>

@@ -39,8 +39,8 @@
                             </label>
                         </div>
                         <button type="submit" class="btn btn-theme-bg">Login</button>
-                        <a href="#" class="btn btn-fb-login"><i class="fa fa-facebook"></i> Login With Facebook</a>
-                        <a href="#">Forget Password?</a>
+                        <!-- <a href="#" class="btn btn-fb-login"><i class="fa fa-facebook"></i> Login With Facebook</a> -->
+                        <!-- <a href="#">Forget Password?</a> -->
                     </form>
                     </div>
                 </div>
