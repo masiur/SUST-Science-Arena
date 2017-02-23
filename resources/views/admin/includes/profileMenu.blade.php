@@ -1,7 +1,7 @@
 <!-- user login dropdown start-->
 <li class="dropdown text-center">
     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-        <img alt="" src={{ asset('img/avatar-2.jpg') }} class="img-circle profile-img thumb-sm">
+        <img alt="" src="{{ asset('img/propic.png') }}" class="img-circle profile-img thumb-sm">
         
     </a>
     <ul class="dropdown-menu pro-menu fadeInUp animated" tabindex="5003" style="overflow: hidden; outline: none;">
