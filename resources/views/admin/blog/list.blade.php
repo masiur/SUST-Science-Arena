@@ -45,7 +45,13 @@
                                                 </td>
                                                 <td>{!! $blog->details !!}</td>
                                                 <td>{!! $blog->user->username !!}</td>
+
+                                                @if($blog->published == "no")
                                                 <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('accept.blog',$blog->id)!!}"  style="margin-right: 3px;">Accept</a></td>
+                                                @else
+                                                <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="#"  style="margin-right: 3px;">Accepted</a></td>
+                                                @endif
+
                                                 <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Ignore</a></td>
                                             </tr>
                                             
