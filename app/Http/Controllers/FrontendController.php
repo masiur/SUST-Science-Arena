@@ -17,7 +17,9 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        return view('index')->with('title', 'Home');
+        $events = Event::all();
+        return view('index')->with('title', 'Home')
+                            ->with('events' , $events);
     }
 
     public function blogIndex()
