@@ -14,8 +14,10 @@ class CreateEventTable extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('name');
+            $table->string('name');
             $table->text('description');
+            $table->string('img_url')->default('img/ssacover.jpg');
+            $table->text('fb_event_link');
             $table->string('date');
             $table->string('place');
             $table->timestamps();

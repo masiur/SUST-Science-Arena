@@ -43,7 +43,7 @@
         
                         <!--mega menu-->
                         <li class="dropdown ">
-                            <a href="{{ route('contact') }}" class="dropdown-toggle" data-toggle="dropdown">Contact </a>
+                            <a href="{{ route('contact') }}" class="dropdown-toggle" >Contact</a>
                             
                         </li> <!--menu Features li end here-->   
 
@@ -80,4 +80,4 @@
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--container-->
-        </div><!--navbar-default
+        </div>

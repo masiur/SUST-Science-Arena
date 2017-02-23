@@ -27,9 +27,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 margin30">
-                    <h3 class="heading">Contact us</h3>
+                    <h3 class="heading">Contact Us</h3>
                     <p>
-                        Duis vitae imperdiet ipsum. Vestibulum ullamcorper lorem at orci vulputate, volutpat tempus magna elementum. Nam in odio sem. Morbi in justo interdum massa tristique lobortis in quis diam. Etiam erat urna, cursus eu ante quis, aliquam venenatis augue. Cras turpis justo, pellentesque eu hendrerit et, euismod vitae leo. Ut in lorem lobortis, gravida quam eget, pulvinar quam. Nam ut leo leo.
+                        <h4>Say Hello to Us :D</h4>
                     </p>
                     <div class="divide30"></div>
                     <div class="form-contact">
@@ -92,10 +92,10 @@
                 <div class="col-md-4">
                     <h3 class="heading">Contact info</h3>
                     <ul class="list-unstyled contact contact-info">
-                        <li><p><strong><i class="fa fa-map-marker"></i> Address:</strong> vaisahali, jaipur, 302012</p></li> 
-                        <li><p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="#">Support@designmylife.com</a></p></li>
-                        <li> <p><strong><i class="fa fa-phone"></i> Phone:</strong> +91 1800 2345 2132</p></li>
-                        <li> <p><strong><i class="fa fa-print"></i> Fax:</strong> +91 2345 2132</p></li>
+                        <li><p><strong><i class="fa fa-map-marker"></i> Address:</strong> SUST, Sylhet-3114, Bangladesh</p></li> 
+                        <li><p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="#">ssa.sust@gmail.com</a></p></li>
+                        <li> <p><strong><i class="fa fa-phone"></i> Phone:</strong> +880 1614 915 502</p></li>
+                        
                     </ul>
                     <div class="divide40"></div>
                     <h4>Get social</h4>
@@ -130,7 +130,7 @@
 
 @section('script')
         
-        
+        {{-- 
         <!--customizable plugin edit according to your needs-->
         <script src="js/custom.js" type="text/javascript"></script>
 
@@ -138,6 +138,7 @@
         <!--cantact form script-->
         <script src="js/contact_me.js" type="text/javascript"></script>
         <script src="js/jqBootstrapValidation.js" type="text/javascript"></script>
+        --}}
         <!--gmap js-->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
         <script type="text/javascript">
