@@ -3,7 +3,7 @@
 
 Route::get('/', array('as' => 'index', 'uses' => 'FrontendController@index'));
 
-Route::get('news_list',['as' => 'news.list', 'uses' => 'NewsController@show']);
+     Route::get('news_list',['as' => 'news.list', 'uses' => 'NewsController@show']);
      Route::get('event_list',['as' => 'event.list', 'uses' => 'EventController@show']);
      Route::get('contact',['as' => 'contact', 'uses' => 'contactController@contact_page']);
      Route::post('contact_store',['as' => 'contact.store', 'uses' => 'contactController@store']);
@@ -60,6 +60,11 @@ Route::group(array('middleware' => 'auth'), function()
 	Route::get('blog/{id}/show',['as' => 'blog.show', 'uses' => 'BlogController@show']);
 	Route::put('blog/{id}',['as' => 'blog.update', 'uses' => 'BlogController@update']);
 	Route::delete('blog/{id}',['as' => 'blog.delete', 'uses' => 'BlogController@destroy']);
+
+    //Pending List Of Blog in  Admin Panel
+
+    Route::get('pending_blog',['as' => 'pending.blog', 'uses' => 'BlogController@pending_list']);
+    Route::get('AdminBlogSingle',['as' => 'admin.blog.single', 'uses' => 'BlogController@pending_list']);
 
 });
 

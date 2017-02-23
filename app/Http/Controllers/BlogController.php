@@ -138,4 +138,16 @@ class BlogController extends Controller
             return redirect()->route('category.index')->with('error','Something went wrong.Try Again.');
         }
     }
+
+
+    public function pending_list(){
+
+        $blogs = Blogs::where('published', 'no')->get('title' , 'id', 'category');
+
+        return view('admin.blog.list')->with('blogs' , $blogs)->with('title' , 'Pending Blog') ;
+
+
+    }
+
+
 }
