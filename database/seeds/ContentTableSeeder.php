@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Event;
+use App\Models\Content;
 // composer require laracasts/testdummy
 use Laracasts\TestDummy\Factory as TestDummy;
 
