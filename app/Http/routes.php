@@ -3,10 +3,14 @@
 
 Route::get('/', array('as' => 'index', 'uses' => 'FrontendController@index'));
 
-     Route::get('news_list',['as' => 'news.list', 'uses' => 'NewsController@show']);
-     Route::get('event_list',['as' => 'event.list', 'uses' => 'EventController@show']);
-     Route::get('contact',['as' => 'contact', 'uses' => 'contactController@contact_page']);
-     Route::post('contact_store',['as' => 'contact.store', 'uses' => 'contactController@store']);
+
+Route::get('news_list',['as' => 'news.list', 'uses' => 'NewsController@show']);
+Route::get('events',['as' => 'event.list', 'uses' => 'FrontendController@event']);
+Route::get('event/{id}',['as' => 'event.single', 'uses' => 'FrontendController@eventSingle']);
+Route::get('contact',['as' => 'contact', 'uses' => 'contactController@contact_page']);
+Route::post('contact_store',['as' => 'contact.store', 'uses' => 'contactController@store']);
+
+
 
 
 // public routes -- Added by Masiur

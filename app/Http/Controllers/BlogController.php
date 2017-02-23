@@ -21,7 +21,7 @@ class BlogController extends Controller
      */
     public function myblog()
     {
-        $blogs = Blog::orderBy('id', 'desc')->where('user_id', auth()->user()->id)->get();
+        $blogs = Blog::orderBy('id', 'desc')->where('user_id', auth()->user()->id)->paginate(10);
         $categories = Category::all();
         return view('blog.myblog')
                         ->with('title', 'Article written by Me')
@@ -58,7 +58,7 @@ class BlogController extends Controller
         $blog->details = $data['details'];
         $blog->user_id = auth()->user()->id;
         // $blog->published = 'no'; // for admin approval status is by default no
-        $blog->cover_img = null;
+        // $blog->cover_img = null;
         $blog->tags =  $data['tags'];
         if($blog->save()) {
             return redirect()->route('blog.myblog')->with('success','Article Created Successfully');
@@ -86,10 +86,12 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::findOrFail($id);
-        return view('category.edit')
-                        ->with('title', 'Edit Categories')
-                        ->with('category', $category);
+        $blog = Blog::findOrFail($id);
+        $categories = Category::lists('name', 'id');
+        return view('blog.edit')
+                        ->with('title', 'Edit this Article')
+                        ->with('blog', $blog)
+                        ->with('categories', $categories);
     }
 
     /**
@@ -99,25 +101,21 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BlogRequest $request, $id)
     {
-        $rules = [
-            'name' => 'required'
-            ];
-
         $data = $request->all();
-        $validation = Validator::make($data, $rules);
-
-        if ($validation->fails()) {
-            return redirect()->back()->withInput()->withErrors($validation);
-        }
-
-        $category = Category::findOrFail($id);
-        $category->name = $data['name'];
-        if($category->save()) {
-            return redirect()->route('category.index')->with('success','Category Successfully Updated');
+        $blog = Blog::findOrFail($id);
+        $blog->title = $data['title'];
+        $blog->category_id = $data['category_id'];
+        $blog->details = $data['details'];
+        $blog->user_id = auth()->user()->id;
+        // $blog->published = 'no'; // for admin approval status is by default no
+        // $blog->cover_img = null;
+        $blog->tags =  $data['tags'];
+        if($blog->save()) {
+            return redirect()->route('blog.myblog')->with('success','Changes Saved');
         } else {
-            return redirect()->route('category.index')->with('error','Something went wrong');
+            return redirect()->route('blog.myblog')->with('error','Something went wrong. Please, try again');
         }
     }
 
@@ -130,12 +128,12 @@ class BlogController extends Controller
     public function destroy($id)
     {
         try{
-            Category::destroy($id);
+            BLog::destroy($id);
 
-            return redirect()->route('category.index')->with('success','Category Deleted Successfully.');
+            return redirect()->route('blog.myblog')->with('success','Article Deleted Successfully.');
 
         }catch(Exception $ex){
-            return redirect()->route('category.index')->with('error','Something went wrong.Try Again.');
+            return redirect()->route('blog.myblog')->with('error','Something went wrong.Try Again.');
         }
     }
 

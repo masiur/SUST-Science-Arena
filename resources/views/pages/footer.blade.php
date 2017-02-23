@@ -1,5 +1,6 @@
 <!-- footer light 1 begin--> 
         <footer class="footer-light-1">
+        {{-- 
             <div class="container">
                 <div class="row">
                     
@@ -123,6 +124,7 @@
                     </div>
                 </div> -->
             </div>
+            --}}
             @include('pages.copyright')
         </footer>
         <!--footer end

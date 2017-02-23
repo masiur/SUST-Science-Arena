@@ -1,14 +1,6 @@
-
-@include('pages.header');
-
-
-    <body>
-
-       @include('pages.topline')
-
-       <!--top-bar end here-->
-        <!--navigation -->
-       @include('pages.navBar')
+@extends('layouts.frontend')
+    @section('content')
+        @include('admin.includes.alert')
 
 
        <!--navbar-default-->
@@ -20,7 +12,7 @@
                     </div>
                     <div class="col-sm-6 hidden-xs text-right">
                         <ol class="breadcrumb">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{ route('index') }}">Home</a></li>
                             <li>Contact</li>
                         </ol>
                     </div>
@@ -134,47 +126,9 @@
         </div>
         <div class="divide40"></div>
 
-                 @include('pages.footer')
+@stop
 
-                 <!--footer col-->
-
-                </div>
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <div class="footer-btm">
-                            <span>&copy;2014. Theme by Design_mylife</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer><!--default footer end here-->
-       <!--scripts and plugins -->
-        <!--must need plugin jquery-->
-        <script src="js/jquery.min.js"></script>        
-        <!--bootstrap js plugin-->
-        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>       
-        <!--easing plugin for smooth scroll-->
-        <script src="js/jquery.easing.1.3.min.js" type="text/javascript"></script>
-        <!--sticky header-->
-        <script type="text/javascript" src="js/jquery.sticky.js"></script>
-        <!--flex slider plugin-->
-        <script src="js/jquery.flexslider-min.js" type="text/javascript"></script>
-        <!--parallax background plugin-->
-        <script src="js/jquery.stellar.min.js" type="text/javascript"></script>
-        
-        
-        <!--digit countdown plugin-->
-        <script src="js/waypoints.min.js"></script>
-        <!--digit countdown plugin-->
-        <script src="js/jquery.counterup.min.js" type="text/javascript"></script>
-        <!--on scroll animation-->
-        <script src="js/wow.min.js" type="text/javascript"></script> 
-        <!--owl carousel slider-->
-        <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-        <!--popup js-->
-        <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
-        <!--you tube player-->
-        <script src="js/jquery.mb.YTPlayer.min.js" type="text/javascript"></script>
+@section('script')
         
         
         <!--customizable plugin edit according to your needs-->
@@ -192,7 +146,7 @@
             var marker;
 
             function initialize() {
-                myLatlng = new google.maps.LatLng(37.397802, -121.890288);
+                myLatlng = new google.maps.LatLng(24.9068371, 91.8235069);
 
                 var mapOptions = {
                     zoom: 13,
@@ -203,7 +157,7 @@
                 };
                 map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-                var contentString = '<p style="line-height: 20px;"><strong>assan Template</strong></p><p>Vailshali, assan City, 302012</p>';
+                var contentString = '<p style="line-height: 20px;"><strong>assan Template</strong></p><p>SSA, SUST, Sylhet-3114</p>';
 
                 var infowindow = new google.maps.InfoWindow({
                     content: contentString
@@ -222,7 +176,4 @@
 
             google.maps.event.addDomListener(window, 'load', initialize);
         </script>
-    </body>
-
-<!-- Mirrored from bootstraplovers.com/templates/assan-v2.5/main-template/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Dec 2016 23:32:57 GMT -->
-</html>
+ @stop

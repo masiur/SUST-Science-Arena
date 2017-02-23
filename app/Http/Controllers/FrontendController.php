@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Category;
+use App\Models\Event;
 class FrontendController extends Controller
 {
     /**
@@ -21,7 +22,7 @@ class FrontendController extends Controller
 
     public function blogIndex()
     {
-        $blogs = Blog::orderBy('id', 'desc')->get();
+        $blogs = Blog::orderBy('id', 'desc')->paginate(15);
         $categories = Category::all();
         return view('blog')
                         ->with('title', 'Public Articles')
@@ -45,9 +46,11 @@ class FrontendController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function event()
     {
-        //
+        $events = Event::paginate(10);
+         
+         return view('user.event')->with('events' , $events)->with('title' , "Events");
     }
 
     /**

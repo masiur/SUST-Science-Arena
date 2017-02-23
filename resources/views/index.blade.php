@@ -1,199 +1,140 @@
 @extends('layouts.frontend')
     @section('content')
         @include('admin.includes.alert')
-            <!--rev slider start-->
-        <div class="fullwidthbanner">
-            <div class="tp-banner">
+        <!--rev slider start-->
+
+        <div class="tp-banner-container">
+            <div class="tp-banner-boxed">
                 <ul>
                     <!-- SLIDE -->
-                    <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Powerful Theme">
+                    <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 1">
+                        <!-- MAIN IMAGE -->
+                        <img src="{{ asset('img/ssacover.jpg') }}"   alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <div class="caption sfb bold uppercase-title text-center"
+                             data-x="center"
+                             data-y="158" 
+                             data-speed="900"
+                             data-start="800"
+                             data-easing="Sine.easeOut">Hello! This is SSA</div>
+                        <div class="caption sfb lowercase-caption text-center" 
+                             data-x="center"
+                             data-y="218"
+                             data-speed="900"
+                             data-start="1500"
+                             data-easing="Sine.easeOut">A responsive site template with a clean and profession design 
+                            <br />that will be a great solution for your business, portfolio, Shop or any other purpose.</div>
+                        <!-- <div class="caption rev-buttons tp-resizeme sfb" 
+                             data-x="center" 
+                             data-y="313"
+                             data-speed="900"
+                             data-start="2200" 
+                             data-easing="Sine.easeOut">
+                            <a href="#" class="btn btn-theme-bg btn-lg">Purchase Now</a>
+                        </div> -->
+                    </li>
+                    <!-- SLIDE -->
+                    <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 2">
                         <!-- MAIN IMAGE -->
                         <img src="{{ asset('img/ssacover.jpg') }}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-                        <div class="caption title-2 sft"
-                             data-x="31"
-                             data-y="100"
-                             data-speed="1000"
-                             data-start="1000"
-                             data-easing="easeOutExpo">
-                            Powerful multipurpose <br>
-                            Business Template
+
+                        <div class="tp-caption lft"
+                             data-x="578"
+                             data-y="120" 
+                             data-speed="900"
+                             data-start="2100"
+                             data-easing="Sine.easeOut">
+                            <img src="{{ asset('img/ssacover.jpg') }}" alt="" />
                         </div>
 
-
-
-                        <div class="caption text sfl"
-                             data-x="50"
-                             data-y="290"
-                             data-speed="1000"
-                             data-start="1800"
-                             data-easing="easeOutExpo">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <br>
-                            lectus. Cras porta nisl at tincidunt tincidunt.  
+                        <div class="tp-caption sft modern_big_bluebg rev-title-v1"
+                             data-x="35" data-y="200"
+                             data-speed="500"
+                             data-start="800"
+                             data-easing="Sine.easeOut">
+                            Powerful Template
                         </div>
-                        <div class="caption sfb rev-buttons tp-resizeme"
-                             data-x="50"
-                             data-y="360"
+                        <div class="tp-caption sfr modern_big_bluebg rev-title-v1"
+                             data-x="35"
+                             data-y="265"
+                             data-speed="500"
+                             data-start="1300"
+                             data-easing="Sine.easeOut">
+                            Unlimited layouts
+                        </div>
+                        <!-- <div class="caption sfb rev-buttons tp-resizeme"
+                             data-x="35"
+                             data-y="330"
                              data-speed="500"
                              data-start="1800"
                              data-easing="Sine.easeOut">
                             <a href="#" class="btn btn-theme-bg btn-lg">Purchase Now</a>
-                        </div>
-
-                        <div class="caption sfb rev-buttons tp-resizeme"
-                             data-x="250"
-                             data-y="360"
-                             data-speed="500"
-                             data-start="2100"
-                             data-easing="Sine.easeOut">
-                            <a href="#" class="btn border-white btn-lg">View features</a>
-                        </div>
-
+                        </div> -->
                     </li>
                     <!-- SLIDE -->
-                    <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Unique Theme">
+                    <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 3">
                         <!-- MAIN IMAGE -->
-                        <img src="img/showcase-4.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-
-
-
-
-                        <div class="caption text-center-top sft"
-                             data-x="center"
-                             data-y="210"
-                             data-speed="1000"
-                             data-start="1400"
-                             data-easing="easeOutExpo">
-                            Perfect for startup 
+                        <img src="{{ asset('img/ssacover.jpg') }}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <div class="tp-caption lft"
+                             data-x="35" 
+                             data-y="140"
+                             data-speed="900"
+                             data-start="800" 
+                             data-easing="Sine.easeOut">
+                            <img src="rev-images/macbook.png" alt="" />
                         </div>
-
-                        <div class="caption text-center-btm sfr text-center"
-                             data-x="center"
-                             data-y="265"
-                             data-speed="1000"
-                             data-start="1600"
-                             data-easing="easeOutExpo">
-
-                            Assan is a creative multipurpose theme, you can use it for<br>  business, corporate, portfolio, shop events, personal and more...
-
+                        <div class="tp-caption lfr"
+                             data-x="375"
+                             data-y="180"
+                             data-speed="900" 
+                             data-start="1500"
+                             data-easing="Sine.easeOut">
+                            <img src="rev-images/ipad.png" alt="" />
                         </div>
-                        <div class="caption sfb rev-buttons tp-resizeme"
-                             data-x="center"
-                             data-y="350"
-                             data-speed="500"
+                        <div class="tp-caption lfl" 
+                             data-x="348"
+                             data-y="249"
+                             data-speed="900"
                              data-start="1800"
                              data-easing="Sine.easeOut">
-                            <a href="#" class="btn border-white btn-lg">View features</a>
+                            <img src="rev-images/iphone.png" alt="" />
                         </div>
-                    </li>
-                    <!-- SLIDE -->
-                    <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Multipurpose">
-                        <!-- MAIN IMAGE -->
-                        <img src="img/bg-1.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-                        <!-- LAYER NR. 1 -->
-                        <div class="caption left-tile-text sfr tp-resizeme"
-                             data-x="40"
-                             data-y="110" 
-                             data-speed="600"
-                             data-start="1200"
-                             data-end="9400"
-                             data-endspeed="600">Unlimited layouts
+                        <div class="tp-caption sfr modern_big_redbg" 
+                             data-x="750"
+                             data-y="185"
+                             data-speed="400"
+                             data-start="2500"
+                             data-easing="Sine.easeOut">
+                            100% Responsive
                         </div>
+                        <div class="tp-caption sfr modern_big_redbg"
+                             data-x="750" 
+                             data-y="237"
+                             data-speed="400"
+                             data-start="2900"
+                             data-easing="Sine.easeOut">
+                            80+ layouts
+                        </div>
+                        <div class="tp-caption sfr modern_big_redbg"
+                             data-x="750" data-y="289"
+                             data-speed="400"
+                             data-start="3300" 
+                             data-easing="Sine.easeOut">
+                            Revolution Slider
+                        </div>
+                        <!-- <div class="caption sfr rev-buttons tp-resizeme " 
+                             data-x="750"
+                             data-y="341" 
+                             data-speed="400" 
+                             data-start="3700" 
+                             data-easing="Sine.easeOut">
+                            <a href="#" class="btn btn-lg border-white">See all features</a>
+                        </div> -->
 
-                        <!-- LAYER NR. 2 -->
-                        <div class="caption medium_bg_darkblue sfl medium tp-resizeme"
-                             data-x="40"
-                             data-y="170" 
-                             data-speed="600"
-                             data-start="1600"
-                             data-end="9400"
-                             data-endspeed="600"><i class="fa fa-check"></i>
-                        </div>
-
-                        <!-- LAYER NR. 3 -->
-                        <div class="caption modern_big_redbg sfb medium tp-resizeme"
-                             data-x="90"
-                             data-y="170" 
-                             data-speed="600"
-                             data-start="1600"
-                             data-end="9400"
-                             data-endspeed="600">Fully Responsive
-                        </div>
-
-                        <!-- LAYER NR. 4 -->
-                        <div class="caption medium_bg_darkblue sfl medium tp-resizeme"
-                             data-x="40"
-                             data-y="220" 
-                             data-speed="600"
-                             data-start="1800"
-                             data-end="9400"
-                             data-endspeed="600"><i class="fa fa-check"></i>
-                        </div>
-
-                        <!-- LAYER NR. 5 -->
-                        <div class="caption modern_big_redbg sfb medium tp-resizeme"
-                             data-x="90"
-                             data-y="220" 
-                             data-speed="600"
-                             data-start="1800"
-                             data-end="9400"
-                             data-endspeed="600">210+ HTML5 Valid Pages
-                        </div>
-
-                        <!-- LAYER NR. 6 -->
-                        <div class="caption medium_bg_darkblue sfl medium tp-resizeme"
-                             data-x="40"
-                             data-y="270" 
-                             data-speed="600"
-                             data-start="2000"
-                             data-end="9400"
-                             data-endspeed="600"><i class="fa fa-check"></i>
-                        </div>
-
-                        <!-- LAYER NR. 7 -->
-                        <div class="caption modern_big_redbg sfb medium tp-resizeme"
-                             data-x="90"
-                             data-y="270" 
-                             data-speed="600"
-                             data-start="2000"
-                             data-end="9400"
-                             data-endspeed="600">Slider revolution
-                        </div>
-
-                        <!-- LAYER NR. 8 -->
-                        <div class="caption medium_bg_darkblue sfl medium tp-resizeme"
-                             data-x="40"
-                             data-y="320" 
-                             data-speed="600"
-                             data-start="2200"
-                             data-end="9400"
-                             data-endspeed="600"><i class="fa fa-check"></i>
-                        </div>
-
-                        <!-- LAYER NR. 9 -->
-                        <div class="caption modern_big_redbg sfb medium tp-resizeme"
-                             data-x="90"
-                             data-y="320" 
-                             data-speed="600"
-                             data-start="2200"
-                             data-end="9400"
-                             data-endspeed="600">Clean & Commented Code
-                        </div>
-
-                        <!-- LAYER NR. 10 -->
-                        <div class="caption modern_big_redbg sfb medium tp-resizeme"
-                             data-x="40"
-                             data-y="370" 
-                             data-speed="600"
-                             data-start="2400"
-                             data-end="9400"
-                             data-endspeed="600">And Much More...
-                        </div>
 
                     </li>
                 </ul>
             </div>
         </div><!--full width banner-->
-        <!--revolution end-->
 
         <div class="divide60"></div>
         <div class="container">
@@ -209,6 +150,7 @@
 
             </div><!--center heading end-->
             <div class="divide50"></div>
+            {{--
             <div class="row">
                 <div class="col-md-3 col-sm-6 margin30">
                     <div class="colored-boxed green">
@@ -251,6 +193,7 @@
                     </div>
                 </div><!--colored boxed col end-->
             </div>
+             --}}
         </div><!--services container-->
 
         <div class="divide80"></div>
@@ -267,7 +210,7 @@
         <div class="container">
             <div class="cube-masonry">
 
-                <div id="filters-container" class="cbp-l-filters-alignCenter">
+                <!-- <div id="filters-container" class="cbp-l-filters-alignCenter">
                     <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
                         All <div class="cbp-filter-counter"></div>
                     </div>
@@ -283,7 +226,7 @@
                     <div data-filter=".graphic, .identity" class="cbp-filter-item">
                         Web Design & Identity <div class="cbp-filter-counter"></div>
                     </div>
-                </div>
+                </div> -->
 
                 <div id="masnory-container" class="cbp">
                     <div class="cbp-item identity">
@@ -480,6 +423,7 @@
             <a href="masonry-portfolio-4.html" class="btn btn-theme-dark btn-lg">View Past Events</a>
         </div>
         <div class="divide50"></div>
+        {{-- Code
         <div class="wide-img-showcase">
 
             <div class="row margin-0 wide-img-showcase-row">
@@ -554,14 +498,15 @@
                 </div>
             </div>
         </section><!--fun facts-->
+         --}} Code
         <div class="testimonials-v-2 wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="100ms">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                         <div class="center-heading">
                             <h2><strong>What</strong> Advisor’s Say</h2>
-                            <p>2600+ Worldwide customers  use Assan template.</p>
-                            <span class="center-line"></span>
+                            <!-- <p>2600+ Worldwide customers  use Assan template.</p>
+                            <span class="center-line"></span> -->
 
                         </div>
                     </div>
@@ -573,7 +518,7 @@
                         <div class="testi-slide">
                             <ul class="slides">
                                 <li>
-                                    <img src="img/customer-1.jpg" alt="">
+                                    <img src="{{ asset('frontend/img/customer-1.jpg') }}" alt="">
                                     <p>
                                         <i class="ion-quote"></i>
                                         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
@@ -583,7 +528,7 @@
                                     </h4>
                                 </li><!--testi item-->
                                 <li>
-                                    <img src="img/customer-2.jpg" alt="">
+                                    <img src="{{ asset('frontend/img/customer-2.jpg') }}" alt="">
                                     <p>
                                         <i class="ion-quote"></i>
                                         Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years </p>
@@ -592,7 +537,7 @@
                                     </h4>
                                 </li><!--testi item-->
                                 <li>
-                                    <img src="img/customer-3.jpg" alt="">
+                                    <img src="{{ asset('frontend/img/customer-3.jpg') }}" alt="">
                                     <p>
                                         <i class="ion-quote"></i>
                                         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor.</p>
@@ -607,130 +552,9 @@
 
             </div>
         </div><!--testimonials v-2 end-->
-        <div class="blue-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 margin30">
-                        <div class="services-box wow animated fadeInDown">
-                            <div class="services-box-icon">
-                                <i class="pe-7s-diamond"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>250+ valid layouts</h4>
-                                <p>
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.</div>
-                        </div><!--service box-->
-                    </div>
-                    <div class="col-sm-6 ">
-                        <div class="services-box wow animated fadeInUp">
-                            <div class="services-box-icon">
-                                <i class="pe-7s-download"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>Free Support & Updates</h4>
-                                <p>
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor. </div>
-                        </div><!--service box-->
-                    </div>
-                </div>
-            </div>
-        </div><!--full wide 2 columns content end-->
-        <div class="divide70"></div>
-        <div class="assan-features">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="center-heading">
-                            <h2>Awesome <strong>features</strong></h2>
-                            <span class="center-line"></span>
-                        </div>
-                    </div>                   
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 margin20">
-                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="100ms">
-                            <div class="services-box-icon">
-                                <i class="fa fa-image"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>Sliders</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-                                </p>
-                            </div>
-                        </div><!--services box-->
-                    </div><!--services col-->
-                    <div class="col-md-4 col-sm-6 margin20">
-                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="200ms">
-                            <div class="services-box-icon">
-                                <i class="fa fa-envelope"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>Advanced Forms</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-                                </p>
-                            </div>
-                        </div><!--services box-->
-                    </div><!--services col-->
-                    <div class="col-md-4 col-sm-6 margin20">
-                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="300ms">
-                            <div class="services-box-icon">
-                                <i class="fa fa-users"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>Customer Support</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-                                </p>
-                            </div>
-                        </div><!--services box-->
-                    </div><!--services col-->
-
-                    <div class="col-md-4 col-sm-6 margin20">
-                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="400ms">
-                            <div class="services-box-icon">
-                                <i class="fa fa-crop"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>Pixel perfect design</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-                                </p>
-                            </div>
-                        </div><!--services box-->
-                    </div><!--services col-->
-                    <div class="col-md-4 col-sm-6 margin20">
-                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="500ms">
-                            <div class="services-box-icon">
-                                <i class="fa fa-twitter"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>BOOTSTRAP 3.3.6</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-                                </p>
-                            </div>
-                        </div><!--services box-->
-                    </div><!--services col-->
-                    <div class="col-md-4 col-sm-6 margin20">
-                        <div class="services-box wow animated fadeIn" data-wow-duration="700ms" data-wow-delay="600ms">
-                            <div class="services-box-icon">
-                                <i class="fa fa-flag"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>Font Awesome icons</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-
-                                </p>
-
-                            </div>
-                        </div><!--services box-->
-                    </div><!--services col-->
-                </div><!--services row-->
-            </div>
-        </div><!--assan features-->
+        
+        <!-- <div class="divide70"></div> -->
+        
         <div class="divide40"></div>
 
         <div class="our-team-v-2">

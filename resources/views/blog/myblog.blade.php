@@ -20,15 +20,16 @@
         <div class="divide80"></div>
         <div class="container blog-left-img">
         @include('admin.includes.alert')
-            <div class="row">
+            <div class="row">       
                 <div class="col-md-8">
+                @if(count($blogs))
                 	@foreach($blogs as $blog)
                     <div class="blog-post">
                         <div class="row">
                             <div class="col-md-6 margin20">
-                                <a href="#">
+                                <a href="{{ route('blog.single', str_slug($blog->title, '-')) }}">
                                     <div class="item-img-wrap">
-                                        <img src="img/img-6.jpg" class="img-responsive" alt="workimg">
+                                        <img src="{{ asset($blog->cover_img) }}" class="img-responsive" alt="workimg">
                                         <div class="item-img-overlay">
                                             <span></span>
                                         </div>
@@ -42,19 +43,23 @@
                                     <li><i class="fa fa-tag"></i> <a href="#">{{ $blog->category->name }}</a></li>
                                 </ul>
                                 <h2><a href="{{ route('blog.single', str_slug($blog->title, '-')) }}">{{ $blog->title }}</a></h2>
-                                <div>{!! str_limit($blog->details, 200) !!}</div><br>
-                                <p><a href="{{ route('blog.single', $blog->title) }}" class="btn btn-theme-dark">Read More...</a></p>
+                                <div>{!! str_limit($blog->details, 50) !!}</div><br>
+                                <p><a href="{{ route('blog.single', str_slug($blog->title, '-')) }}" class="btn btn-theme-dark">Read More...</a></p>
+                                <a href="{{ route('blog.edit', $blog->id) }}"><button class="btn btn-sm">Edit this Article</button></a>
                             </div>
                         </div>
                     </div><!--blog post-->
                     @endforeach
 
                     
-                    <ul class="pager">
-                        <li class="previous"><a href="#">&larr; Previous Page</a></li>
-                        <li class="next"><a href="#">Next Page &rarr;</a></li>
+                    <ul class="pager pagination">
+                        {!! $blogs->render() !!} 
                     </ul><!--pager-->
-                </div><!--col-->
+                @else
+                    <p>You haven't wriiten any article yet. You can Write an Article From Here.</p>
+                    <a href="{{ route('blog.create') }}"><button class="btn btn-sm btn-primary">Write an Article</button></a>
+                @endif
+                </div><!--col-->               
                 <div class="col-md-3 col-md-offset-1">
                     <!-- <div class="sidebar-box margin40">
                         <h4>Search</h4>
@@ -77,7 +82,7 @@
                             @endforeach
                         </ul>
                     </div><!--sidebar-box-->
-                    <div class="sidebar-box margin40">
+                    <!-- <div class="sidebar-box margin40">
                         <h4>Popular Post</h4>
                         <ul class="list-unstyled popular-post">
                             <li>
@@ -108,7 +113,7 @@
                                 </div>
                             </li>
                         </ul>
-                    </div><!--sidebar-box-->
+                    </div> --><!--sidebar-box-->
                     <!-- <div class="sidebar-box margin40">
                         <h4>Tag Cloud</h4>
                         <div class="tag-list">

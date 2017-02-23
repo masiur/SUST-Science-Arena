@@ -22,13 +22,16 @@
                 <div class="col-md-8">
                     <div class="blog-post">
                             <div>
-                                <img src="{{ asset('img/ssacover.jpg') }}" class="img-responsive" alt="workimg">
+                                <img src="{{ asset($blog->cover_img) }}" class="img-responsive" alt="workimg">
                             </div>                       
                         <ul class="list-inline post-detail">
                             <li>by <a href="#">{{ $blog->user->profile->fullName }}</a></li>
                             <li><i class="fa fa-calendar"></i> {{ $blog->created_at }}</li>
                             <li><i class="fa fa-tag"></i> <a href="#">{{ $blog->category->name }}</a></li>
-                            <!-- <li><i class="fa fa-comment"></i> <a href="#">6 Comments</a></li> -->
+                            <!-- Masiur Rahman Siddiki  -->
+                            @if(auth()->check() && auth()->user()->id == $blog->user_id)
+                            <li><a href="{{ route('blog.edit', $blog->id) }}"><button class="btn btn-sm">Edit this Article</button></a></li>
+                            @endif
                         </ul>
                         <h2>{{ $blog->title }}</h2>
                         <p>
@@ -87,7 +90,7 @@
                             @endforeach
                         </ul>
                     </div><!--sidebar-box-->
-                    <div class="sidebar-box margin40">
+                    <!-- <div class="sidebar-box margin40">
                         <h4>Popular Post</h4>
                        <ul class="list-unstyled popular-post">
                             <li>
@@ -118,7 +121,7 @@
                                 </div>
                             </li>
                         </ul>
-                    </div><!--sidebar-box-->
+                    </div> --><!--sidebar-box-->
                     <!-- <div class="sidebar-box margin40">
                         <h4>Tag Cloud</h4>
                         <div class="tag-list">
@@ -135,8 +138,36 @@
                     </div> -->
                 </div><!--sidebar-col-->
             </div><!--row for blog post-->
+
+            <div id="disqus_thread"></div> <!-- disqus platform for comment  -->
         </div><!--blog full main container-->
         <div class="divide60"></div>
 
+        
+
           
     @endsection
+
+    @section('script') 
+        <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//sust-science-arena.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+    @stop
