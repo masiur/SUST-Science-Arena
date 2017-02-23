@@ -22,32 +22,30 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                @if(count($events))
+                                @if(count($blogs))
                                     <table  id="dataTable" class="table table-striped table-bordered">
                                         <thead>
                                         <tr>
                                             <th>No.</th>
-                                            <th>Event Name</th>
+                                            <th> Blog title</th>
                                             <th>Details</th>
-                                            <th>Date</th>
-                                            <th>Place</th>
+                                            <th>Author</th>
                                             <th>#</th>
                                             <th>#</th>
+                                            
                                         </tr>
                                         </thead>
                                         <tbody>
                                         @foreach ($blogs as $blog)
 
                                             <tr>
-                                                <td><?php echo $eventCounter++; ?></td>
+                                                <td><?php echo $blogCounter++; ?></td>
                                                 <td>
-                                                    <a class="show-project-modal" data-toggle="modal" data-project-id="{{ $blog->id }}" data-project-url="{!! route('blog.show',$blog->id) !!}" href="#" style="">{!! $blog->title !!}</a>
+                                                    <a class="show-project-modal" data-toggle="modal" data-project-id="{{ $blog->id }}" data-project-url="{!! route('admin.blog.single',$blog->id) !!}" href="#" style="">{!! $blog->title !!}</a>
                                                 </td>
-                                                <td>{!! $blog->category !!}</td>
-                                                <td>{!! $event->date !!}</td>
-                                                <td>{!! $event->place !!}</td>
-                                                <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('event.edit',$event->id)!!}"  style="margin-right: 3px;">Edit</a></td>
-                                                <td><a href="{!! route('event.delete',$event->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $event->id !!}">Delete</a></td>
+                                                <td>{!! $blog->user->email !!}</td>
+                                                <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('accept.blog',$blog->id)!!}"  style="margin-right: 3px;">Accept</a></td>
+                                                <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Ignore</a></td>
                                             </tr>
                                             
                                         @endforeach

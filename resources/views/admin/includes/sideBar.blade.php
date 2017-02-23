@@ -18,12 +18,12 @@
                      <li class="{!! Menu::isActiveRoute('dashboard') !!}"><a href="{{ route('dashboard') }}"><i class="ion-flask"></i> <span class="nav-label">Dashboard</span></a>                 
                     </li>
 
-                    <li class="has-submenu"><a href="#"><i class="ion-compose"></i> <span class="nav-label">Event</span><span class="badge bg-purple">1</span></a>
-                        <ul class="list-unstyled">
+                    <li class="has-submenu"><a href="{!! route('pending.blog') !!}"><i class="ion-compose"></i> <span class="nav-label">Blog</span><span class="badge bg-purple">1</span></a>
+                       <!-- <ul class="list-unstyled">
                             <li><a href="{!! route('blog.create') !!}">Create blog</a></li>
                             <li><a href="{!!route('blog.index') !!}">All Event List</a></li>
 
-                        </ul>
+                        </ul> -->
                     </li>
 
 

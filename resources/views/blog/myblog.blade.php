@@ -38,6 +38,7 @@
                             </div>
                             <div class="col-md-6 margin20">
                                 <ul class="list-inline post-detail">
+                                
                                     <li>by <a href="#">{{ auth()->user()->profile->fullName }}</a></li>
                                     <li><i class="fa fa-calendar"></i> {{ $blog->created_at }}</li>
                                     <li><i class="fa fa-tag"></i> <a href="#">{{ $blog->category->name }}</a></li>

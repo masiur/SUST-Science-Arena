@@ -68,7 +68,9 @@ Route::group(array('middleware' => 'auth'), function()
     //Pending List Of Blog in  Admin Panel
 
     Route::get('pending_blog',['as' => 'pending.blog', 'uses' => 'BlogController@pending_list']);
-    Route::get('AdminBlogSingle',['as' => 'admin.blog.single', 'uses' => 'BlogController@pending_list']);
+    Route::get('AdminSingleBlog/{id}',['as' => 'admin.blog.single', 'uses' => 'BlogController@AdminSingleBlog']);
+    Route::get('acceptblog/{id}/',['as' => 'accept.blog', 'uses' => 'BlogController@AcceptBlog']);
+    Route::get('ignoreblog/{id}/',['as' => 'ignore.blog', 'uses' => 'BlogController@ignoreBlog']);
 
 });
 

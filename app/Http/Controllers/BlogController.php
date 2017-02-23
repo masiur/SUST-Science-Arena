@@ -140,12 +140,43 @@ class BlogController extends Controller
 
     public function pending_list(){
 
-        $blogs = Blogs::where('published', 'no')->get('title' , 'id', 'category');
 
-        return view('admin.blog.list')->with('blogs' , $blogs)->with('title' , 'Pending Blog') ;
+         
+        $blogs = Blog::where('published', 'no')->get(['title' , 'id', 'category_id', 'user_id']);
+
+        return view('admin.blog.list')
+                ->with('title', 'List of All Pending Blogs')
+                ->with('blogCounter', 1)
+                ->with('blogs', $blogs);
 
 
     }
+
+
+    public function AdminSingleBlog($id){
+       
+        return "ddccd";
+
+
+
+
+    }
+
+
+    public function AcceptBlog($id){
+
+        
+
+
+    }
+
+    public function ignoreBlog($id){
+
+        
+
+
+    }
+
 
 
 }

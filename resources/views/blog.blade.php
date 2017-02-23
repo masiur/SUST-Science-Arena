@@ -36,7 +36,7 @@
                             </div>
                             <div class="col-md-6 margin20">
                                 <ul class="list-inline post-detail">
-                                    <li>by <a href="#">{{ $blog->user->profile->fullName }}</a></li>
+                                    <li>by <a href="#">{{ $blog->user->profile->fullName or 'dd' }}</a></li>
                                     <li><i class="fa fa-calendar"></i> {{ $blog->created_at }}</li>
                                     <li><i class="fa fa-tag"></i> <a href="#">{{ $blog->category->name }}</a></li>
                                 </ul>
