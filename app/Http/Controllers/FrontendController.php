@@ -22,7 +22,7 @@ class FrontendController extends Controller
 
     public function blogIndex()
     {
-        $blogs = Blog::orderBy('id', 'desc')->paginate(15);
+        $blogs = Blog::orderBy('id', 'desc')->where('published', 'yes')->paginate(15);
         $categories = Category::all();
         return view('blog')
                         ->with('title', 'Public Articles')

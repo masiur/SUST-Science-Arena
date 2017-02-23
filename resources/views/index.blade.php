@@ -144,7 +144,7 @@
                         <h2>What <strong>we do</strong> </h2>
                         <span class="center-line"></span>
                         <p class="sub-text margin40">
-                            We want to present you a simple and functional template “ASSAN”. It is a powerful Multi-Purpose HTML 5 Template. Build whatever you like with this Template that looks effortlessly on-point in Business </p>
+                            Our objective is to promote activities of science, expose recent scientific information to students and to encourage students about science. We are committed to popularize science among young people. To accomplish this job we arrange different types of exposition programs like poster exhibition, science lecture, writing competition, organize seminar, conference, science Fair, quiz competition, debate competition, exhibition on science, study circle, talk show, Sudoku competition, publish Magazine, journal, celebrate science day, science week, establish science library, science talk, participating in social activities. </p>
                     </div>
                 </div>
 
@@ -423,88 +423,13 @@
             <a href="masonry-portfolio-4.html" class="btn btn-theme-dark btn-lg">View Past Events</a>
         </div>
         <div class="divide50"></div>
-        {{-- Code
-        <div class="wide-img-showcase">
-
-            <div class="row margin-0 wide-img-showcase-row">
-                <div class="col-sm-6 no-padding  img-2 ">
-                    <div class="no-padding-inner ">
-                        <div>&nbsp;</div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-sm-offset-6 no-padding gray">
-                    <div class="no-padding-inner gray">
-                        <h3 class="wow animated fadeInDownfadeInRight">Core features of <span class="colored-text">assan</span></h3>
-                        <div class="services-box margin30 wow animated fadeInRight">
-                            <div class="services-box-icon">
-                                <i class="fa fa-tablet"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>Fully Responsive</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-                                </p>
-                            </div>
-                        </div><!--service box-->
-                        <div class="services-box margin30 wow animated fadeInRight">
-                            <div class="services-box-icon">
-                                <i class="fa fa-twitter"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>bootstrap 3</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-                                </p>
-                            </div>
-                        </div><!--service box-->
-
-                        <div class="services-box margin30 wow animated fadeInRight">
-                            <div class="services-box-icon">
-                                <i class="fa fa-code"></i>
-                            </div><!--services icon-->
-                            <div class="services-box-info">
-                                <h4>250+ valid HTML5 Pages and much more...</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
-                                </p>
-                            </div>
-                            <div class="divide30"></div>
-                            <p><a href="#" class="btn btn-theme-dark btn-lg">Purchase Now</a></p>
-                        </div><!--service box-->
-
-                    </div>
-                </div>
-            </div>
-        </div><!--wide image showcase end-->
-        <section class="fun-fact-wrap fun-facts-bg">
-            <div class="container">               
-                <div class="row">
-                    <div class="col-md-3 margin20 facts-in">
-                        <h3><span class="counter">3800</span> +</h3>
-                        <h4>Downloads</h4>
-                    </div><!--facts in-->
-                    <div class="col-md-3 margin20 facts-in">
-                        <h3><span class="counter">8500</span></h3>
-                        <h4>Happy Customers</h4>
-                    </div><!--facts in-->
-                    <div class="col-md-3 margin20 facts-in">
-                        <h3><span class="counter">250</span> +</h3>
-                        <h4>Valid layouts </h4>
-                    </div><!--facts in-->
-                    <div class="col-md-3 margin20 facts-in">
-                        <h3><span class="counter">11000</span></h3>
-                        <h4>Cups of tea</h4>
-                    </div><!--facts in-->
-                </div>
-            </div>
-        </section><!--fun facts-->
-         --}} Code
+    
         <div class="testimonials-v-2 wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="100ms">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                         <div class="center-heading">
-                            <h2><strong>What</strong> Advisor’s Say</h2>
+                            <h2><strong>What</strong> Advisors' Say</h2>
                             <!-- <p>2600+ Worldwide customers  use Assan template.</p>
                             <span class="center-line"></span> -->
 
@@ -562,7 +487,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="center-heading">
-                            <h2>SSA <strong>EC</strong></h2>
+                            <h2>SSA <strong>Executives</strong></h2>
                             <span class="center-line"></span>
                         </div>
                     </div>                   
@@ -572,14 +497,11 @@
                         <div class="person-v2">
                             <img src="img/team-5.jpg" class="img-responsive" alt="">
                             <div class="person-desc-v2">
-                                <h3>Steve Smith</h3>
-                                <em>Creative Designer</em>
+                                <h3>Sadman Al Fahad Tousif</h3>
+                                <em>President</em>
                                 <ul class="list-inline top-social">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <!--                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>-->
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li> 
                                 </ul>
                             </div>
                         </div>
@@ -588,14 +510,12 @@
                         <div class="person-v2">
                             <img src="img/team-6.jpg" class="img-responsive" alt="">
                             <div class="person-desc-v2">
-                                <h3>Steve Smith</h3>
-                                <em>Creative Designer</em>
+                                <h3>Khoirom Kameshwar/h3>
+                                <em>Sr. Vice President</em>
                                 <ul class="list-inline top-social">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <!--                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>-->
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -604,19 +524,17 @@
                         <div class="person-v2">
                             <img src="img/team-7.jpg" class="img-responsive" alt="">
                             <div class="person-desc-v2">
-                                <h3>Steve Smith</h3>
-                                <em>Creative Designer</em>
+                                <h3>Rifat Hyder</h3>
+                                <em>General Secretary</em>
                                 <ul class="list-inline top-social">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <!--                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>-->
+                                    
                                 </ul>
                             </div>
                         </div>
                     </div><!--person col end-->
-                    <div class="col-sm-3 text-center">
+                    <!-- <div class="col-sm-3 text-center">
                         <div class="person-v2">
                             <img src="img/team-8.jpg" class="img-responsive" alt="">
                             <div class="person-desc-v2">
@@ -625,17 +543,16 @@
                                 <ul class="list-inline top-social">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <!--                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>-->
+                                    
                                 </ul>
                             </div>
                         </div>
-                    </div><!--person col end-->
+                    </div> -->
                 </div>
             </div>
         </div><!--our team v-2-->
         <div class="divide70"></div>
+        {{-- 
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -699,7 +616,7 @@
                 </div><!--news col-->
             </div>
         </div><!--latest news-->
-
+        --}}
         <div class="divide40"></div>
         <!-- <div class="intro-text-1 light">
             <div class="container">
