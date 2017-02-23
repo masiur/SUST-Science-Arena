@@ -1,5 +1,5 @@
 <!-- footer light 1 begin--> 
-        <footer class="footer-light-1">
+        <footer class="footer-light-2">
         {{-- 
             <div class="container">
                 <div class="row">

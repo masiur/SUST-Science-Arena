@@ -165,14 +165,21 @@ class BlogController extends Controller
 
     public function AcceptBlog($id){
 
-        
+         $blog = Blog::where('id' , $id)->first();
+         //$blog = Blog::where('id' , $id)->pluck('published');
+
+        $blog->published = "yes";
+
+        $blog->save();
 
 
     }
 
     public function ignoreBlog($id){
 
-        
+        $blog = Blog::where('id' , $id)->first();
+
+        $blog->delete();
 
 
     }

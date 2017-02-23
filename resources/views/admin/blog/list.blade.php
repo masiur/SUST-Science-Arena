@@ -43,7 +43,8 @@
                                                 <td>
                                                     <a class="show-project-modal" data-toggle="modal" data-project-id="{{ $blog->id }}" data-project-url="{!! route('admin.blog.single',$blog->id) !!}" href="#" style="">{!! $blog->title !!}</a>
                                                 </td>
-                                                <td>{!! $blog->user->email !!}</td>
+                                                <td>{!! $blog->details !!}</td>
+                                                <td>{!! $blog->user->username !!}</td>
                                                 <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('accept.blog',$blog->id)!!}"  style="margin-right: 3px;">Accept</a></td>
                                                 <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Ignore</a></td>
                                             </tr>
@@ -52,7 +53,7 @@
                                         </tbody>
                                     </table>
                                 @else
-                                    No event added yet. 
+                                    No pending blog. 
                                 @endif
                                 </div>
                             </div>
@@ -75,7 +76,7 @@
                 Are you sure to delete?
             </div>
             <div class="modal-footer">
-                {!! Form::open(array('route' => array('event.delete'), 'method'=> 'delete', 'class' => 'deleteForm')) !!}
+                {!! Form::open(array('route' => array('ignore.blog'), 'method'=> 'delete', 'class' => 'deleteForm')) !!}
                 <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
                 {!! Form::submit('Yes, Delete', array('class' => 'btn btn-success', 'id' =>'deleteButtonYes')) !!}
                 {!! Form::close() !!}

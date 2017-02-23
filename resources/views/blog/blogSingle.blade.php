@@ -19,14 +19,14 @@
         <div class="divide80"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-10">
                     <div class="blog-post">
                             <div>
                                 <img src="{{ asset($blog->cover_img) }}" class="img-responsive" alt="workimg">
                             </div>                       
                         <ul class="list-inline post-detail">
                             <li>by <a href="#">{{ $blog->user->profile->fullName }}</a></li>
-                            <li><i class="fa fa-calendar"></i> {{ $blog->created_at }}</li>
+                            <li><i class="fa fa-calendar"></i> {{ $blog->updated_at->diffForHumans() }}</li>
                             <li><i class="fa fa-tag"></i> <a href="#">{{ $blog->category->name }}</a></li>
                             <!-- Masiur Rahman Siddiki  -->
                             @if(auth()->check() && auth()->user()->id == $blog->user_id)
@@ -68,7 +68,7 @@
                         </div>
                     </div> -->
                 </div><!--col-->
-                <div class="col-md-3 col-md-offset-1">
+                <div class="col-md-2">
                     <!-- <div class="sidebar-box margin40">
                         <h4>Search</h4>
                         <form role="form" class="search-widget">

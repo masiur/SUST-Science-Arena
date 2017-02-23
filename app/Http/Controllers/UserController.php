@@ -105,9 +105,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function settings()
     {
-        //
+        return view('auth.settings')
+                    ->with('title', 'Profile')->with('user', Auth::user());
     }
 
     /**
