@@ -18,7 +18,7 @@
                      <li class="{!! Menu::isActiveRoute('dashboard') !!}"><a href="{{ route('dashboard') }}"><i class="ion-flask"></i> <span class="nav-label">Dashboard</span></a>                 
                     </li>
 
-                    <li class="has-submenu"><a href="{!! route('pending.blog') !!}"><i class="ion-compose"></i> <span class="nav-label">Blog</span><span class="badge bg-purple">1</span></a>
+                    <li class="has-submenu"><a href="{!! route('pending.blog') !!}"><i class="ion-compose"></i> <span class="nav-label">Blog | Articles</span><span class="badge bg-purple">{{ count(App\Models\Blog::all()) }}</span></a>
                        <!-- <ul class="list-unstyled">
                             <li><a href="{!! route('blog.create') !!}">Create blog</a></li>
                             <li><a href="{!!route('blog.index') !!}">All Event List</a></li>
@@ -47,7 +47,7 @@
                         </ul>
                     </li> -->
 
-                   <li class="has-submenu {!! Menu::areActiveRoutes(['event.index', 'event.create']) !!}"><a href="#"><i class="ion-compose"></i> <span class="nav-label">Event</span><span class="badge bg-purple">1</span></a>
+                   <li class="has-submenu {!! Menu::areActiveRoutes(['event.index', 'event.create']) !!}"><a href="#"><i class="ion-compose"></i> <span class="nav-label">Events</span></a>
                         <ul class="list-unstyled">
                             <li><a href="{!! route('event.create') !!}">Create Event</a></li>
                             <li><a href="{!!route('event.index') !!}">All Event List</a></li>
@@ -56,7 +56,7 @@
                     </li>
 
 
-                  <li class="has-submenu"><a href="#"><i class="ion-stats-bars"></i> <span class="nav-label">News</span><span class="badge bg-purple">1</span></a>
+                  <li class="has-submenu"><a href="#"><i class="ion-stats-bars"></i> <span class="nav-label">News</span></a>
                         <ul class="list-unstyled">
                             <li><a href="{!! route('news.create') !!}">Create News</a></li>
                             <li><a href="{!!route('news.index') !!}">All News List</a></li>
@@ -66,8 +66,8 @@
 
                     <li class="has-submenu"><a href="#"><i class="ion-grid"></i> <span class="nav-label">Category</span></a>
                         <ul class="list-unstyled">
-                            <li><a href="">Add Category</a></li>
-                            <li><a href="">All Categories</a></li>
+                            <li><a href="{{ route('category.index') }}">All Categories</a></li>
+                            <li><a href="{{ route('category.create') }}">Add Category</a></li>
 
                         </ul>
                     </li>

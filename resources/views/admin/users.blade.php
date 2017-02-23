@@ -27,10 +27,11 @@
                                         <thead>
                                         <tr>
                                             <th>No.</th>
-                                            <th>users title</th>
-                                            <th>Details</th>
-                                            
-                                        
+                                            <th>Email</th>
+                                            <th>Name</th>
+                                            <th>Address</th>
+                                            <th>Bio</th>
+                                            <th>Phone</th>
                                             <th>#</th>
                                             <th>#</th>
                                         </tr>
@@ -45,7 +46,10 @@
                                                 </td>
                                                 
 
-                                                <td>{!! $user !!}</td>
+                                                <td>{!! $user->profile->fullName !!}</td>
+                                                <td>{!! $user->profile->address !!}</td>
+                                                <td>{!! $user->profile->bio !!}</td>
+                                                <td>{!! $user->profile->phone !!}</td>
 
                                                 <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('user.edit',$user->id)!!}"  style="margin-right: 3px;">Edit</a></td>
                                                 <td><a href="#" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $user->id !!}">Delete</a></td>

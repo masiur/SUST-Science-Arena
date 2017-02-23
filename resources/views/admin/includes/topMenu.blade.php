@@ -40,8 +40,9 @@
 
                     <ul class="nav navbar-nav navbar-right top-menu top-right-menu">
 
-                        @include('admin.includes.notificationMenu')
+                    {{--    @include('admin.includes.notificationMenu')
                         @include('admin.includes.inboxMenu')
+                    --}} 
                         @include('admin.includes.profileMenu')
 
                     </ul>
