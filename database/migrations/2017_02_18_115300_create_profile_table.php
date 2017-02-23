@@ -19,7 +19,7 @@ class CreateProfileTable extends Migration
             $table->string('phone');
             $table->string('bio');
             $table->string('occupation');
-            $table->string('img_url')->nullable();
+            $table->string('img_url')->default('img/propic.png');
             $table->integer('user_id')->unsigned();
 
             $table->foreign('user_id')->references('id')->on('users')

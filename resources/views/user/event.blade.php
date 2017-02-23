@@ -42,7 +42,7 @@
                             <div class="col-md-6 margin20">
                                 <ul class="list-inline post-detail">
                                     <li>by <a href="#">SSA</a></li>
-                                    <li><i class="fa fa-calendar"></i> {{ $event->created_at }} </li>
+                                    <li><i class="fa fa-calendar"></i>Created at: {{ $event->created_at->toFormattedDateString() }} </li>
                                    <!-- <li><i class="fa fa-tag"></i> <a href="#">Sports</a></li>
                                 </ul> -->
                                 <h2><a href="{{ route('event.single',$event->id) }}">{{ $event->name }}</a></h2>
@@ -50,7 +50,9 @@
                                 <p>
                                     {!!  str_limit($event->description, 100) !!}
                                 </p>
-                                <p><a href="{{ route('event.single',$event->id) }}" class="btn btn-theme-dark">Read More...</a></p>
+                                <p><a href="{{ route('event.single',$event->id) }}" class="btn btn-theme-dark">Read More...</a>
+                                <a href="{{ $event->fb_event_link or '#' }}" class="btn btn-primary">Facebook Event</a>
+                                </p>
                             </div>
                         </div>
                     </div><!--blog post-->
