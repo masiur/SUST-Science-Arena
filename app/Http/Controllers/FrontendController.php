@@ -48,9 +48,9 @@ class FrontendController extends Controller
      */
     public function event()
     {
-        $event = Event::paginate(10);
+        $events = Event::paginate(10);
          
-         return view('user.event')->with('event' , $event)->with('title' , "Events");
+         return view('user.event')->with('events' , $events)->with('title' , "Events");
     }
 
     /**

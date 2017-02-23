@@ -10,7 +10,7 @@
                     </div>
                     <div class="col-sm-6 hidden-xs text-right">
                         <ol class="breadcrumb">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{ route('index') }}">Home</a></li>
                             <li>{{ $title }}</li>
                         </ol>
                     </div>
@@ -23,15 +23,16 @@
                 <div class="col-md-8">
 
 
-                @foreach($event as $events)
+                @foreach($events as $event)
 
                     <div class="blog-post">
 
                         <div class="row">
+                        
                             <div class="col-md-6 margin20">
-                                <a href="#">
+                                <a href="{{ route('event.single',$event->id) }}">
                                     <div class="item-img-wrap">
-                                        <img src="{{ asset($events->img_url) }}" class="img-responsive" alt="workimg">
+                                        <img src="{{ asset($event->img_url) }}" class="img-responsive" alt="workimg">
                                         <div class="item-img-overlay">
                                             <span></span>
                                         </div>
@@ -41,14 +42,15 @@
                             <div class="col-md-6 margin20">
                                 <ul class="list-inline post-detail">
                                     <li>by <a href="#">SSA</a></li>
-                                    <li><i class="fa fa-calendar"></i> {{ $events->created_at }} </li>
+                                    <li><i class="fa fa-calendar"></i> {{ $event->created_at }} </li>
                                    <!-- <li><i class="fa fa-tag"></i> <a href="#">Sports</a></li>
                                 </ul> -->
-                                <h2><a href="#">{{ $events->title }}</a></h2>
+                                <h2><a href="{{ route('event.single',$event->id) }}">{{ $event->name }}</a></h2>
+                                <h5>Date: {{ $event->date }}</h5><h6>Place: {{ $event->place }} </h6>
                                 <p>
-                                    {!! $events->description !!}
+                                    {!!  str_limit($event->description, 100) !!}
                                 </p>
-                                <p><a href="blog-single.html" class="btn btn-theme-dark">Read More...</a></p>
+                                <p><a href="{{ route('event.single',$event->id) }}" class="btn btn-theme-dark">Read More...</a></p>
                             </div>
                         </div>
                     </div><!--blog post-->
@@ -71,7 +73,7 @@
                             <a href="#">Photoshop</a>
                         </div>
                     </div> -->
-                    {!! $event->render() !!}
+                    {!! $events->render() !!}
                 </div><!--sidebar-col-->
             </div><!-- row for blog post -->
        </div><!--blog full main container -->
