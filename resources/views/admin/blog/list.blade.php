@@ -46,7 +46,7 @@
                                                 <td>{!! $blog->details !!}</td>
                                                 <td>{!! $blog->user->username !!}</td>
 
-                                                @if($blog->published == "no")
+                                                @if($blog->published == 'no')
                                                 <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('accept.blog',$blog->id)!!}"  style="margin-right: 3px;">Accept</a></td>
                                                 @else
                                                 <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="#"  style="margin-right: 3px;">Accepted</a></td>

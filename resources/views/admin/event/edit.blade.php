@@ -26,7 +26,7 @@
                             
                                 <div class=" form"> 
 
-                                    {!! Form::model($event, array('route' => ['event.update',$event->id], 'method' => 'PUT', 'class' => 'cmxform form-horizontal tasi-form')) !!}
+                                    {!! Form::model($event, array('route' => ['event.update',$event->id], 'method' => 'PUT', 'class' => 'cmxform form-horizontal tasi-form' ,'files' => true)) !!}
 
 
                                     <div class="form-group">
@@ -51,6 +51,22 @@
                                         {!! Form::textarea('description', null, array('class' => 'form-control','placeholder' => 'Details of the event', 'row' => 2, 'required')) !!}
                                     </div>
                                 </div>
+
+
+                                <div class="form-group">
+                                    {!! Form::label('fb_event_link', "Facebook Link*", array('class' => 'control-label col-lg-2')) !!}
+                                    <div class="col-lg-6">
+                                        {!! Form::text('fb_event_link', null, array('class' => 'form-control','placeholder' => 'facebook link of the event')) !!}
+                                    </div>
+                                </div>
+      
+                                <div class="form-group">
+                                        {!! Form::label('image', "Image*", array('class' => 'control-label col-lg-2')) !!}
+                                        <div class="col-lg-10">
+                                            {!! Form::file('image', array('class' => 'form-control', 'multiple'=>false )) !!}
+                                        </div>
+                                </div>
+                                       
 
 
                                 <div class="form-group">

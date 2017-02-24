@@ -31,6 +31,8 @@
                                             <th>Details</th>
                                             <th>Date</th>
                                             <th>Place</th>
+                                            <th>Facebook Link</th>
+                                            <th>Image</th>
                                             <th>#</th>
                                             <th>#</th>
                                         </tr>
@@ -46,6 +48,13 @@
                                                 <td>{!! $event->description !!}</td>
                                                 <td>{!! $event->date !!}</td>
                                                 <td>{!! $event->place !!}</td>
+                                                <td>
+                                                <a class="btn btn-sm" href="{{ url($event->fb_event_link) }}" style="" target = "_blank">Go To FB</a>
+                                                </td>
+                                                <td>
+                                                <a href="{{ url($event->img_url) }}" style="" target = "_blank"><button class="btn btn-success btn-xs btn-archive Editbtn">View</button> </a>
+                                                </td>
+
                                                 <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('event.edit',$event->id)!!}"  style="margin-right: 3px;">Edit</a></td>
                                                 <td><a href="{!! route('event.delete',$event->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $event->id !!}">Delete</a></td>
                                             </tr>
