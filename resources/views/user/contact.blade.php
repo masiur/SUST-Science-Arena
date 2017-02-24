@@ -100,11 +100,11 @@
                     <div class="divide40"></div>
                     <h4>Get social</h4>
                      <div class=" margin10">
-                            <a href="#" class="social-icon si-dark si-colored-facebook">
+                            <a href="https://www.facebook.com/SUSTScienceArena/" target="_blank" class="social-icon si-dark si-colored-facebook">
                                 <i class="fa fa-facebook"></i>
                                 <i class="fa fa-facebook"></i>
                             </a>
-                            <a href="#" class="social-icon si-dark si-colored-twitter">
+                            <a href="https://twitter.com/ssa_sust" target="_blank" class="social-icon si-dark si-colored-twitter">
                                 <i class="fa fa-twitter"></i>
                                 <i class="fa fa-twitter"></i>
                             </a>

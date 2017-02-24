@@ -3,6 +3,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge') !!}
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ $title }} || SUST Science Arena</title>
+        <meta name="description" content="SUST Science Arena(SSA) is one of the science based organizations of SUST. SSA is committed to popularize science among young people.">
+        <meta name="keywords" content="SSA,SUST,Science,Arena, SUST Science Arena, Science Arena">
+        <meta name="author" content="SUST Science Arena">
+
+        <!-- Developers
+        Masiur Rahman Siddiki
+        mrsiddiki AT gmail DOT com
+        CSE'12, SUST.
+
+        &&
+
+        Mithun Das
+        mithun.das227 AT gmail DOT com
+        CSE'12, SUST. -->
 
         <!-- Bootstrap -->
         {!! Html::style('frontend/bootstrap/css/bootstrap.min.css') !!}
@@ -34,8 +48,16 @@
         <style type="text/css">
             .masiur-navlogo-pos {
                 position: absolute;
-                left: 28%;
+                left: 12%;
                 top: 24%;
+            }
+            .masiur-developers-corner-name {
+                font-size: large;
+                font-family: cursive;
+            }
+            .masiur-developers-corner-text {
+                font-size: large;
+                font-family: inherit;
             }
         </style>
         

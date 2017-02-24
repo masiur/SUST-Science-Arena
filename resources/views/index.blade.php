@@ -9,20 +9,20 @@
                     <!-- SLIDE -->
                     <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 1">
                         <!-- MAIN IMAGE -->
-                        <img src="{{ asset('img/ssacover.jpg') }}"   alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <img src="{{ asset('img/ssafest.jpg') }}"   alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                         <div class="caption sfb bold uppercase-title text-center"
                              data-x="center"
                              data-y="158" 
                              data-speed="900"
                              data-start="800"
                              data-easing="Sine.easeOut">Hello! This is SSA</div>
-                        <div class="caption sfb lowercase-caption text-center" 
+                        <!-- <div class="caption sfb lowercase-caption text-center" 
                              data-x="center"
                              data-y="218"
                              data-speed="900"
                              data-start="1500"
                              data-easing="Sine.easeOut">A responsive site template with a clean and profession design 
-                            <br />that will be a great solution for your business, portfolio, Shop or any other purpose.</div>
+                            <br />that will be a great solution for your business, portfolio, Shop or any other purpose.</div> -->
                         <!-- <div class="caption rev-buttons tp-resizeme sfb" 
                              data-x="center" 
                              data-y="313"
@@ -51,7 +51,7 @@
                              data-speed="500"
                              data-start="800"
                              data-easing="Sine.easeOut">
-                            Powerful Template
+                            Science In Life
                         </div>
                         <div class="tp-caption sfr modern_big_bluebg rev-title-v1"
                              data-x="35"
@@ -59,7 +59,7 @@
                              data-speed="500"
                              data-start="1300"
                              data-easing="Sine.easeOut">
-                            Unlimited layouts
+                            Science For Life
                         </div>
                         <!-- <div class="caption sfb rev-buttons tp-resizeme"
                              data-x="35"
@@ -71,9 +71,10 @@
                         </div> -->
                     </li>
                     <!-- SLIDE -->
+                    {{--
                     <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 3">
                         <!-- MAIN IMAGE -->
-                        <img src="{{ asset('img/ssacover.jpg') }}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <img src="{{ asset('img/ssafest.jpg') }}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                         <div class="tp-caption lft"
                              data-x="35" 
                              data-y="140"
@@ -132,6 +133,7 @@
 
 
                     </li>
+                     --}}
                 </ul>
             </div>
         </div><!--full width banner-->
@@ -144,7 +146,8 @@
                         <h2>What <strong>we do</strong> </h2>
                         <span class="center-line"></span>
                         <p class="sub-text margin40">
-                            Our objective is to promote activities of science, expose recent scientific information to students and to encourage students about science. We are committed to popularize science among young people. To accomplish this job we arrange different types of exposition programs like poster exhibition, science lecture, writing competition, organize seminar, conference, science Fair, quiz competition, debate competition, exhibition on science, study circle, talk show, Sudoku competition, publish Magazine, journal, celebrate science day, science week, establish science library, science talk, participating in social activities. </p>
+                            Our objective is to promote activities of science, expose recent scientific information to students and to encourage students about science. We are committed to popularize science among young people. 
+                            To accomplish this job we arrange different types of exposition programs like poster exhibition, science lecture, writing competition, organize seminar, conference, science Fair, quiz competition, debate competition, exhibition on science, study circle, talk show, Sudoku competition, publish Magazine, journal, celebrate science day, science week, establish science library, science talk, participating in social activities. </p>
                     </div>
                 </div>
 
@@ -196,7 +199,7 @@
              --}}
         </div><!--services container-->
 
-        <div class="divide80"></div>
+        <div class="divide50"></div>
         
         @if(count($events))
         <div class="container">
@@ -275,7 +278,7 @@
             <a href="masonry-portfolio-4.html" class="btn btn-theme-dark btn-lg">View Past Events</a>
         </div> -->
         <div class="divide50"></div>
-    
+        
         <div class="testimonials-v-2 wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="100ms">
             <div class="container">
                 <div class="row">
@@ -295,15 +298,19 @@
                         <div class="testi-slide">
                             <ul class="slides">
                                 <li>
-                                    <img src="{{ asset('frontend/img/customer-1.jpg') }}" alt="">
+                                    <img src="{{ asset('img/mzi.png') }}" alt="">
                                     <p>
                                         <i class="ion-quote"></i>
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+                                        SUST Science Arena is the one of the science based organizations of SUST, established at February 24, 2004 by a group of science enthusiast of SUST. The main commitment of this organization is to popularize science among the youngstars throughout the city. 
                                     </p>
                                     <h4 class="test-author">
-                                        Rick man - <em>rock inc</em>
+                                        Dr. Muhammed Zafar Iqbal - <em>Renowned Writer & Professor,
+Dept. of CSE,
+SUST, Sylhet.
+</em>
                                     </h4>
                                 </li><!--testi item-->
+                                {{--
                                 <li>
                                     <img src="{{ asset('frontend/img/customer-2.jpg') }}" alt="">
                                     <p>
@@ -322,6 +329,7 @@
                                         Smith - <em>Ceo, company inc.</em>
                                     </h4>
                                 </li><!--testi item-->
+                                 --}}
                             </ul>
                         </div><!--flex slider testimonials end here-->
                     </div>
@@ -347,42 +355,42 @@
                 <div class="row">
                     <div class="col-sm-4 text-center">
                         <div class="person-v2">
-                            <img src="img/team-5.jpg" class="img-responsive" alt="">
+                            <img src="{{ asset('img/pres.jpg') }}" class="img-responsive" alt="">
                             <div class="person-desc-v2">
                                 <h3>Sadman Al Fahad</h3>
                                 <em>President</em>
-                                <ul class="list-inline top-social">
+                                <!-- <ul class="list-inline top-social">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li> 
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div><!--person col end-->
                     <div class="col-sm-4 text-center">
                         <div class="person-v2">
-                            <img src="img/team-6.jpg" class="img-responsive" alt="">
+                            <img src="{{ asset('img/vp.jpg') }}" class="img-responsive" alt="">
                             <div class="person-desc-v2">
                                 <h3>Khoirom Kameshwar</h3>
                                 <em>Sr. Vice President</em>
-                                <ul class="list-inline top-social">
+                                <!-- <ul class="list-inline top-social">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                     
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div><!--person col end-->
                     <div class="col-sm-4 text-center">
                         <div class="person-v2">
-                            <img src="img/team-7.jpg" class="img-responsive" alt="">
+                            <img src="{{ asset('img/gs.jpg') }}" class="img-responsive" alt="">
                             <div class="person-desc-v2">
                                 <h3>Rifat Hyder</h3>
                                 <em>General Secretary</em>
-                                <ul class="list-inline top-social">
+                                <!-- <ul class="list-inline top-social">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                     
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div><!--person col end-->
@@ -403,7 +411,7 @@
                 </div>
             </div>
         </div><!--our team v-2-->
-        <div class="divide70"></div>
+        <!-- <div class="divide70"></div> -->
         {{-- 
         <div class="container">
             <div class="row">
