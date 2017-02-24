@@ -55,6 +55,17 @@ class FrontendController extends Controller
          return view('user.event')->with('events' , $events)->with('title' , "Events");
     }
 
+
+
+    public function eventSingle()
+    {
+
+
+
+
+
+    }
+
     /**
      * Store a newly created resource in storage.
      *

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Event;
 use Input;
 use App\Http\Requests;
+use Validator;
 use App\Http\Controllers\Controller;
 
 class EventController extends Controller
@@ -46,20 +47,75 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $rules = [
+           
+        //    'name'   => 'required',
+        //    'date' => 'required',
+        //    'description' => 'required',
+        //    'place' => 'required',
+        //    'img_url' => 'required',
+        // ];
+
 
                     
 
-              $event = new Event();
+        //       $event = new Event();
 
-              $event->name =    Input::get('name');
-              $event->date =    Input::get('date');
-              $event->description = Input::get('details');
-              $event->place =    Input::get('place');
+        //       $event->name =    Input::get('name');
+        //       $event->date =    Input::get('date');
+        //       $event->description = Input::get('details');
+        //       $event->place =    Input::get('place');
+        //       $event->fb_event_link = Input::get('fbLink');
+        //       $event->img_url = Input::get('image');
 
-             $event->save();
+        //      $event->save();
 
-             return redirect()->route('event.index')->with('success', 'Event Added Successfuly.');
+        //      return redirect()->route('event.index')->with('success', 'Event Added Successfuly.');
+
+        $rules = [
+              'name'   => 'required',
+              'date' => 'required',
+              'description' => 'required',
+              'place' => 'required',
+              // 'img_url' => 'required',
+            ];
+
+        $data = $request->all();
+        $validation = Validator::make($data, $rules);
+
+        if ($validation->fails()) {
+            return redirect()->back()->withInput()->withErrors($validation);
+        }
+
+        $img_url = 'img/ssacover.jpg';
+
+        if(Input::hasFile('image')) {
+            $file = Input::file('image');
+
+            $destination = public_path().'/uploads/event/';
+            $filename = time().'_portfolio.'.$file->getClientOriginalExtension();
+            $file->move($destination, $filename);
+            $img_url = '/uploads/event/'.$filename;
+        } else {
+            return redirect()->back()->withInput()->withErrors('Image Required');
+        }
+
+        $event = new Event();
+        $event->name = $data['name'];
+        $event->date =    Input::get('date');
+        $event->place =    Input::get('place');
+        $event->fb_event_link = $data['fb_event_link'];
+        $event->description = $data['description'];
+        
+        $event->img_url = $img_url;
+
+            
+   
+        if($event->save()) {
+            return redirect()->route('event.index')->with('success','Event Successfully Added');
+        } else {
+            return redirect()->route('event.index')->with('error','Something went wrong');
+        }
 
 
 
@@ -106,7 +162,50 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $rules = [
+              'name'   => 'required',
+              'date' => 'required',
+              'description' => 'required',
+              'place' => 'required',
+              // 'img_url' => 'required',
+            ];
+
+        $data = $request->all();
+        $validation = Validator::make($data, $rules);
+
+        if ($validation->fails()) {
+            return redirect()->back()->withInput()->withErrors($validation);
+        }
+
+        $img_url = 'img/ssacover.jpg';
+
+        if(Input::hasFile('image')) {
+            $file = Input::file('image');
+
+            $destination = public_path().'/uploads/event/';
+            $filename = time().'_portfolio.'.$file->getClientOriginalExtension();
+            $file->move($destination, $filename);
+            $img_url = '/uploads/event/'.$filename;
+        } else {
+             $img_url = Event::where('id', '=', $id)->pluck('img_url');
+        }
+
+        $event = Event::findOrFail($id);
+        $event->name = $data['name'];
+        $event->date =    Input::get('date');
+        $event->place =    Input::get('place');
+        $event->fb_event_link = $data['fb_event_link'];
+        $event->description = $data['description'];
+        
+        $event->img_url = $img_url;
+
+            
+   
+        if($event->save()) {
+            return redirect()->route('event.index')->with('success','Event Successfully Updated');
+        } else {
+            return redirect()->route('event.index')->with('error','Something went wrong');
+        }
     }
 
     /**

@@ -84,13 +84,13 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
    Route::post('event',['as' => 'event.store', 'uses' => 'EventController@store']);
    Route::get('event/{id}/show',['as' => 'event.show', 'uses' => 'EventController@show']);
    Route::get('event/{id}/edit',['as' => 'event.edit', 'uses' => 'EventController@edit']);
-   Route::put('event/{id}',['as' => 'event.update', 'uses' => 'ProjectController@update']);
+   Route::put('event/{id}',['as' => 'event.update', 'uses' => 'EventController@update']);
    Route::delete('event/{id}',['as' => 'event.delete', 'uses' => 'EventController@destroy']);
 
    // Mithun end
 
    // any new admin panel route must be added here 
-   Route::get('user',['as' => 'user.index', 'uses' => 'UserController@index']);
+    Route::get('user',['as' => 'user.index', 'uses' => 'UserController@index']);
 	Route::get('user/{id}/edit',['as' => 'user.edit', 'uses' => 'UserController@edit']);
 	Route::get('user/{id}/show',['as' => 'user.show', 'uses' => 'UserController@show']);
 	Route::put('user/{id}',['as' => 'user.update', 'uses' => 'UserController@update']);

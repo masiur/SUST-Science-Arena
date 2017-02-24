@@ -16,7 +16,7 @@
                                     <h4>{{ $title }}</h4>
                             </div>
                             <div class="col-md-6">                            
-                                <a class="pull-right" href="{!! route('event.index')!!}"><button class="btn btn-success">Event List</button></a>
+                                <a class="pull-right" href="{!! route('event.index')  !!}"><button class="btn btn-success">Event List</button></a>
                             </div>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                                 
                             <div class=" form"> 
 
-                                {!! Form::open(array('route' => 'event.store' , 'method' => 'post', 'class' => 'cmxform form-horizontal tasi-form')) !!}
+                                {!! Form::open(array('route' => 'event.store' , 'method' => 'post', 'class' => 'cmxform form-horizontal tasi-form' , 'files' => true )) !!}
 
 
                                 <div class="form-group">
@@ -43,11 +43,20 @@
                                 </div>
 
                                 <div class="form-group">
-                                    {!! Form::label('details', "Event Details*", array('class' => 'control-label col-lg-2')) !!}
+                                    {!! Form::label('description', "Event description*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::textarea('details', null, array('class' => 'form-control','placeholder' => 'Details of the event', 'row' => 2, 'required')) !!}
+                                        {!! Form::textarea('description', null, array('class' => 'form-control','placeholder' => 'Details of the event', 'row' => 2, 'required' => 'required')) !!}
                                     </div>
                                 </div>
+
+                                 <div class="form-group">
+                                    {!! Form::label('fb_event_link', "Facebook Link*", array('class' => 'control-label col-lg-2')) !!}
+                                    <div class="col-lg-6">
+                                        {!! Form::text('fb_event_link', null, array('class' => 'form-control','placeholder' => 'facebook link of the event', 'row' => 2 )) !!}
+                                    </div>
+                                </div>
+
+
 
 
                                 <div class="form-group">
@@ -58,7 +67,12 @@
                                 </div>
 
 
-
+                               <div class="form-group">
+                                        {!! Form::label('image', "Image*", array('class' => 'control-label col-lg-2')) !!}
+                                        <div class="col-lg-10">
+                                            {!! Form::file('image', array('class' => 'form-control', 'required' => 'required', 'multiple' => 'false' )) !!}
+                                        </div>
+                                </div>
                                                         
 
                                 <div class="form-group">

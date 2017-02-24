@@ -141,8 +141,8 @@ class BlogController extends Controller
     public function pending_list(){
 
 
-         
-        $blogs = Blog::get(['title' , 'id', 'category_id', 'user_id']);
+         $blogs = Blog::all();
+        //$blogs = Blog::get(['title' , 'id', 'category_id', 'user_id']);
 
         return view('admin.blog.list')
                 ->with('title', 'List of All Pending Blogs')
@@ -153,7 +153,34 @@ class BlogController extends Controller
     }
 
 
-    public function AdminSingleBlog($id){
+
+      public function AcceptBlog($id)
+      {
+
+
+            $blog = Blog::where('id' , $id)->first();
+        
+            $blog->published = "yes";
+
+            $blog->save();
+
+            $blogs = Blog::all();
+
+            return view('admin.blog.list')
+                ->with('title', 'List of All Pending Blogs')
+                ->with('blogCounter', 1)
+                ->with('blogs', $blogs);
+        
+      }
+
+       
+                        
+
+ 
+    
+
+
+ public function AdminSingleBlog($id){
        
         return "ddccd";
 
@@ -163,21 +190,11 @@ class BlogController extends Controller
     }
 
 
-    public function AcceptBlog($id) {
 
-         return $blog = Blog::where('id' , $id)->first();
-         //$blog = Blog::where('id' , $id)->pluck('published');
 
-        $blog->published = "yes";
+   
 
-        $blog->save();
-
-         return view('admin.blog.list');
-                        -
-
-}
-    
-
+  
     public function ignoreBlog($id){
 
         $blog = Blog::where('id' , $id)->first();
