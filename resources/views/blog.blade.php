@@ -36,13 +36,9 @@
                             </div>
                             <div class="col-md-6 margin20">
                                 <ul class="list-inline post-detail">
-<<<<<<< HEAD
-                                    <li>by <a href="#">{{ $blog->user->profile->fullName or 'dd' }}</a></li>
-                                    <li><i class="fa fa-calendar"></i> {{ $blog->created_at }}</li>
-=======
+
                                     <li>by <a href="#">{{ $blog->user->profile->fullName }}</a></li>
                                     <li><i class="fa fa-calendar"></i> {{ $blog->updated_at->diffForHumans() }}</li>
->>>>>>> 6352ba1812cb0456b0a3c791a8f2474c044383c0
                                     <li><i class="fa fa-tag"></i> <a href="#">{{ $blog->category->name }}</a></li>
                                 </ul>
                                 <h2><a href="{{ route('blog.single', str_slug($blog->title, '-')) }}">{{ $blog->title }}</a></h2>
