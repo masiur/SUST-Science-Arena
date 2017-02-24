@@ -31,7 +31,7 @@
                     </div>
                     <div class="col-sm-8 text-right">
                         <ul class="list-inline top-dark-right">                      
-                            <li class="hidden-sm hidden-xs"><i class="fa fa-envelope"></i> ssa.sust@gmail.com</li>
+                            <li class="hidden-sm hidden-xs"><i class="fa fa-envelope"></i> +880 1614 915 502</li>
 
                             @if(auth()->check())
                                 @role('admin')

@@ -90,7 +90,7 @@ a {
   </div>
   <div class="row">
     <div class="col-md-6 col-md-push-3">
-      <p class="lead">You can go back <a href="{{ route('index') }}"> Home Page</a></p>
+      <p class="lead">You can go back to <a href="{{ route('index') }}"> Home Page</a></p>
     </div>
   </div>
 </div>
