@@ -104,7 +104,8 @@ class EventController extends Controller
         $event->name = $data['name'];
         $event->date =    Input::get('date');
         $event->place =    Input::get('place');
-        $event->fb_event_link = $data['fb_event_link'];
+        //$event->fb_event_link = $data['fb_event_link'];
+        $event->fb_event_link = Input::get('fb_event_link');
         $event->description = $data['description'];
         
         $event->img_url = $img_url;

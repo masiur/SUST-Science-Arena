@@ -64,11 +64,11 @@
                                <div class="form-group">
                                     {!! Form::label('fb_event_link', "Facebook Link*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('place', null, array('class' => 'form-control', 'placeholder' => 'Enter Facebook Event Link', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                        {!! Form::text('fb_event_link', null, array('class' => 'form-control', 'placeholder' => 'Enter Facebook Event Link', 'required' => 'required', 'aria-required' =>'true')) !!}
                                     </div>
                                 </div>
 
-
+                                <div class="form-group">
                                         {!! Form::label('image', "Image*", array('class' => 'control-label col-lg-2')) !!}
                                         <div class="col-lg-10">
                                             {!! Form::file('image', array('class' => 'form-control', 'required' => 'required', 'multiple' => 'false' )) !!}

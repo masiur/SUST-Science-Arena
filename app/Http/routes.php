@@ -8,6 +8,7 @@ Route::get('news_list',['as' => 'news.list', 'uses' => 'NewsController@show']);
 Route::get('events',['as' => 'event.list', 'uses' => 'FrontendController@event']);
 Route::get('event/{id}',['as' => 'event.single', 'uses' => 'FrontendController@eventSingle']);
 Route::get('contact',['as' => 'contact', 'uses' => 'contactController@contact_page']);
+Route::get('blog/{title}',['as' => 'blog.single', 'uses' => 'FrontendController@blogSingle']);
 Route::post('contact_store',['as' => 'contact.store', 'uses' => 'contactController@store']);
 
 
@@ -125,11 +126,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
      Route::get('content/create',['as' => 'content.create', 'uses' => 'ContentController@create']);
      Route::post('content',['as' => 'content.store', 'uses' => 'ContentController@store']);
   
-
-     //USER PAGE
-
-     Route::get('blog/{title}',['as' => 'blog.single', 'uses' => 'FrontendController@blogSingle']);
-
 
 
 	/* will be Commented Out */
