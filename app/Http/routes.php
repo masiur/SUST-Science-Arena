@@ -1,6 +1,9 @@
 <?php
 
 
+Route::get('test',['as' => 'test', 'uses' => 'FrontendController@test']);
+
+
 Route::get('/', array('as' => 'index', 'uses' => 'FrontendController@index'));
 
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use File;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -10,6 +11,7 @@ use App\Models\Category;
 use App\Models\Event;
 use Validator;
 use Input;
+
 
 
 
@@ -64,9 +66,30 @@ class FrontendController extends Controller
     }
 
 
+    public function test()
+    {
+       
+
+       $no = 'sylhetnews24_road accident.txt';
+       $content =  File::get(storage_path($no));
+         
+        return  substr_count($content, 'www');
+
+
+    }
+
+
 
     public function eventSingle($id)
     {
+            $event = Event::findOrFail($id);
+            $pageTitle = str_limit($event->name, 20).' || Event';
+    
+             
+    
+             return view('user.eventSingle')
+                            ->with('title', $pageTitle)
+                            ->with('event', $event);
 
          $event = Event::findOrFail($id);
          $pageTitle = str_limit($event->name, 20).' || Event';
