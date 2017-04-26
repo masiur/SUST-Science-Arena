@@ -31,7 +31,7 @@
                     </div>
                     <div class="col-sm-8 text-right">
                         <ul class="list-inline top-dark-right">                      
-                            <li class="hidden-sm hidden-xs"><i class="fa fa-envelope"></i> +880 1614 915 502</li>
+                            <li class="hidden-sm hidden-xs"><i class="fa fa-envelope"></i><?php echo \App\Models\Info::where('id', 1)->pluck('contact');  ?> </li>
 
                             @if(auth()->check())
                                 @role('admin')
@@ -41,7 +41,7 @@
                                 <li><a href="{{ route('settings') }}"><i class="fa fa-lock"></i> Settings</a></li>
                                 <li><a href="{{ route('logout') }}"><i class="fa fa-logout"></i> Log Out</a></li>
                             @else
-                                <li class="hidden-sm hidden-xs"><i class="fa fa-phone"></i> +88 01711 107915</li>
+                                <li class="hidden-sm hidden-xs"><i class="fa fa-phone"></i> <?php echo \App\Models\Info::where('id', 1)->pluck('contact');  ?></li>
                                 <li><a href="{{ route('login') }}"><i class="fa fa-lock"></i> Login</a></li>
                                 <li><a href="{{ route('register') }}"><i class="fa fa-user"></i> Sign Up</a></li>
                                 <li><a class="topbar-icons" href="#"><span><i class="fa fa-search top-search"></i></span></a></li>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use File;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Models\Info;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Committee_member;
@@ -108,6 +109,64 @@ class FrontendController extends Controller
     {
         //
     }
+
+
+
+    public function info_edit()
+    {
+
+        $info = Info::first();
+
+        
+        return view('admin.infoEdit')
+                        ->with('title', 'Update SSA Info')
+                        ->with('info', $info);
+
+    }
+
+
+
+   public function info_update(Request $request, $id)
+    {
+         $rules = [
+              'contact'   => 'required',
+              'email' => 'required',
+              'fb_link' => 'required',
+              'twitter_link' => 'required',
+              // 'img_url' => 'required',
+            ];
+
+        $data = $request->all();
+        $validation = Validator::make($data, $rules);
+
+        if ($validation->fails()) {
+            return redirect()->back()->withInput()->withErrors($validation);
+        }
+
+
+        $info = Info::findOrFail($id);
+        $info->contact = $data['contact'];
+        $info->fb_link =    Input::get('fb_link');
+        $info->email =    Input::get('email');
+        $info->twitter_link = $data['twitter_link'];
+        
+            
+   
+        if($info->save()) {
+            return redirect()->route('dashboard')->with('success','Info Successfully Updated');
+        } else {
+            return redirect()->route('dashboard')->with('error','Something went wrong');
+        }
+
+ }
+
+
+
+
+
+
+
+
 
     /**
      * Show the form for editing the specified resource.

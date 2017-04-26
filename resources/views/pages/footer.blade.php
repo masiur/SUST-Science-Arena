@@ -90,8 +90,8 @@
 
                         <ul class="list-unstyled info">
                             <li><i class="pe-7s-map-marker"></i> SUST, Sylhet, 3114</li>
-                            <li><i class="pe-7s-phone"></i> +01 1800 4534 545</li>
-                            <li><i class="pe-7s-mail"></i> info@ssa.org</li>
+                            <li><i class="pe-7s-phone"></i><?php echo \App\Models\Info::where('id', 1)->pluck('contact');  ?></li>
+                            <li><i class="pe-7s-mail"></i> <?php echo \App\Models\Info::where('id', 1)->pluck('email');  ?></li>
                         </ul>
 
                     </div>

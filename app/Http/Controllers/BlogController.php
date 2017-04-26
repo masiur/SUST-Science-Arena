@@ -145,7 +145,7 @@ class BlogController extends Controller
         //$blogs = Blog::get(['title' , 'id', 'category_id', 'user_id']);
 
         return view('admin.blog.list')
-                ->with('title', 'List of All Pending Blogs')
+                ->with('title', 'List of All Pending Articles')
                 ->with('blogCounter', 1)
                 ->with('blogs', $blogs);
 

@@ -90,6 +90,11 @@
                     </li>
 
 
+                    <li> <a href="{!! route('info.edit') !!}"><i class="ion-compose"></i> <span class="nav-label">SSA Info</span></a>
+                    </li>
+
+
+
 
                     <!-- <li class="has-submenu"><a href="#"><i class="ion-email"></i> <span class="nav-label">Mail</span></a>
                         <ul class="list-unstyled">

@@ -15,7 +15,7 @@
                                     <h4>{{ $title }}</h4>
                                 </div>
                                 <div class="col-md-6">                            
-                                     <a class="pull-right"><button class="btn btn-success">Pending Blog</button></a>
+                                     <a class="pull-right"><button class="btn btn-success">All Articles</button></a>
                                 </div>
                             </div>
                         </div>            
@@ -27,9 +27,9 @@
                                         <thead>
                                         <tr>
                                             <th>No.</th>
-                                            <th> Blog title</th>
-                                            <th>Details</th>
+                                            <th> Article title</th>
                                             <th>Author</th>
+                                            <th>#</th>
                                             <th>#</th>
                                             <th>#</th>
                                             
@@ -43,8 +43,14 @@
                                                 <td>
                                                     <a class="show-project-modal" data-toggle="modal" data-project-id="{{ $blog->id }}" data-project-url="{!! route('admin.blog.single',$blog->id) !!}" href="#" style="">{!! $blog->title !!}</a>
                                                 </td>
-                                                <td>{!! $blog->details !!}</td>
+                                               
+                                                
+
                                                 <td>{!! $blog->user->username !!}</td>
+
+                                                <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('blog.read',$blog->id)!!}"  style="margin-right: 3px;">Read</a>
+
+                                                </td> 
 
                                                 @if($blog->published == 'no')
                                                 <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('accept.blog',$blog->id)!!}"  style="margin-right: 3px;">Accept</a></td>
@@ -59,7 +65,7 @@
                                         </tbody>
                                     </table>
                                 @else
-                                    No pending blog. 
+                                    No pending article. 
                                 @endif
                                 </div>
                             </div>

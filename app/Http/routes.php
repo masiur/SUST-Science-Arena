@@ -96,6 +96,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 
 
     // Pending Blog
+    Route::get('read',['as' => 'blog.read', 'uses' => 'BlogController@read']);
 	Route::get('pending_blog',['as' => 'pending.blog', 'uses' => 'BlogController@pending_list']);
     Route::get('AdminSingleBlog/{id}',['as' => 'admin.blog.single', 'uses' => 'BlogController@AdminSingleBlog']);
     Route::get('acceptblog/{id}/',['as' => 'accept.blog', 'uses' => 'BlogController@AcceptBlog']);
@@ -111,6 +112,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
    Route::put('member/{id}',['as' => 'member.update', 'uses' => 'memberController@update']);
    Route::delete('member/{id}',['as' => 'member.delete', 'uses' => 'memberController@destroy']);
 
+  // INFO Update
+  
+  Route::get('edit',['as' => 'info.edit',   'uses' => 'FrontendController@info_edit']);
+  Route::put('info/{id}',['as' => 'info.update', 'uses' => 'FrontendController@info_update']);
 
 
 
