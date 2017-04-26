@@ -19,7 +19,7 @@
         <div class="divide80"></div>
          <div class="container">
             <div class="row">  
-                <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                <div class="col-md-6 col-sm-6 col-md-offset-3 col-sm-offset-3">
                 @include('admin.includes.alert')
                     <div class="login-form">
                         <h3>Log In</h3>
@@ -32,12 +32,14 @@
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
                             <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>                   
+                        </div>
+                        {{--                 
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox"> Remember Me
                             </label>
                         </div>
+                        --}}   
                         <button type="submit" class="btn btn-theme-bg">Login</button>
                         <!-- <a href="#" class="btn btn-fb-login"><i class="fa fa-facebook"></i> Login With Facebook</a> -->
                         <!-- <a href="#">Forget Password?</a> -->

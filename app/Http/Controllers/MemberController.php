@@ -6,7 +6,7 @@ use DB;
 use Validator;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Models\Committee_member;
+use App\Models\CommitteeMember;
 use App\Http\Controllers\Controller;
 
 class MemberController extends Controller
@@ -31,11 +31,11 @@ class MemberController extends Controller
     {
         
 
-        $members = Committee_member::all();
+        $members = CommitteeMember::all();
 
         
          return view('user.committee_member_list')
-                ->with('title', 'List of Committee member')
+                ->with('title', 'List of Committee Member')
                 ->with('memberCounter', 1)
                 ->with('members', $members);
         
@@ -45,14 +45,9 @@ class MemberController extends Controller
     public function list()
     {
         
-         $members = DB::table('Committee_member')
-                ->orderBy('rank', 'asc')
-                ->get();
-
-
-
-                return view('admin.member.list')
-                ->with('title', 'List of Committee member')
+        $members = CommitteeMember::orderBy('rank', 'asc')->get();
+        return view('admin.member.list')
+                ->with('title', 'List of Committee Member')
                 ->with('memberCounter', 1)
                 ->with('members', $members);
 
@@ -100,7 +95,7 @@ class MemberController extends Controller
 
 
 
-        $member = new Committee_member();
+        $member = new CommitteeMember();
 
         $member->name = $data['name'];
         $member->designation = $data['designation'];
@@ -137,7 +132,7 @@ class MemberController extends Controller
      */
     public function edit($id)
     {
-        $member= Committee_member::find($id);
+        $member= CommitteeMember::find($id);
         return view('admin.member.edit')
                         ->with('title', 'Edit Member data')
                         ->with('member', $member);
@@ -173,7 +168,7 @@ class MemberController extends Controller
 
 
 
-        $member = new Committee_member();
+        $member = CommitteeMember::find($id);
 
         $member->name = $data['name'];
         $member->designation = $data['designation'];
@@ -201,7 +196,7 @@ class MemberController extends Controller
     {
         
         try{
-            Committee_member::destroy($id);
+            CommitteeMember::destroy($id);
 
             return redirect()->route('member.list')->with('success','Member Deleted Successfully.');
 
@@ -210,3 +205,13 @@ class MemberController extends Controller
         }
     }
 }
+
+
+
+ // check user is enabled to login start 
+ //                if (User::where('email', $allInput['email'])->orWhere('username', $allInput['email'])->pluck('activation_status') == 0) {
+ //                    return redirect()->route('login') // send him/her back to login page
+ //                            ->withInput()
+ //                            ->withErrors('Your Account is disabled. Please Contact Support');
+ //                }
+ //                // check user is enabled to login end

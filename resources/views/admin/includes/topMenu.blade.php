@@ -39,11 +39,25 @@
                     <!-- Right navbar -->
 
                     <ul class="nav navbar-nav navbar-right top-menu top-right-menu">
+                        <!-- <li>
+                            Home
+                        </li> -->
+
+                   <li class="">
+                        <a data-toggle="" class="dropdown-toggle" href="{!!route('home')!!}">
+                        <span class="btn btn-info bg-purple ">Home</span>
+                        </a>
+                    </li>
+
 
                     {{--    @include('admin.includes.notificationMenu')
                         @include('admin.includes.inboxMenu')
                     --}} 
                         @include('admin.includes.profileMenu')
+
+
+
+
 
                     </ul>
                     <!-- End right navbar -->

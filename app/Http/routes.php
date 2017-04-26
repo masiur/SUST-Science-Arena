@@ -89,7 +89,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 
    // any new admin panel route must be added here 
     Route::get('user',['as' => 'user.index', 'uses' => 'UserController@index']);
-	Route::get('user/{id}/edit',['as' => 'user.edit', 'uses' => 'UserController@edit']);
+	Route::get('user/{id}/activation',['as' => 'user.activation', 'uses' => 'UserController@changeUserActivationStatus']);
 	Route::get('user/{id}/show',['as' => 'user.show', 'uses' => 'UserController@show']);
 	Route::put('user/{id}',['as' => 'user.update', 'uses' => 'UserController@update']);
 	Route::delete('user/{id}',['as' => 'user.delete', 'uses' => 'UserController@destroy']);

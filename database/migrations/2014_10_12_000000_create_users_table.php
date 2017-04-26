@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->string('username')->nullable();
             $table->string('fb_id')->nullable();
             $table->string('email')->nullable();
+            $table->enum('activation_status',[0,1])->default(1);
             $table->string('password', 60);
             $table->rememberToken();
             $table->timestamps();
