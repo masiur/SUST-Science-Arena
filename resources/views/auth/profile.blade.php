@@ -20,7 +20,7 @@
         <div class="divide80"></div>
         <div class="container blog-left-img">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-sm-6">
                     <div class="blog-post">
 
                         <div class="row">

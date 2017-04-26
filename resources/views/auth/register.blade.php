@@ -66,10 +66,15 @@
                             <input type="text" name="occupation" class="form-control" id="exampleInputOccupation" placeholder="Student or Service Holder etc.">
                         </div>
 
-                        <!-- <div class="form-group">
+                         <div class="form-group">
                             <label for="exampleInputProfilePicture">Profile Picture</label>
-                            <input type="file" name="photo" class="form-control" id="exampleInputProfilePicture" multiple="false">
-                        </div> -->
+                            <input type="file" name="image" class="form-control" id="exampleInputProfilePicture" multiple="false">
+                        </div>  
+
+                       <!-- {!! Form::label('image', "Image*", array('class' => 'control-label col-md-2')) !!}
+                                        <div class="col-sm-4">
+                                            {!! Form::file('image', array('class' => 'form-control', 'required' => 'required', 'multiple' => 'false' )) !!}-->
+                                        </div> 
          
                         <button type="submit" class="btn btn-theme-bg">Sign Up</button>
 
