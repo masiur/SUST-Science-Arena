@@ -117,9 +117,16 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function changeUserActivationStatus($id)
     {
-        //
+        $user = User::find($id);
+        if($user->activation_status == 0) {
+            $user->activation_status = 1;
+        } else {
+            $user->activation_status = 0;
+        }
+        $user->save();
+        return redirect()->route('user.index')->with('success', "User Status Change Succesfully");
     }
 
     /**

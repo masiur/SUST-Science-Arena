@@ -32,7 +32,7 @@
                                             <th>Address</th>
                                             <th>Bio</th>
                                             <th>Phone</th>
-                                            <th>#</th>
+                                            <th>Status</th>
                                             <th>#</th>
                                         </tr>
                                         </thead>
@@ -43,15 +43,19 @@
                                                 <td><?php echo $userCounter++; ?></td>
                                                 <td>
                                                     <a class="show-project-modal" data-toggle="modal" data-project-id="{{ $user->id }}" data-project-url="{!! route('user.show',$user->id) !!}" href="#" style="">{!! $user->email !!}</a>
-                                                </td>
-                                                
+                                                </td>    
 
                                                 <td>{!! $user->profile->fullName !!}</td>
                                                 <td>{!! $user->profile->address !!}</td>
                                                 <td>{!! $user->profile->bio !!}</td>
                                                 <td>{!! $user->profile->phone !!}</td>
 
-                                                <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('user.edit',$user->id)!!}"  style="margin-right: 3px;">Edit</a></td>
+                                                @if($user->activation_status == 0)
+                                                    <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('user.activation',$user->id)!!}"  style="margin-right: 3px;">Disabled</a></td>
+                                                @else
+                                                    <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('user.activation',$user->id)!!}"  style="margin-right: 3px;">Enabled</a></td>
+                                                @endif
+                                                
                                                 <td><a href="#" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $user->id !!}">Delete</a></td>
                                             </tr>
                                             

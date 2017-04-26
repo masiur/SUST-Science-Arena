@@ -15,7 +15,7 @@
                                     <h4>{{ $title }}</h4>
                                 </div>
                                 <div class="col-md-6">                            
-                                     <a class="pull-right"><button class="btn btn-success">Pending Blog</button></a>
+                                     <a class="pull-right"><button class="btn btn-success">All Articles</button></a>
                                 </div>
                             </div>
                         </div>            
@@ -27,7 +27,7 @@
                                         <thead>
                                         <tr>
                                             <th>No.</th>
-                                            <th> Blog title</th>
+                                            <th>Blog title</th>
                                             <th>Details</th>
                                             <th>Author</th>
                                             <th>#</th>

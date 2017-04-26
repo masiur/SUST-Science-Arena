@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8') !!}
-<meta http-equiv="X-UA-Compatible" content="IE=edge') !!}
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Not Found || SUST Science Arena</title>
 <meta name="description" content="SUST Science Arena(SSA) is one of the science based organizations of SUST. SSA is committed to popularize science among young people.">
