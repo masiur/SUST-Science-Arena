@@ -16,7 +16,7 @@
                                     <h4>{{ $title }}</h4>
                             </div>
                             <div class="col-md-6">                            
-                                <a class="pull-right" href="{!! route('event.index')  !!}"><button class="btn btn-success">Event List</button></a>
+                                <a class="pull-right" href="{!! route('member.list')  !!}"><button class="btn btn-success">Member List</button></a>
                             </div>
                         </div>
                     </div>
@@ -25,28 +25,28 @@
                                 
                             <div class=" form"> 
 
-                                {!! Form::open(array('route' => 'event.store' , 'method' => 'post', 'class' => 'cmxform form-horizontal tasi-form' , 'files' => true )) !!}
+                                {!! Form::open(array('route' => 'member.store' , 'method' => 'post', 'class' => 'cmxform form-horizontal tasi-form' , 'files' => false )) !!}
 
 
                                 <div class="form-group">
-                                    {!! Form::label('name', "Event Name*", array('class' => 'control-label col-lg-2')) !!}
+                                    {!! Form::label('name', "Member Name*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Enter Event Name', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                        {!! Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Enter Member Name', 'required' => 'required', 'aria-required' =>'true')) !!}
                                     </div>
                                 </div>
                                    
 
                                 <div class="form-group">
-                                    {!! Form::label('date', "Event Date*", array('class' => 'control-label col-lg-2')) !!}
+                                    {!! Form::label('designation', "Member Designation*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('date', null, array('class' => 'form-control', 'placeholder' => 'Date of the Event', 'required' => 'required')) !!}
+                                        {!! Form::text('designation', null, array('class' => 'form-control', 'placeholder' => 'Designation of the member', 'required' => 'required')) !!}
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    {!! Form::label('description', "Event description*", array('class' => 'control-label col-lg-2')) !!}
+                                    {!! Form::label('contact', "Contact no*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::textarea('description', null, array('class' => 'form-control','placeholder' => 'Details of the event', 'row' => 2, 'required' => 'required')) !!}
+                                        {!! Form::text('contact', null, array('class' => 'form-control','placeholder' => 'Contact Of the member',  'required' => 'required')) !!}
                                     </div>
                                 </div>
 
@@ -54,32 +54,28 @@
 
 
                                 <div class="form-group">
-                                    {!! Form::label('place', "Event Place*", array('class' => 'control-label col-lg-2')) !!}
+                                    {!! Form::label('info', "Member Info*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('place', null, array('class' => 'form-control', 'placeholder' => 'Enter Event place', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                        {!! Form::text('info', null, array('class' => 'form-control', 'placeholder' => 'Enter Member Info', 'required' => 'required', 'aria-required' =>'true')) !!}
                                     </div>
                                 </div>
 
 
-                               <div class="form-group">
-                                    {!! Form::label('fb_event_link', "Facebook Link*", array('class' => 'control-label col-lg-2')) !!}
+
+                                 <div class="form-group">
+                                    {!! Form::label('rank', "Member Rank*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('fb_event_link', null, array('class' => 'form-control', 'placeholder' => 'Enter Facebook Event Link', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                        {!! Form::text('rank', null, array('class' => 'form-control', 'placeholder' => 'Enter Member Rank', 'required' => 'required', 'aria-required' =>'true')) !!}
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                        {!! Form::label('image', "Image*", array('class' => 'control-label col-lg-2')) !!}
-                                        <div class="col-lg-10">
-                                            {!! Form::file('image', array('class' => 'form-control', 'required' => 'required', 'multiple' => 'false' )) !!}
-                                        </div>
-                                </div>
 
+                             
                                                         
 
                                 <div class="form-group">
                                     <div class="col-lg-offset-2 col-lg-6">
-                                    {!! Form::submit('Add Event', array('class' => 'btn btn-success')) !!}
+                                    {!! Form::submit('Add Member', array('class' => 'btn btn-success')) !!}
                                     </div>
                                 </div>
 

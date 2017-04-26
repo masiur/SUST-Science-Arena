@@ -2,12 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use File;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\Committee_member;
 use App\Models\Category;
 use App\Models\Event;
+use Validator;
+use Input;
+
+
+
+
+
+
+
 class FrontendController extends Controller
 {
     /**
@@ -35,7 +46,7 @@ class FrontendController extends Controller
     public function blogSingle($title)
     {
         $blog = Blog::where('title', str_slug($title, ' '))->first();
-        $pageTitle = str_limit($blog->title, 20).' || Blog';
+        $pageTitle = str_limit($blog->title, 20)." || Blog";
         $categories = Category::all();
         return view('blog.blogSingle')
                         ->with('title', $pageTitle)
@@ -56,10 +67,20 @@ class FrontendController extends Controller
     }
 
 
+   
 
-    public function eventSingle()
+    public function eventSingle($id)
     {
+            $event = Event::findOrFail($id);
+            $pageTitle = str_limit($event->name, 20).' || Event';
+    
+             
+    
+             return view('user.eventSingle')
+                            ->with('title', $pageTitle)
+                            ->with('event', $event);
 
+         
 
 
 

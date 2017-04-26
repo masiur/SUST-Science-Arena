@@ -1,6 +1,9 @@
 <?php
 
 
+//Route::get('test',['as' => 'test', 'uses' => 'FrontendController@test']);
+
+
 Route::get('/', array('as' => 'index', 'uses' => 'FrontendController@index'));
 
 
@@ -8,8 +11,9 @@ Route::get('news_list',['as' => 'news.list', 'uses' => 'NewsController@show']);
 Route::get('events',['as' => 'event.list', 'uses' => 'FrontendController@event']);
 Route::get('event/{id}',['as' => 'event.single', 'uses' => 'FrontendController@eventSingle']);
 Route::get('contact',['as' => 'contact', 'uses' => 'contactController@contact_page']);
-Route::post('contact_store',['as' => 'contact.store', 'uses' => 'contactController@store']);
 
+Route::get('committee_member',['as' => 'committee.member', 'uses' => 'MemberController@committee_member_list']);
+Route::post('contact_store',['as' => 'contact.store', 'uses' => 'contactController@store']);
 
 
 
@@ -65,13 +69,7 @@ Route::group(array('middleware' => 'auth'), function()
 	Route::put('blog/{id}',['as' => 'blog.update', 'uses' => 'BlogController@update']);
 	Route::delete('blog/{id}',['as' => 'blog.delete', 'uses' => 'BlogController@destroy']);
 
-    //Pending List Of Blog in  Admin Panel
-
-    Route::get('pending_blog',['as' => 'pending.blog', 'uses' => 'BlogController@pending_list']);
-    Route::get('AdminSingleBlog/{id}',['as' => 'admin.blog.single', 'uses' => 'BlogController@AdminSingleBlog']);
-    Route::get('acceptblog/{id}/',['as' => 'accept.blog', 'uses' => 'BlogController@AcceptBlog']);
-    Route::get('ignoreblog/{id}/',['as' => 'ignore.blog', 'uses' => 'BlogController@ignoreBlog']);
-
+    
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function()
@@ -95,7 +93,27 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 	Route::get('user/{id}/show',['as' => 'user.show', 'uses' => 'UserController@show']);
 	Route::put('user/{id}',['as' => 'user.update', 'uses' => 'UserController@update']);
 	Route::delete('user/{id}',['as' => 'user.delete', 'uses' => 'UserController@destroy']);
+
+
+    // Pending Blog
+	Route::get('pending_blog',['as' => 'pending.blog', 'uses' => 'BlogController@pending_list']);
+    Route::get('AdminSingleBlog/{id}',['as' => 'admin.blog.single', 'uses' => 'BlogController@AdminSingleBlog']);
+    Route::get('acceptblog/{id}/',['as' => 'accept.blog', 'uses' => 'BlogController@AcceptBlog']);
+    Route::get('ignoreblog/{id}/',['as' => 'ignore.blog', 'uses' => 'BlogController@ignoreBlog']);
+
 	
+   // Member Add or Delete Or List Show
+
+   Route::get('member/add',['as' => 'member.add',   'uses' => 'MemberController@add']);
+   Route::get('member',['as' => 'member.list', 'uses' => 'MemberController@list']);
+   Route::post('member/store',['as' => 'member.store', 'uses' => 'MemberController@store']);
+   Route::get('member/{id}/edit',['as' => 'member.edit', 'uses' => 'memberController@edit']);
+   Route::put('member/{id}',['as' => 'member.update', 'uses' => 'memberController@update']);
+   Route::delete('member/{id}',['as' => 'member.delete', 'uses' => 'memberController@destroy']);
+
+
+
+
 });
 
 
@@ -126,11 +144,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
      Route::post('content',['as' => 'content.store', 'uses' => 'ContentController@store']);
   
 
-     //USER PAGE
-
-     Route::get('blog/{title}',['as' => 'blog.single', 'uses' => 'FrontendController@blogSingle']);
-
-
 
 	/* will be Commented Out */
 	// Demo CRUD
@@ -155,3 +168,4 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 	Route::delete('language/{id}',['as' => 'language.delete', 'uses' => 'LanguageController@destroy']);
 
 */
+Route::get('blog/{title}',['as' => 'blog.single', 'uses' => 'FrontendController@blogSingle']);

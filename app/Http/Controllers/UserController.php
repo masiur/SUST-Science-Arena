@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\User;
-use Validator;
 use Auth;
 use Hash;
+use Input;
+use Validator;
+use Illuminate\Http\Request;
+use App\Models\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Profile;
@@ -51,7 +52,9 @@ class UserController extends Controller
             'password'              => 'required|confirmed',
             'password_confirmation' => 'required'
         ];
+
         $data = $request->all();
+        //return $data;
 
         $validation = Validator::make($data,$rules);
 
@@ -63,6 +66,21 @@ class UserController extends Controller
             $user->email = $data['email'];
             $user->password = Hash::make($data['password']);
 
+
+            $img_url = 'img/ssacover.jpg';
+
+            if(Input::hasFile('image')) {
+                $file = Input::file('image');
+
+                $destination = public_path().'/uploads/user_image/';
+                $filename = time().'_portfolio.'.$file->getClientOriginalExtension();
+                $file->move($destination, $filename);
+                $img_url = '/uploads/user_image/'.$filename;
+            } else {
+                return redirect()->back()->withInput()->withErrors('Image Required');
+            }
+
+
             if($user->save()){
 
                 $profile = new Profile();
@@ -72,6 +90,7 @@ class UserController extends Controller
                 $profile->phone = $data['phone'];
                 $profile->bio = $data['bio'];
                 $profile->occupation = $data['occupation'];
+                $profile->img_url = $img_url;
                 if($profile->save()) {
                     return redirect()->route('login')
                             ->with('success','Registered successfully.You can Log In Now.');
