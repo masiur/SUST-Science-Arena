@@ -110,17 +110,25 @@ class AuthController extends Controller
                         'email'    => $allInput['email'],
                         'password' => $allInput['password']
             );
-
+             // check user is enabled to login start 
+                if (User::where('email', $allInput['email'])->orWhere('username', $allInput['email'])->pluck('activation_status') == 0) {
+                    return redirect()->route('login') // send him/her back to login page
+                            ->withInput()
+                            ->withErrors('Your Account is disabled. Please Contact Support');
+                }
+            // check user is enabled to login end
             if (Auth::attempt($credentials))
             {   
                 if ($throttles) {
                     $this->clearLoginAttempts($request);
                 }
+                
                 return redirect()->intended('/');
             } else if(Auth::attempt([ 'username' => $allInput['email'], 'password' => $allInput['password'] ])) {
                 if ($throttles) {
                     $this->clearLoginAttempts($request);
                 }
+
                 return redirect()->intended('/');
             } else
             {   

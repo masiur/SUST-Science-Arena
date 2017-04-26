@@ -4,7 +4,7 @@
 						Supported By: <a href="http://code.com.bd/" target="_blank">Code Technologies</a>
 					</div>
 					<div class="col-md-6">
-						Copyright &copy; 2017.All right reserved. SUST Sciece Arena.
+						Copyright &copy;2016-{{ Date('Y')}}. All right reserved. SUST Sciece Arena.
 					</div>
 					<div class="col-md-3">
 						<a data-toggle="modal" data-target="#showDevelopers"  href="#" style="">Made with <i class="fa fa-heart" aria-hidden="true"></i></a>
