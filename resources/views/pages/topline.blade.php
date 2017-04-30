@@ -3,11 +3,12 @@
                 <div class="row">
                     <div class="col-sm-4 hidden-xs">
                         <div class="top-bar-socials">
-                            <a href="https://www.facebook.com/SUSTScienceArena/" target="_blank" class="social-icon-sm si-dark si-gray-round si-colored-facebook">
+                            <a href=  "{!! \App\Models\Info::where('id', 1)->pluck('fb_link'); !!}" 
+                            target="_blank" class="social-icon-sm si-dark si-gray-round si-colored-facebook">
                                 <i class="fa fa-facebook"></i>
                                 <i class="fa fa-facebook"></i>
                             </a>
-                            <a href="https://twitter.com/ssa_sust" target="_blank" class="social-icon-sm si-dark si-gray-round si-colored-twitter">
+                            <a href="{!! \App\Models\Info::where('id', 1)->pluck('twitter_link'); !!}" target="_blank" class="social-icon-sm si-dark si-gray-round si-colored-twitter">
                                 <i class="fa fa-twitter"></i>
                                 <i class="fa fa-twitter"></i>
                             </a>

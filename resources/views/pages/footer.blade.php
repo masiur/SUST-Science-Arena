@@ -1,6 +1,10 @@
 <!-- footer light 1 begin--> 
         <footer class="footer-light-2">
+<<<<<<< HEAD
         
+=======
+         
+>>>>>>> mithun
             <div class="container">
                 <div class="row">
                     
@@ -37,11 +41,11 @@
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, s ed elit diam nonummy ad minim veniam quis nostrud exerci et tation diam.
                         </p>
                         <div class=" margin10 clearfix">
-                            <a href="#" class="social-icon si-dark si-colored-facebook">
+                            <a href="{!! \App\Models\Info::where('id', 1)->pluck('fb_link'); !!}" target="_blank" class="social-icon si-dark si-colored-facebook">
                                 <i class="fa fa-facebook"></i>
                                 <i class="fa fa-facebook"></i>
                             </a>
-                            <a href="#" class="social-icon si-dark si-colored-twitter">
+                            <a href="{!! \App\Models\Info::where('id', 1)->pluck('twitter_link'); !!}" target ="_blank" class="social-icon si-dark si-colored-twitter">
                                 <i class="fa fa-twitter"></i>
                                 <i class="fa fa-twitter"></i>
                             </a>
