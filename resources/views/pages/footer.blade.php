@@ -1,15 +1,11 @@
 <!-- footer light 1 begin--> 
-        <footer class="footer-light-2">
-<<<<<<< HEAD
-        
-=======
-         
->>>>>>> mithun
-            <div class="container">
+        <footer >
+
+           <!-- <div class="container">
                 <div class="row">
                     
                     <div class="col-sm-4 margin30">
-                        <h3>Latest Post</h3>
+                  <!--      <h3>Latest Post</h3>
                         
                         <div class="media">
                             <div class="media-left">
@@ -23,24 +19,24 @@
                                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit
                                 </p>
                             </div>
-                        </div><!--media-->
+                        </div> --><!--media-->
                         
-                    </div>
+               <!--     </div>
                     <div class="col-sm-4 margin30">
-                        <h3>Latest Work</h3>
+                   <!--     <h3>Latest Work</h3>
                         <ul class="list-inline f2-work">
                             <li><a href="portfolio-single.html"><img src="img/img-1.jpg" class="img-responsive" alt=""></a></li>
                             <li><a href="portfolio-single.html"><img src="img/img-2.jpg" class="img-responsive" alt=""></a></li>
                             <li><a href="portfolio-single.html"><img src="img/img-3.jpg" class="img-responsive" alt=""></a></li>
                             <li><a href="portfolio-single.html"><img src="img/img-4.jpg" class="img-responsive" alt=""></a></li>
-                        </ul>
-                    </div>
+                        </ul> -->
+                   <!-- </div> 
                     <div class="col-sm-4 margin30">
-                        <h3>Find us</h3>
+                       <!-- <h3>Find us</h3> 
                         <p>
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, s ed elit diam nonummy ad minim veniam quis nostrud exerci et tation diam.
-                        </p>
-                        <div class=" margin10 clearfix">
+                        </p> -->
+                       <!-- <div class=" margin10 clearfix">
                             <a href="{!! \App\Models\Info::where('id', 1)->pluck('fb_link'); !!}" target="_blank" class="social-icon si-dark si-colored-facebook">
                                 <i class="fa fa-facebook"></i>
                                 <i class="fa fa-facebook"></i>
@@ -63,11 +59,7 @@
                             </a>
                         </div><!--socials-->
 
-                        <ul class="list-unstyled info">
-                            <li><i class="pe-7s-map-marker"></i> SUST, Sylhet, 3114</li>
-                            <li><i class="pe-7s-phone"></i><?php echo \App\Models\Info::where('id', 1)->pluck('contact');  ?></li>
-                            <li><i class="pe-7s-mail"></i> <?php echo \App\Models\Info::where('id', 1)->pluck('email');  ?></li>
-                        </ul>
+                     <!--   
 
                     </div>
                 </div><hr>
@@ -98,7 +90,7 @@
                         </ul>
                     </div>
                 </div> -->
-            </div>
+           <!-- </div> -->
             
             @include('pages.copyright')
         </footer>

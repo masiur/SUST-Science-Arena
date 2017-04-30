@@ -47,20 +47,12 @@
                     </table>
 
                   
-                    <!-- <div class="sidebar-box margin40">
-                        <h4>Tag Cloud</h4>
+                     <div class="sidebar-box margin40">
+                       <!-- <h4>Tag Cloud</h4> -->
                         <div class="tag-list">
-                            <a href="#">Wordpress</a>
-                            <a href="#">Design</a>
-                            <a href="#">Graphics</a>
-                            <a href="#">Seo</a>
-                            <a href="#">Development</a>
-                            <a href="#">Marketing</a>
-                            <a href="#">fashion</a>
-                            <a href="#">Media</a>
-                            <a href="#">Photoshop</a>
-                        </div>
-                    </div> -->
+                            <h4></h4> 
+                        </div> 
+                    </div> 
                     
                 </div><!--sidebar-col-->
             </div><!-- row for blog post -->
@@ -70,4 +62,7 @@
        <div class="divide60"></div> 
          <div class="divide60"></div> 
 
+
+
 @stop
+
