@@ -34,9 +34,15 @@ class FrontendController extends Controller
                             ->with('events' , $events);
     }
 
-    public function blogIndex()
+    public function blogPublicPage()
     {
+        $category = Input::get('category');
         $blogs = Blog::orderBy('id', 'desc')->where('published', 'yes')->paginate(15);
+        if($category) {
+            $category_id = Category::where('name', $category)->pluck('id');
+            $blogs = Blog::orderBy('id', 'desc')->where('published', 'yes')->where('category_id', $category_id)->paginate(15);   
+        }
+        
         $categories = Category::all();
         return view('blog')
                         ->with('title', 'Public Articles')

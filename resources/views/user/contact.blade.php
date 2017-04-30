@@ -138,7 +138,7 @@
         <script src="js/jqBootstrapValidation.js" type="text/javascript"></script>
         --}}
         <!--gmap js-->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+        <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRX19ehSu70QjDAvCoQIIeOqTV8zv_li0&callback=initMap" type="text/javascript"></script>
         <script type="text/javascript">
             var myLatlng;
             var map;
@@ -156,7 +156,7 @@
                 };
                 map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-                var contentString = '<p style="line-height: 20px;"><strong>assan Template</strong></p><p>SSA, SUST, Sylhet-3114</p>';
+                var contentString = '<p style="line-height: 20px;"><strong>SSA</strong></p><p> SUST, Sylhet-3114</p>';
 
                 var infowindow = new google.maps.InfoWindow({
                     content: contentString

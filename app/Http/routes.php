@@ -20,7 +20,7 @@ Route::post('contact_store',['as' => 'contact.store', 'uses' => 'contactControll
 // public routes -- Added by Masiur
 Route::get('home', array('as' => 'home', 'uses' => 'FrontendController@index'));
 // Blog Public Page
-Route::get('blog',['as' => 'blog.index', 'uses' => 'FrontendController@blogIndex']);
+Route::get('blog',['as' => 'blog.index', 'uses' => 'FrontendController@blogPublicPage']);
 
 
 Route::group(['middleware' => 'guest'], function(){

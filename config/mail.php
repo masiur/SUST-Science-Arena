@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'admin@infancyit.com', 'name' => 'admin'],
+    'from' => ['address' => 'support@sciencearena.club', 'name' => 'Science Arena Support'],
 
     /*
     |--------------------------------------------------------------------------
