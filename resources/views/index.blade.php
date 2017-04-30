@@ -146,8 +146,10 @@
                         <h2>What <strong>we do</strong> </h2>
                         <span class="center-line"></span>
                         <p class="sub-text margin40">
-                            Our objective is to promote activities of science, expose recent scientific information to students and to encourage students about science. We are committed to popularize science among young people. 
-                            To accomplish this job we arrange different types of exposition programs like poster exhibition, science lecture, writing competition, organize seminar, conference, science Fair, quiz competition, debate competition, exhibition on science, study circle, talk show, Sudoku competition, publish Magazine, journal, celebrate science day, science week, establish science library, science talk, participating in social activities. </p>
+                            
+                            <?php echo \App\Models\Content::where('id', 1)->pluck('about_us'); ?>
+                             
+                         </p>
                     </div>
                 </div>
 
@@ -299,16 +301,9 @@
                             <ul class="slides">
                                 <li>
                                     <img src="{{ asset('img/mzi.png') }}" alt="">
-                                    <p>
-                                        <i class="ion-quote"></i>
-                                        SUST Science Arena is the one of the science based organizations of SUST, established at February 24, 2004 by a group of science enthusiast of SUST. The main commitment of this organization is to popularize science among the youngstars throughout the city. 
-                                    </p>
-                                    <h4 class="test-author">
-                                        Dr. Muhammed Zafar Iqbal - <em>Renowned Writer & Professor,
-Dept. of CSE,
-SUST, Sylhet.
-</em>
-                                    </h4>
+                                   
+                                        <?php echo \App\Models\Content::where('id', 1)->pluck('about_us'); ?>
+
                                 </li><!--testi item-->
                                 {{--
                                 <li>
