@@ -43,7 +43,7 @@
                              data-speed="900"
                              data-start="2100"
                              data-easing="Sine.easeOut">
-                            <img src="{{ asset('img/ssacover.jpg') }}" alt="" />
+                            <!-- <img src="{{ asset('img/ssacover.jpg') }}" alt="" /> -->
                         </div>
 
                         <div class="tp-caption sft modern_big_bluebg rev-title-v1"
