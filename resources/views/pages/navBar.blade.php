@@ -22,7 +22,7 @@
                             
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle " data-toggle="dropdown">News</i></a>
+                            <a href="{{ route('committee.member') }}" class="dropdown-toggle ">Executives</i></a>
                             
                         </li>
                         <!--menu Portfolio li end here-->

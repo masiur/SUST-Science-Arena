@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(EntrustTableSeeder::class);
         $this->call(CategoryTableSeeder::class);
         $this->call(ContentTableSeeder::class);
+        $this->call(CommitteeTableSeeder::class);
         
 
         if (env('DB_CONNECTION') == 'mysql') {

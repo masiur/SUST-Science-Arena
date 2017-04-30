@@ -55,7 +55,7 @@ class ContentController extends Controller
 
         }
 
-         $content = New Content();
+         $content = new Content();
 
          $content->about_us = $data['about_us'];
          

@@ -1,16 +1,16 @@
-			<div class="footer-copyright text-center">
-				<div class="row">
-					<div class="col-md-3">
-						Supported By: <a href="http://code.com.bd/" target="_blank">Code Technologies</a>
-					</div>
-					<div class="col-md-6">
-						Copyright &copy;2016-{{ Date('Y')}}. All right reserved. SUST Sciece Arena.
-					</div>
-					<div class="col-md-3">
-						<a data-toggle="modal" data-target="#showDevelopers"  href="#" style="">Made with <i class="fa fa-heart" aria-hidden="true"></i></a>
-					</div>
-                
-            </div>
+<div class="footer-copyright text-center">
+	<div class="row">
+		<div class="col-md-3">
+			Supported By: <a href="http://code.com.bd/" target="_blank">Code Technologies</a>
+		</div>
+		<div class="col-md-6">
+			Copyright &copy;2016-{{ Date('Y')}}. All rights reserved. SUST Sciece Arena.
+		</div>
+		<div class="col-md-3">
+			<a data-toggle="modal" data-target="#showDevelopers"  href="#" style="">Made with <i class="fa fa-heart" aria-hidden="true"></i></a>
+		</div>
+    
+</div>
 
 <!-- Show Developers -->
 <div class="modal fade" id="showDevelopers" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">

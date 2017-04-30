@@ -25,7 +25,7 @@
                     <div class="login-form">
                         <h3>Edit Profile</h3>
                          
-                        {!! Form::model($user, array('route' => 'postRegister', 'method' => 'PUT', 'class' => 'form-horizontal', 'role' => 'form', 'files' => true)) !!}
+                        {!! Form::model($user, array('route' => 'edit.profile', 'method' => 'PUT', 'class' => 'form-horizontal', 'role' => 'form')) !!}
 
                         <div class="form-group">
                             {!! Form::label('username', "Username*", array('class' => 'control-label col-lg-2')) !!}

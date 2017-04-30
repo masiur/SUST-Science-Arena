@@ -155,9 +155,48 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function postEditProfile(Request $request)
     {
-        //
+        // return $data = $request->all();
+        $rules =[
+            'fullName'              => 'required',
+            'email'                 => 'required|unique:users,email,'.Auth::id(),
+            'username'              => 'unique:users,username,'.Auth::id(),
+            
+        ];
+        $data = $request->all();
+        //return $data;
+
+        $validation = Validator::make($data,$rules);
+
+        if($validation->fails()){
+            return redirect()->back()->withErrors($validation)->withInput();
+        }
+        $user = Auth::user();
+        // $user->username = $data['fullName']; // will be done later 
+        $user->email = $data['email'];
+        // $user->password = Hash::make($data['password']);
+        if($user->save()){
+
+            $profile = Profile::where('user_id', Auth::id())->first();
+            $profile->fullName = $data['fullName'];
+            $profile->address = $data['address'];
+            $profile->phone = $data['phone'];
+            $profile->bio = $data['bio'];
+            $profile->occupation = $data['occupation'];
+            
+            if($profile->save()) {
+                return redirect()->route('profile')
+                        ->with('success','Profile Updated Successfully');
+            } else {
+                User::destroy($user->id);
+
+            }         
+        } else {
+            return redirect()->route('profile')
+                            ->with('error',"Something went wrong.Please Try again.");
+        }
+
     }
 
     /**

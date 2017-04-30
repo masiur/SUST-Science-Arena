@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Content extends Model
 {
-    protected $table='event';
+    protected $guarded = ['id'];
+    protected $table='contents';
 }
