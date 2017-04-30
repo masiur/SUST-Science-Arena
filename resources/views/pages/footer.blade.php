@@ -1,11 +1,12 @@
 <!-- footer light 1 begin--> 
         <footer class="footer-light-2">
-        {{-- 
+        
             <div class="container">
                 <div class="row">
                     
                     <div class="col-sm-4 margin30">
-                        <h3>latest post</h3>
+                        <h3>Latest Post</h3>
+                        
                         <div class="media">
                             <div class="media-left">
                                 <a href="#">
@@ -19,32 +20,7 @@
                                 </p>
                             </div>
                         </div><!--media-->
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="img/img-3.jpg" alt="post" width="60">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Dedicated support</a></h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                                </p>
-                            </div>
-                        </div><!--media-->
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="img/img-3.jpg" alt="post" width="60">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Truly multi-purpose</a></h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                                </p>
-                            </div>
-                        </div><!--media-->
+                        
                     </div>
                     <div class="col-sm-4 margin30">
                         <h3>Latest Work</h3>
@@ -53,11 +29,6 @@
                             <li><a href="portfolio-single.html"><img src="img/img-2.jpg" class="img-responsive" alt=""></a></li>
                             <li><a href="portfolio-single.html"><img src="img/img-3.jpg" class="img-responsive" alt=""></a></li>
                             <li><a href="portfolio-single.html"><img src="img/img-4.jpg" class="img-responsive" alt=""></a></li>
-                            <li><a href="portfolio-single.html"><img src="img/img-5.jpg" class="img-responsive" alt=""></a></li>
-                            <li><a href="portfolio-single.html"><img src="img/img-6.jpg" class="img-responsive" alt=""></a></li>
-                            <li><a href="portfolio-single.html"><img src="img/img-7.jpg" class="img-responsive" alt=""></a></li>
-                            <li><a href="portfolio-single.html"><img src="img/img-8.jpg" class="img-responsive" alt=""></a></li>
-                            <li><a href="portfolio-single.html"><img src="img/img-9.jpg" class="img-responsive" alt=""></a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 margin30">
@@ -124,7 +95,7 @@
                     </div>
                 </div> -->
             </div>
-            --}}
+            
             @include('pages.copyright')
         </footer>
         <!--footer end

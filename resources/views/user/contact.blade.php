@@ -27,11 +27,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 margin30">
-                    <h3 class="heading">Contact Us</h3>
-                    <p>
-                        <h4>Say Hello to Us :D</h4>
-                    </p>
-                    <div class="divide30"></div>
+                    <h3 class="heading">Say Hello to Us </h3>
+                    
+                    <!-- <div class="divide30"></div> -->
                     <div class="form-contact">
                         <div class="required">
                             <p>( <span>*</span> fields are required )</p>

@@ -74,7 +74,7 @@
                         <h4>Categories</h4>
                         <ul class="list-unstyled cat-list">
                         	@foreach($categories as $category)
-                            <li> <a href="#">{{ $category->name }}</a> <i class="fa fa-angle-right"></i></li>
+                            <li> <a href="{{ route('blog.index',[ 'category' => $category->name]) }}">{{ $category->name }}</a> <i class="fa fa-angle-right"></i></li>
                             @endforeach
                         </ul>
                     </div><!--sidebar-box-->

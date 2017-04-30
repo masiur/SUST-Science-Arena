@@ -12,7 +12,7 @@ Route::get('events',['as' => 'event.list', 'uses' => 'FrontendController@event']
 Route::get('event/{id}',['as' => 'event.single', 'uses' => 'FrontendController@eventSingle']);
 Route::get('contact',['as' => 'contact', 'uses' => 'contactController@contact_page']);
 
-Route::get('committee_member',['as' => 'committee.member', 'uses' => 'MemberController@committee_member_list']);
+Route::get('executives',['as' => 'committee.member', 'uses' => 'MemberController@committee_member_list']);
 Route::post('contact_store',['as' => 'contact.store', 'uses' => 'contactController@store']);
 
 
@@ -54,6 +54,7 @@ Route::group(array('middleware' => 'auth'), function()
 	Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@logout']);
 	Route::get('profile', ['as' => 'profile', 'uses' => 'UserController@profile']);
 	Route::get('settings', ['as' => 'settings', 'uses' => 'UserController@settings']);
+	Route::put('edit-profile', ['as' => 'edit.profile', 'uses' => 'UserController@postEditProfile']);
 
 	 Route::get('dashboard', array('as' => 'dashboard', 'uses' => 'Auth\AuthController@dashboard'));
 
