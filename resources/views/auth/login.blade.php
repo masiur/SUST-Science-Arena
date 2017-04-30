@@ -40,14 +40,45 @@
                             </label>
                         </div>
                         --}}   
-                        <button type="submit" class="btn btn-theme-bg">Login</button>
+                        <button type="submit" class="btn btn-theme-bg">Login</button><br><br>
                         <!-- <a href="#" class="btn btn-fb-login"><i class="fa fa-facebook"></i> Login With Facebook</a> -->
-                        <!-- <a href="#">Forget Password?</a> -->
+                        <a  data-toggle="modal" href="#myModal"><i class="fa fa-lock m-r-5"></i> Forget Password?</a>
+                         <!-- <div class="col-sm-7 text-right">
+                <a data-toggle="modal" href="#myModal"> Forgot your password?</a>
+            </div> -->
                     </form>
                     </div>
                 </div>
             </div>
         </div>
         <div class="divide60"></div>
+
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Forgot Password ?</h4>
+            </div>
+            <div class="modal-body">
+                <p>Enter your e-mail address below to reset your password.</p>
+
+
+                {!! Form::open(array('route' => 'postPasswordRequest', 'method' => 'post')) !!}
+
+                {!! Form::email('email', '', array('class' => 'form-control placeholder-no-fix', 'placeholder' => 'Email Address', 'autocomplete'=>'off')) !!}
+
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+
+                {!! Form::submit('Submit', array('class' => 'btn btn-success')) !!}
+                {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal -->
 
 @endsection

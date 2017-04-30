@@ -148,6 +148,7 @@ return [
         Zizaco\Entrust\EntrustServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Artdarek\OAuth\OAuthServiceProvider::class,
+        Webup\LaravelSendinBlue\SendinBlueServiceProvider::class, // sendinblue mail service provider
     ],
 
     /*

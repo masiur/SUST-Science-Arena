@@ -33,7 +33,7 @@
     <input type='hidden' name='token' value="{!!$token!!}">
     <h2 class="form-signin-heading"><center>Reset Password</center></h2>
     <div class="login-wrap">
-        @include('includes.alert')
+        @include('admin.includes.alert')
 
         
         {!! Form::text('email', '', array('class' => 'form-control', 'placeholder' => 'Email Address', 'autofocus')) !!}<br>
