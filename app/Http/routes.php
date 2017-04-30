@@ -1,10 +1,13 @@
 <?php
+
 //Route::get('test',['as' => 'test', 'uses' => 'FrontendController@test']);
 Route::get('/', array('as' => 'index', 'uses' => 'FrontendController@index'));
 Route::get('news_list',['as' => 'news.list', 'uses' => 'NewsController@show']);
 Route::get('events',['as' => 'event.list', 'uses' => 'FrontendController@event']);
 Route::get('event/{id}',['as' => 'event.single', 'uses' => 'FrontendController@eventSingle']);
 Route::get('contact',['as' => 'contact', 'uses' => 'contactController@contact_page']);
+
+
 Route::get('executives',['as' => 'committee.member', 'uses' => 'MemberController@committee_member_list']);
 Route::post('contact_store',['as' => 'contact.store', 'uses' => 'contactController@store']);
 // public routes -- Added by Masiur
@@ -35,7 +38,9 @@ Route::group(array('middleware' => 'auth'), function()
 	Route::get('profile', ['as' => 'profile', 'uses' => 'UserController@profile']);
 	Route::get('settings', ['as' => 'settings', 'uses' => 'UserController@settings']);
 	Route::put('edit-profile', ['as' => 'edit.profile', 'uses' => 'UserController@postEditProfile']);
-	 Route::get('dashboard', array('as' => 'dashboard', 'uses' => 'Auth\AuthController@dashboard'));
+
+
+	Route::get('dashboard', array('as' => 'dashboard', 'uses' => 'Auth\AuthController@dashboard'));
 	Route::get('change-password', array('as' => 'password.change', 'uses' => 'Auth\AuthController@changePassword'));
 	Route::post('change-password', array('as' => 'password.doChange', 'uses' => 'Auth\AuthController@doChangePassword'));
 	// Blog CRUD for bloggers
