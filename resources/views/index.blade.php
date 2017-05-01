@@ -336,7 +336,7 @@
         <!-- <div class="divide70"></div> -->
         
         <div class="divide40"></div>
-
+        
         <div class="our-team-v-2">
             <div class="container">
                 <div class="row">

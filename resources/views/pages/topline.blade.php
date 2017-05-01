@@ -3,7 +3,7 @@
                 <div class="row">
                     <div class="col-sm-4 hidden-xs">
                         <div class="top-bar-socials">
-                            <a href=  "{!! \App\Models\Info::where('id', 1)->pluck('fb_link'); !!}" 
+                            <a href=  "{!! \App\Models\Info::where('id', 1)->pluck('fb_link') !!}" 
                             target="_blank" class="social-icon-sm si-dark si-gray-round si-colored-facebook">
                                 <i class="fa fa-facebook"></i>
                                 <i class="fa fa-facebook"></i>
@@ -12,7 +12,7 @@
                                 <i class="fa fa-twitter"></i>
                                 <i class="fa fa-twitter"></i>
                             </a>
-                            <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-google-plus">
+                            <a href="{!! \App\Models\Info::where('id', 1)->pluck('googleplus_link') !!}" class="social-icon-sm si-dark si-gray-round si-colored-google-plus">
                                 <i class="fa fa-google-plus"></i>
                                 <i class="fa fa-google-plus"></i>
                             </a>
@@ -20,7 +20,7 @@
                                 <i class="fa fa-linkedin"></i>
                                 <i class="fa fa-linkedin"></i>
                             </a> -->
-                            <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-google-plus">
+                            <a href="{!! \App\Models\Info::where('id', 1)->pluck('youtube_link') !!}" class="social-icon-sm si-dark si-gray-round si-colored-google-plus">
                                 <i class="fa fa-youtube"></i>
                                 <i class="fa fa-youtube"></i>
                             </a>

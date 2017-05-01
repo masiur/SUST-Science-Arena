@@ -88,9 +88,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
    Route::get('member/add',['as' => 'member.add',   'uses' => 'MemberController@add']);
    Route::get('member',['as' => 'member.list', 'uses' => 'MemberController@list']);
    Route::post('member/store',['as' => 'member.store', 'uses' => 'MemberController@store']);
-   Route::get('member/{id}/edit',['as' => 'member.edit', 'uses' => 'memberController@edit']);
-   Route::put('member/{id}',['as' => 'member.update', 'uses' => 'memberController@update']);
-   Route::delete('member/{id}',['as' => 'member.delete', 'uses' => 'memberController@destroy']);
+   Route::get('member/{id}/edit',['as' => 'member.edit', 'uses' => 'MemberController@edit']);
+   Route::put('member/{id}',['as' => 'member.update', 'uses' => 'MemberController@update']);
+   Route::delete('member/{id}',['as' => 'member.delete', 'uses' => 'MemberController@destroy']);
   // INFO Update
   
   Route::get('edit',['as' => 'info.edit',   'uses' => 'FrontendController@info_edit']);

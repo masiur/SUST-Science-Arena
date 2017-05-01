@@ -15,11 +15,13 @@ class CreateSSAInfoTable extends Migration
         Schema::create('Info', function (Blueprint $table) {
             $table->increments('id');
             $table->string('contact');
-            $table->text('fb_link');
             $table->string('twitter_link');
+            $table->string('youtube_link');
+            $table->string('googleplus_link');
             $table->string('email');
             $table->timestamps();
         });
+
 
 
 

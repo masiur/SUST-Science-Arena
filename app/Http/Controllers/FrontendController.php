@@ -150,7 +150,7 @@ class FrontendController extends Controller
         }
 
 
-        $info = Info::findOrFail($id);
+        $info = Info::findOrFail(1);
         $info->contact = $data['contact'];
         $info->fb_link =    Input::get('fb_link');
         $info->email =    Input::get('email');
