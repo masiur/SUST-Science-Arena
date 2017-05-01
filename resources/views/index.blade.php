@@ -302,7 +302,15 @@
                                 <li>
                                     <img src="{{ asset('img/mzi.png') }}" alt="">
                                    
-                                        <?php echo \App\Models\Content::where('id', 1)->pluck('about_us'); ?>
+                                    <p>
+                                        <i class="ion-quote"></i>
+                                        SUST Science Arena is the one of the science based organizations of SUST, established at February 24, 2004 by a group of science enthusiast of SUST. The main commitment of this organization is to popularize science among the youngstars throughout the city. 
+                                    </p>
+                                    <h4 class="test-author">
+                                        Dr. Muhammed Zafar Iqbal - <em>Renowned Writer & Professor,
+Dept. of CSE,
+SUST, Sylhet.
+</em>
 
                                 </li><!--testi item-->
                                 {{--
@@ -336,7 +344,7 @@
         <!-- <div class="divide70"></div> -->
         
         <div class="divide40"></div>
-        
+
         <div class="our-team-v-2">
             <div class="container">
                 <div class="row">
