@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCommitteeMemberTable extends Migration
+class CreateCommitteeMembersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateCommitteeMemberTable extends Migration
      */
     public function up()
     {
-          Schema::create('committee_member', function (Blueprint $table) {
+        Schema::create('committee_members', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->text('designation');
@@ -21,7 +21,6 @@ class CreateCommitteeMemberTable extends Migration
             $table->integer('rank');
             $table->timestamps();
         });
-
     }
 
     /**
@@ -31,6 +30,6 @@ class CreateCommitteeMemberTable extends Migration
      */
     public function down()
     {
-        Schema::drop('committee_member');
+        Schema::drop('committee_members');
     }
 }

@@ -16,6 +16,9 @@ Route::get('home', array('as' => 'home', 'uses' => 'FrontendController@index'));
 
 Route::get('blog',['as' => 'blog.index', 'uses' => 'FrontendController@blogPublicPage']);
 
+Route::get('admin', function() {
+	return redirect()->route('dashboard');
+});
 
 Route::group(['middleware' => 'guest'], function(){
 	Route::get('login', ['as'=>'login','uses' => 'Auth\AuthController@login']);
@@ -76,7 +79,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 	Route::delete('user/{id}',['as' => 'user.delete', 'uses' => 'UserController@destroy']);
     // Pending Blog
     Route::get('read',['as' => 'blog.read', 'uses' => 'BlogController@read']);
-	Route::get('pending_blog',['as' => 'pending.blog', 'uses' => 'BlogController@pending_list']);
+	Route::get('listOfArticles',['as' => 'pending.blog', 'uses' => 'BlogController@pending_list']);
     Route::get('AdminSingleBlog/{id}',['as' => 'admin.blog.single', 'uses' => 'BlogController@AdminSingleBlog']);
     Route::get('acceptblog/{id}/',['as' => 'accept.blog', 'uses' => 'BlogController@AcceptBlog']);
     Route::get('ignoreblog/{id}/',['as' => 'ignore.blog', 'uses' => 'BlogController@ignoreBlog']);

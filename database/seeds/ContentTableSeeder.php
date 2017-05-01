@@ -16,20 +16,19 @@ class ContentTableSeeder extends Seeder
 
         Content::create(['about_us' => "Our objective is to promote activities of science, expose recent scientific information to students and to encourage students about science. We are committed to popularize science among young people. To accomplish this job we arrange different types of exposition programs like poster exhibition, science lecture, writing competition, organize seminar, conference, science Fair, quiz competition, debate competition, exhibition on science, study circle, talk show, Sudoku competition, publish Magazine, journal, celebrate science day, science week, establish science library, science talk, participating in social activities.",
 
-          'advisor_say' =>  <<< EOD 
-          <p>
-                                        <i class="ion-quote"></i>
-                                        SUST Science Arena is the one of the science based organizations of SUST, established at February 24, 2004 by a group of science enthusiast of SUST. The main commitment of this organization is to popularize science among the youngstars throughout the city. 
-                                    </p>
-                                    <h4 class="test-author">
-                                        Dr. Muhammed Zafar Iqbal - <em>Renowned Writer & Professor,
-Dept. of CSE,
-SUST, Sylhet.
-</em>
-                                    </h4>
-
-
-EOD
+//           'advisor_say' =>  <<< EOD 
+// <p>
+// <i class="ion-quote"></i>
+// SUST Science Arena is the one of the science based organizations of SUST, established at February 24, 2004 by a group of science enthusiast of SUST. The main commitment of this organization is to popularize science among the youngstars throughout the city. 
+// </p>
+// <h4 class="test-author">
+// Dr. Muhammed Zafar Iqbal - <em>Renowned Writer & Professor,
+// Dept. of CSE,
+// SUST, Sylhet.
+// </em>
+// </h4>
+// EOD
+// ,
           ]);
 
 

@@ -27,12 +27,7 @@
                                         <thead>
                                         <tr>
                                             <th>No.</th>
-<<<<<<< HEAD
                                             <th> Article title</th>
-=======
-                                            <th>Blog title</th>
-                                            <th>Details</th>
->>>>>>> master
                                             <th>Author</th>
                                             <th>#</th>
                                             <th>#</th>
