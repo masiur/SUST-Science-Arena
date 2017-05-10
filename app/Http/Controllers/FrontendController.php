@@ -30,8 +30,12 @@ class FrontendController extends Controller
     public function index()
     {
         $events = Event::all();
+        $img =  Event::orderby('id' , 'desc')->first();
+        $img_url = $img['img_url'];
+        
         return view('index')->with('title', 'Home')
-                            ->with('events' , $events);
+                            ->with('events' , $events)
+                            ->with('img_url' , $img_url);
     }
 
     public function blogPublicPage()
