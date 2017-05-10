@@ -202,6 +202,7 @@
         </div><!--services container-->
 
         <div class="divide50"></div>
+        <div class="our-team-v-4">
         
         @if(count($events))
         <div class="container">
