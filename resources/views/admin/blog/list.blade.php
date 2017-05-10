@@ -31,7 +31,11 @@
                                             <th>Author</th>
                                             <th>#</th>
                                             <th>#</th>
+<<<<<<< HEAD
                                             
+=======
+                                            {{-- <th>#</th> --}}
+>>>>>>> f257a1fa222561ba9df58034ec0b1a8e63da9a52
                                             
                                         </tr>
                                         </thead>
@@ -41,14 +45,20 @@
                                             <tr>
                                                 <td><?php echo $blogCounter++; ?></td>
                                                 <td>
-                                                    <a class="show-project-modal" data-toggle="modal" data-project-id="{{ $blog->id }}" data-project-url="{!! route('admin.blog.single',$blog->id) !!}" href="#" style="">{!! $blog->title !!}</a>
+                                                    <a class="show-project-modal"  href="#" style="">{!! $blog->title !!}</a>
                                                 </td>
                                                
                                                 
 
                                                 <td>{!! $blog->user->username !!}</td>
 
+<<<<<<< HEAD
                                             
+=======
+                                                <td><a class="btn btn-success btn-xs" href="{{ route('blog.single', str_slug($blog->title, '-')) }}" target="_blank"  style="margin-right: 3px;">Details</a>
+
+                                                </td> 
+>>>>>>> f257a1fa222561ba9df58034ec0b1a8e63da9a52
 
                                                 @if($blog->published == 'no')
                                                  <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Accept</a></td>
@@ -56,12 +66,16 @@
                                                 <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Disabled</a></td>
                                                 @else
 
+<<<<<<< HEAD
                                                  <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Accepted</a></td>
                                                 
                                                 <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Disable</a></td>
 
 
                                                 @endif                                        
+=======
+                                                {{-- <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Ignore</a></td> --}}
+>>>>>>> f257a1fa222561ba9df58034ec0b1a8e63da9a52
                                             </tr>
                                             
                                         @endforeach

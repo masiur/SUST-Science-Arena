@@ -65,7 +65,8 @@
                                  <div class="form-group">
                                     {!! Form::label('rank', "Member Rank*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('rank', null, array('class' => 'form-control', 'placeholder' => 'Enter Member Rank', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                        {!! Form::text('rank', null, array('class' => 'form-control', 'placeholder' => 'Enter Member Rank', 'required' => 'required', 'aria-required' =>'true')) !!}<br>
+                                        ** Rank is used to set order as they appear in public page ( executives )
                                     </div>
                                 </div>
 

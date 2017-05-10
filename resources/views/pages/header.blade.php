@@ -59,6 +59,11 @@
                 font-size: large;
                 font-family: inherit;
             }
+            .navbar-brand img {
+                width: 80px;
+                height: auto;
+                margin-top: -17px !important;
+            }
         </style>
         
     </head>

@@ -138,7 +138,7 @@ class BlogController extends Controller
     }
 
 
-    public function pending_list(){
+    public function listOfArticles(){
 
 
          $blogs = Blog::all();
@@ -146,7 +146,7 @@ class BlogController extends Controller
         //$blogs = Blog::get(['title' , 'id', 'category_id', 'user_id']);
 
         return view('admin.blog.list')
-                ->with('title', 'List of All Pending Articles')
+                ->with('title', 'List of All Articles')
                 ->with('blogCounter', 1)
                 ->with('blogs', $blogs);
 

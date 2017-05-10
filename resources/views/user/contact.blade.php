@@ -98,23 +98,23 @@
                     <div class="divide40"></div>
                     <h4>Get social</h4>
                      <div class=" margin10">
-                            <a href="https://www.facebook.com/SUSTScienceArena/" target="_blank" class="social-icon si-dark si-colored-facebook">
+                            <a href="{!! \App\Models\Info::where('id', 1)->pluck('fb_link') !!}" target="_blank" class="social-icon si-dark si-colored-facebook">
                                 <i class="fa fa-facebook"></i>
                                 <i class="fa fa-facebook"></i>
                             </a>
-                            <a href="https://twitter.com/ssa_sust" target="_blank" class="social-icon si-dark si-colored-twitter">
+                            <a href="{!! \App\Models\Info::where('id', 1)->pluck('twitter_link') !!}" target="_blank" class="social-icon si-dark si-colored-twitter">
                                 <i class="fa fa-twitter"></i>
                                 <i class="fa fa-twitter"></i>
                             </a>
-                            <a href="#" class="social-icon si-dark si-colored-google-plus">
+                            <a href="{!! \App\Models\Info::where('id', 1)->pluck('googleplus_link') !!}" target="_blank" class="social-icon si-dark si-colored-google-plus">
                                 <i class="fa fa-google-plus"></i>
                                 <i class="fa fa-google-plus"></i>
                             </a>
-                            <a href="#" class="social-icon si-dark si-colored-linkedin">
+                            <!-- <a href="#" class="social-icon si-dark si-colored-linkedin">
                                 <i class="fa fa-linkedin"></i>
                                 <i class="fa fa-linkedin"></i>
-                            </a>
-                            <a href="#" class="social-icon si-dark si-colored-google-plus">
+                            </a> -->
+                            <a href="{!! \App\Models\Info::where('id', 1)->pluck('youtube_link') !!}" target="_blank" class="social-icon si-dark si-colored-google-plus">
                                 <i class="fa fa-youtube"></i>
                                 <i class="fa fa-youtube"></i>
                             </a>
@@ -156,7 +156,7 @@
                 };
                 map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-                var contentString = '<p style="line-height: 20px;"><strong>SSA</strong></p><p> SUST, Sylhet-3114</p>';
+                var contentString = '<p style="line-height: 20px;"><strong>SUST Science Arena</strong></p><p> SUST, Sylhet-3114</p>';
 
                 var infowindow = new google.maps.InfoWindow({
                     content: contentString
@@ -165,7 +165,7 @@
                 marker = new google.maps.Marker({
                     position: myLatlng,
                     map: map,
-                    title: 'Marker'
+                    title: 'SUST Science Arena'
                 });
 
                 google.maps.event.addListener(marker, 'click', function() {
