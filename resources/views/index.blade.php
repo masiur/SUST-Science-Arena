@@ -279,7 +279,8 @@
         <div class="text-center">
             <a href="masonry-portfolio-4.html" class="btn btn-theme-dark btn-lg">View Past Events</a>
         </div> -->
-        <div class="divide50"></div>
+        <div class="divide40"></div>
+        <div class="our-team-v-3">
         
         <div class="testimonials-v-2 wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="100ms">
             <div class="container">
@@ -295,6 +296,7 @@
                 </div><!--center heading end-->
 
                 <div class="row">
+                 
 
                     <div class="col-sm-8 col-sm-offset-2">
                         <div class="testi-slide">
@@ -305,6 +307,8 @@
                                         <?php echo \App\Models\Content::where('id', 1)->pluck('about_us'); ?>
 
                                 </li><!--testi item-->
+
+
                                 {{--
                                 <li>
                                     <img src="{{ asset('frontend/img/customer-2.jpg') }}" alt="">
@@ -329,13 +333,13 @@
                         </div><!--flex slider testimonials end here-->
                     </div>
                 </div><!--testi slider row end-->
-
+              </div>  
             </div>
         </div><!--testimonials v-2 end-->
         
         <!-- <div class="divide70"></div> -->
         
-        <div class="divide40"></div>
+        
 
         <div class="our-team-v-2">
             <div class="container">
@@ -472,7 +476,7 @@
             </div>
         </div><!--latest news-->
         --}}
-        <div class="divide40"></div>
+        
         <!-- <div class="intro-text-1 light">
             <div class="container">
                 <div class="row">

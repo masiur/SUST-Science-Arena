@@ -142,6 +142,7 @@ class BlogController extends Controller
 
 
          $blogs = Blog::all();
+        // $blogs = Blog::orderBy('id', 'desc')->where('published', 'yes')->paginate(15);
         //$blogs = Blog::get(['title' , 'id', 'category_id', 'user_id']);
 
         return view('admin.blog.list')
@@ -197,9 +198,14 @@ class BlogController extends Controller
   
     public function ignoreBlog($id){
 
-        $blog = Blog::where('id' , $id)->first();
-
-        $blog->delete();
+         $blog = Blog::find($id);
+        if($blog->activation_status == "no") {
+            $blog->activation_status = "yes";
+        } else {
+            $blog->activation_status = "no";
+        }
+        $blog->save();
+        return redirect()->route('blog.list')->with('success', "Blog Activation Changed Succesfully");
 
 
     }

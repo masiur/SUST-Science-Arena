@@ -56,7 +56,7 @@ Route::group(array('middleware' => 'auth'), function()
 	Route::get('blog/{id}/edit',['as' => 'blog.edit', 'uses' => 'BlogController@edit']);
 	Route::get('blog/{id}/show',['as' => 'blog.show', 'uses' => 'BlogController@show']);
 	Route::put('blog/{id}',['as' => 'blog.update', 'uses' => 'BlogController@update']);
-	Route::delete('blog/{id}',['as' => 'blog.delete', 'uses' => 'BlogController@destroy']);
+
     
 });
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function()
@@ -83,6 +83,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
     Route::get('AdminSingleBlog/{id}',['as' => 'admin.blog.single', 'uses' => 'BlogController@AdminSingleBlog']);
     Route::get('acceptblog/{id}/',['as' => 'accept.blog', 'uses' => 'BlogController@AcceptBlog']);
     Route::get('ignoreblog/{id}/',['as' => 'ignore.blog', 'uses' => 'BlogController@ignoreBlog']);
+    	//Route::delete('blog/{id}',['as' => 'blog.delete', 'uses' => 'BlogController@destroy']);
+	Route::get('blog/{id}',['as' => 'blog.accept', 'uses' => 'BlogController@AcceptBlog']);
+    
 	
    // Member Add or Delete Or List Show
    Route::get('member/add',['as' => 'member.add',   'uses' => 'MemberController@add']);

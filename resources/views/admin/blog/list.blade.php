@@ -31,7 +31,7 @@
                                             <th>Author</th>
                                             <th>#</th>
                                             <th>#</th>
-                                            <th>#</th>
+                                            
                                             
                                         </tr>
                                         </thead>
@@ -48,17 +48,20 @@
 
                                                 <td>{!! $blog->user->username !!}</td>
 
-                                                <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('blog.read',$blog->id)!!}"  style="margin-right: 3px;">Read</a>
-
-                                                </td> 
+                                            
 
                                                 @if($blog->published == 'no')
-                                                <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('accept.blog',$blog->id)!!}"  style="margin-right: 3px;">Accept</a></td>
+                                                 <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Accept</a></td>
+                                                
+                                                <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Disabled</a></td>
                                                 @else
-                                                <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="#"  style="margin-right: 3px;">Accepted</a></td>
-                                                @endif
 
-                                                <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Ignore</a></td>
+                                                 <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Accepted</a></td>
+                                                
+                                                <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Disable</a></td>
+
+
+                                                @endif                                        
                                             </tr>
                                             
                                         @endforeach
