@@ -145,7 +145,7 @@
                     <div class="center-heading">
                         <h2>What <strong>we do</strong> </h2>
                         <span class="center-line"></span>
-                        <p class="sub-text margin40">
+                        <p class="sub-text margin40" style="text-align: justify">
                             
                             <?php echo \App\Models\Content::where('id', 1)->pluck('about_us'); ?>
                              
@@ -202,86 +202,85 @@
         </div><!--services container-->
 
         <div class="divide50"></div>
-        <div class="our-team-v-4">
+        
         
         @if(count($events))
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="center-heading">
-                        <h2><strong>Recent</strong> Events</h2>
-                        <span class="center-line"></span>
-                    </div>
-                </div>                   
-            </div>
-            <div class="row">
-                
-                @foreach($events as $event)
-                <div class="col-sm-4 margin30">
-                    <div>
-                        <a href="#">
-                            <div class="item-img-wrap">
-                                <img src="{{ asset($event->img_url) }}" class="img-responsive" alt="workimg">
-                                <div class="item-img-overlay">
-                                    <span></span>
-                                </div>
-                            </div>                       
-                        </a><!--news link--> 
-                        <div class="news-desc">
-                            <span></span>
-                            <h4><a href="{{ route('event.list') }}">{{ $event->name }}</a></h4>
-                            <span>At {{ $event->place }} on {{ $event->date }}</span> <!-- <span><a href="#">Read more...</a></span> -->
-                        </div><!--news desc-->
-                    </div> 
-                </div><!--news col-->
-                @endforeach
+        <div class="our-team-v-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="center-heading">
+                            <h2><strong>Recent</strong> Events</h2>
+                            <span class="center-line"></span>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="row">
+                    
+                    @foreach($events as $event)
+                    <div class="col-sm-4 margin30">
+                        <div>
+                            <a href="#">
+                                <div class="item-img-wrap">
+                                    <img src="{{ asset($event->img_url) }}" class="img-responsive" alt="workimg">
+                                    <div class="item-img-overlay">
+                                        <span></span>
+                                    </div>
+                                </div>                       
+                            </a><!--news link--> 
+                            <div class="news-desc">
+                                <span></span>
+                                <h4><a href="{{ route('event.list') }}">{{ $event->name }}</a></h4>
+                                <span>At {{ $event->place }} on {{ $event->date }}</span> <!-- <span><a href="#">Read more...</a></span> -->
+                            </div><!--news desc-->
+                        </div> 
+                    </div><!--news col-->
+                    @endforeach
 
-                {{-- 
-                <div class="col-sm-4 margin30">
-                    <div>
-                        <a href="#">
-                            <div class="item-img-wrap">
-                                <img src="img/img-3.jpg" class="img-responsive" alt="workimg">
-                                <div class="item-img-overlay">
-                                    <span></span>
-                                </div>
-                            </div>                       
-                        </a><!--news link--> 
-                        <div class="news-desc">
-                            <span>Sports</span>
-                            <h4><a href="#">Lorem ipsum dollor Sit amet</a></h4>
-                            <span>By <a href="#">Author</a> on 24 july 2014</span> <span><a href="#">Read more...</a></span>
-                        </div><!--news desc-->
-                    </div> 
-                </div><!--news col-->
-                <div class="col-sm-4 margin30">
-                    <div>
-                        <a href="#">
-                            <div class="item-img-wrap">
-                                <img src="img/img-6.jpg" class="img-responsive" alt="workimg">
-                                <div class="item-img-overlay">
-                                    <span></span>
-                                </div>
-                            </div>                       
-                        </a><!--news link--> 
-                        <div class="news-desc">
-                            <span>Sports</span>
-                            <h4><a href="#">Lorem ipsum dollor Sit amet</a></h4>
-                            <span>By <a href="#">Author</a> on 24 july 2014</span> <span><a href="#">Read more...</a></span>
-                        </div><!--news desc-->
-                    </div> 
-                </div><!--news col-->
-                --}}
+                    {{-- 
+                    <div class="col-sm-4 margin30">
+                        <div>
+                            <a href="#">
+                                <div class="item-img-wrap">
+                                    <img src="img/img-3.jpg" class="img-responsive" alt="workimg">
+                                    <div class="item-img-overlay">
+                                        <span></span>
+                                    </div>
+                                </div>                       
+                            </a><!--news link--> 
+                            <div class="news-desc">
+                                <span>Sports</span>
+                                <h4><a href="#">Lorem ipsum dollor Sit amet</a></h4>
+                                <span>By <a href="#">Author</a> on 24 july 2014</span> <span><a href="#">Read more...</a></span>
+                            </div><!--news desc-->
+                        </div> 
+                    </div><!--news col-->
+                    <div class="col-sm-4 margin30">
+                        <div>
+                            <a href="#">
+                                <div class="item-img-wrap">
+                                    <img src="img/img-6.jpg" class="img-responsive" alt="workimg">
+                                    <div class="item-img-overlay">
+                                        <span></span>
+                                    </div>
+                                </div>                       
+                            </a><!--news link--> 
+                            <div class="news-desc">
+                                <span>Sports</span>
+                                <h4><a href="#">Lorem ipsum dollor Sit amet</a></h4>
+                                <span>By <a href="#">Author</a> on 24 july 2014</span> <span><a href="#">Read more...</a></span>
+                            </div><!--news desc-->
+                        </div> 
+                    </div><!--news col-->
+                    --}}
+                </div>
             </div>
         </div>
         @endif
 
-        <!-- <div class="divide50"></div>
-        <div class="text-center">
-            <a href="masonry-portfolio-4.html" class="btn btn-theme-dark btn-lg">View Past Events</a>
-        </div> -->
+        
         <div class="divide40"></div>
-        <div class="our-team-v-3">
+
         
         <div class="testimonials-v-2 wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="100ms">
             <div class="container">
@@ -289,8 +288,7 @@
                     <div class="col-sm-8 col-sm-offset-2">
                         <div class="center-heading">
                             <h2><strong>What</strong> Advisors' Say</h2>
-                            <!-- <p>2600+ Worldwide customers  use Assan template.</p>
-                            <span class="center-line"></span> -->
+                            
 
                         </div>
                     </div>
@@ -349,7 +347,7 @@ SUST, Sylhet.
         <!-- <div class="divide70"></div> -->
         
         
-
+        {{--
         <div class="our-team-v-2">
             <div class="container">
                 <div class="row">
@@ -360,8 +358,9 @@ SUST, Sylhet.
                         </div>
                     </div>                   
                 </div>
+                 
                 <div class="row">
-                    <div class="col-sm-4 text-center">
+                    <div class="col-sm-3 text-center">
                         <div class="person-v2">
                             <img src="{{ asset('img/pres.jpg') }}" class="img-responsive" alt="">
                             <div class="person-desc-v2">
@@ -374,7 +373,7 @@ SUST, Sylhet.
                             </div>
                         </div>
                     </div><!--person col end-->
-                    <div class="col-sm-4 text-center">
+                    <div class="col-sm-3 text-center">
                         <div class="person-v2">
                             <img src="{{ asset('img/vp.jpg') }}" class="img-responsive" alt="">
                             <div class="person-desc-v2">
@@ -388,7 +387,7 @@ SUST, Sylhet.
                             </div>
                         </div>
                     </div><!--person col end-->
-                    <div class="col-sm-4 text-center">
+                    <div class="col-sm-3 text-center">
                         <div class="person-v2">
                             <img src="{{ asset('img/gs.jpg') }}" class="img-responsive" alt="">
                             <div class="person-desc-v2">
@@ -420,6 +419,7 @@ SUST, Sylhet.
             </div>
         </div><!--our team v-2-->
         <!-- <div class="divide70"></div> -->
+        --}}
         {{-- 
         <div class="container">
             <div class="row">
@@ -486,22 +486,6 @@ SUST, Sylhet.
         </div><!--latest news-->
         --}}
         
-        <!-- <div class="intro-text-1 light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8">
-                        <h4 class="animated slideInDown">Assan is Simply creative Template
-                        </h4>
-
-                        <p>
-                            Clean & powerful Easy to use multipurpose business HTML5 template.
-                        </p>                   
-                    </div>
-                    <div class="col-sm-4">
-                        <a href="#" class="btn border-theme btn-lg">Purchase now</a>
-                    </div>
-                </div>
-            </div>
-        </div> --> <!--intro text end-->
+       
         
 @stop
