@@ -19,7 +19,7 @@
         <div class="divide80"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-10">
+                <div class="col-md-12">
                     <div class="event-post">
                             <div>
                                 <img src="{{ asset($event->img_url) }}" class="img-responsive" alt="workimg">

@@ -224,7 +224,7 @@
                     @foreach($events as $event)
                     <div class="col-sm-4 margin30">
                         <div>
-                            <a href="#">
+                            <a href="{{ route('event.single',$event->id) }}">
                                 <div class="item-img-wrap">
                                     <img src="{{ asset($event->img_url) }}" class="img-responsive" alt="workimg">
                                     <div class="item-img-overlay">
@@ -234,7 +234,7 @@
                             </a><!--news link--> 
                             <div class="news-desc">
                                 <span></span>
-                                <h4><a href="{{ route('event.list') }}">{{ $event->name }}</a></h4>
+                                <h4><a href="{{ route('event.single',$event->id) }}">{{ $event->name }}</a></h4>
                                 <span>At {{ $event->place }} on {{ $event->date }}</span> <!-- <span><a href="#">Read more...</a></span> -->
                             </div><!--news desc-->
                         </div> 
