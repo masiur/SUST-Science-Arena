@@ -17,11 +17,11 @@
                             
                         </li>
                         <!--menu home li end here-->
-                        <li class="dropdown">
+                        <li class="dropdown {!! Menu::isActiveRoute('event.list') !!}">
                             <a href="{{ route('event.list') }}" class="dropdown-toggle ">Events</i></a>
                             
                         </li>
-                        <li class="dropdown">
+                        <li class="dropdown {!! Menu::isActiveRoute('committee.member') !!}">
                             <a href="{{ route('committee.member') }}" class="dropdown-toggle ">Executives</i></a>
                             
                         </li>
@@ -42,7 +42,7 @@
                         <!--menu blog li end here-->
         
                         <!--mega menu-->
-                        <li class="dropdown ">
+                        <li class="dropdown {!! Menu::isActiveRoute('contact') !!}">
                             <a href="{{ route('contact') }}" class="dropdown-toggle" >Contact</a>
                             
                         </li> <!--menu Features li end here-->   

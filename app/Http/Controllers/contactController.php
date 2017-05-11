@@ -16,7 +16,7 @@ class ContactController extends Controller
 
     public function contact_page()
     {
-        return view('user.contact')->with('title', 'Contact');
+        return view('contact')->with('title', 'Contact');
     }
 
 
@@ -82,7 +82,7 @@ class ContactController extends Controller
 
         $message->save();
 
-        return view('user.contact');
+        return view('contact');
 
     }
 

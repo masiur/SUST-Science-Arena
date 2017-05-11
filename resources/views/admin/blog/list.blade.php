@@ -29,7 +29,7 @@
                                             <th>No.</th>
                                             <th> Article title</th>
                                             <th>Author</th>
-                                            <th>#</th>
+                                            <!-- <th>#</th> -->
                                             <th>#</th>
                                             
                                             
@@ -41,7 +41,7 @@
                                             <tr>
                                                 <td><?php echo $blogCounter++; ?></td>
                                                 <td>
-                                                    <a class="show-project-modal" data-toggle="modal" data-project-id="{{ $blog->id }}" data-project-url="{!! route('admin.blog.single',$blog->id) !!}" href="#" style="">{!! $blog->title !!}</a>
+                                                    <a  href="{{ route('blog.single', str_slug($blog->title, '-')) }}" target="_blank">{!! $blog->title !!}</a>
                                                 </td>
                                                
                                                 
@@ -51,16 +51,11 @@
                                             
 
                                                 @if($blog->published == 'no')
-                                                 <td><a href="{!! route('accept.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Accept</a></td>
+                                                 <td><a class="btn btn-danger" href="{!! route('blog.activationStatus',$blog->id)!!}"  style="margin-right: 3px;">Not Published</a></td>
                                                 
-                                                <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Disabled</a></td>
                                                 @else
 
-                                                 <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Accepted</a></td>
-                                                
-                                                <td><a href="{!! route('ignore.blog',$blog->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $blog->id !!}">Disable</a></td>
-
-
+                                                <td><a class="btn btn-success" href="{!! route('blog.activationStatus',$blog->id)!!}"  style="margin-right: 3px;">Published</a></td>
                                                 @endif                                        
                                             </tr>
                                             

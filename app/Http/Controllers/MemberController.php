@@ -24,18 +24,18 @@ class MemberController extends Controller
     public function add()
     {
         return view('admin.member.add')
-        ->with('title' , 'Add member');
+        ->with('title' , 'Add an Executive Member');
     }
 
     public function committee_member_list()
     {
-        
+        // this is frontend view
 
         $members = CommitteeMember::all();
 
         
-         return view('user.committee_member_list')
-                ->with('title', 'List of Committee Member')
+         return view('committee_member_list')
+                ->with('title', 'Executive Members')
                 ->with('memberCounter', 1)
                 ->with('members', $members);
         
@@ -76,14 +76,12 @@ class MemberController extends Controller
 
         $rules = [
               'name'   => 'required',
-              'contact' => 'required',
+              // 'contact' => 'required',
               'designation' => 'required',
               'info' => 'required',
               'rank'  => 'required',
               // 'img_url' => 'required',
             ];
-
-
 
        $data = $request->all();
 
@@ -93,17 +91,26 @@ class MemberController extends Controller
             return redirect()->back()->withInput()->withErrors($validation);
         }
 
+        $img_url = 'img/propic.png';
 
+        if($request->hasFile('image')) {
+            $file = $request->file('image');
 
+            $destination = public_path().'/uploads/members/';
+            $filename = time().'member.'.$file->getClientOriginalExtension();
+            $file->move($destination, $filename);
+            $img_url = '/uploads/members/'.$filename;
+        } 
+        //else {
+        //     return redirect()->back()->withInput()->withErrors('Image Required');
+        // }
         $member = new CommitteeMember();
-
         $member->name = $data['name'];
         $member->designation = $data['designation'];
         $member->contact = $data['contact'];
         $member->info = $data['info'];
         $member->rank = (int)$data['rank'];
-
-        $member->save();
+        $member->photo = $img_url;
 
          if($member->save()) {
             return redirect()->route('member.list')->with('success' , 'Member Added Successfully');

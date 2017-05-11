@@ -155,22 +155,31 @@ class BlogController extends Controller
 
 
 
-      public function AcceptBlog($id)
+      public function activationStatus($id)
       {
 
 
-            $blog = Blog::where('id' , $id)->first();
+            // $blog = Blog::where('id' , $id)->first();
         
-            $blog->published = "yes";
+            // $blog->published = "yes";
 
+            // $blog->save();
+
+            // $blogs = Blog::all();
+
+            // return view('admin.blog.list')
+            //     ->with('title', 'List of All Pending Blogs')
+            //     ->with('blogCounter', 1)
+            //     ->with('blogs', $blogs);
+
+            $blog = Blog::find($id);
+            if($blog->published == "yes") {
+                $blog->published = "no";
+            } else {
+                $blog->published = "yes";
+            }
             $blog->save();
-
-            $blogs = Blog::all();
-
-            return view('admin.blog.list')
-                ->with('title', 'List of All Pending Blogs')
-                ->with('blogCounter', 1)
-                ->with('blogs', $blogs);
+            return redirect()->route('pending.blog')->with('success', "User Status Change Succesfully");
         
       }
 
