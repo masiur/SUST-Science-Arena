@@ -93,7 +93,7 @@ class EventController extends Controller
             $file = Input::file('image');
 
             $destination = public_path().'/uploads/event/';
-            $filename = time().'_portfolio.'.$file->getClientOriginalExtension();
+            $filename = time().'event.'.$file->getClientOriginalExtension();
             $file->move($destination, $filename);
             $img_url = '/uploads/event/'.$filename;
         } else {

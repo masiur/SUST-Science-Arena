@@ -2916,18 +2916,20 @@ ul.post-desc li + li {
   margin: 20px 0;
   margin-bottom: 0px;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 30px;
   font-style: italic;
+  color: #17202A;
+  
 }
 
 .testi-slide i {
-  color: #32c5d2;
+  color: #17202A;
   margin-right: 10px;
 }
 
 .testi-slide h4 {
-  font-weight: 600;
+  font-weight: bold;
   font-size: 13px;
   font-family: "Raleway", sans-serif !important;
 }
@@ -2948,7 +2950,7 @@ ul.post-desc li + li {
 
 .testi-slide .flex-control-paging li a.flex-active {
   background: transparent !important;
-  border: 2px solid #32c5d2;
+  border: 2px solid #17202A;;
 }
 
 .quote {
@@ -3354,6 +3356,16 @@ ol.breadcrumb li a {
   padding-top: 70px;
   background-color: #f5f5f5;
   padding-bottom: 40px;
+}
+.our-team-v-3 {
+  padding-top: 20px;
+  background-color: #9370DB;
+  padding-bottom: 20px;
+}
+.our-team-v-4 {
+  padding-top: 70px;
+  background-color: #7D3C98;
+  padding-bottom: 0px;
 }
 
 .person-v2 img {

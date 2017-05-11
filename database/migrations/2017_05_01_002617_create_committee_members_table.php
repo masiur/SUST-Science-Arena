@@ -16,9 +16,10 @@ class CreateCommitteeMembersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('designation');
-            $table->string('contact');
+            $table->string('contact')->nullable();
             $table->string('info');
             $table->integer('rank');
+            $table->string('photo')->default('img/propic.png');
             $table->timestamps();
         });
     }

@@ -20,18 +20,21 @@
         <div class="divide80"></div>
         <div class="container blog-left-img">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-md-12 col-lg-12">
+                @include('admin.includes.alert')
                     <div class="blog-post">
 
                         <div class="row">
                         
-                            <div class="col-md-4 margin20">
-                                <a href="">
-                                  
-                                 <img src="{{ asset($user->profile->img_url) }}" class="img-responsive img-circle" alt="Profile Picture">                
-                                </a><!--work link--> 
+                            <div class="col-md-4 col-md-offset-1">
+                                <center>
+                                <a>   
+                                 <img src="{{ asset($user->profile->img_url) }}" class="img-responsive img-circle" alt="Profile Picture" width="250px">                
+                                </a><br>
+                                <a href="{{ route('editProfilePicture') }}" class="btn btn-primary">Edit Profile Picture</a>
+                                </center>
                             </div>
-                            <div class="col-md-6 margin20">
+                            <div class="col-md-6 col-md-offset-1">
                                 <h3>{{ $user->profile->fullName }}</h3>
                                 <p><i>Username:</i> {{ $user->username }}</p>
                                 <p><i>Email:</i> {{ $user->email }}</p>

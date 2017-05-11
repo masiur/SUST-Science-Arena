@@ -15,11 +15,6 @@ use Validator;
 use Input;
 
 
-
-
-
-
-
 class FrontendController extends Controller
 {
     /**
@@ -30,8 +25,13 @@ class FrontendController extends Controller
     public function index()
     {
         $events = Event::all();
+        $eventPhotos =  Event::orderby('id' , 'desc')->take(2)->lists('img_url');
+        // $img_url = $img['img_url'];
+        // return $slider1 = $eventPhotos[0];
+        
         return view('index')->with('title', 'Home')
-                            ->with('events' , $events);
+                            ->with('events' , $events)
+                            ->with('eventPhotos' , $eventPhotos);
     }
 
     public function blogPublicPage()
@@ -70,7 +70,7 @@ class FrontendController extends Controller
     {
         $events = Event::paginate(10);
          
-         return view('user.event')->with('events' , $events)->with('title' , "Events");
+         return view('event')->with('events' , $events)->with('title' , "Events");
     }
 
 
@@ -83,7 +83,7 @@ class FrontendController extends Controller
     
              
     
-             return view('user.eventSingle')
+             return view('eventSingle')
                             ->with('title', $pageTitle)
                             ->with('event', $event);
 

@@ -142,6 +142,7 @@ class BlogController extends Controller
 
 
          $blogs = Blog::all();
+        // $blogs = Blog::orderBy('id', 'desc')->where('published', 'yes')->paginate(15);
         //$blogs = Blog::get(['title' , 'id', 'category_id', 'user_id']);
 
         return view('admin.blog.list')
@@ -154,22 +155,31 @@ class BlogController extends Controller
 
 
 
-      public function AcceptBlog($id)
+      public function activationStatus($id)
       {
 
 
-            $blog = Blog::where('id' , $id)->first();
+            // $blog = Blog::where('id' , $id)->first();
         
-            $blog->published = "yes";
+            // $blog->published = "yes";
 
+            // $blog->save();
+
+            // $blogs = Blog::all();
+
+            // return view('admin.blog.list')
+            //     ->with('title', 'List of All Pending Blogs')
+            //     ->with('blogCounter', 1)
+            //     ->with('blogs', $blogs);
+
+            $blog = Blog::find($id);
+            if($blog->published == "yes") {
+                $blog->published = "no";
+            } else {
+                $blog->published = "yes";
+            }
             $blog->save();
-
-            $blogs = Blog::all();
-
-            return view('admin.blog.list')
-                ->with('title', 'List of All Pending Blogs')
-                ->with('blogCounter', 1)
-                ->with('blogs', $blogs);
+            return redirect()->route('pending.blog')->with('success', "User Status Change Succesfully");
         
       }
 
@@ -197,9 +207,14 @@ class BlogController extends Controller
   
     public function ignoreBlog($id){
 
-        $blog = Blog::where('id' , $id)->first();
-
-        $blog->delete();
+         $blog = Blog::find($id);
+        if($blog->activation_status == "no") {
+            $blog->activation_status = "yes";
+        } else {
+            $blog->activation_status = "no";
+        }
+        $blog->save();
+        return redirect()->route('blog.list')->with('success', "Blog Activation Changed Succesfully");
 
 
     }

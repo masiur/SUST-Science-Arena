@@ -25,13 +25,13 @@
                                 
                             <div class=" form"> 
 
-                                {!! Form::open(array('route' => 'member.store' , 'method' => 'post', 'class' => 'cmxform form-horizontal tasi-form' , 'files' => false )) !!}
+                                {!! Form::open(array('route' => 'member.store' , 'method' => 'post', 'class' => ' form-horizontal' , 'files' => true )) !!}
 
 
                                 <div class="form-group">
                                     {!! Form::label('name', "Member Name*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Enter Member Name', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                        {!! Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'John Doe', 'required' => 'required', 'aria-required' =>'true')) !!}
                                     </div>
                                 </div>
                                    
@@ -39,14 +39,14 @@
                                 <div class="form-group">
                                     {!! Form::label('designation', "Member Designation*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('designation', null, array('class' => 'form-control', 'placeholder' => 'Designation of the member', 'required' => 'required')) !!}
+                                        {!! Form::text('designation', null, array('class' => 'form-control', 'placeholder' => 'Assistant General Secretary', 'required' => 'required')) !!}
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    {!! Form::label('contact', "Contact no*", array('class' => 'control-label col-lg-2')) !!}
+                                    {!! Form::label('contact', "Contact No", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('contact', null, array('class' => 'form-control','placeholder' => 'Contact Of the member',  'required' => 'required')) !!}
+                                        {!! Form::text('contact', null, array('class' => 'form-control','placeholder' => '+8801XXXXXXX')) !!}
                                     </div>
                                 </div>
 
@@ -56,7 +56,7 @@
                                 <div class="form-group">
                                     {!! Form::label('info', "Member Info*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('info', null, array('class' => 'form-control', 'placeholder' => 'Enter Member Info', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                        {!! Form::text('info', null, array('class' => 'form-control', 'placeholder' => 'PSS 2012, SUST', 'required' => 'required')) !!}
                                     </div>
                                 </div>
 
@@ -65,14 +65,19 @@
                                  <div class="form-group">
                                     {!! Form::label('rank', "Member Rank*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('rank', null, array('class' => 'form-control', 'placeholder' => 'Enter Member Rank', 'required' => 'required', 'aria-required' =>'true')) !!}<br>
+                                        {!! Form::text('rank', null, array('class' => 'form-control', 'placeholder' => 'E.g. 3, if you want give third priority', 'required' => 'required', 'aria-required' =>'true')) !!}<br>
                                         ** Rank is used to set order as they appear in public page ( executives )
                                     </div>
                                 </div>
 
 
-                             
-                                                        
+                                <div class="form-group">
+                                    {!! Form::label('rank', "Member Rank*", array('class' => 'control-label col-lg-2')) !!}
+                                    <div class="col-lg-6">
+                                        {!! Form::file('image',  array('class' => 'form-control', 'multiple' => 'false')) !!}<br>
+                                    </div>
+                                </div>
+                                  
 
                                 <div class="form-group">
                                     <div class="col-lg-offset-2 col-lg-6">

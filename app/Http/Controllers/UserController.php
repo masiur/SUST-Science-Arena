@@ -80,7 +80,6 @@ class UserController extends Controller
                 return redirect()->back()->withInput()->withErrors('Image Required');
             }
 
-
             if($user->save()){
 
                 $profile = new Profile();
@@ -196,6 +195,42 @@ class UserController extends Controller
             return redirect()->route('profile')
                             ->with('error',"Something went wrong.Please Try again.");
         }
+
+    }
+
+    public function editProfilePicture()
+    {
+        return view('auth.editProPic')
+                    ->with('title', 'New Profile Picture');
+    }
+
+    public function postEditProfilePicture(Request $request)
+    {
+        $img_url = Profile::where('user_id', Auth::id())->pluck('img_url');
+        $flag = 1;
+
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+
+                $destination = public_path().'/uploads/user_image/';
+                $filename = time().'_profile.'.$file->getClientOriginalExtension();
+                $file->move($destination, $filename);
+                $img_url = '/uploads/user_image/'.$filename;
+                $flag = 0;
+            } else {
+                return redirect()->back()->withInput()->withErrors('Image Required');
+            }
+        $profile = Profile::where('id', Auth::id())->first();
+        $profile->img_url = $img_url;
+        if($flag == 0) {
+           $profile->save(); 
+           return redirect()->route('profile')
+                            ->with('success','Updated successfully.');
+        } else {
+            return redirect()->route('profile')
+                            ->with('warning','Photo Not Changed.');
+        }
+        
 
     }
 
