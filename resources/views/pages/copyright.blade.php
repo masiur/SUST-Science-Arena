@@ -7,7 +7,7 @@
 			Copyright &copy;2016-{{ Date('Y')}}. All rights reserved. SUST Sciece Arena.
 		</div>
 		<div class="col-md-3">
-			<a data-toggle="modal" data-target="#showDevelopers"  href="#" style="">Developers <!-- <i class="fa fa-heart" aria-hidden="true"></i> --></a>
+			Powered By:<a data-toggle="modal" data-target="#showDevelopers"  href="#" style=""> Dept. of CSE,SUST <!-- <i class="fa fa-heart" aria-hidden="true"></i> --></a>
 		</div>
     
 </div>
