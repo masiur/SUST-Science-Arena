@@ -9,7 +9,7 @@
                     <!-- SLIDE -->
                     <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 1">
                         <!-- MAIN IMAGE -->
-                        <img src= "{{ $eventPhotos[0] }}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <img src= "{{ asset($eventPhotos[0]) }}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                         <div class="caption sfb bold uppercase-title text-center"
                              data-x="center"
                              data-y="158" 
@@ -36,7 +36,7 @@
                     @if(!empty($eventPhotos[1]) )
                     <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 2">
                         <!-- MAIN IMAGE -->
-                        <img src="{{ $eventPhotos[1] }}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <img src="{{ asset($eventPhotos[1]) }}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
                         <div class="tp-caption lft"
                              data-x="578"
