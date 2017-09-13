@@ -31,9 +31,9 @@
 
 jQuery(window).load(function() { 
 		jQuery("#loaderInner").fadeOut(); 
-		jQuery("#loader").delay(200).fadeOut("slow"); 
+		jQuery("#loader").delay(50).fadeOut(); 
 		document.getElementById("myWholeDiv").style.display = "block";
-		//document.getElementById("copyright1").style.display = "block";
+		document.getElementById("copyright1").style.display = "block";
 
  		
  });

@@ -179,7 +179,7 @@ class BlogController extends Controller
                 $blog->published = "yes";
             }
             $blog->save();
-            return redirect()->route('pending.blog')->with('success', "User Status Change Succesfully");
+            return redirect()->route('pending.blog')->with('success', "Status Changed Succesfully");
         
       }
 
