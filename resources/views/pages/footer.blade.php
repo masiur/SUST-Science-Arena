@@ -1,6 +1,5 @@
 <!-- footer light 1 begin--> 
-        <footer >
-
+       
            <!-- <div class="container">
                 <div class="row">
                     

@@ -1,4 +1,4 @@
-<div class="footer-copyright text-center">
+<div id ="copyright1" class="footer-copyright text-center">
 	<div class="row">
 		<div class="col-md-3">
 			Supported By: <a href="http://code.com.bd/" target="_blank">Code Technologies</a>

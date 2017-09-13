@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Dhaka',
 
     /*
     |--------------------------------------------------------------------------
@@ -149,6 +149,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Artdarek\OAuth\OAuthServiceProvider::class,
         Webup\LaravelSendinBlue\SendinBlueServiceProvider::class, // sendinblue mail service provider
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
     ],
 
     /*
@@ -201,6 +202,7 @@ return [
         'Html'      => Collective\Html\HtmlFacade::class,
         'Entrust'   =>Zizaco\Entrust\EntrustFacade::class,
         'OAuth'     => Artdarek\OAuth\Facade\OAuth::class,
+        'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
     ],
 
 ];

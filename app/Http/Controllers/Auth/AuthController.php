@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
-
+use Charts;
 class AuthController extends Controller
 {
     /*
@@ -150,11 +150,28 @@ class AuthController extends Controller
         // return 'Logout Panel';
     }
 
+    // dashboard
+
     public function dashboard(){
+
+        // $transactionChart = Charts::database(TransHistory::all(), 'line', 'fusioncharts')
+        //             ->elementLabel("Transaction")
+        //             ->groupByMonth();
+
+        $userChart = Charts::database(User::all(), 'bar', 'fusioncharts')
+                    ->elementLabel("Users")
+                    ->title('')
+                    ->lastByMonth(12, true);
+
         return view('admin.dashboard')
-                    ->with('title','Dashboard')->with('user', Auth::user());
-        // return 'Dashboard';
+                    ->with('title','Dashboard')
+                    // ->with('transactionChart', $transactionChart)
+                    ->with('userChart', $userChart)
+                    ->with('users', User::all());
     }
+
+
+    // dashboard end
 
     public function changePassword(){
         return view('auth.changePassword')

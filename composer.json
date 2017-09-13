@@ -13,7 +13,8 @@
         "oriceon/oauth-5-laravel": "dev-master",
         "guzzlehttp/guzzle": "~5.3|~6.0",
         "nesbot/carbon": "^1.22",
-        "webup/laravel-sendinblue": "^1.0"
+        "webup/laravel-sendinblue": "^1.0",
+        "consoletvs/charts": "5.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
