@@ -31,57 +31,13 @@
                                 <em><b>{!! $member->designation !!}</b></em>
                                 <ul class="list-inline top-social">
                                     <li>{!! $member->info !!}</li>
-                                    <li>Phone: {!! $member->contact !!}</li> 
+                                    @if($member->contact) <li>Phone: {!! $member->contact !!}</li>@endif
                                 </ul>
                             </div>
                         </div>
                     </div><!--person col end-->
                     @endforeach
 
-                    {{-- 
-                    <div class="col-sm-3 text-center">
-                        <div class="person-v2">
-                            <img src="{{ asset('img/vp.jpg') }}" class="img-responsive" alt="">
-                            <div class="person-desc-v2">
-                                <h3>Khoirom Kameshwar</h3>
-                                <em>Sr. Vice President</em>
-                                <!-- <ul class="list-inline top-social">
-                                    <li>{!! $member->info !!}</li>
-                                    <li>{!! $member->contact !!}</li>
-                                    
-                                </ul> -->
-                            </div>
-                        </div>
-                    </div><!--person col end-->
-                    <div class="col-sm-3 text-center">
-                        <div class="person-v2">
-                            <img src="{{ asset('img/gs.jpg') }}" class="img-responsive" alt="">
-                            <div class="person-desc-v2">
-                                <h3>Rifat Hyder</h3>
-                                <em>General Secretary</em>
-                                <!-- <ul class="list-inline top-social">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    
-                                </ul> -->
-                            </div>
-                        </div>
-                    </div><!--person col end-->
-                    <div class="col-sm-3 text-center">
-                        <div class="person-v2">
-                            <img src="img/team-8.jpg" class="img-responsive" alt="">
-                            <div class="person-desc-v2">
-                                <h3>Steve Smith</h3>
-                                <em>Creative Designer</em>
-                                <ul class="list-inline top-social">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    --}}
                 </div>
             </div>
  
@@ -131,10 +87,10 @@
             </div><!-- row for blog post -->
        </div><!--blog full main container -->
        --}}
-       <div class="divide60"></div> 
+
 
        <div class="divide60"></div> 
-         <div class="divide60"></div> 
+
 
 
 

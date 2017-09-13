@@ -31,7 +31,7 @@
                                 <div class="form-group">
                                     {!! Form::label('name', "Member Name*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'John Doe', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                        {!! Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'John Doe', 'required' => 'required')) !!}
                                     </div>
                                 </div>
                                    
@@ -65,14 +65,14 @@
                                  <div class="form-group">
                                     {!! Form::label('rank', "Member Rank*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('rank', null, array('class' => 'form-control', 'placeholder' => 'E.g. 3, if you want give third priority', 'required' => 'required', 'aria-required' =>'true')) !!}<br>
+                                        {!! Form::text('rank', null, array('class' => 'form-control', 'placeholder' => 'E.g. 3, if you want give third priority', 'required' => 'required')) !!}<br>
                                         ** Rank is used to set order as they appear in public page ( executives )
                                     </div>
                                 </div>
 
 
                                 <div class="form-group">
-                                    {!! Form::label('rank', "Member Rank*", array('class' => 'control-label col-lg-2')) !!}
+                                    {!! Form::label('rank', "Profile Picture", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
                                         {!! Form::file('image',  array('class' => 'form-control', 'multiple' => 'false')) !!}<br>
                                     </div>
@@ -98,6 +98,8 @@
 @stop
 
 
+ {{-- 
+
 @section('style')
 
     {!! Html::style('chosen/chosen.css') !!}
@@ -105,14 +107,11 @@
 @stop
 
 @section('script')
-
+   
     {!! Html::script('chosen/chosen.jquery.js') !!}
-    {!! Html::script('assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js') !!}
-    {!! Html::script('assets/summernote/summernote.min.js') !!}
 
 
-    {!! Html::script('assets/jquery.validate/jquery.validate.min.js') !!}
-    {!! Html::script('assets/jquery.validate/form-validation-init.js') !!}
+
 
 
 
@@ -149,4 +148,7 @@
   </script>
 
 
+
 @stop
+
+--}}
