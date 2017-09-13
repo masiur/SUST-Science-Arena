@@ -93,6 +93,8 @@
 @stop
 
 
+
+
 @section('style')
 
     {!! Html::style('chosen/chosen.css') !!}
