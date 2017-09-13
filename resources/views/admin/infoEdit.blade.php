@@ -32,7 +32,7 @@
 
                                     <div class="form-group">
                                         {!! Form::label('contact', 'Contact (required)', array('class' => 'control-label col-lg-2')) !!}
-                                        <div class="col-lg-10">
+                                        <div class="col-lg-6">
                                             {!! Form::text('contact', null, array('class' => 'form-control', 'placeholder' => 'Enter Contact', 'required' => 'required')) !!}
                                         </div>
                                     </div>

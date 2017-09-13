@@ -80,12 +80,10 @@
                     </li>
 
 
-
                     <li class="has-submenu {!! Menu::areActiveRoutes(['member.add',  'member.list']) !!}"><a href="#"><i class="ion-compose"></i> <span class="nav-label">Member</span></a>
                         <ul class="list-unstyled">
-                            <li><a href="{!! route('member.add') !!}">Member Add</a></li>
-                            <li><a href="{!!route('member.list') !!}">All Member List</a></li>
-
+                            <li><a href="{!! route('member.add') !!}">Add Member</a></li>
+                            <li><a href="{!! route('member.list') !!}">List of Members</a></li>
                         </ul>
                     </li>
 

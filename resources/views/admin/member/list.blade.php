@@ -31,8 +31,8 @@
                                             <th>Designation</th>
                                             <th>Contact</th>
                                             <th>Info</th>
-                                            <th>#</th>
-                                            <th>#</th>
+                                            <th>Photo</th>
+                                            <th>Action</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -46,9 +46,10 @@
                                                 <td>{!! $member->designation !!}</td>
                                                 <td>{!! $member->contact !!}</td>
                                                 <td>{!! $member->info !!}</td>
+                                                <td><a target="_blank" href="{{ asset($member->photo) }}">Preview</a></td>
                                                
-                                                <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('member.edit',$member->id)!!}"  style="margin-right: 3px;">Edit</a></td>
-                                                <td><a href="{!! route('member.delete',$member->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $member->id !!}">Delete</a></td>
+                                                <td><a class="btn btn-success btn-xs btn-archive Editbtn" href="{!! route('member.edit',$member->id)!!}"  style="margin-right: 3px;">Edit</a>
+                                                <a href="{!! route('member.delete',$member->id)!!}" class="btn btn-danger btn-xs btn-archive deleteBtn" data-toggle="modal" data-target="#deleteConfirm" deleteId="{!! $member->id !!}">Delete</a></td>
                                             </tr>
                                             
                                         @endforeach

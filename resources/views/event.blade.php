@@ -51,7 +51,9 @@
                                     {!!  str_limit($event->description, 100) !!}
                                 </p>
                                 <p><a href="{{ route('event.single',$event->id) }}" class="btn btn-theme-dark">Read More...</a>
-                                <a href="{{ $event->fb_event_link or '#' }}" class="btn btn-primary">Facebook Event</a>
+                                @if($event->fb_event_link)
+                                <a target="_blank" href="{{ asset($event->fb_event_link) }}" class="btn btn-primary">Facebook Event</a>
+                                @endif
                                 </p>
                             </div>
                         </div>
