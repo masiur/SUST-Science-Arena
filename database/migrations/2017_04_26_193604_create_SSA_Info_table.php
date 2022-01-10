@@ -12,7 +12,7 @@ class CreateSSAInfoTable extends Migration
      */
     public function up()
     {
-        Schema::create('Info', function (Blueprint $table) {
+        Schema::create('info', function (Blueprint $table) {
             $table->increments('id');
             $table->string('contact');
             $table->string('fb_link');
