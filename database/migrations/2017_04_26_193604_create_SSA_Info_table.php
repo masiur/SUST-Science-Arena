@@ -35,6 +35,6 @@ class CreateSSAInfoTable extends Migration
      */
     public function down()
     {
-        Schema::drop('Info');
+        Schema::drop('info');
     }
 }
