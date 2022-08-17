@@ -16,7 +16,7 @@
                                     <h4>{{ $title }}</h4>
                             </div>
                             <div class="col-md-6">                            
-                                <a class="pull-right" href="{!! route('member.list')  !!}"><button class="btn btn-success">Member List</button></a>
+                                <a class="pull-right" href="{!! route('member.list')  !!}"><button class="btn btn-success">EC Member List</button></a>
                             </div>
                         </div>
                     </div>
@@ -28,6 +28,20 @@
                                 {!! Form::open(array('route' => 'member.store' , 'method' => 'post', 'class' => ' form-horizontal' , 'files' => true )) !!}
 
 
+                                <div class="form-group">
+                                    {!! Form::label('year', "Year*", array('class' => 'control-label col-lg-2')) !!}
+                                    <div class="col-lg-6">
+                                        {!! Form::text('year', null, array('class' => 'form-control', 'placeholder' => '2022', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    {!! Form::label('nth_of_committee', "Nth of Committee", array('class' => 'control-label col-lg-2')) !!}
+                                    <div class="col-lg-6">
+                                        {!! Form::number('nth_of_committee', null, array('class' => 'form-control', 'placeholder' => '25')) !!}
+                                    </div>
+                                </div>
+                                
                                 <div class="form-group">
                                     {!! Form::label('name', "Member Name*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
@@ -65,14 +79,14 @@
                                  <div class="form-group">
                                     {!! Form::label('rank', "Member Rank*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('rank', null, array('class' => 'form-control', 'placeholder' => 'E.g. 3, if you want give third priority', 'required' => 'required')) !!}<br>
+                                        {!! Form::number('rank', 10, array('class' => 'form-control', 'placeholder' => 'E.g. 3, if you want give third priority', 'required' => 'required')) !!}<br>
                                         ** Rank is used to set order as they appear in public page ( executives )
                                     </div>
                                 </div>
 
 
                                 <div class="form-group">
-                                    {!! Form::label('rank', "Profile Picture", array('class' => 'control-label col-lg-2')) !!}
+                                    {!! Form::label('image', "Profile Picture", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
                                         {!! Form::file('image',  array('class' => 'form-control', 'multiple' => 'false')) !!}<br>
                                     </div>

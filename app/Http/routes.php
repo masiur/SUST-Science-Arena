@@ -6,10 +6,10 @@ Route::get('news_list',['as' => 'news.list', 'uses' => 'NewsController@show']);
 Route::get('events',['as' => 'event.list', 'uses' => 'FrontendController@event']);
 Route::get('event/{id}',['as' => 'event.single', 'uses' => 'FrontendController@eventSingle']);
 Route::get('contact',['as' => 'contact', 'uses' => 'contactController@contact_page']);
+Route::get('about',['as' => 'about', 'uses' => 'FrontendController@about']);
 
-
-Route::get('executives',['as' => 'committee.member', 'uses' => 'MemberController@committee_member_list']);
-Route::post('contact_store',['as' => 'contact.store', 'uses' => 'contactController@store']);
+Route::get('executives',['as' => 'committee', 'uses' => 'FrontendController@committee']);
+Route::post('contact_store',['as' => 'contact.store', 'uses' => 'ContactController@store']);
 // public routes -- Added by Masiur
 Route::get('home', array('as' => 'home', 'uses' => 'FrontendController@index'));
 // Blog Public Page
@@ -91,7 +91,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 	
    // Member Add or Delete Or List Show
    Route::get('member/add',['as' => 'member.add',   'uses' => 'MemberController@add']);
-   Route::get('member',['as' => 'member.list', 'uses' => 'MemberController@list']);
+   Route::get('member', ['as' => 'member.list', 'uses' => 'MemberController@list']);
    Route::post('member/store',['as' => 'member.store', 'uses' => 'MemberController@store']);
    Route::get('member/{id}/edit',['as' => 'member.edit', 'uses' => 'MemberController@edit']);
    Route::put('member/{id}',['as' => 'member.update', 'uses' => 'MemberController@update']);

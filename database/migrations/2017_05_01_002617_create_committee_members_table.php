@@ -18,7 +18,10 @@ class CreateCommitteeMembersTable extends Migration
             $table->text('designation');
             $table->string('contact')->nullable();
             $table->string('info');
-            $table->integer('rank');
+            $table->integer('rank')->comment('rank 1 gets high priority');
+            $table->string('year');
+            $table->integer('nth_of_committee')->nullable();
+            $table->enum('status', ['ACTIVE', 'INACTIVE'])->default('ACTIVE');
             $table->string('photo')->default('img/propic.png');
             $table->timestamps();
         });

@@ -15,7 +15,7 @@
                                     <h4>{{ $title }}</h4>
                                 </div>
                                 <div class="col-md-6">                            
-                                     <a class="pull-right" href="{!! route('member.add') !!}"><button class="btn btn-success">Add Member</button></a>
+                                     <a class="pull-right" href="{!! route('member.add') !!}"><button class="btn btn-success">Add EC Member</button></a>
                                 </div>
                             </div>
                         </div>            
@@ -27,8 +27,9 @@
                                         <thead>
                                         <tr>
                                             <th>No.</th>
+                                            <th>Year (Nth)</th>
                                             <th>Name</th>
-                                            <th>Designation</th>
+                                            <th>Desig.</th>
                                             <th>Contact</th>
                                             <th>Info</th>
                                             <th>Photo</th>
@@ -40,6 +41,7 @@
 
                                             <tr>
                                                 <td><?php echo $memberCounter++; ?></td>
+                                                <td>{{ $member->year.' ('.$member->nth_of_committee.'th)' }}</td>
                                                 <td>
                                                     <a class="show-project-modal" data-toggle="modal" data-project-id="{{ $member->id }}" data-project-url="{!! route('member.list',$member->id) !!}" href="#" style="">{!! $member->name !!}</a>
                                                 </td>
@@ -110,7 +112,9 @@
 
         $(document).ready(function() {
             
-            $('#dataTable').dataTable();
+        $('#dataTable').dataTable({
+            "pageLength": 25
+        });
 
             $(document).on("click", ".deleteBtn", function() {
                 var deleteId = $(this).attr('deleteId');

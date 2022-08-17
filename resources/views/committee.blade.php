@@ -2,7 +2,7 @@
     @section('content')
         @include('admin.includes.alert')
      <!--navbar-default-->
-        <div class="breadcrumb-wrap">
+        <!-- <div class="breadcrumb-wrap">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
@@ -16,10 +16,43 @@
                     </div>
                 </div>
             </div>
-        </div><!--breadcrumbs-->
-        <div class="divide80"></div>
+        </div> -->
+        <div class="divide30"></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="center-heading">
+                        <h2><strong>{{ isset($members->first()->nth_of_committee) ? $members->first()->nth_of_committee."th - " : '' }} {{ $title }}</strong> </h2>
+                        <span class="center-line"></span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <form action="{{ route('committee') }}" method="GET">
+                        <div class="form-inline float-end">
+
+                            <label for="committee" class="col-form-label">Select Year</label>
+                            <select class="form-control-xs" name="year">
+                                @foreach($years as $year)
+                                    <option
+                                        {{ $year['year']==$yearRequest ? 'selected' : '' }} value="{{ $year['year'] }}">{{ $year['year'] }}</option>
+                                @endforeach
+                            </select>
+                            {{--                            <div style="padding-left: 15px;">--}}
+                            <button type="submit" class="btn btn-xs btn-secondary btn-success">Go to Committee</button>
+                            {{--                            </div>--}}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="divide30"></div>
  
-            <div class="container">   
+            <div class="container">
                  
                 <div class="row">
                     @foreach($members as $member)

@@ -11,15 +11,7 @@ use App\Http\Controllers\Controller;
 
 class MemberController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
+
 
     public function add()
     {
@@ -27,25 +19,10 @@ class MemberController extends Controller
         ->with('title' , 'Add an Executive Member');
     }
 
-    public function committee_member_list()
-    {
-        // this is frontend view
-
-        $members = CommitteeMember::all();
-
-        
-         return view('committee_member_list')
-                ->with('title', 'Executive Members')
-                ->with('memberCounter', 1)
-                ->with('members', $members);
-        
-    }
-
 
     public function list()
     {
-        
-        $members = CommitteeMember::orderBy('rank', 'asc')->get();
+        $members = CommitteeMember::orderBy('year', 'DESC')->orderBy('rank', 'asc')->get();
         return view('admin.member.list')
                 ->with('title', 'List of Committee Member')
                 ->with('memberCounter', 1)
@@ -53,24 +30,6 @@ class MemberController extends Controller
 
     }
 
-
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
 
@@ -78,8 +37,9 @@ class MemberController extends Controller
               'name'   => 'required',
               // 'contact' => 'required',
               'designation' => 'required',
+              'year'  => 'required',
               'info' => 'required',
-              'rank'  => 'required',
+              'rank'  => 'required|numeric',
               // 'img_url' => 'required',
             ];
 
@@ -105,11 +65,13 @@ class MemberController extends Controller
         //     return redirect()->back()->withInput()->withErrors('Image Required');
         // }
         $member = new CommitteeMember();
+        $member->year = $data['year'];
         $member->name = $data['name'];
         $member->designation = $data['designation'];
         $member->contact = $data['contact'];
         $member->info = $data['info'];
         $member->rank = (int)$data['rank'];
+        $member->nth_of_committee = $data['nth_of_committee'] == 0 ? null : (int)$data['nth_of_committee'];
         $member->photo = $img_url;
 
          if($member->save()) {
@@ -120,28 +82,14 @@ class MemberController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $member= CommitteeMember::find($id);
+        $status = ['ACTIVE' => 'ACTIVE', 'INACTIVE'=> 'INACTIVE'];
         return view('admin.member.edit')
-                        ->with('title', 'Edit Member data')
+                        ->with('title', 'Edit Executive Data')
+                        ->with('status', $status)
                         ->with('member', $member);
     }
 
@@ -156,10 +104,11 @@ class MemberController extends Controller
     {
            $rules = [
               'name'   => 'required',
-              'contact' => 'required',
+            //   'contact' => 'required',
               'designation' => 'required',
               'info' => 'required',
-              'rank'  => 'required',
+              'rank'  => 'required|numeric',
+              'year'  => 'required',
               // 'img_url' => 'required',
             ];
 
@@ -173,15 +122,16 @@ class MemberController extends Controller
             return redirect()->back()->withInput()->withErrors($validation);
         }
 
-
-
         $member = CommitteeMember::find($id);
 
+        $member->year = $data['year'];
         $member->name = $data['name'];
         $member->designation = $data['designation'];
         $member->contact = $data['contact'];
         $member->info = $data['info'];
         $member->rank = (int)$data['rank'];
+        $member->nth_of_committee = $data['nth_of_committee'] == 0 ? null : (int)$data['nth_of_committee'];
+        $member->status = $data['status'];
 
         $member->save();
 
@@ -207,7 +157,7 @@ class MemberController extends Controller
 
             return redirect()->route('member.list')->with('success','Member Deleted Successfully.');
 
-        }catch(Exception $ex){
+        }catch(\Exception $ex){
             return redirect()->route('member.list')->with('error','Something went wrong.Try Again.');
         }
     }

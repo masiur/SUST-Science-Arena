@@ -24,22 +24,34 @@
 
                     <div class="panel-body">
                             
-                                <div class=" form"> 
+                            <div class=" form"> 
 
-                                    {!! Form::model($member, array('route' => ['member.update',$member->id], 'method' => 'PUT', 'class' => 'cmxform form-horizontal tasi-form' ,'files' => false)) !!}
+                                {!! Form::model($member, array('route' => ['member.update',$member->id], 'method' => 'PUT', 'class' => 'cmxform form-horizontal tasi-form' ,'files' => false)) !!}
 
+
+                                <div class="form-group">
+                                    {!! Form::label('year', "Year*", array('class' => 'control-label col-lg-2')) !!}
+                                    <div class="col-lg-6">
+                                        {!! Form::text('year', null, array('class' => 'form-control', 'placeholder' => '2022', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    {!! Form::label('nth_of_committee', "Nth of Committee", array('class' => 'control-label col-lg-2')) !!}
+                                    <div class="col-lg-6">
+                                        {!! Form::number('nth_of_committee', null, array('class' => 'form-control', 'placeholder' => '25')) !!}
+                                    </div>
+                                </div>
 
                                     <div class="form-group">
-                                        {!! Form::label('name', 'Member Name (required)', array('class' => 'control-label col-lg-2')) !!}
+                                        {!! Form::label('name', 'Name (required)', array('class' => 'control-label col-lg-2')) !!}
                                         <div class="col-lg-10">
                                             {!! Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Enter Member Name', 'required' => 'required')) !!}
                                         </div>
                                     </div>
-
-
                                    
                                 <div class="form-group">
-                                    {!! Form::label('designation', "Member Designation*", array('class' => 'control-label col-lg-2')) !!}
+                                    {!! Form::label('designation', "Designation*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
                                         {!! Form::text('designation', null, array('class' => 'form-control', 'placeholder' => 'Designation Of The Member', 'required' => 'required')) !!}
                                     </div>
@@ -53,8 +65,6 @@
                                 </div>
 
 
-                               
-
                                 <div class="form-group">
                                     {!! Form::label('info', "Member Info*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
@@ -62,14 +72,20 @@
                                     </div>
                                 </div>
 
+                                
                                 <div class="form-group">
                                     {!! Form::label('rank', "Member Rank*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('rank', null, array('class' => 'form-control', 'placeholder' => 'Enter Member Rank', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                        {!! Form::number('rank', null, array('class' => 'form-control', 'placeholder' => 'Enter Member Rank', 'required' => 'required', 'aria-required' =>'true')) !!}
                                     </div>
                                 </div>
 
-                                    
+                                <div class="form-group">
+                                    {!! Form::label('status', "Status", array('class' => 'control-label col-lg-2')) !!}
+                                    <div class="col-lg-6">
+                                        {!! Form::select('status', $status, $member->status, array('class' => 'form-control', 'placeholder' => 'Enter Member Info')) !!}
+                                    </div>
+                                </div>
 
                                     <div class="form-group">
                                         <div class="col-lg-offset-2 col-lg-10">

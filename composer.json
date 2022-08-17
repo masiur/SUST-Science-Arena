@@ -13,8 +13,7 @@
         "oriceon/oauth-5-laravel": "dev-master",
         "guzzlehttp/guzzle": "~5.3|~6.0",
         "nesbot/carbon": "^1.22",
-        "webup/laravel-sendinblue": "^1.0",
-        "consoletvs/charts": "5.*"
+        "webup/laravel-sendinblue": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -55,6 +54,9 @@
         ]
     },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
     }
 }

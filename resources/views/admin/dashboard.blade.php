@@ -51,7 +51,7 @@
                             <h3 class="panel-title"><i class="fa fa-users"></i> User Registration</h3>
                         </div>
                         <div class="panel-body"><br>
-                            {!! $userChart->render() !!}
+         
                         </div>
                     </div>
                     
@@ -66,7 +66,7 @@
 
 @section('style')
 
-{!! Charts::assets() !!}
+
 
 
 @endsection

@@ -13,6 +13,7 @@ use App\Models\Category;
 use App\Models\Event;
 use Validator;
 use Input;
+use App\Models\CommitteeMember as Committee;
 
 
 class FrontendController extends Controller
@@ -32,6 +33,57 @@ class FrontendController extends Controller
         return view('index')->with('title', 'Home')
                             ->with('events' , $events)
                             ->with('eventPhotos' , $eventPhotos);
+    }
+
+    public function committee(Request $request)
+    {
+        $yearRequest = $request->year ?? null;
+        $years = Committee::orderBy('year','DESC')->select('year')->distinct()->get();
+
+        if (!(isset($yearRequest))) {
+            $yearRequest = Committee::orderBy('year','DESC')->select('year')->where('status', 'ACTIVE')->first();
+
+            if (!(isset($yearRequest))) {
+                $yearRequest['year'] = '';
+            }
+
+            // $presidentSecretary = Committee::whereIn('designation', ['PRESIDENT', 'GENERAL SECRETARY'])
+            //     ->where('year', $yearRequest['year'])
+            //     ->get();
+            
+            $members = Committee::where('year', $yearRequest['year'])
+                ->orderBy('rank', 'ASC')
+                ->get();
+
+            
+            return view('committee')
+                // ->with('presidentSecretary', $presidentSecretary)
+                ->with('members', $members)
+                ->with('years', $years)
+                ->with('yearRequest', $yearRequest['year'])
+                ->with('title', "Executive Committee");
+        } else {
+//            $committee = Committee::where('year', $yearRequest)->get();
+            // $presidentSecretary = Committee::whereIn('designation', ['PRESIDENT', 'GENERAL SECRETARY'])
+            //     ->where('year', $yearRequest)
+            //     ->get();
+            
+            $members = Committee::where('year', $yearRequest)
+                ->orderBy('rank', 'ASC')
+                ->get();
+
+            return view('committee')
+                // ->with('presidentSecretary', $presidentSecretary)
+                ->with('members', $members)
+                ->with('years', $years)
+                ->with('yearRequest', $yearRequest)
+                ->with('title', "Executive Committee");
+        }
+    }
+
+    public function about()
+    {   
+        return view('about')->with('title', 'About Us'); 
     }
 
     public function blogPublicPage()
@@ -61,11 +113,6 @@ class FrontendController extends Controller
                         ->with('categories', $categories);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function event()
     {
         $events = Event::paginate(10);
@@ -73,49 +120,17 @@ class FrontendController extends Controller
          return view('event')->with('events' , $events)->with('title' , "Events");
     }
 
-
-   
-
     public function eventSingle($id)
     {
-            $event = Event::findOrFail($id);
-            $pageTitle = str_limit($event->name, 20).' || Event';
-    
-             
-    
-             return view('eventSingle')
-                            ->with('title', $pageTitle)
-                            ->with('event', $event);
+        $event = Event::findOrFail($id);
+        $pageTitle = str_limit($event->name, 20).' || Event';
 
-         
+            
 
-
-
-
+            return view('eventSingle')
+                        ->with('title', $pageTitle)
+                        ->with('event', $event);
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
 
 
     public function info_edit()
@@ -166,45 +181,4 @@ class FrontendController extends Controller
 
  }
 
-
-
-
-
-
-
-
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

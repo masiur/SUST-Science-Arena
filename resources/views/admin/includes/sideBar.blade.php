@@ -50,7 +50,7 @@
                    <li class="has-submenu {!! Menu::areActiveRoutes(['event.index', 'event.create']) !!}"><a href="#"><i class="ion-compose"></i> <span class="nav-label">Events</span></a>
                         <ul class="list-unstyled">
                             <li><a href="{!! route('event.create') !!}">Create Event</a></li>
-                            <li><a href="{!!route('event.index') !!}">All Event List</a></li>
+                            <li><a href="{!!route('event.index') !!}">All Events</a></li>
 
                         </ul>
                     </li>
@@ -59,7 +59,7 @@
                   <li class="has-submenu"><a href="#"><i class="ion-stats-bars"></i> <span class="nav-label">News</span></a>
                         <ul class="list-unstyled">
                             <li><a href="{!! route('news.create') !!}">Create News</a></li>
-                            <li><a href="{!!route('news.index') !!}">All News List</a></li>
+                            <li><a href="{!!route('news.index') !!}">All News</a></li>
 
                         </ul>
                     </li>
@@ -80,10 +80,10 @@
                     </li>
 
 
-                    <li class="has-submenu {!! Menu::areActiveRoutes(['member.add',  'member.list']) !!}"><a href="#"><i class="ion-compose"></i> <span class="nav-label">Member</span></a>
+                    <li class="has-submenu {!! Menu::areActiveRoutes(['member.add',  'member.list']) !!}"><a href="#"><i class="ion-compose"></i> <span class="nav-label">Committee</span></a>
                         <ul class="list-unstyled">
-                            <li><a href="{!! route('member.add') !!}">Add Member</a></li>
-                            <li><a href="{!! route('member.list') !!}">List of Members</a></li>
+                            <li><a href="{!! route('member.add') !!}">Add EC </a></li>
+                            <li><a href="{!! route('member.list') !!}">List of EC Members</a></li>
                         </ul>
                     </li>
 

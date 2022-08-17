@@ -146,7 +146,7 @@
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                         <div class="center-heading">
-                            <h2>What <strong>we do</strong> </h2>
+                            <h2><strong>About Us</strong> </h2>
                             <span class="center-line"></span>
                             <p class="sub-text margin40" style="text-align: justify">
                                 

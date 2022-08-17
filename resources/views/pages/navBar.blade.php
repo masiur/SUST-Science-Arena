@@ -16,13 +16,17 @@
                             <a href="{{ route('index') }}" class="dropdown-toggle">Home</a>
                             
                         </li>
-                        <!--menu home li end here-->
+
+                        <li class="dropdown {!! Menu::isActiveRoute('about') !!}">
+                            <a href="{{ route('about') }}" class="dropdown-toggle ">About</i></a>
+                        </li>
+                       
                         <li class="dropdown {!! Menu::isActiveRoute('event.list') !!}">
                             <a href="{{ route('event.list') }}" class="dropdown-toggle ">Events</i></a>
-                            
                         </li>
-                        <li class="dropdown {!! Menu::isActiveRoute('committee.member') !!}">
-                            <a href="{{ route('committee.member') }}" class="dropdown-toggle ">Executives</i></a>
+
+                        <li class="dropdown {!! Menu::isActiveRoute('committee') !!}">
+                            <a href="{{ route('committee') }}" class="dropdown-toggle ">Executives</i></a>
                             
                         </li>
                         <!--menu Portfolio li end here-->

@@ -158,15 +158,15 @@ class AuthController extends Controller
         //             ->elementLabel("Transaction")
         //             ->groupByMonth();
 
-        $userChart = Charts::database(User::all(), 'bar', 'fusioncharts')
-                    ->elementLabel("Users")
-                    ->title('')
-                    ->lastByMonth(12, true);
+        // $userChart = Charts::database(User::all(), 'bar', 'fusioncharts')
+        //             ->elementLabel("Users")
+        //             ->title('')
+        //             ->lastByMonth(12, true);
 
         return view('admin.dashboard')
                     ->with('title','Dashboard')
                     // ->with('transactionChart', $transactionChart)
-                    ->with('userChart', $userChart)
+                    // ->with('userChart', $userChart)
                     ->with('users', User::all());
     }
 
