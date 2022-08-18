@@ -150,7 +150,15 @@
                             <span class="center-line"></span>
                             <p class="sub-text margin40" style="text-align: justify">
                                 
-                                <?php echo \App\Models\Content::where('id', 1)->pluck('about_us'); ?>
+                            We are SUST Science Arena (SSA for short), a renowned science organization in Sylhet and one of the prominent science organizations of Shahjalal University of Science and Technology. 
+                            SSA was  established on February 24, 2004 by a group of science enthusiasts of SUST with an aim to be a common platform for all the science enthusiasts of this region (Sylhet).
+                            SSA is affiliated with Shahjalal University of Science and Technology. SUST authority gives us recognition as “Registered Organization of SUST”
+                            <br><br>
+
+
+                            The objective of SSA is to promote activities of science, expose recent scientific information to students and to encourage students about science.
+                            SSA is committed to popularize science among young people. To accomplish this job different types of exposition programs are being arranged throughout the year.
+                            <br><br>
                                  
                              </p>
                         </div>
@@ -282,10 +290,39 @@
         <!-- </div> -->
         @endif
 
+        <!-- <div class="divide70"></div> -->
+        
+        <div class="our-team-v-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="center-heading">
+                            <h2>SSA <strong>Executives</strong></h2>
+                            <span class="center-line"></span>
+                        </div>
+                    </div>                   
+                </div>
+                 
+                <div class="row">
+                    @foreach($currentPresidentGs as $ec)
+                    <div class="col-sm-3 col-sm-offset-2 text-center">
+                        <div class="person-v2">
+                            <img src="{{ asset($ec->photo) }}" class="img-responsive" alt="">
+                            <div class="person-desc-v2">
+                                <h3>{{ $ec->name }}</h3>
+                                <em>{{ $ec->designation }}</em>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
         
         <div class="divide40"></div>
 
-        <div class="our-team-v-2">
+        <div class="our-team-v-1">
         <!-- <div class="testimonials-v-2 wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="100ms"> -->
             <div class="container">
                 <div class="row">
@@ -312,9 +349,9 @@
                                     </p>
                                     <h4 class="test-author">
                                         Dr. Muhammed Zafar Iqbal - <em>Renowned Writer & Professor,
-Dept. of CSE,
-SUST, Sylhet.
-</em>
+                                        Dept. of CSE,
+                                        SUST, Sylhet.
+                                        </em>
 
                                 </li><!--testi item-->
 
@@ -345,85 +382,12 @@ SUST, Sylhet.
                 </div><!--testi slider row end-->
               </div>  
             </div>
-        <!-- </div> --><!--testimonials v-2 end-->
+         <!-- </div> -->
         </div>
         
-        <!-- <div class="divide70"></div> -->
         
-        
-        {{--
-        <div class="our-team-v-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="center-heading">
-                            <h2>SSA <strong>Executives</strong></h2>
-                            <span class="center-line"></span>
-                        </div>
-                    </div>                   
-                </div>
-                 
-                <div class="row">
-                    <div class="col-sm-3 text-center">
-                        <div class="person-v2">
-                            <img src="{{ asset('img/pres.jpg') }}" class="img-responsive" alt="">
-                            <div class="person-desc-v2">
-                                <h3>Sadman Al Fahad</h3>
-                                <em>President</em>
-                                <!-- <ul class="list-inline top-social">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li> 
-                                </ul> -->
-                            </div>
-                        </div>
-                    </div><!--person col end-->
-                    <div class="col-sm-3 text-center">
-                        <div class="person-v2">
-                            <img src="{{ asset('img/vp.jpg') }}" class="img-responsive" alt="">
-                            <div class="person-desc-v2">
-                                <h3>Khoirom Kameshwar</h3>
-                                <em>Sr. Vice President</em>
-                                <!-- <ul class="list-inline top-social">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    
-                                </ul> -->
-                            </div>
-                        </div>
-                    </div><!--person col end-->
-                    <div class="col-sm-3 text-center">
-                        <div class="person-v2">
-                            <img src="{{ asset('img/gs.jpg') }}" class="img-responsive" alt="">
-                            <div class="person-desc-v2">
-                                <h3>Rifat Hyder</h3>
-                                <em>General Secretary</em>
-                                <!-- <ul class="list-inline top-social">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    
-                                </ul> -->
-                            </div>
-                        </div>
-                    </div><!--person col end-->
-                    <!-- <div class="col-sm-3 text-center">
-                        <div class="person-v2">
-                            <img src="img/team-8.jpg" class="img-responsive" alt="">
-                            <div class="person-desc-v2">
-                                <h3>Steve Smith</h3>
-                                <em>Creative Designer</em>
-                                <ul class="list-inline top-social">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div><!--our team v-2-->
         <!-- <div class="divide70"></div> -->
-        --}}
+       
         {{-- 
         <div class="container">
             <div class="row">

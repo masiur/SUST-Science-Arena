@@ -9,6 +9,9 @@ Route::get('contact',['as' => 'contact', 'uses' => 'contactController@contact_pa
 Route::get('about',['as' => 'about', 'uses' => 'FrontendController@about']);
 
 Route::get('executives',['as' => 'committee', 'uses' => 'FrontendController@committee']);
+Route::get('general-members',['as' => 'general.members', 'uses' => 'FrontendController@generalMembers']);
+Route::get('advisors',['as' => 'advisors', 'uses' => 'FrontendController@advisors']);
+
 Route::post('contact_store',['as' => 'contact.store', 'uses' => 'ContactController@store']);
 // public routes -- Added by Masiur
 Route::get('home', array('as' => 'home', 'uses' => 'FrontendController@index'));

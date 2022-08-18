@@ -15,7 +15,6 @@ use Validator;
 use Input;
 use App\Models\CommitteeMember as Committee;
 
-
 class FrontendController extends Controller
 {
     /**
@@ -29,9 +28,14 @@ class FrontendController extends Controller
         $eventPhotos =  Event::orderby('id' , 'desc')->take(2)->lists('img_url');
         // $img_url = $img['img_url'];
         // return $slider1 = $eventPhotos[0];
+         $currentPresidentGs = Committee::orderBy('year', 'DESC')
+                                        ->orderBy('rank', 'ASC')
+                                        ->get()
+                                        ->take(2);
         
         return view('index')->with('title', 'Home')
                             ->with('events' , $events)
+                            ->with('currentPresidentGs' , $currentPresidentGs)
                             ->with('eventPhotos' , $eventPhotos);
     }
 
@@ -84,6 +88,14 @@ class FrontendController extends Controller
     public function about()
     {   
         return view('about')->with('title', 'About Us'); 
+    }
+    public function advisors()
+    {   
+        return view('advisors')->with('title', 'Respected Advisors');
+    }
+    public function generalMembers()
+    {   
+        return view('generalmembers')->with('title', 'General Members'); 
     }
 
     public function blogPublicPage()

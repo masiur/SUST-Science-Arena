@@ -25,11 +25,19 @@
                             <a href="{{ route('event.list') }}" class="dropdown-toggle ">Events</i></a>
                         </li>
 
-                        <li class="dropdown {!! Menu::isActiveRoute('committee') !!}">
+                        <!-- <li class="dropdown {!! Menu::isActiveRoute('committee') !!}">
                             <a href="{{ route('committee') }}" class="dropdown-toggle ">Executives</i></a>
-                            
+                        </li> -->
+
+                        <li class="dropdown {!! Menu::areActiveRoutes(['committee', 'general.members', 'advisors']) !!}">
+                            <a href="#" class="dropdown-toggle">Members <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ route('committee') }}">Executive</a></li>
+                                <li><a href="{{ route('general.members') }}">General</a></li>
+                                <li><a href="{{ route('advisors') }}">Advisors</a></li>           
+                            </ul>
                         </li>
-                        <!--menu Portfolio li end here-->
+                     
                         <li class="dropdown {!! Menu::areActiveRoutes(['blog.myblog', 'blog.index']) !!}">
                             <a href="{{ route('blog.index' ) }}" class="dropdown-toggle">Blog <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
@@ -37,9 +45,7 @@
                                 @if(auth()->check())
                                 <li><a href="{{ route('blog.myblog') }}">My Article</a></li>
                                 @endif
-                                <li><a href="{{ route('blog.create') }}">Write an Article</a></li>
-                                
-                                
+                                <li><a href="{{ route('blog.create') }}">Write an Article</a></li> 
                                 
                             </ul>
                         </li>
