@@ -158,7 +158,8 @@
 
                             The objective of SSA is to promote activities of science, expose recent scientific information to students and to encourage students about science.
                             SSA is committed to popularize science among young people. To accomplish this job different types of exposition programs are being arranged throughout the year.
-                            <br><br>
+                            
+                            <a style="text-decoration:none;color:blue" href="{{ route('about') }}">See more...</a>
                                  
                              </p>
                         </div>

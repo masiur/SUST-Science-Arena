@@ -1,13 +1,14 @@
 <div id ="copyright1" class="footer-copyright text-center">
 	<div class="row">
 		<div class="col-md-3">
-			Supported By: <a href="http://code.com.bd/" target="_blank">Code Technologies</a>
+			<!-- Supported By: <a href="http://code.com.bd/" target="_blank">Code Technologies</a> -->
 		</div>
 		<div class="col-md-6">
-			Copyright &copy;2016-{{ Date('Y')}}. All rights reserved. SUST Sciece Arena.
+			Copyright &copy;2022-{{ Date('Y')}}. All rights reserved. SUST Science Arena.
 		</div>
 		<div class="col-md-3">
-			Powered By:<a data-toggle="modal" data-target="#showDevelopers"  href="#" style=""> Dept. of CSE,SUST <!-- <i class="fa fa-heart" aria-hidden="true"></i> --></a>
+            <a href="#" target="_blank">Credits</a> <i class="fa fa-heart" style="color:red" aria-hidden="true"></i>
+			<!-- Powered By:<a data-toggle="modal" data-target="#showDevelopers"  href="#" style=""> Dept. of CSE,SUST <i class="fa fa-heart" aria-hidden="true"></i></a> -->
 		</div>
     
 </div>

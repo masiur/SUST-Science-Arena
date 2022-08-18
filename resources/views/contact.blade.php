@@ -21,7 +21,7 @@
         </div><!--breadcrumbs-->
         <div class="divide80"></div>
         <div class="container">
-            <div id="map-canvas"></div>
+            <!-- <div id="map-canvas"></div> -->
         </div><!--.container-->
         <div class="divide60"></div>
         <div class="container">
