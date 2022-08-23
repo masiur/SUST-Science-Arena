@@ -9,10 +9,20 @@
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1">
                         <div class="center-heading">
-                            <h3><strong>General Members</strong> </h3>
+                            <h3><strong>Thanks & Gratitude to...</strong> </h3>
                             <span class="center-line"></span>
-                            <p class="sub-text margin40">
-                            <iframe src="https://docs.google.com/document/d/e/2PACX-1vQc_vyibC62E0uYFrItin5ZMt0IkcMjU8W5hrEb3b0fCX0po3sheSLDm2oBfXodlt-dM1R81Jv_7Sqi/pub?embedded=true"></iframe>
+                            <br>
+                                Developers
+                                <div class="row">
+                                    <div><h5>Masiur Rahman Siddiki</h5> Vice-President, 2015 EC. </div>
+                                    <div><h4>Mithun Das</h4> CSE 2012, SUST. </div>
+
+                                </div>
+                                <div class="row">
+                                    
+
+                                </div>
+                             
                         </div>
                     </div>
                 </div>

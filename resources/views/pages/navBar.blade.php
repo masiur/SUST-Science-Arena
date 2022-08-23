@@ -37,7 +37,8 @@
                                 <li><a href="{{ route('advisors') }}">Advisors</a></li>           
                             </ul>
                         </li>
-                     
+
+                        
                         <li class="dropdown {!! Menu::areActiveRoutes(['blog.myblog', 'blog.index']) !!}">
                             <a href="{{ route('blog.index' ) }}" class="dropdown-toggle">Blog <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
@@ -52,6 +53,12 @@
                         <!--menu blog li end here-->
         
                         <!--mega menu-->
+
+                        <li class="dropdown">
+                            <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vQofcXWYXtKwQPSDNxxRKFoGNrXH18OiCVQ_YEmyw9pr01x5R4EfogqNPZlU07AENU12nAwRpD-s0yb/pub
+                     " class="dropdown-toggle ">Booklist</i></a>
+                        </li>
+
                         <li class="dropdown {!! Menu::isActiveRoute('contact') !!}">
                             <a href="{{ route('contact') }}" class="dropdown-toggle" >Contact</a>
                             

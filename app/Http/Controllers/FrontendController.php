@@ -144,6 +144,12 @@ class FrontendController extends Controller
                         ->with('event', $event);
     }
 
+    public function credit()
+    {
+       return view('credit')->with('title' , "Gratitude and Thanks");
+    }
+
+    
 
     public function info_edit()
     {

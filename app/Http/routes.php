@@ -11,6 +11,7 @@ Route::get('about',['as' => 'about', 'uses' => 'FrontendController@about']);
 Route::get('executives',['as' => 'committee', 'uses' => 'FrontendController@committee']);
 Route::get('general-members',['as' => 'general.members', 'uses' => 'FrontendController@generalMembers']);
 Route::get('advisors',['as' => 'advisors', 'uses' => 'FrontendController@advisors']);
+Route::get('credit', ['as' => 'credit', 'uses' => 'FrontendController@credit']);
 
 Route::post('contact_store',['as' => 'contact.store', 'uses' => 'ContactController@store']);
 // public routes -- Added by Masiur
