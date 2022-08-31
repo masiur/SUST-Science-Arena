@@ -33,7 +33,7 @@
                             <a href="#" class="dropdown-toggle">Members <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ route('committee') }}">Executive</a></li>
-                                <li><a href="{{ route('general.members') }}">General</a></li>
+{{--                                <li><a href="{{ route('general.members') }}">General</a></li>--}}
                                 <li><a href="{{ route('advisors') }}">Advisors</a></li>           
                             </ul>
                         </li>

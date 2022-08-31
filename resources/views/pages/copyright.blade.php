@@ -7,7 +7,8 @@
 			Copyright &copy;2022-{{ Date('Y')}}. All rights reserved. SUST Science Arena.
 		</div>
 		<div class="col-md-3">
-            <a href="{{ route('credit') }}" target="_blank">Credits</a> <i class="fa fa-heart" style="color:red" aria-hidden="true"></i>
+{{--            <a href="{{ route('credit') }}" target="_blank">Credits</a> <i class="fa fa-heart" style="color:red" aria-hidden="true"></i>--}}
+            <a href="#" target="_blank">Credits</a> <i class="fa fa-heart" style="color:red" aria-hidden="true"></i>
 			<!-- Powered By:<a data-toggle="modal" data-target="#showDevelopers"  href="#" style=""> Dept. of CSE,SUST <i class="fa fa-heart" aria-hidden="true"></i></a> -->
 		</div>
     
