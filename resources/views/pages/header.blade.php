@@ -108,6 +108,8 @@
                 position: absolute;
                 left: 12%;
                 top: 24%;
+                font-size: 20px;
+                text-transform: none;
             }
             .masiur-developers-corner-name {
                 font-size: large;
@@ -121,8 +123,14 @@
                 width: 80px;
                 
                 height: auto;
-                margin-top: -17px !important;
+                /*margin-top: -17px !important;*/
             }
+            /*@media (min-width: 900px) {*/
+            /*        .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {*/
+            /*                margin-right: 0;*/
+            /*                margin-left: 0 ;*/
+            /*        }*/
+            /*}*/
         </style>
         
     </head>

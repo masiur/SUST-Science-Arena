@@ -3,36 +3,29 @@
                 <div class="row">
                     <div class="col-sm-4 hidden-xs">
                         <div class="top-bar-socials">
-                            <a href=  "{!! \App\Models\Info::where('id', 1)->pluck('fb_link') !!}" 
+                            <?php $someInfo = \App\Models\Info::find(1)->toArray(); ?>
+                            <a href=  "{!! $someInfo['fb_link'] !!}"
                             target="_blank" class="social-icon-sm si-dark si-gray-round si-colored-facebook">
                                 <i class="fa fa-facebook"></i>
                                 <i class="fa fa-facebook"></i>
                             </a>
-                            <a href="{!! \App\Models\Info::where('id', 1)->pluck('twitter_link'); !!}" target="_blank" class="social-icon-sm si-dark si-gray-round si-colored-twitter">
-                                <i class="fa fa-twitter"></i>
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a href="{!! \App\Models\Info::where('id', 1)->pluck('googleplus_link') !!}" class="social-icon-sm si-dark si-gray-round si-colored-google-plus">
-                                <i class="fa fa-google-plus"></i>
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                            <!-- <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-linkedin">
-                                <i class="fa fa-linkedin"></i>
-                                <i class="fa fa-linkedin"></i>
-                            </a> -->
-                            <a href="{!! \App\Models\Info::where('id', 1)->pluck('youtube_link') !!}" class="social-icon-sm si-dark si-gray-round si-colored-google-plus">
+                            <a href="{!! $someInfo['youtube_link'] !!}" class="social-icon-sm si-dark si-gray-round si-colored-google-plus">
                                 <i class="fa fa-youtube"></i>
                                 <i class="fa fa-youtube"></i>
                             </a>
-                            <!-- <a href="#" class="social-icon-sm si-dark si-gray-round si-colored-dribbble">
-                                <i class="fa fa-dribbble"></i>
-                                <i class="fa fa-dribbble"></i>
-                            </a> -->
+                            <a href="{!! $someInfo['twitter_link'] !!}" target="_blank" class="social-icon-sm si-dark si-gray-round si-colored-twitter">
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="{!! $someInfo['googleplus_link'] !!}" class="social-icon-sm si-dark si-gray-round si-colored-google-plus">
+                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-instagram"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="col-sm-8 text-right">
                         <ul class="list-inline top-dark-right">                      
-                            <li class="hidden-sm hidden-xs"><i class="fa fa-phone"></i> <?php echo \App\Models\Info::where('id', 1)->pluck('contact');  ?></li>
+                            <li class="hidden-sm hidden-xs"><i class="fa fa-phone"></i> <?php echo $someInfo['contact'];  ?></li>
 
                             @if(auth()->check())
                                 @role('admin')
@@ -49,12 +42,12 @@
                             @endif
 
                         </ul>
-                        <div class="search">
-                            <form role="form">
-                                <input type="text" class="form-control" autocomplete="off" placeholder="Write something and press enter">
-                                <span class="search-close"><i class="fa fa-times"></i></span>
-                            </form>
-                        </div>
+{{--                        <div class="search">--}}
+{{--                            <form role="form">--}}
+{{--                                <input type="text" class="form-control" autocomplete="off" placeholder="Write something and press enter">--}}
+{{--                                <span class="search-close"><i class="fa fa-times"></i></span>--}}
+{{--                            </form>--}}
+{{--                        </div>--}}
 
                     </div>
                 </div>
