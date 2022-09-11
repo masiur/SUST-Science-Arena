@@ -60,7 +60,7 @@
                         <div class="person-v2">
                             <img src="{{ asset($member->photo) }}" class="img-responsive" alt="">
                             <div class="person-desc-v2">
-                                <h3>{!! $member->name !!}</h3>
+                                <h5>{!! $member->name !!}</h5>
                                 <em><b>{!! $member->designation !!}</b></em>
                                 <ul class="list-inline top-social">
                                     <li>{!! $member->info !!}</li>

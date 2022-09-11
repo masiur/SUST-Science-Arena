@@ -18,6 +18,17 @@
                      <li class="{!! Menu::isActiveRoute('dashboard') !!}"><a href="{{ route('dashboard') }}"><i class="ion-flask"></i> <span class="nav-label">Dashboard</span></a>                 
                     </li>
 
+
+                    <li class="has-submenu {!! Menu::areActiveRoutes(['member.add',  'member.list']) !!}"><a href="#"><i class="ion-compose"></i> <span class="nav-label">Executive Committee</span></a>
+                        <ul class="list-unstyled">
+                            <li><a href="{!! route('member.add') !!}">Add EC Member </a></li>
+                            <li><a href="{!! route('member.list') !!}">List of EC Members</a></li>
+                        </ul>
+                    </li>
+
+                    <li> <a href="{!! route('info.edit') !!}"><i class="ion-compose"></i> <span class="nav-label">SSA Info</span></a>
+                    </li>
+
                     <li class="has-submenu"><a href="{!! route('pending.blog') !!}"><i class="ion-compose"></i> <span class="nav-label">Blog | Articles</span><span class="badge bg-purple">{{ count(App\Models\Blog::all()) }}</span></a>
                        <!-- <ul class="list-unstyled">
                             <li><a href="{!! route('blog.create') !!}">Create blog</a></li>
@@ -26,26 +37,6 @@
                         </ul> -->
                     </li>
 
-
-                    <!-- <li class="{!! Menu::isActiveRoute('demo.index') !!}"><a href="{{ route('demo.index') }}"><i class="ion-compose"></i> <span class="nav-label">Demo (modal) CRUD</span></a>                       
-                    </li>
-
-                    <li class="has-submenu"><a href="#"><i class="ion-grid"></i> <span class="nav-label">Data Tables</span></a>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Basic Tables</a></li>
-                            <li><a href="#">Data Table</a></li>
-
-                        </ul>
-                    </li>
-
-
-                    <li class="has-submenu"><a href="#"><i class="ion-stats-bars"></i> <span class="nav-label">Charts</span><span class="badge bg-purple">1</span></a>
-                        <ul class="list-unstyled">
-                            <li><a href="#">chart</a></li>
-                            <li><a href="#">Morris</a></li>
-
-                        </ul>
-                    </li> -->
 
                    <li class="has-submenu {!! Menu::areActiveRoutes(['event.index', 'event.create']) !!}"><a href="#"><i class="ion-compose"></i> <span class="nav-label">Events</span></a>
                         <ul class="list-unstyled">
@@ -79,37 +70,6 @@
                         </ul>
                     </li>
 
-
-                    <li class="has-submenu {!! Menu::areActiveRoutes(['member.add',  'member.list']) !!}"><a href="#"><i class="ion-compose"></i> <span class="nav-label">Committee</span></a>
-                        <ul class="list-unstyled">
-                            <li><a href="{!! route('member.add') !!}">Add EC </a></li>
-                            <li><a href="{!! route('member.list') !!}">List of EC Members</a></li>
-                        </ul>
-                    </li>
-
-
-                    <li> <a href="{!! route('info.edit') !!}"><i class="ion-compose"></i> <span class="nav-label">SSA Info</span></a>
-                    </li>
-
-
-
-
-                    <!-- <li class="has-submenu"><a href="#"><i class="ion-email"></i> <span class="nav-label">Mail</span></a>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Inbox</a></li>
-                            <li><a href="#">Compose Mail</a></li>
-                            <li><a href="#">View Mail</a></li>
-
-                        </ul>
-                    </li>
-
-
-                    <li class="has-submenu"><a href="#"><i class="ion-location"></i> <span class="nav-label">Maps</span></a>
-                        <ul class="list-unstyled">
-                            <li><a href="gmap.html"> Google Map</a></li>
-                            <li><a href="vector-map.html"> Vector Map</a></li>
-                        </ul>
-                    </li> -->
 
                 </ul>
             </nav>

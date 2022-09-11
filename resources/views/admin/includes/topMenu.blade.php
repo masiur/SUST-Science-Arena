@@ -44,7 +44,7 @@
                         </li> -->
 
                    <li class="">
-                        <a data-toggle="" class="dropdown-toggle" href="{!!route('home')!!}">
+                        <a data-toggle="" class="dropdown-toggle" href="{!!route('index')!!}">
                         <span class="btn btn-info bg-purple ">Home</span>
                         </a>
                     </li>

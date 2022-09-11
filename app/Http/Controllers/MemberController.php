@@ -56,8 +56,16 @@ class MemberController extends Controller
         if($request->hasFile('image')) {
             $file = $request->file('image');
 
+            $fileinfo= @getimagesize($file);
+            $width = $fileinfo[0];
+            $height = $fileinfo[1];
+
+            if ($width > 300 || $height > 300) {
+                return redirect()->back()->withInput()->with('error','Size must be equal or less than 300*300. Your size is: '.$width.'*'.$height);
+            }
+
             $destination = public_path().'/uploads/members/';
-            $filename = time().'member.'.$file->getClientOriginalExtension();
+            $filename = time().'_member.'.$file->getClientOriginalExtension();
             $file->move($destination, $filename);
             $img_url = '/uploads/members/'.$filename;
         } 
@@ -122,6 +130,25 @@ class MemberController extends Controller
             return redirect()->back()->withInput()->withErrors($validation);
         }
 
+        $img_url = 'img/propic.png';
+
+        if($request->hasFile('image')) {
+            $file = $request->file('image');
+
+            $fileinfo= @getimagesize($file);
+            $width = $fileinfo[0];
+            $height = $fileinfo[1];
+
+            if ($width > 300 || $height > 300) {
+                return redirect()->back()->withInput()->with('error','Size must be equal or less than 300*300. Your size is: '.$width.'*'.$height);
+            }
+
+            $destination = public_path().'/uploads/members/';
+            $filename = time().'_member.'.$file->getClientOriginalExtension();
+            $file->move($destination, $filename);
+            $img_url = '/uploads/members/'.$filename;
+        }
+
         $member = CommitteeMember::find($id);
 
         $member->year = $data['year'];
@@ -132,6 +159,7 @@ class MemberController extends Controller
         $member->rank = (int)$data['rank'];
         $member->nth_of_committee = $data['nth_of_committee'] == 0 ? null : (int)$data['nth_of_committee'];
         $member->status = $data['status'];
+        $member->photo = $img_url;
 
         $member->save();
 

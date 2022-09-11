@@ -26,7 +26,7 @@
                             
                             <div class=" form"> 
 
-                                {!! Form::model($member, array('route' => ['member.update',$member->id], 'method' => 'PUT', 'class' => 'cmxform form-horizontal tasi-form' ,'files' => false)) !!}
+                                {!! Form::model($member, array('route' => ['member.update',$member->id], 'method' => 'PUT', 'class' => 'cmxform form-horizontal tasi-form' ,'files' => true)) !!}
 
 
                                 <div class="form-group">
@@ -36,10 +36,14 @@
                                     </div>
                                 </div>
 
+
                                 <div class="form-group">
-                                    {!! Form::label('nth_of_committee', "Nth of Committee", array('class' => 'control-label col-lg-2')) !!}
-                                    <div class="col-lg-6">
-                                        {!! Form::number('nth_of_committee', null, array('class' => 'form-control', 'placeholder' => '25')) !!}
+                                    <label for="nth_of_committee" class="control-label col-lg-2">Nth of Committee</label>
+                                    <div class="col-lg-2">
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="25" name="nth_of_committee" type="number" value="{{ $member->nth_of_committee }}" id="nth_of_committee">
+                                            <span class="input-group-addon">th</span>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -87,9 +91,20 @@
                                     </div>
                                 </div>
 
+                                <div class="form-group">
+                                    {!! Form::label('image', "Profile Picture (300* 300)", array('class' => 'control-label col-lg-2')) !!}
+                                    <div class="col-lg-6">
+                                        <img src="{{ asset($member->photo) }}" alt="" width="300px">
+                                        <- Existing Photo
+                                        <br><br>
+                                        <p>Note: Photo must be square and should not be more than 300*300</p>
+                                        {!! Form::file('image',  array('class' => 'form-control', 'multiple' => 'false')) !!}<br>
+                                    </div>
+                                </div>
+
                                     <div class="form-group">
                                         <div class="col-lg-offset-2 col-lg-10">
-                                        {!! Form::submit('Save Changes', array('class' => 'btn btn-success')) !!}
+                                        {!! Form::submit('Save Changes', array('class' => 'btn btn-success', 'placeholder' => 'Change photo')) !!}
                                         </div>
                                     </div>
 
