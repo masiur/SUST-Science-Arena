@@ -18,7 +18,7 @@
                                     <h4>{{ $title }}</h4>
                             </div>
                             <div class="col-md-6">                            
-                                <a class="pull-right" href="{!! route('member.list')!!}"><button class="btn btn-success">SSA INFO</button></a>
+                                <a class="pull-right" href="{!! route('member.list')!!}"><button class="btn btn-success">SSA Committee</button></a>
                             </div>
                          </div>
                     </div>
@@ -49,7 +49,7 @@
                                 <div class="form-group">
                                     {!! Form::label('fb_link', "Facebook Link Of SSA*", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('fb_link', null, array('class' => 'form-control','placeholder' => 'Facebook Link Of SSA',  'required')) !!}
+                                        {!! Form::text('fb_link', null, array('class' => 'form-control','placeholder' => 'Facebook Page Link',  'required')) !!}
                                     </div>
                                 </div>
 
@@ -57,11 +57,25 @@
                                
 
                                 <div class="form-group">
-                                    {!! Form::label('twitter_link', "Twitter Link*", array('class' => 'control-label col-lg-2')) !!}
+                                    {!! Form::label('twitter_link', "Twitter Link", array('class' => 'control-label col-lg-2')) !!}
                                     <div class="col-lg-6">
-                                        {!! Form::text('twitter_link', null, array('class' => 'form-control', 'placeholder' => 'Enter Twitter Link', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                        {!! Form::text('twitter_link', null, array('class' => 'form-control', 'placeholder' => 'Enter Twitter Link',  'aria-required' =>'true')) !!}
                                     </div>
                                 </div>
+
+                                    <div class="form-group">
+                                        {!! Form::label('youtube_link', "Youtube Link*", array('class' => 'control-label col-lg-2')) !!}
+                                        <div class="col-lg-6">
+                                            {!! Form::text('youtube_link', null, array('class' => 'form-control', 'placeholder' => 'Enter Youtube Link', 'required' => 'required', 'aria-required' =>'true')) !!}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        {!! Form::label('googleplus_link', "Instagram Link", array('class' => 'control-label col-lg-2')) !!}
+                                        <div class="col-lg-6">
+                                            {!! Form::text('googleplus_link', null, array('class' => 'form-control', 'placeholder' => 'Enter Instagram Link',  'aria-required' =>'true')) !!}
+                                        </div>
+                                    </div>
 
                                
 

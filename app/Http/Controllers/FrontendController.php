@@ -171,7 +171,9 @@ class FrontendController extends Controller
               'contact'   => 'required',
               'email' => 'required',
               'fb_link' => 'required',
-              'twitter_link' => 'required',
+              'twitter_link' => '',
+              'youtube_link' => 'required',
+              'googleplus_link' => '', // this is instagram
               // 'img_url' => 'required',
             ];
 
@@ -187,8 +189,10 @@ class FrontendController extends Controller
         $info->contact = $data['contact'];
         $info->fb_link =    Input::get('fb_link');
         $info->email =    Input::get('email');
-        $info->twitter_link = $data['twitter_link'];
-        
+        $info->twitter_link = $data['twitter_link'] ? $data['twitter_link'] : null;
+        $info->youtube_link = $data['youtube_link'];
+        $info->googleplus_link = $data['googleplus_link'] ? $data['googleplus_link'] : null;
+
             
    
         if($info->save()) {

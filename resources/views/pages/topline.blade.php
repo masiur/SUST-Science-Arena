@@ -17,7 +17,7 @@
                                 <i class="fa fa-twitter"></i>
                                 <i class="fa fa-twitter"></i>
                             </a>
-                            <a href="{!! $someInfo['googleplus_link'] !!}" class="social-icon-sm si-dark si-gray-round si-colored-google-plus">
+                            <a href="{!! $someInfo['googleplus_link'] !!}" class="social-icon-sm si-dark si-gray-round si-colored-instagram">
                                 <i class="fa fa-instagram"></i>
                                 <i class="fa fa-instagram"></i>
                             </a>
