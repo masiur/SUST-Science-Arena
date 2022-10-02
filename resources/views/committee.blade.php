@@ -64,7 +64,7 @@
                                 <em><b>{!! $member->designation !!}</b></em>
                                 <ul class="list-inline top-social">
                                     <li>{!! $member->info !!}</li>
-                                    @if($member->contact) <li>Phone: {!! $member->contact !!}</li>@endif
+{{--                                    @if($member->contact) <li>Phone: {!! $member->contact !!}</li>@endif--}}
                                 </ul>
                             </div>
                         </div>
