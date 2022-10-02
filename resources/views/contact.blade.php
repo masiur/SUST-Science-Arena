@@ -45,7 +45,7 @@
                                     <div class="row control-group">
                                         <div class="form-group col-xs-12 controls">
                                             <label>Name<span>*</span></label>
-                                            <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                                            <input type="text" class="form-control" name="name" placeholder="Name" id="name" required>
                                             <p class="help-block"></p>
                                         </div>
                                     </div>
@@ -56,7 +56,7 @@
                                     <div class="row control-group">
                                         <div class="form-group col-xs-12 controls">
                                             <label>Email Address<span>*</span></label>
-                                            <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                                            <input type="email" class="form-control" name="email" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
                                             <p class="help-block"></p>
                                         </div>
                                     </div> 
@@ -64,15 +64,15 @@
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12  controls">
-                                    <label>Phone Number<span>*</span></label>
-                                    <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <label>Phone Number<span></span></label>
+                                    <input type="tel" class="form-control" name="contact_no" placeholder="Phone Number" >
                                     <p class="help-block"></p>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 controls">
                                     <label>Message<span>*</span></label>
-                                    <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <textarea rows="5" class="form-control" name="message" placeholder="Your message goes here" required ></textarea>
                                     <p class="help-block"></p>
                                 </div>
                             </div>
@@ -91,8 +91,8 @@
                     <h3 class="heading">Contact info</h3>
                     <ul class="list-unstyled contact contact-info">
                         <li><p><strong><i class="fa fa-map-marker"></i> Address:</strong> SUST, Sylhet-3114, Bangladesh</p></li> 
-                        <li><p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="#">ssa.sust@gmail.com</a></p></li>
-                        <li> <p><strong><i class="fa fa-phone"></i> Phone:</strong> +880 1614 915 502</p></li>
+                        <li><p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="#">{{ $someInfo['email'] }}</a></p></li>
+                        <li> <p><strong><i class="fa fa-phone"></i> Phone:</strong> {{ $someInfo['contact'] }}</p></li>
                         
                     </ul>
                     <div class="divide40"></div>

@@ -26,7 +26,10 @@
                         </ul>
                     </li>
 
-                    <li> <a href="{!! route('info.edit') !!}"><i class="ion-compose"></i> <span class="nav-label">SSA Info</span></a>
+                    <li class="{!! Menu::isActiveRoute('info.edit') !!}"> <a href="{!! route('info.edit') !!}"><i class="ion-compose"></i> <span class="nav-label">SSA Info</span></a>
+                    </li>
+
+                    <li class="{!! Menu::isActiveRoute('message') !!}"> <a href="{!! route('message') !!}"><i class="ion-compose"></i> <span class="nav-label">Messages</span></a>
                     </li>
 
                     <li class="has-submenu"><a href="{!! route('pending.blog') !!}"><i class="ion-compose"></i> <span class="nav-label">Blog | Articles</span><span class="badge bg-purple">{{ count(App\Models\Blog::all()) }}</span></a>

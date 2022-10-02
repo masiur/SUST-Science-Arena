@@ -5,7 +5,7 @@ Route::get('/', array('as' => 'index', 'uses' => 'FrontendController@index'));
 Route::get('news_list',['as' => 'news.list', 'uses' => 'NewsController@show']);
 Route::get('events',['as' => 'event.list', 'uses' => 'FrontendController@event']);
 Route::get('event/{id}',['as' => 'event.single', 'uses' => 'FrontendController@eventSingle']);
-Route::get('contact',['as' => 'contact', 'uses' => 'contactController@contact_page']);
+Route::get('contact',['as' => 'contact', 'uses' => 'ContactController@contact_page']);
 Route::get('about',['as' => 'about', 'uses' => 'FrontendController@about']);
 
 Route::get('executives',['as' => 'committee', 'uses' => 'FrontendController@committee']);
@@ -104,7 +104,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
   
   Route::get('edit',['as' => 'info.edit',   'uses' => 'FrontendController@info_edit']);
   Route::put('info/{id}',['as' => 'info.update', 'uses' => 'FrontendController@info_update']);
-});
+
  //  NEWS CRUD
    Route::get('news',['as' => 'news.index', 'uses' => 'NewsController@index']);
    Route::get('news/create',['as' => 'news.create', 'uses' => 'NewsController@create']);
@@ -125,25 +125,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
      //Content CRUD
      Route::get('content/create',['as' => 'content.create', 'uses' => 'ContentController@create']);
      Route::post('content',['as' => 'content.store', 'uses' => 'ContentController@store']);
-  
-	/* will be Commented Out */
-	// Demo CRUD
-	Route::get('demo',['as' => 'demo.index', 'uses' => 'DemoController@index']);
-	Route::get('demo/create',['as' => 'demo.create', 'uses' => 'DemoController@create']);
-	Route::post('demo',['as' => 'demo.store', 'uses' => 'DemoController@store']);
-	Route::get('demo/{id}/edit',['as' => 'demo.edit', 'uses' => 'DemoController@edit']);
-	Route::get('demo/{id}/show',['as' => 'demo.show', 'uses' => 'DemoController@show']);
-	Route::put('demo/{id}',['as' => 'demo.update', 'uses' => 'DemoController@update']);
-	Route::get('demo/delete/{id}',['as' => 'demo.delete', 'uses' => 'DemoController@destroy']);
-	 // Language CRUD
-/*	Route::get('language',['as' => 'language.index', 'uses' => 'LanguageController@index']);
-	Route::get('language/create',['as' => 'language.create', 'uses' => 'LanguageController@create']);
-	Route::post('language',['as' => 'language.store', 'uses' => 'LanguageController@store']);
-	Route::get('language/{id}/edit',['as' => 'language.edit', 'uses' => 'LanguageController@edit']);
-	Route::get('language/{id}/show',['as' => 'language.show', 'uses' => 'LanguageController@show']);
-	Route::put('language/{id}',['as' => 'language.update', 'uses' => 'LanguageController@update']);
-	Route::delete('language/{id}',['as' => 'language.delete', 'uses' => 'LanguageController@destroy']);
-*/
+
+     Route::get('message',['as' => 'message', 'uses' => 'ContactController@messagePageInAdmin']);
+
+});
 Route::get('blog/{title}',['as' => 'blog.single', 'uses' => 'FrontendController@blogSingle']);
 
 

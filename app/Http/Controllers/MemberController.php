@@ -130,7 +130,8 @@ class MemberController extends Controller
             return redirect()->back()->withInput()->withErrors($validation);
         }
 
-        $img_url = 'img/propic.png';
+        $member = CommitteeMember::find($id);
+        $img_url = $member->photo;
 
         if($request->hasFile('image')) {
             $file = $request->file('image');
@@ -148,8 +149,6 @@ class MemberController extends Controller
             $file->move($destination, $filename);
             $img_url = '/uploads/members/'.$filename;
         }
-
-        $member = CommitteeMember::find($id);
 
         $member->year = $data['year'];
         $member->name = $data['name'];
